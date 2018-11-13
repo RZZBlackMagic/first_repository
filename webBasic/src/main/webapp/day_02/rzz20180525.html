@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>任先生的网页</title>
+<style >
+  /*继承性：*/
+  body{
+      font-family:
+        "微软雅黑","文泉驿正黑","黑体";
+  }
+  /*层叠性：*/
+  h1{
+    color:red;
+    font-size:50px;
+  }
+  /*优先级：给同一个元素设置相同的样式，效果以后一个为准，也叫就近原则。*/
+  h2{
+    color:yellow;
+  }
+  h2{
+    color:green;
+  }
+</style>
+<style >
+   .female{
+      color:pink;
+   }
+</style>
+<!-- ID选择器：选择id等于某值的唯一元素 -->
+<style>
+  #p4{
+     color:red;
+  }
+</style>
+<!-- 选择器组：写出几个选择器组，用逗号隔开，可以选中他们的并集（都可以选中） -->
+<style >
+   .female,#p4{
+   /*字体加粗*/
+        font-weight:bold;
+   }
+</style>
+<!-- 派生选择器：1 选择父元素下面的满足条件的后代
+             2 选择父元素下满足条件的儿子 -->
+<style>
+   #p5 b{
+       color:red;
+   }
+   #p5>b{
+       font-size:30px;
+   }
+</style>
+
+<style>
+  /* 6伪类选择器：*/
+  /* 6.1选择所有为访问过的超链接*/
+  a:link{
+      color:green;
+  }
+  /* 6.2选择所有已访问过的超链接*/
+  a:visited{
+      color:red;
+  }
+  /* 6.3:选择激活态（正在点）的按钮*/
+  #b1:active{
+       background-color:blue;
+  }
+  /* 6.4:选择有焦点（就是点上去有光标闪烁的框）的框*/
+  #t1:focus{
+       background-color:green;
+  }
+  /* 6.5选择悬停态的图片*/
+  img:hover{
+     width:250px;
+     height:250px;
+  }
+  
+</style>
+<style>
+/**/
+</style>
+</head>
+<body>
+    <p class="female">王晨曦啊王晨曦</p>
+    <p>任章哲啊任章哲</p>
+    <p class="female">哎呀啊啊呀呀啊</p>
+    <p id="p4">瞧你们那些破事</p>
+    
+    <p id = p5>
+        四川省<b>成都市</b>郫县<u>犀安路<b>西南交通大学</b>犀浦校区</u>图书馆三楼3A区57号座位
+    </p>
+    
+    <p>
+                         <a href="http://www.tmooc.cn" target="_blank">达内</a>
+                         <a href="http://www.baidu.com" target="_blank">百度</a>
+                         <a href="http://www.xiaxie.com" target="_blank">瞎写</a>
+                         <a href="http://www.caide.com" target="_blank">猜的</a>
+                         
+    </p>
+    
+    <p>
+       <input type="button" value="演示" id="b1"/>
+    </p>
+    
+    <p >
+        <input type="text" id ="t1"/>
+    </p>
+    
+    <p>
+      <img src="../images/01.jpg"/>
+      <img src="../images/02.jpg"/>
+      <img src="../images/03.jpg"/>
+    </p>
+</body>
+</html>

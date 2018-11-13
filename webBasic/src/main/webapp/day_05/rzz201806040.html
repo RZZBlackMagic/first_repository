@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/*JS中的函数都是共有的
+ *JS的函数返回值类型不用声明，但是是存在的。 
+ */
+   function f2(){
+	   alert("范传奇");
+   }
+   
+</script>
+<!-- 3 文件调用式：在独立的JS文件中写JS -->
+<script src="rzz201806040.js"></script>
+</head>
+<body>
+<!--
+            事件：是用用户的操作（动作），是JS调用的时机
+                         比如：单击事件，双击事件。
+ -->
+ 
+ <!-- 1 事件定义式：在事件定义时直接写JS -->
+   <input type="button" value="按钮1 " onclick="alert('苍老师')"/>
+   <input type="button"  value="按钮1 " onclick="f2();"/>
+   <input type="button"  value="按钮1 " onclick="f3()"/>
+</body>
+</html>

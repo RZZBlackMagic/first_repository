@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>牛逼的网页</title>
+<script>
+   //此处写JS有两种方式
+   //1 函数：在用户操作某按钮时调用，即函数是在页面加载后调用的
+   //2 直接写JS：页面加载时就调用。（在body里面的语句执行的早，因为script不需要编译）
+   function f(){
+	   
+   }
+   //alert("牛逼呀！兄弟。")
+   console.log("你好啊 任章哲");
+   var x;
+   console.log(x);
+   
+   //2 数据类型演示：
+   var s = "hi";
+   var n = 3.14;
+   var b = true;
+   var i=1;
+   var v1 = s+n;
+   console.log(v1);
+   var v2 = s+b;
+   console.log(v2);
+   var v3=toString(b+b);
+   console.log(v3);
+   console.log(toString(n+b));
+   console.log(i+n)
+   console.log(parseInt(n+i))
+   console.log(typeof(b));
+   console.log(isNaN(23));
+   console.log(isNaN("A12"));
+   console.log(isNaN("1234"));
+   console.log(isNaN(""));
+   console.log(parseInt(""));
+   var v4="1";
+   var v5=1;
+   console.log(v4==v5);
+   var v6=9;
+   if(v6){
+	   console.log("ok");
+   }
+   v6&&console.log("over");
+</script>
+</head>
+<body>
+    <p>在此页面演示JS基本语法！</p>
+    
+</body>
+</html>

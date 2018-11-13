@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+  div{
+    position:relative;
+    width:800px;
+    height:500px;
+    background-color:#666;
+/*     text-align:center;
+ */  }
+   .image1{
+      z-index:3;
+   }
+  .image2{
+    left:200px;
+    top:50px;
+    z-index:2;
+  }
+  .image3{
+    left:30px;
+    top:70px;
+    z-index:1;
+    }
+    /*序号越大，元素越靠上，反之越靠下。*/
+    img:hover{
+        position:absolute;
+        z-index:999;
+    }
+    ol{
+      list-style-type:upper-roman;
+    }
+    ul{
+
+list-style-image:url(../images/add.png)    }
+    
+</style>
+</head>
+<body>
+ <!--  <div>
+        <img src="../images/1.jpg" class="image1"/>
+        <img src="../images/2.jpg" class="image2"/>
+        <img src="../images/3.jpg" class="image3"/>
+  </div> -->
+  <ol>
+        <li>陕西省</li>
+        <li>山西省</li>
+        <li>湖南省</li>
+        <li>广西省</li>
+        <li>浙江省</li>
+    
+  </ol>
+  <ul>
+          <li>西安</li>
+          <li>成都</li>
+          <li>重庆</li>
+          <li>保定</li>
+          <li>嘉兴</li>
+          <li>佳木斯</li>
+     
+  </ul>
+</body>
+</html>

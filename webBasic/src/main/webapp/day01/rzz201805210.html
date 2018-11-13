@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"><!-- 声明网页编码类型 -->
+<title>任先生的网页</title>
+</head>
+<body>
+   <!-- 1 标题 (标题之间会自动换行)-->
+   <h1>张昊</h1>
+   <h6>大傻逼</h6>
+   
+   
+   <!-- 2 段落 -->
+   <p>张昊暗恋王姐</p>
+   <p>laigang吃醋</p>
+   <p>
+                                    那是一个 &nbsp; &nbsp; &nbsp;   秋天，<br>
+                                    看着传奇  &nbsp;  &nbsp; &nbsp;  跑偏，<br>
+                                    奔着可敬  &nbsp;    &nbsp; &nbsp; 而去，<br>
+                                    误入<a href = "#cang">老苍  </a>   &nbsp;  &nbsp; &nbsp;  心间  。          <br>              
+        </p>
+   
+   <ol><!-- 生成有序列表 就是文本前面会按照行号排序 -->
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>   
+   </ol>
+   <ul><!-- 生成无序列表 就是文本每行之前都是一个黑点来代替上面生成的序号 -->
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+   </ul>
+   <!-- 嵌套列表 -->
+   <ol>
+       <li>
+                                      黑龙江
+           <ul>
+               <li>哈尔滨</li>
+               <li>牡丹江</li>
+               <li>佳木斯</li>
+           </ul>
+      </li>
+      <li>
+                                    河北
+          <ul>
+              <li>保定</li>
+              <li>廊坊</li>
+              <li>石家庄</li>
+          </ul>
+      </li>
+   </ol>
+   <p>
+      <!-- 图片和网页平级，比如01.jpg -->
+      <img  src="01.jpg">
+      <!-- 图片在网页的下级 ：day_001是day_01下级目录-->
+      <img src="day_001/02.jpg">
+      <!-- 图片在网页的上级:../意思是向上跳一级目录-->
+      <img src="../03.jpg">
+      <img src="../04.jpg">
+   </p>
+   <!-- 普通的用法 -->
+   <p>
+            <a href="http://www.tmooc.cn">达内</a>
+      <a href = "http://www.baidu.com" target="_blank">百度一下</a>
+   </p>
+ <!-- 连接到锚点（即就是连接到本网页的某个位置，比如回到顶部） -->
+ <p>
+          <a name="cang">苍老师</a>是个好老师，不但会讲课还会拍片子
+ </p>
+  <!-- 特殊的锚点 :网页的顶部默认是锚点，没有名字。-->
+  <p>
+      <a href = "#">回到顶部</a>
+  </p>
+   <!-- 普通的表格 -->
+   <table >
+      <caption>NBA巨星</caption>
+      <tr> 
+         <td>科比</td>
+         <td>詹姆斯</td>
+      </tr>
+      <tr> 
+         <td>乔丹</td>
+         <td>韦德</td>
+      </tr>
+   </table>
+   
+    <table >
+      <tr> 
+         <td >科比</td>
+                  <td>詹姆斯</td>
+     
+      </tr>
+      <tr> 
+         <td>乔丹</td>
+         <td>韦德</td>
+      </tr>
+   </table>
+   
+   <!-- 行分组 -->
+   <table border="1" cellspacing="0" width="30%">
+   <caption>账目表</caption>
+      <thead>
+        <tr>
+          <td>编号</td>
+          <td>名称</td>
+          <td>金额</td>
+         </tr>
+      </thead>
+      <tbody style = "color:red">
+        <tr>
+           <td>1</td>
+           <td>鼠标</td>
+           <td>100</td>
+        </tr>
+        <tr>
+           <td>2</td>
+           <td>键盘</td>
+           <td>120</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">合计</td>
+          <td>220</td>
+        </tr>
+      </tfoot>
+   </table>   
+   
+</body>
+</html>

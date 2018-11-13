@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>任先生的网页</title>
+</head>
+<body>
+    <!--1 表单元素 ：用来圈定数据的范围，在此范围内的数据才能提价给服务器，在此之外的提交不了 
+         -->
+        <form action="http://www.tmooc.cn">
+           <!-- 2 表单控件 ： 用来给用户输入数据的框
+                2.1 input元素
+                2.2： 其他元素-->
+           <!-- 文本框 -->
+           <p>
+                                                账号：<input type="text" value="201611555" maxlength="10" readonly/> 
+           </p>
+           <!-- 密码框 -->
+           <p>
+                                               密码：<input type = "password"/>
+           </p>
+           <!-- 单选框
+                单线框的name是组名，同一组的name会互斥，就是只能选一个
+                name:组名，
+                checked：默认选中
+                value：将来讲 -->
+            <p>
+                                               性别：  <input type ="radio" name="sex" checked/>男
+                  <input type = "radio" name="sex" />女
+           </p>
+           <!--多选框  
+           checked:默认选中
+           name,value：将来再说-->
+           <p>
+                                              兴趣：
+             <input type="checkbox"/>养生
+             <input type="checkbox" checked/>美食
+             <input type="checkbox"/>交盆友
+             <input type="checkbox"/>竞技                              
+           </p>
+        </form>
+        
+        <!-- 隐藏框
+         用来向服务器发送不希望被用户看到的数据（有些数据我们程序员要用，但是不需要被用户看到） -->
+         <p>
+                  <input type="hidden" value="love"/><!-- value给定默认值 -->
+         </p>
+         <!-- 文件框：用来传文件的 -->
+         <p>
+                                       头像
+           <input type="file"/>
+         </p>
+         <!-- 按钮 -->
+         <p>
+            <input type="submit" value="注册"/>
+            <input type="reset" value="重置"/>
+            <input type="button" value="演示"/>
+         </p>
+         
+         <!-- 演示label：我们在点勾选框时，有时候勾选框太小，
+                                 就要把后面的字和勾选框绑在一起，，这时候点后面的字和勾选框都可以勾中 -->
+         <p>
+            <input type="checkbox" id="任章哲" />
+            <label for="任章哲">我已阅读并自愿遵守此协议！</label>
+         </p>
+         <!-- 下拉选 -->
+         <p>
+                                      城市：
+           <select>
+           <!-- 默认显示第一个,也可以自己定义，你想默认选中哪一个就在哪个后面加上selected（如下西安） -->
+               <option>请选择</option>
+               <option selected>西安</option>
+               <option>成都</option>
+               <option>北京</option>
+               <option>保定</option>
+           </select>
+         </p>
+         
+         <!-- 文本域 -->
+         <p>
+            个人简介：
+            <textarea rows="8" cols="30">
+               我叫任章哲那个来自陕西渭南，爱打篮球
+            </textarea>
+         </p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

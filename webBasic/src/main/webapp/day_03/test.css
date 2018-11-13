@@ -1,0 +1,94 @@
+*{
+	padding:opx;
+	margin:0px auto;
+}
+div{
+	
+	border:1px solid red;
+}
+.logo{
+	width:960px;
+	height:61px;
+}
+.menu{
+	height:91px;
+}
+.main{
+	width:960px;
+	height:410px;
+	padding-top:10px;
+}
+.cr{
+	width:960px;
+	height:50px;
+}
+.btn{
+	width:910px;
+	height:40px;
+}
+.content{
+	width:910px;
+	height:310px;
+	
+}
+.page{
+	width:910px;
+	height:40px;
+}
+.logo{
+	background: url(../img/top_bg.png) no-repeat center;
+}
+body{
+	background-color:#0EA8D8;
+}
+.menu{
+	background-color:#0488BB;
+}
+.main{
+	background-color:#E8F3F8;
+}
+.logo>p{
+   margin-top:10px;
+   margin-right:10px;
+   float:right;
+   color:#fff;
+}
+.content table{
+	border-collapse:collapse;/*边框合并必须写在table之上*/
+	width:100%;
+}
+.content tbody{
+		background-color:#fff;
+}
+
+.content tbody td{
+	border:1px solid red;
+	text-align:center;
+	height:15px;
+}
+.content thead td{
+	border:1px solid red;
+	height:40px;
+	text-align:center;
+	font-weight:bold;
+}
+.content tbody tr:hover{
+		background-color:#f7f9fd;
+}
+.update{
+	padding-left:15px;
+		background:url(../img/modification.png) no-repeat left ;
+}
+.logo p:hover{
+	cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,215 @@
+/*0.给元素统一设置一些样式*/
+*{/* "*"是通用选择器，能选择一切元素    */
+	padding:0px;
+	margin:0px;
+}
+/*1.给网页分区，并设置每个区域的尺寸*/
+div{
+	border:1px solid red;
+	margin:0px auto;
+}
+.logo{
+	width:960px;
+	height:61px;
+}
+.menu{
+	height:91px;
+}
+.core{
+	height:410px;
+	padding-top:10px;
+	}
+.cr{
+	width:960px;
+	height:50px;
+}
+ .content{
+	width:950px;
+	height:390px;
+	border:5px solid #8ac1db
+} 
+.content>div{
+	width:910px;
+	height:40px;
+}
+.content>.data{
+	height:310px;
+}
+/*设置背景*/
+body{
+	background-color:#0EA8D8;
+}
+.logo{
+	background-image:url(../img/top_bg.png)
+
+}
+.menu{
+	background-color:#0488BB;
+}
+.content{
+	background-color:#E8F3F8;
+}
+.core{/*加上渐变条*/
+	background:url(../img/content_bg.png) repeat-x top;
+}
+/*3 设置文本样式*/
+body{
+	font-family:
+	"微软雅黑","文泉驿正黑","黑体";
+	font-size:14px;
+}
+.logo{
+	text-align:right;
+	line-height:61px;
+}
+.logo>a{
+	margin-right:40px;
+	color:#FFF;
+	text-decoration:none;
+}
+.logo>a{
+	font-weight:bold;
+}
+.cr>p{
+	text-align:center;
+	text-color:#FFF;
+	line-height:25px;
+}
+/*设置表格样式：*/
+.data>table{
+	border:1px solid red;
+			border-collapse:collapse;/*边框合并必须写在table之上*/
+}
+.data td{
+		border:1px solid red;
+}
+.data>table{
+	width:100%;
+	height:
+}
+.data td{
+	text-align:center;
+}
+.data thead tr{
+	height:40px;
+	background-color:#fbedce;
+	font-weight:bold;
+}
+.data tbody tr{
+	height:32px;
+	background-color:#fff;
+}
+.data tbody tr:hover{
+	background-color:#f7f9fd;
+}
+.update{
+	padding-left:15px;
+	background : url(../img/modification.png) no-repeat left;
+	border:0px;
+}
+.logo>img{
+    float:left;
+	}
+.content{
+		position:relative;
+}
+.content>.msg{
+	width:500px;
+	height:80px;
+}
+.content>.msg{
+	 position:absolute;	
+    left:250px;
+    top:100px;
+}
+#x{
+	float:right;
+	margin:5px;
+	/*将鼠标变手型*/
+	cursor:pointer;
+}
+.msg>p{
+	line-height:80px;
+ 	margin-left:38px;
+ }
+ .msg{
+    background:#fdecec url(../img/ok.png) no-repeat 10px 32.5px;
+    border:1px solid #f68a8a;
+ }
+ .menu>ul{
+    width:960px;
+    height:91px;
+    margin:0px auto;
+    border:1px solid yellow;
+    list-style-type:none;
+ }
+ .menu>ul>li{
+    margin:7px 14px;
+    width:68px;
+    height:77px;
+    float:left;
+ }
+ .index{
+    background-image:url(../img/index_out.png)
+ }
+ .index:hover{
+    background-image:url(../img/index_on.png)
+ }
+  .role{
+    background-image:url(../img/role_out.png)
+ }
+ .role:hover{
+    background-image:url(../img/role_on.png)
+ }
+
+ .admin{
+    background-image:url(../img/admin_out.png)
+ }
+ .admin:hover{
+    background-image:url(../img/admin_on.png)
+ }
+  .fee{
+    background-image:url(../img/fee_out.png)
+ }
+ .fee:hover{
+    background-image:url(../img/fee_on.png)
+ }
+  .account{
+    background-image:url(../img/account_out.png)
+ }
+ .account:hover{
+    background-image:url(../img/account_on.png)
+ }
+  .service{
+    background-image:url(../img/service_out.png)
+ }
+ .service:hover{
+    background-image:url(../img/service_on.png)
+ }
+  .bill{
+    background-image:url(../img/bill_out.png)
+ }
+ .bill:hover{
+    background-image:url(../img/bill_on.png)
+ }
+  .report{
+    background-image:url(../img/report_out.png)
+ }
+ .report:hover{
+    background-image:url(../img/report_on.png)
+ }
+  .information{
+    background-image:url(../img/information_out.png)
+ }
+ .information:hover{
+    background-image:url(../img/information_on.png)
+ }
+  .password{
+    background-image:url(../img/password_out.png)
+ }
+ .password:hover{
+    background-image:url(../img/password_on.png)
+ }
+ div,.menu>ul{
+   border:0px;
+}

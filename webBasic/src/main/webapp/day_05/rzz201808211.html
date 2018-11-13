@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style >
+   p{
+      width:120px;
+      height:30px;
+      border:1px solid red;
+   }
+</style>
+<script >
+  var id;
+  function f3(){
+	  var data = new Date();
+	  console.log(data.toLocaleTimeString());
+	  var time = document.getElementById("pp");
+	  var result=data.toLocaleTimeString();
+	  time.innerHTML=result;
+  }
+  function f(){
+	  id = setInterval(f3,1000);
+  }
+  function f4(){
+	  clearInterval(id);
+	  var p =document.getElementById("pp");
+	  p.innerHTML=" ";
+  }
+  function f5(){
+	  var b = confirm("您确定要离开本页么？");
+	  if(b){
+		  location.href="http://www.baidu.com/";
+	  }
+  }
+</script>
+</head>
+<body>
+   <input type="button" value="开始" id="start" onclick="f();">
+   <input type="button" value="停止" id="end" onclick="f4();">
+   <p id="pp"></p>
+   <input type="button" value="百度一下" id="baidu" onclick="f5()">
+</body>
+</html>

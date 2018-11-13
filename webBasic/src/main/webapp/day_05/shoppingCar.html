@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>购物车案例</title>
+<style>
+  table,th{
+       border:1px solid red;
+  }
+  table{
+      border-collapse:collapse;
+   }
+   tr{
+      height:30px;
+   }
+   th{
+     width:100px;
+   }
+   .h{
+      text-align:center;
+   }
+   .calign{
+      margin:0 auto;
+   }
+   div{
+      height:30px;
+   }
+</style>
+<script>
+   function inshop(e){
+		
+	   
+	   
+        var efather=e.parentNode;
+        var egrandfather=efather.parentNode;
+        var eborther=egrandfather.getElementsByTagName("th");
+        /*console.log(eborther[0]);
+        console.log(eborther[1]);//得到商品价格
+	    */
+	    var newTr = document.createElement("tr");
+	    newTr.innerHTML='<th>'+eborther[0].innerHTML+'</th>'+
+                     '<th>'+eborther[1].innerHTML+'</th>'+
+                     '<th><input type="button" value="-" onclick="decrease(this)"/>'+'<input type="text" size="2" value="1"/>'+'<input type="button" value="+" onclick="increase(this)"/></th>'+
+                     '<th>'+eborther[1].innerHTML+'</th>'+
+                     '<th>'+'<input type="button" value="删除" onclick="delete1(this)"/>'+'</th>';
+	    Ttbody.appendChild(newTr);
+	
+   }
+   function decrease(e){
+	   //先将数量加一
+       var efather=e.parentNode;
+       var eborther = efather.getElementsByTagName("input");
+       eborther[1].value--;
+       //总金额变化
+       var egrandfather=efather.parentNode;
+       var euncles = egrandfather.getElementsByTagName("th");
+       euncles[3].innerHTML=eborther[1].value*euncles[1].innerHTML;
+   }
+   function increase(e){
+	   var efather=e.parentNode;
+       var eborther = efather.getElementsByTagName("input");
+       eborther[1].value++;
+       
+     //总金额变化
+       var egrandfather=efather.parentNode;
+       var euncles = egrandfather.getElementsByTagName("th");
+       euncles[3].innerHTML=eborther[1].value*euncles[1].innerHTML;
+   }
+   function delete1(e){
+	   var efather = e.parentNode;
+	   var egrandfather= efather.parentNode;
+	   var eggrandfather=egrandfather.parentNode;
+	   eggrandfather.removeChild(egrandfather);
+   }
+</script>
+</head>
+<body>
+   <h1 class="h">大降价</h1>
+   <table class="calign">
+      <thead >
+        <tr >
+          <th>商品</th>
+          <th>单价(元)</th>
+          <th>颜色</th>
+          <th>库存</th>
+          <th>好评率</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <th>罗技鼠标</th>
+            <th>80</th>
+            <th>黑色</th>
+            <th>345</th>
+            <th>0.98</th>
+            <th><input type="button" value="加入购物车" onclick="inshop(this)"/></th>
+         </tr>
+         <tr>
+            <th>微软键盘</th>
+            <th>90</th>
+            <th>黑色</th>
+            <th>445</th>
+            <th>0.97</th>
+            <th><input type="button" value="加入购物车" onclick="inshop(this)"/></th>
+         </tr><tr>
+            <th>vivo手机壳</th>
+            <th>180</th>
+            <th>粉色</th>
+            <th>545</th>
+            <th>0.96</th>
+            <th><input type="button" value="加入购物车" onclick="inshop(this)" /></th>
+         </tr><tr>
+            <th>蓝牙耳机</th>
+            <th>800</th>
+            <th>红色</th>
+            <th>645</th>
+            <th>0.95</th>
+            <th><input type="button" value="加入购物车" onclick="inshop(this)"/></th>
+         </tr>
+         <tr>
+            <th>金士顿U盘</th>
+            <th>820</th>
+            <th>花色</th>
+            <th>745</th>
+            <th>0.94</th>
+            <th><input type="button" value="加入购物车"/ onclick="inshop(this)"></th>
+         </tr>
+      </tbody>
+   </table>
+   <div>
+   
+   </div>
+   <h1 class="h">购物车</h1>
+   <table class="calign">
+      <thead>
+         <tr>
+           <th>商品</th>
+           <th>单价</th>
+           <th>数量</th>
+           <th>金额</th>
+           <th>删除</th>
+         </tr>
+      </thead>
+      <tbody id="Ttbody">
+          
+      </tbody>
+      <tfoot>
+         <tr>
+           <th colspan="3">总计</th>
+           
+           <th></th>
+           <th></th>
+         </tr>
+      </tfoot>
+   </table>
+</body>
+</html>

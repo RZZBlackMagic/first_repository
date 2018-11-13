@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+   div{
+       width:120px;
+       height:100px;
+   }
+   p{
+      width:80px;
+      height:18px;
+      margin:0px;
+      border:1px solid red;
+   }
+   p,input{
+       float:left;     
+       margin:2px;
+   }
+</style>
+<script>
+    window.onload=function(){
+        var div = document.getElementById("div");
+        div.onclick=function(e){
+        	var dataThings = e.srcElement||e.targer;
+        	if(dataThings.nodeName=="INPUT") {
+				var p = document.getElementById("p");
+				if(dataThings.id=="clear"){
+					//清空操作
+					p.innerHTML="";
+				}else if(dataThings.id=="="){
+					//计算操作
+					p.innerHTML=eval(p.innerHTML);
+				}else{
+					//将按钮的value放进p中
+					p.innerHTML=p.innerHTML+dataThings.value;
+				}
+				
+			} else {
+				console.log("操作有误！");
+			}
+		}
+	}
+</script>
+</head>
+<body>
+   <div id="div">
+       <p id="p"></p>
+       <input id="clear" type="button" value="c"/>
+       <input type="button" value="7"/>
+       <input type="button" value="8"/>
+       <input type="button" value="9"/>
+       <input type="button" value="/"/>
+       <input type="button" value="4"/>
+       <input type="button" value="5"/>
+       <input type="button" value="6"/>
+       <input type="button" value="*"/>
+       <input type="button" value="1"/>
+       <input type="button" value="2"/>
+       <input type="button" value="3"/>
+       <input type="button" value="-"/>
+       <input type="button" value="0"/>
+       <input type="button" value="."/>
+       <input id="=" type="button" value="="/>
+       <input type="button" value="+"/>
+   </div>
+</body>
+</html>

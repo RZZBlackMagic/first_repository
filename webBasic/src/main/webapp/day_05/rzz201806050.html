@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+   var ran = parseInt(Math.random()*100);
+   //在页面加载时生成随机数
+   function guess(){
+	   var n = document.getElementById("num").value;
+	   var span = document.getElementById("result");
+	   if(isNaN(n)){
+		   //bu是数字
+		   span.innerHTML = "请重新输入！"
+	   }else{
+		   if(n>ran){
+			   span.innerHTML = "大了"
+		   }else if(n<ran){
+			   span.innerHTML = "小了"
+			   
+		   }else{
+			   span.innerHTML = "等于"
+		   }
+	   }
+   }
+</script>
+</head>
+<body>
+   <input type="text" id="num"/>
+   <input type="button" value="猜" onclick="guess()"/>
+   <span id="result"></span>
+</body>
+</html>

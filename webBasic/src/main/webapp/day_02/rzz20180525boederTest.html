@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>牛逼的网页</title>
+<style>
+    /*1 给单个边加边框*/
+    h1{
+      border-left:10px solid red;
+    }
+    /*给四个边加相同的边框 (px像素，solid：实线)*/
+    p{
+       border:1px dashed/*虚线*/ blue;
+    }
+</style>
+<style>
+/*内容溢出时的处理方式(只有固定高度时，才可能出现内容溢出的问题，默认的border是不会溢出的，但是有些时候，我们必须固定的宽和高，所以就存在溢出问题)*/
+   p{
+     width:200px;
+     height:50px;
+     overflow:auto;
+   }
+
+</style>
+</head>
+<body>
+     <h1>任章哲</h1>
+     
+     <p>
+        我叫任章哲，来自陕西渭南，爱好打篮球，特别不爱学习！他是Java教学改革的先驱，我马上过去取全啊。我同时也是一名七星爱好者，它气的路程超过了2000公里。你说棒不棒，张昊是傻逼傻逼傻逼大傻逼傻逼傻逼的撒和氏璧
+     </p>
+</body>
+</html>

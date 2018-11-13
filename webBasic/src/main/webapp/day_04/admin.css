@@ -1,0 +1,187 @@
+*{
+	padding:0px;
+	margin:0px auto;
+	background-color:#0EA8D8;
+}
+.logo{
+	width:960px;
+	height:61px;
+	background-image:url(../img/top_bg.png);
+}
+.logo p{
+	float:right;
+	margin-right:20px;
+	margin-top:20px;
+	color:#fff;
+}
+.logo a:hover{
+	cursor:pointer;
+}
+.menu ul{
+	height:91px;
+	width:960px;
+	    list-style-type:none;
+	    	background-color:#0488BB;
+	    
+}
+.menu{
+		background-color:#0488BB;
+	
+}
+.menu li{
+	width:68px;
+	height:77px;
+	margin:7px 14px;
+	padding:0px;
+}
+.index{
+    background-image:url(../img/index_out.png);
+	}
+.index:hover{
+	background-image:url(../img/index_on.png);
+}
+.role{
+    background-image:url(../img/role_out.png);
+	}
+.role:hover{
+	background-image:url(../img/role_on.png);
+}
+.admin{
+    background-image:url(../img/admin_out.png);
+	}
+.admin:hover{
+	background-image:url(../img/admin_on.png);
+}
+.fee{
+    background-image:url(../img/fee_out.png);
+	}
+.fee:hover{
+	background-image:url(../img/fee_on.png);
+}
+.account{
+    background-image:url(../img/account_out.png);
+	}
+.account:hover{
+	background-image:url(../img/account_on.png);
+}
+.service{
+    background-image:url(../img/service_out.png);
+	}
+.service:hover{
+	background-image:url(../img/service_on.png);
+}
+.bill{
+    background-image:url(../img/bill_out.png);
+	}
+.bill:hover{
+	background-image:url(../img/bill_on.png);
+}
+.report{
+    background-image:url(../img/report_out.png);
+	}
+.report:hover{
+	background-image:url(../img/report_on.png);
+}
+.information{
+    background-image:url(../img/information_out.png);
+	}
+.information:hover{
+	background-image:url(../img/information_on.png);
+}
+.password{
+    background-image:url(../img/password_out.png);
+	}
+.password:hover{
+	background-image:url(../img/password_on.png);
+}
+.menu li{
+	float:left;
+}
+.main{
+	padding-top:10px;
+	height:410px;
+	background-color:#fff;
+			background:url(../img/content_bg.png) repeat-x top;
+}
+
+.content{
+	background-color:#E8F3F8;
+	width:950px;
+	height:390px;
+	border:5px solid #8ac1db
+}
+.btn{
+	padding:0;
+	margin:0 auto;
+	width:910px;
+	height:40px;
+	background-color:#E8F3F8;
+	
+}
+.data{
+	width:910px;
+	height:310px;
+	background-color:#E8F3F8;
+	
+}
+
+.data table{
+	width:100%;
+	heidht:200px;
+    border-collapse:collapse;/*边框合并必须写在table之上*/
+    text-align:center;
+}
+.data table td{
+	border:1px solid red;
+}
+thead td{
+	height:40px;
+	background-color:#fbedce;
+	font-weight:bold;
+}
+tbody td{
+	height:30px;
+	background-color:#fff;
+}
+.update{
+	padding-left:20px;
+	background:#fff url(../img/modification.png) no-repeat left;
+}
+.cr{
+	width:960px;
+	height:50px;
+}
+.cr p{
+	text-align:center;
+}
+.info{
+	width:400px;
+	height:100px;
+	padding-left:20px;
+	position:absolute;
+	bottom:260px;
+	left:500px;
+    border:1px solid #f68a8a;
+}
+.info,span{
+	    background-color:#fdecec;
+}
+body{
+	position:relative;
+}
+#close{
+	float:right;
+	margin-top:10px;
+	margin-right:10px;
+}
+.info span{
+		line-height:100px;
+}
+body{
+	font-family:
+	"微软雅黑","文泉驿正黑","黑体";
+	font-size:14px;
+}
+#close:hover{
+	cursor:pointer;
+}

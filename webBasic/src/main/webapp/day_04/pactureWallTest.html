@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body{
+   background-color:#066;
+}
+ul{
+  border:1px solid red;
+     width:780px;
+     margin:20px auto;
+  list-style-type:none;
+  /*列表前有四十的内边距，因为有顺序号*/
+  padding:0 ;
+}
+ li{
+  width:218px;
+  padding:10px;
+  margin:10px;
+  float:left;
+     border:1px solid red;
+    background-color:#FFF;
+ }
+ #p1{
+    clear:left;
+  }
+ P{
+   text-align:center;
+ }
+ /*采用相对定位实现抖动的效果*/
+ li:hover{
+        position:relative;
+    left:2px;
+    bottom:2px;
+ }
+</style>   
+</head>
+<body>
+    <ul>
+              <li id="1">
+                <img src="../images/01.jpg"/>
+                <p>哈哈</p>
+              </li>
+              <li id="2">
+               <img src="../images/02.jpg"/>
+                <p>呵呵</p>
+              </li>
+              <li id="3">
+               <img src="../images/03.jpg"/>
+                <p>嘻嘻</p>
+              </li>
+              <li id="4">
+               <img src="../images/04.jpg"/>
+                <p>吼吼</p>
+              </li>
+              <li id="5">
+               <img src="../images/05.jpg"/>
+                <p>咯咯</p>
+              </li>
+              <li id="6">
+               <img src="../images/06.jpg"/>
+                <p>啊啊</p>
+              </li>
+       
+    </ul>
+    <div id="p1"></div>
+    <p >任先生做的图片墙</p>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>牛逼的网页</title>
+<style>
+ p{
+  width:100px;
+  height:100px;
+  border:1px solid red;
+} 
+/*1 四个边设置相同的方式*/
+#d1{
+  padding:20px;
+  margin:40px;
+}
+/*2 四个边设置不同的边距 */
+#d2{/*顺序：上 右 下 左*/
+  padding:10px 20px 30px 40px;
+  margin: 40px 30px 20px 10px;
+}
+/*3 单个边设置边距(left,right,top,bottom)*/
+#d3{
+   padding-left:30px;
+   margin-bottom:30px;
+}
+/*4 对边设置边距*/
+#d4{
+   padding:20px 40px;
+   /*20px:上下的边距  40px：左右的边距*/
+   margin:20px 40px;
+}
+/*5 对边设置外边距的特殊用法：
+    当左右值为auto时，该元素会水平居中*/
+    #d5{
+     margin:20px auto;     
+    }
+</style>
+</head>
+<body>
+          <p id="d0">d0</p>
+          <p id="d1">d1</p>
+          <p id="d2">d2</p>
+          <p id="d3">d3</p>
+          <p id="d4">d4</p>
+          <p id="d5">d5</p>
+</body>
+</html>

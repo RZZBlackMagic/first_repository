@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>小小计算器</title>
+<script>
+  function cal(){
+	  //获得输入框对象
+	  var input =document.getElementById("text1");
+	  //获得框中的值
+	  var value = input.value;
+	  input.value=eval(value);
+	  
+  }
+</script>
+</head>
+<body>
+   <input type="text" id="text1">
+   <input type="button" value="计算" onclick="cal()">
+</body>
+</html>

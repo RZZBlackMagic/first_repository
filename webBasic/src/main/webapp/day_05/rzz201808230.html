@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+   var cities;
+   window.onload=function(){
+	   cities=[
+			   ["西安","安康","榆林"],
+			   ["成都","绵阳","德阳"],
+			   ["保定","廊坊","石家庄"]
+	   ]
+   }
+   function change(){
+	    console.log(1);
+	    var value=document.getElementById("p1").value;
+	    var city=cities[value];//得到所选省份的城市。
+	    console.log(city.length)
+	    
+	    //删除所选省得城市
+	    var c = document.getElementById("c");
+	    var ooption=c.getElementsByTagName("option");
+        var length = ooption.length;
+        console.log(ooption);
+        console.log(length);
+        for (i=length-1;i>=0;i--){
+         	c.removeChild(ooption[i]);
+       }
+	    //添加选中省份的城市
+	    for(i=0;i<city.length;i++){
+	    	var option = document.createElement("option");
+	    	option.innerHTML=city[i];
+	    	var c = document.getElementById("c");
+	    	c.appendChild(option);
+	    }
+   }
+</script>
+
+</head>
+<body>
+   <select id="p1" onchange="change();">
+      <option>请选择</option>
+      <option value="0">陕西省</option>
+      <option value="1">四川省</option>
+      <option value="2">河北省</option>
+   </select>
+   <select id="c">
+      <option>请选择</option>
+      
+   </select>
+</body>
+</html>

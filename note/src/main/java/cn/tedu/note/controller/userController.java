@@ -1,0 +1,65 @@
+package cn.tedu.note.controller;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import cn.tedu.note.entity.User;
+import cn.tedu.note.service.PasswordException;
+import cn.tedu.note.service.UserNotFoundException;
+import cn.tedu.note.service.UserService;
+import cn.tedu.note.util.JsonResult;
+
+@Controller
+@RequestMapping()
+public class userController extends AbatractController{
+
+	@Resource(name="userService")
+	private UserService useService;
+	@RequestMapping("/login.do")
+	@ResponseBody//json注解:就是返回一个json
+	public Object login(String name,String password){
+			User user = useService.login(name, password);
+			return new JsonResult(user);
+	}
+	/*@ExceptionHandler(Exception.class)
+	@ResponseBody//json注释：就是返回一个json对象
+	public Object handlerException(Exception e){
+		e.printStackTrace();
+		return new JsonResult(e);
+	}*/
+
+	//用户名异常
+	@ExceptionHandler(UserNotFoundException.class)
+	@ResponseBody
+	public Object handleUserNotFound(UserNotFoundException e){
+		return new JsonResult(2,e);
+	}
+	//密码错误
+	@ExceptionHandler(PasswordException.class)
+	@ResponseBody
+	public Object handlePasswordException(PasswordException e){
+		e.printStackTrace();
+		return new JsonResult(3,e);
+	}
+	@ExceptionHandler(PasswordException.class)
+	@ResponseBody
+	public Object Exception(PasswordException e){
+		e.printStackTrace();
+		return new JsonResult(4,e);
+	}
+
+	@RequestMapping("/regist.do")
+	@ResponseBody
+	public JsonResult regist(String name,String nick,String password,String confirm){
+		User user = useService.regist(name, nick, password, confirm);
+		return new JsonResult(user);
+	}
+
+	
+	
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" 
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+	<!-- 指定映射文件的位置 -->
+	<mapper namespace="cn.tedu.note.dao.NotebookDao">
+	   <select id="findNotebooksByUser" parameterType="string" resultType="map">
+	       select 
+	         cn_notebook_id,cn_notebook_name
+	       from 
+	         cn_notebook
+	       where
+	         cn_user_id=#{id}
+	   </select>
+	    
+	   <select id="findNotesByNotebookId" parameterType="string" resultType="cn.tedu.note.entity.Notebook">
+	      select 
+              cn_notebook_id,
+	          cn_user_id,
+	          cn_notebook_type_id,
+	          cn_notebook_name,
+	          cn_notebook_desc,
+	          cn_notebook_createtime
+	      from 
+	          cn_notebook
+	      where
+	          cn_notebook_id=#{id}
+	   </select>
+	    
+	</mapper>

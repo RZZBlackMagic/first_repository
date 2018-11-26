@@ -1,0 +1,21 @@
+package com.ideal.service.impl;
+
+import com.ideal.mapper.CommodityMapper;
+import com.ideal.pojo.Commodity;
+import com.ideal.pojo.CommodityExample;
+import com.ideal.service.CommodityService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class CommodityServiceImpl implements CommodityService {
+
+    @Autowired
+    private CommodityMapper commodityMapper;
+
+    @Override
+    public Commodity getCommodityById(long commodityId) {
+        Commodity commodity = commodityMapper.selectByPrimaryKey(commodityId);
+        return commodity;
+    }
+}

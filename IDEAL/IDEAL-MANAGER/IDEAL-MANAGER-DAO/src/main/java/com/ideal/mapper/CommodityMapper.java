@@ -1,0 +1,23 @@
+package com.ideal.mapper;
+
+import com.ideal.pojo.Commodity;
+import com.ideal.pojo.CommodityExample;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+
+public interface CommodityMapper {
+    int countByExample(CommodityExample example);
+
+    int deleteByExample(CommodityExample example);
+
+    int insert(Commodity record);
+
+    int insertSelective(Commodity record);
+
+    List<Commodity> selectByExample(CommodityExample example);
+
+    int updateByExampleSelective(@Param("record") Commodity record, @Param("example") CommodityExample example);
+
+    int updateByExample(@Param("record") Commodity record, @Param("example") CommodityExample example);
+}

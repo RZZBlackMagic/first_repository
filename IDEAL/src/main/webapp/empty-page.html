@@ -13,7 +13,7 @@
 	<!-- MAIN CSS -->
 	<link rel="stylesheet" href="assets/css/main.css">
 	<!-- BOOTSTRAP TABLE-->
-	<link rel="stylesheet" href="assets/vendor/dataTables/bootstrap-table.css">
+	<link rel="stylesheet" href="assets/vendor/bootstrap-table/bootstrap-table.css">
 	<!-- FOR CUSTOM CSS -->
     <!-- ZTREE CSS -->
     <link rel="stylesheet" href="assets/ztree/lib/zTree/v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
@@ -27,6 +27,11 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<!-- bootstarpeditable相关js -->
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
+ 
 </head>
 
 <body>
@@ -137,18 +142,85 @@
 					<div class="panel panel-headline">
 						<div class="panel-body">
 							<div class="row">
-								<div class="col-lg-12">
+								<div class="col-lg-12" id="showTable">
 									<div id="toolbar">
-										<a href="/manager/commodity-add"><button id="add-good" class="btn btn-default" type="button" style="float: left;border-top-right-radius: 0%;border-bottom-right-radius: 0%;">
+										<a><button onclick="clickPlus()" id="add-good" class="btn btn-default" type="button" style="float: left;border-top-right-radius: 0%;border-bottom-right-radius: 0%;">
 											<span class="fa fa-plus" ></span>
 										</button></a>
-										<button id="remove-good" class="btn btn-default" type="button" style="margin-right: 5px;float: left;border-top-left-radius: 0%;border-bottom-left-radius: 0%;border-left:0;">
+										<button onclick="clickMinus()" id="remove-good" class="btn btn-default" type="button" style="margin-right: 5px;float: left;border-top-left-radius: 0%;border-bottom-left-radius: 0%;border-left:0;">
 											<span class="fa fa-minus"></span>
 										</button>
 									</div>
 									<table id="table" data-buttons-align="right"></table>
 								</div>
+								
+								<div class="col-lg-9" id="showForm" style="display:none">
+								<form class="form-horizontal" role="form" onsubmit="clickSubmit()" id="form">
+									<legend style="margin-bottom: 30px;">添加商品</legend>
+                                   <ul>
+                                    <li>
+									<div class="form-group" style="margin-bottom: 20px">
+										<label for="name" class="col-lg-3 control-label">类别</label>
+										<div class="col-lg-10">
+											<input type="text" class="form-control" name="name" placeholder="请输入商品所属类别">
+										</div>
+									</div>
+									</li>
+									<li>
+									<div class="form-group" style="margin-bottom: 20px">
+										<label for="title" class="col-lg-3 control-label">名字</label>
+										<div class="col-lg-10">
+											<input type="text" class="form-control" name="title" placeholder="请输入商品名称">
+										</div>
+									</div>
+									</li>
+									<li>
+									<div class="form-group" style="margin-bottom: 20px">
+										<label for="price" class="col-lg-3 control-label">价格</label>
+										<div class="col-lg-10">
+											<input type="text" class="form-control" name="price" placeholder="请输入商品价格">
+										</div>
+									</div>
+									</li>
+									<li>
+									<div class="form-group" style="margin-bottom: 20px">
+										<label for="quantity" class="col-lg-3 control-label">数量</label>
+										<div class="col-lg-10">
+											<input type="text" class="form-control" name="quantity" placeholder="请输入商品数量">
+										</div>
+									</div>
+									</li>
+									<li>
+									<div class="form-group" style="margin-bottom: 20px">
+										<label for="hotpoint" class="col-lg-3 control-label">卖点</label>
+										<div class="col-lg-10">
+											<input type="text" class="form-control" name="hotpoint" placeholder="请输入商品卖点">
+										</div>
+									</div>
+									</li>
+									<li>
+									<div class="form-group" style="margin-bottom: 20px">
+										<label for="status" class="col-lg-3 control-label">状态</label>
+										<div class="col-lg-10">
+											<input type="text" class="form-control" name="status" placeholder="请输入商品状态">
+										</div>
+									</div>
+									</li>
+									
+									<li>
+									<div class="form-group">
+										<div class="col-lg-offset-2 col-lg-4" >
+											<button type="button" class="btn btn-success" onclick="clickSubmit()">确认</button>
+										</div>
+										<div class="col-lg-4" style="margin-left: 6px;">
+											<button type="reset" class="btn btn-default" onclick="clickExit()">返回</button>
+										</div>
+									</div>
+									</li>
+									</ul>
+								</form>
 							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -169,14 +241,20 @@
 	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 	<script src="assets/scripts/klorofil-common.js"></script>
-	<script src="assets/vendor/dataTables/bootstrap-table.js"></script>
-	<script src="assets/vendor/dataTables/bootstrap-table-zh-CN.js"></script>
-	<script src="assets/vendor/custom-scripts.js"></script>
+	<script src="assets/vendor/bootstrap-table/bootstrap-table.js"></script>
+	<script src="assets/vendor/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+	<script src="assets/scripts/custom-scripts.js"></script>
     <script type="text/javascript" src="assets/ztree/lib/zTree/v3/js/jquery.ztree.all-3.5.min.js"></script>
     <script type="text/javascript" src="assets/ztree/lib/zTree/v3/js/jquery.ztree.core-3.5.js"></script>
     <script type="text/javascript" src="assets/ztree/lib/zTree/v3/js/jquery.ztree.excheck-3.5.js"></script>
-	
+	<!-- bootstrap-editable相关js -->
     
+<!--     <script src="js/jquery-1.9.1.min.js"></script>
+ -->    <script src="assets/vendor/bootstrap3-editable/js/bootstrap-editable.js"></script>
+    <script src="assets/vendor/bootstrap-table/bootstrap-table.js"></script>
+    <script src="assets/vendor/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+    <script src="assets/vendor/bootstrap3-editable/js/bootstrap-table-editable.js"></script>
+
 <!--请在下方写此页面业务相关的脚本-->
 
 	<script>
@@ -278,16 +356,66 @@
     	 console.log(cid);
          //加载table
             $("#table").bootstrapTable('destroy');
-            initTable(cid);
+            initTable('/IDEAL/commodity/editCommodity.do',cid);
 
 
         }
+        
+        /* $('#add-good').click(clickPlus);
+        $('#remove-good').click(clickMinus); */
         });
 
-
-
-
-        function initTable(cid) {
+        //添加商品
+        function clickPlus(){
+        	console.log('addGood');
+        	$("#showTable").hide();
+            $("#showForm").show();
+            
+        }
+        //移除商品
+        function clickMinus(){
+        	//console.log('removeGood');
+        	var title = '';
+        	 $("input[name='btSelectItem']:checked").each(function() { // 遍历选中的checkbox
+        		 
+                n = $(this).parents("tr").index();  // 获取checkbox所在行的顺序
+                //console.log(n);
+                newtitle = $(this).parents("tr").find('td:eq(1)').find('a[data-name="title"]').html();
+                title = title + newtitle+',';
+               // $("table#test_table").find("tr:eq("+n+")").remove();
+            }); 
+            console.log(title);
+            data={
+            		'title':title
+            };
+            $.post('/IDEAL/commodity/removeGood.do',data,function(){
+            	
+            });
+            
+        }
+        function clickExit(){
+        	$("#showTable").show();
+            $("#showForm").hide();
+        }
+        function clickSubmit(){
+        	console.log($("#form").serialize());
+    		//$("#cid").attr("placeholder", $("#table").data("category_id"));
+             $.ajax({
+                url:'/IDEAL/commodity/addGood.do',
+                data:$("#form").serialize(),
+                dataType:'json',
+                processData: false,
+                type:'get',
+                success:function(data){
+                   
+                },
+                error:function(XMLHttpRequest, textStatus, errorThrown) {
+                    console.log('fail');
+                }}); 
+        }
+        //初始化table
+        function initTable( edit_url,cid) {
+            $(table).data("category_id",cid);
             $("#table").bootstrapTable({
                 url: '/IDEAL/category/table.do',       //请求后台的URL（*）
                 method: 'get',                      //请求方式（*）
@@ -320,19 +448,46 @@
                     },
                     {
                         field: 'title',
-                        title: '商品名称'
+                        title: '商品名称',
+                        editable: {
+                            type: 'text',
+                            title: '商品名称',
+                            placement: 'right',
+                            emptytext: "空文本",
+                            validate: function(v) {
+                                if (!v) return '用户名不能为空';
+                            }
+                        }
                     },
                     {
                         field: 'price',
-                        title: '价格'
+                        title: '价格',
+                        editable: {
+                            type: 'text',
+                            title: '修改价格',
+                            placement: 'right',
+                            emptytext: "空文本",
+                            validate: function(v) {
+                                if (!v) return '价格不能为空';
+                            }
+                        }
                     },
                     {
                         field: 'quantity',
-                        title: '数量'
+                        title: '数量',
+                        editable: {
+                            type: 'text',
+                            title: '修改数量',
+                            placement: 'right',
+                            emptytext: "空文本",
+                            validate: function(v) {
+                                if (!v) return '数量不能为空';
+                            }
+                        }
                     },
                     {
                         field: 'created',
-                        title: '创建时间'
+                        title: '创建时间',
                     },
                     {
                         field: 'updated',
@@ -349,7 +504,60 @@
                         }
                     }
 
-                ]
+                ],
+                onEditableSave: function ( field, row ) {
+                	
+                    $.ajax({
+                        type: "post",
+                        url: edit_url,
+                        data:{
+                    		'bid':row.bid,
+                    		'category':row.category,
+                    		'created':row.created,
+                    		'hotpoint':row.hotpoint,
+                    		'id':row.id,
+                    		'image':row.image,
+                    		'position':row.position,
+                    		'price':row.price,
+                    		'quantity':row.quantity,
+                    		'status':row.status,
+                    		'title':row.title,
+                    		'updated':row.updated
+                    	},
+                        dataType: 'JSON',
+                        success: function (result) {
+                        	console.log(result);
+                            /* $("#table").bootstrapTable('refresh',cid);
+                            if (status == "success") {
+                                alert('提交数据成功');
+                            } */
+                        },
+                        error: function () {
+                        	date = {
+                        		'bid':row.bid,
+                        		'category':row.category,
+                        		'created':row.created,
+                        		'hotpoint':row.hotpoint,
+                        		'id':row.id,
+                        		'image':row.image,
+                        		'position':row.position,
+                        		'price':row.price,
+                        		'quantity':row.quantity,
+                        		'status':row.status,
+                        		'title':row.title,
+                        		'updated':row.updated
+                        	}
+                            console.log('编辑失败');
+                            console.log(row);
+                            console.log(date);
+                            console.log(field);
+                        },
+                        complete: function () {
+
+                        }
+
+                    });
+                }
             });
         }
     </script>

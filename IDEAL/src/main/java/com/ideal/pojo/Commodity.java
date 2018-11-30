@@ -3,19 +3,19 @@ package com.ideal.pojo;
 import java.util.Date;
 
 public class Commodity {
-    private Long id;
+	private Long id;
 
-    private String title;
+     private String title;
 
-    private String hotpoint;
+     private String hotpoint;
 
-    private Long price;
+     private Long price;
 
-    private Integer quantity;
+     private Integer quantity;
 
-    private Long bid;
+     private Long bid;
 
-    private String image;
+     private String image;
 
     private String position;
 

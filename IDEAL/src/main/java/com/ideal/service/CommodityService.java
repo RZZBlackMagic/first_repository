@@ -12,5 +12,7 @@ public interface CommodityService {
     Commodity getCommodityById(long commodityId);
     List<ZtreeNodesEntity> getZtreeJsonNodesService();
     CommdoityTableJsonResult getProductList(String category_id, int limit, int page);
-
+    String EditCommodity(Commodity com);
+    String addGood(String name,String title ,String price,String quantity,String hitpoint, String status);
+    String removeGood(String title);
 }

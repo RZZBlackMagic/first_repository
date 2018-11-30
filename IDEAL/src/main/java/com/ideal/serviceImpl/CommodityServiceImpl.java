@@ -12,6 +12,7 @@ import com.ideal.service.CommodityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,9 +60,6 @@ public class CommodityServiceImpl implements CommodityService {
 	        CommodityZtreeJsonResult commodityZtreeJsonResult = new CommodityZtreeJsonResult(ztreeNodesList);
 	        return ztreeNodesList;		
 	}
-
-
-
 
 	public CommdoityTableJsonResult getProductList(String category_id, int limit, int page) {
 		System.out.println(category_id);
@@ -113,18 +111,90 @@ public class CommodityServiceImpl implements CommodityService {
                         allSelectedProductList.add(commodityList.get(m));
                     }
                 }
-                
-                
-               
             }
         }
         //取结果
-        
         PageInfo<Commodity> pageInfo = new PageInfo<Commodity>(allSelectedProductList);
         CommdoityTableJsonResult commdoityTableJsonResult = new CommdoityTableJsonResult();
         commdoityTableJsonResult.setRows(allSelectedProductList);
         commdoityTableJsonResult.setTotal(pageInfo.getTotal());
         System.out.println(1);
         return commdoityTableJsonResult;		
+	}
+	
+
+	public String EditCommodity(Commodity com) {
+		com.setUpdated(new Date(System.currentTimeMillis()));
+		CommodityExample ce = new CommodityExample();
+        CommodityExample.Criteria cc = ce.createCriteria();
+        cc.andIdEqualTo(com.getId());
+        int row = commodityMapper.updateByExample(com, ce);
+        String message;
+        if(row!=0){
+        	 message = "修改成功";
+        }else{
+        	 message = "修改失败";
+        }
+        return message;
+	}
+
+
+
+
+	public String addGood(String name, String title, String price, String quantity, String hitpoint, String status) {
+		Commodity com = new Commodity();
+		
+		return null;
+	}
+
+
+
+
+	public String removeGood(String title) {
+		//解析字符串
+		String flag = "";
+        List<String> titleList = new ArrayList<String>();
+        for(int i=0;i<title.length();i++){
+        	char a = title.charAt(i);
+        	char b = ',';
+            if(b==a){
+                //System.out.println("id="+flag);
+            	titleList.add(flag);
+                flag="";
+                		
+            }else{
+                flag=flag+title.charAt(i);
+            }
+        }
+        String success = "删除成功" ;
+        String error = "";
+        int flag1 = 0;//判断删除是否成功
+        for(int i=0;i<titleList.size();i++){
+            //在商品表Commodity表里面删除
+        	CommodityExample ce = new CommodityExample();
+            CommodityExample.Criteria cc = ce.createCriteria();
+            cc.andTitleEqualTo(titleList.get(i));
+            int row = commodityMapper.deleteByExample(ce);
+            //在关系表Real_COmmodity_Cat里删除
+            RelaCommodityCatExample rce = new RelaCommodityCatExample();
+        	RelaCommodityCatExample.Criteria rc = rce.createCriteria();
+        	rc.andTitleEqualTo(titleList.get(i));
+        	int row1 = relaCommodityCatMapper.deleteByExample(rce);
+            if(row==0||row1==0){
+            	flag1=1;
+            	error=error+ titleList.get(i)+"删除失败;";
+            	continue;
+            }
+        }
+        
+        if(flag1==1){
+        	//删除失败
+    		return error;
+        }else{
+        	//删除成功
+        	return success;
+        }
+        
+		
 	}
 }

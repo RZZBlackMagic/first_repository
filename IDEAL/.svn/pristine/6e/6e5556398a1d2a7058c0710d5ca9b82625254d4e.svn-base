@@ -1,0 +1,8 @@
+package com.ideal.service;
+
+import com.ideal.pojo.Commodity;
+
+public interface CommodityService {
+
+    Commodity getCommodityById(long commodityId);
+}

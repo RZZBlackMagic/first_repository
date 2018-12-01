@@ -1,0 +1,138 @@
+package com.ideal.pojo;
+
+import java.io.Serializable;
+import java.util.Date;
+
+public class Commodity implements Serializable {
+    private Integer id;
+
+    private String title;
+
+    private Integer price;
+
+    private Integer quantity;
+
+    private String image;
+
+    private Integer cid;
+
+    private Integer status;
+
+    private Date created;
+
+    private Date updated;
+
+    private String sellingPoint;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image == null ? null : image.trim();
+    }
+
+    public Integer getCid() {
+        return cid;
+    }
+
+    public void setCid(Integer cid) {
+        this.cid = cid;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    public Date getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(Date updated) {
+        this.updated = updated;
+    }
+
+    public String getSellingPoint() {
+        return sellingPoint;
+    }
+
+    public void setSellingPoint(String sellingPoint) {
+        this.sellingPoint = sellingPoint == null ? null : sellingPoint.trim();
+    }
+
+    public Commodity() {
+    }
+
+    public Commodity(Integer id, String title, Integer price, Integer quantity, String image, Integer cid, Integer status, Date created, Date updated, String sellingPoint) {
+        this.id = id;
+        this.title = title;
+        this.price = price;
+        this.quantity = quantity;
+        this.image = image;
+        this.cid = cid;
+        this.status = status;
+        this.created = created;
+        this.updated = updated;
+        this.sellingPoint = sellingPoint;
+    }
+
+    @Override
+    public String toString() {
+        return "Commodity{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", image='" + image + '\'' +
+                ", cid=" + cid +
+                ", status=" + status +
+                ", created=" + created +
+                ", updated=" + updated +
+                ", sellingPoint='" + sellingPoint + '\'' +
+                '}';
+    }
+}

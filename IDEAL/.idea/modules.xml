@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/IDEAL-COMMON/IDEAL-COMMON.iml" filepath="$PROJECT_DIR$/IDEAL-COMMON/IDEAL-COMMON.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER.iml" filepath="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-DAO/IDEAL-MANAGER-DAO.iml" filepath="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-DAO/IDEAL-MANAGER-DAO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE/IDEAL-MANAGER-INTERFACE.iml" filepath="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE/IDEAL-MANAGER-INTERFACE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/IDEAL-MANAGER-POJO.iml" filepath="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/IDEAL-MANAGER-POJO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/IDEAL-MANAGER-SERVICE.iml" filepath="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/IDEAL-MANAGER-SERVICE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/IDEAL-MANAGER-WEB.iml" filepath="$PROJECT_DIR$/IDEAL-MANAGER-WEB/IDEAL-MANAGER-WEB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PARENT.iml" filepath="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PARENT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_MyBatis/_MyBatis.iml" filepath="$PROJECT_DIR$/_MyBatis/_MyBatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_PageHelper/_PageHelper.iml" filepath="$PROJECT_DIR$/_PageHelper/_PageHelper.iml" />
+    </modules>
+  </component>
+</project>

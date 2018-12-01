@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [27/Nov/2018:20:19:56 +0800] "GET /category/ztree HTTP/1.1" 500 5567 http-bio-8081-exec-1 146
+0:0:0:0:0:0:0:1 - - [27/Nov/2018:20:22:01 +0800] "GET /category/table?category_id=1,39,28,&limit=10&page=1 HTTP/1.1" 500 5552 http-bio-8081-exec-3 36

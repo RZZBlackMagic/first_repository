@@ -1,0 +1,1 @@
+FileOutputStream fos = new FileOutputStreamosw写出的字符串都使用该字符集转换 osw还支持第二个参数，是一个字符串，用来指定字符集，当指定后，那么所有使用为文字。OutputStreamWriter osw = new OutputStreamWriter(fos,”GBK”);将上面字节流转为字符流。

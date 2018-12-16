@@ -1,0 +1,1 @@
+九 捕获异常Java异常结构中定义有Throwable类，Exception和Error是其派生的两个子类，其中Exception表示由于网络故障，文件损坏，设备错误，用户输入非法等情况导致的异常。而 Error表示Java运行时环境出现的错误，例如：JVM内存资源耗尽等。

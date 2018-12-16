@@ -1,0 +1,1 @@
+FileOutputStream fos = new FileOutputStreamosw写出的字符串都使用该字符集转换 osw还支持第二个参数，是一个字符串，用来指定字符集，当指定后，那么所有使用为文字。OutputStreamWriter osw = new OutputStreamWriter(fos,”GBK”);将上面字节流转为字符流。九 捕获异常Java异常结构中定义有Throwable类，Exception和Error是其派生的两个子类，其中Exception表示由于网络故障，文件损坏，设备错误，用户输入非法等情况导致的异常。而 Error表示Java运行时环境出现的错误，例如：JVM内存资源耗尽等。

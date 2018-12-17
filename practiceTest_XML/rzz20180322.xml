@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+   <emp id="1">
+     <name>张总</name>
+     <age>34</age>
+     <gender>男</gender>
+     <salsry>3000</salsry>
+   </emp>
+   <emp id="2">
+     <name>李总</name>
+     <age>24</age>
+     <gender>女</gender>
+     <salsry>4000</salsry>
+   </emp>
+   <emp id="3">
+     <name>赵总</name>
+     <age>38</age>
+     <gender>男</gender>
+     <salsry>5000</salsry>
+   </emp>
+   <emp id="4">
+     <name>王总</name>
+     <age>4</age>
+     <gender>男</gender>
+     <salsry>8000</salsry>
+   </emp>
+
+
+
+
+
+</list>

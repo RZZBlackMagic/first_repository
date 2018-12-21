@@ -3,6 +3,7 @@ package cn.tedu.note.controller;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -22,8 +23,10 @@ public class userController extends AbatractController{
 	private UserService useService;
 	@RequestMapping("/login.do")
 	@ResponseBody//json注解:就是返回一个json
-	public Object login(String name,String password){
+	public Object login(String name,String password,HttpSession session){
 			User user = useService.login(name, password);
+			//登录成功,将User信息放在session里面，用于拦截器的拦截
+			session.setAttribute("UserLogin", user);
 			return new JsonResult(user);
 	}
 	/*@ExceptionHandler(Exception.class)

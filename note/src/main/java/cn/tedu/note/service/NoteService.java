@@ -11,4 +11,6 @@ public interface NoteService {
     public Note createNewNote(String UserID,String cn_note_id,String cn_note_title) throws Exception;
     public void saveBody(String NoteId,String NoteBody,String title);
     public void updateNotebookId(String NoteId,String NotebookId);
+    public String deleteNoteById(String NoteId);
+    public boolean addStars(String userId,int stars)throws UserNotFoundException;
 }

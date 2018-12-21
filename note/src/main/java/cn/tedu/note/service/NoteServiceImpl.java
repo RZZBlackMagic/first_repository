@@ -8,11 +8,16 @@ import java.util.UUID;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import cn.tedu.note.dao.NoteDao;
 import cn.tedu.note.dao.NotebookDao;
+import cn.tedu.note.dao.StarDao;
+import cn.tedu.note.dao.UserDao;
 import cn.tedu.note.entity.Note;
 import cn.tedu.note.entity.Notebook;
+import cn.tedu.note.entity.Stars;
+import cn.tedu.note.entity.User;
 @Service("noteService")
 public class NoteServiceImpl implements NoteService {
 
@@ -31,6 +36,7 @@ public class NoteServiceImpl implements NoteService {
 		}
 		return notes;
 	}
+	@Transactional
 	public Note createNewNote(String UserID, String cn_notebook_id, String cn_note_title) throws Exception {
 		Note note = new Note();
 		note.setCn_note_body(null);
@@ -45,6 +51,8 @@ public class NoteServiceImpl implements NoteService {
 		note.setCn_user_id(UserID);
 		noteDao.createNewNote(note);
 		Note  backNote = noteDao.findNoteByNoteId(cn_note_id);
+		//当前事务会整合到addStar中，整合为一件事
+		addStars(UserID,5);
 		return backNote;
 	}
 	public void saveBody(String NoteId, String NoteBody,String title) {
@@ -63,6 +71,61 @@ public class NoteServiceImpl implements NoteService {
         Note note = noteDao.findNoteByNoteId(NoteId);
         note.setCn_notebook_id(NotebookId);
         noteDao.updateNote(note);
+	}
+	public String deleteNoteById(String NoteId) {
+		int row = noteDao.deleteNoteById(NoteId);
+		if(row==1){
+			return "删除成功";
+		}
+		return "删除失败";
+	}
+	@Resource
+	private StarDao starsDao;
+	@Resource(name="dao")
+	private UserDao userDao;
+	@Transactional
+	public boolean addStars(String userId, int stars) throws UserNotFoundException {
+		if(userId==null||userId.trim().isEmpty()){
+			throw new UserNotFoundException("userId不能为空");
+		}
+		User user = userDao.findUserById(userId);
+		if(user==null){
+			throw new UserNotFoundException("没有对应 的用户");
+		}
+		System.out.println(user);
+		Stars star = starsDao.findStarsByUseId(userId);
+		if(star==null){
+			//执行insert语句，
+			System.out.println("insert"+star);
+			String id = UUID.randomUUID().toString();
+			Stars st = new Stars(id,userId,stars);
+			System.out.println(st);
+			int n = starsDao.insertStars(st);
+			System.out.println(n);
+			System.out.println("insert:"+stars);
+			if(n!=1){
+				throw new  RuntimeException();
+				
+			}
+			return true;
+		}else{
+			//有星星，就在现有星星中，执行update，
+
+			int n = star.getCn_stars()+stars;
+			star.setCn_stars(n);
+			if(n<0){
+				throw new RuntimeException("扣分太多");
+			}
+			System.out.println("update"+star);
+			int nn = starsDao.updateStars(star);
+			System.out.println("update:"+stars);
+			System.out.println(nn);
+			/*if(nn!=1){
+				System.out.println("错哦了");
+				throw new  RuntimeException();
+			}*/
+			return true;
+		}
 	}
 
 

@@ -25,6 +25,33 @@
     <servlet-name>DispatcherServlet</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
-  
-  
+  <filter>
+    <display-name>AccessFilter</display-name>
+    <filter-name>AccessFilter</filter-name>
+    <filter-class>cn.tedu.note.web.AccessFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AccessFilter</filter-name>
+    <url-pattern>*.html</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ImageServlet</display-name>
+    <servlet-name>ImageServlet</servlet-name>
+    <servlet-class>cn.tedu.note.web.ImageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImageServlet</servlet-name>
+    <url-pattern>/ImageDEMO</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ImageServletDemo</display-name>
+    <servlet-name>ImageServletDemo</servlet-name>
+    <servlet-class>cn.tedu.note.web.ImageServletDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImageServletDemo</servlet-name>
+    <url-pattern>/ImageDemo</url-pattern>
+  </servlet-mapping>
 </web-app>

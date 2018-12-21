@@ -17,6 +17,10 @@ public class JsonResult implements Serializable {
 		state=SUCCESS;
 		this.data=data;
 	}
+	public JsonResult(String error){
+		state=ERROR;
+		this.message=error;
+	}
 	public JsonResult(Throwable e ){
 		state=ERROR;
 		message = e.getMessage();
@@ -41,6 +45,7 @@ public class JsonResult implements Serializable {
 	public Object getData() {
 		return data;
 	}
+	
 	public void setData(Object data) {
 		this.data = data;
 	}

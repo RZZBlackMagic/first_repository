@@ -10,14 +10,40 @@ $(function(){
 	//绑定笔记本点击事件，单击后注浆笔记本的内容展示到笔记本的区域
 	$('#notebook-list').on('click','.notebook',notebooks);
 	$('#note-list').on('click','.notebody',notes);
-	$('#add_note').click(showAddNotebookDialog);
+	$('#add_note').click(showAddNoteDialog);
 	$('#can').on('click','.create-note',addNote);
 	$('#can').on('click','.close,.cancel',closeDialog);
 	$('#save_note').click(saveNoteBody);
 	$(document).click(hideNote_menu);
-	
-});
+	startHartbat();
+	$('#add_notebook').click(showAddNotebookDialog);
+	$('#can').on('click','.create-notebook',addNotebook);
 
+});
+//添加笔记业务
+function addNotebook(){
+	console.log("添加笔啊");
+	title = $('#input_notebook').val();
+	UserId = getCookie('UserId');
+	
+	
+}
+//展示添加笔记本对话框
+function showAddNotebookDialog(){
+	console.log("添加笔记本");
+	$('#can').load('alert/alert_notebook.html',function(){
+		$('#input_note').focus();
+		$('.opacity_bg').show();
+	});
+}
+function startHartbat(){
+	var url = "/session.do";
+	setTimeout(function(){
+		$.getJSON(url,function(result){
+			console.log(result.message);
+		});
+	},5000);
+}
 function moveNote(){
 	//console.log(1);
 	$('#can').load('alert/alert_move.html');
@@ -57,6 +83,20 @@ function updateNotebookId(){
 	};
 	$.post(url,data,function(result){
 		$('#can').empty();
+		var url = "Notelist.do";
+		var NotebookId = $("#first_side_right").find('a[class="checked"]').parent().data('notebookId');
+		var data = {
+			NotebookId : NotebookId	
+		};
+		$.getJSON(url,data,function(result){
+			if(result.state==SUCCESS){
+				var notes = result.data;
+				//console.log(notes);
+				showNotes(notes);
+			}else{
+				alert(result.message);
+			}
+		});
 	});
 }
 function hideNote_menu(){
@@ -114,7 +154,7 @@ function addNote(){
         $('.contacts-list').append(li);
 	});
 }
-function showAddNotebookDialog(){
+function showAddNoteDialog(){
 	$('#can').load('alert/alert_note.html',function(){
 		$('#input_note').focus();
 		$('.opacity_bg').show();
@@ -147,9 +187,39 @@ function showNoteBody(notebodys){
 	var title = notebodys.cn_note_title;
 	//console.log(title);
 	$('#input_note_title').val(title);
-	
+	//定义移除笔记事件
 	 $('.checked').next().on('click','.btn_move',moveNote);
-	
+	//定义删除事件
+	 $('.checked').next().on('click','.btn_delete',deleteNote);
+}
+function deleteNote(){
+	//console.log("删除笔记");
+	var url = "deleteNote.do";
+	var data1= $(this).parent().parent().parent().parent().data('NoteId');
+	console.log(data1);
+	var data = {
+			NoteId:data1
+	}
+	var NotebookId = $("#first_side_right").find('a[class="checked"]').parent().data('notebookId');
+    console.log(NotebookId);
+	$.post(url,data,function(result){
+		console.log(result);
+		//删除成功，重新加载笔记列表
+		var url = "Notelist.do";
+		var NotebookId = $("#first_side_right").find('a[class="checked"]').parent().data('notebookId');
+		var data = {
+			NotebookId : NotebookId	
+		};
+		$.getJSON(url,data,function(result){
+			if(result.state==SUCCESS){
+				var notes = result.data;
+				//console.log(notes);
+				showNotes(notes);
+			}else{
+				alert(result.message);
+			}
+		});
+	});
 }
 //笔记本项目点击事件处理方法，加载全部笔记
 function notebooks(){

@@ -18,6 +18,10 @@ public class UserServiceImpl implements UserService{
 	private UserDao dao;
 	public User login(String name, String password) throws UserNotFoundException, PasswordException {
 		User user = dao.findUserByName(name);
+		System.out.println("login.do");
+		String s = null;
+		//s.charAt(0);
+		
 		String pwd = DigestUtils.md5Hex(salt+password);
 		if(name==null){
 		    throw new UserNotFoundException("«Î ‰»Îname");

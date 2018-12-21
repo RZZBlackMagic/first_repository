@@ -43,5 +43,12 @@ public class NoteController extends AbatractController{
 		noteService.updateNotebookId(NoteId, NotebookId);
 		return new JsonResult("ÒÆ¶¯³É¹¦");
 	}
+	@RequestMapping("/deleteNote.do")
+	@ResponseBody
+	public JsonResult deleteNote(String NoteId){
+		System.out.println(NoteId);
+		String message = noteService.deleteNoteById(NoteId);
+		return new JsonResult(message);
+	}
 
 }

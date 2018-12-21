@@ -7,7 +7,9 @@ import java.util.UUID;
 import org.junit.Test;
 
 import cn.tedu.note.dao.NoteDao;
+import cn.tedu.note.dao.UserDao;
 import cn.tedu.note.entity.Note;
+import cn.tedu.note.entity.User;
 import cn.tedu.note.service.NoteService;
 import cn.tedu.note.service.NotebookNotFoundException;
 
@@ -42,6 +44,15 @@ public class NoteServiceTest extends BaseTest{
 		NoteService ns = ctx.getBean("noteService",NoteService.class);
 		ns.updateNotebookId(NoteId, NotebookId);
 		System.out.println(1);
+	}
+	@Test
+	public void addStars(){
+		String userId = "39295a3d-cc9b-42b4-b206-a2e7fab7e77c";
+		NoteService ns = ctx.getBean("noteService",NoteService.class);
+		boolean b = ns.addStars(userId, 5);
+		System.out.println(b);
+		b=ns.addStars(userId, 6);
+		System.out.println(b);
 	}
 
 }

@@ -12,7 +12,8 @@
 		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
     
-  <!-- 配置Spring-mybatis -->
+   
+    <!-- 配置Spring-mybatis -->
   <!-- 读取配置文件 -->
   <util:properties id="jdbc" location="classpath:conf/jdbc.properties"/>
    <!-- 配置数据库连接池 -->
@@ -36,5 +37,9 @@
       <property name="basePackage" value="cn.tedu.note.dao"/>
    </bean>
    
-   
+   <!-- 事务管理配置 -->
+   <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+     <property name="dataSource" ref="ds"></property>
+   </bean>
+   <tx:annotation-driven transaction-manager="txManager"/>
 </beans>

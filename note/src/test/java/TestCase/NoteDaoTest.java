@@ -77,5 +77,12 @@ public class NoteDaoTest extends BaseTest{
 		nd.updateNote(note);
 		System.out.println(1);
 	}
+	@Test 
+	public void deleteNoteById(){
+		String NoteId = "56a2f645-d615-43de-a549-82c3d38da4b2";
+		NoteDao nd = ctx.getBean("noteDao",NoteDao.class);
+		int row = nd.deleteNoteById(NoteId);
+		System.out.println(row);
+	}
 
 }

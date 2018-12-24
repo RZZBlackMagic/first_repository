@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-1.4.3.js"></script>
+<script>
+   $(function(){
+	   $('#qry-btn').click(aryDemo);
+   });
+   function aryDemo(){
+	   //console.log('Click');
+	   $.ajax({
+		   url:'demo/ary.do',
+		   type:'get',
+		   dataType:'json',
+		   success:function(ary){
+			   //$('#ary-result').html(ary+"");
+			   for(var i=0;i<ary.length;i++){
+				   $('#ary-result').append(ary[i]);
+			   }
+		   },
+		   error:function(){
+			   alert('通讯故障！')
+		   }
+	   });
+   }
+</script>
+</head>
+<body>
+  <h1>Spring MVC AJAX</h1>
+  <h2>获取数组数据</h2>
+  <input type="button" id="qry-btn" value="数组"/>
+  <p id="ary-result"></p>
+</body>
+</html>

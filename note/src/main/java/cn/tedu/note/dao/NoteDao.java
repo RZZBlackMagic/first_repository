@@ -12,4 +12,5 @@ public interface NoteDao {
 	public Note findNoteByNoteId(String NoteId);
 	public void updateNote(Note note);
 	public int deleteNoteById(String NoteId);
+	public void findAllNote();
 }

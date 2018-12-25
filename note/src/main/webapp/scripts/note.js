@@ -11,30 +11,49 @@ $(function(){
 	$('#notebook-list').on('click','.notebook',notebooks);
 	$('#note-list').on('click','.notebody',notes);
 	$('#add_note').click(showAddNoteDialog);
-	$('#can').on('click','.create-note',addNote);
 	$('#can').on('click','.close,.cancel',closeDialog);
 	$('#save_note').click(saveNoteBody);
 	$(document).click(hideNote_menu);
-	startHartbat();
-	$('#add_notebook').click(showAddNotebookDialog);
-	$('#can').on('click','.create-notebook',addNotebook);
+	//startHartbat();
+	$('#add_notebook').click(showAddNotebookDialog1);
 
 });
 //添加笔记业务
 function addNotebook(){
 	console.log("添加笔啊");
-	title = $('#input_notebook').val();
-	UserId = getCookie('UserId');
-	
+	var title1 = $('#input_notebook').val();
+	console.log('title'+title1);
+	var UserId1 = getCookie('UserId');
+	console.log('UserId'+UserId1);
+	var url = "addNotebook.do";
+	var data={
+		title:title1,
+		UserId:UserId1
+	};
+	$.post(url,data,function(result){
+		console.log(result);
+		//添加成功，先关闭添加笔记对话框，在重新将笔记展示到笔记本区域
+		$('.opacity_bg').hide();
+		$('#can').empty();
+		loadNotebooks();
+	});
 	
 }
 //展示添加笔记本对话框
-function showAddNotebookDialog(){
+function showAddNotebookDialog1(){
 	console.log("添加笔记本");
 	$('#can').load('alert/alert_notebook.html',function(){
 		$('#input_note').focus();
 		$('.opacity_bg').show();
+		console.log("hh");
+		addNotebookTran();
 	});
+}
+function addNotebookTran(){
+	console.log(2);
+	var context = $('#can').find('button[class="create_notebook"]').html();
+	console.log(context);
+	$('#can').on('click','.create_notebook',addNotebook);
 }
 function startHartbat(){
 	var url = "/session.do";
@@ -147,6 +166,9 @@ function addNote(){
 		$('.opacity_bg').hide();
 		$('#can').empty();
 		console.log(result);
+		//notebooks(result);
+		//正确的业务是：用NotebookID将所有的Note查询出来返回到这里，遍历将id和title绑到li上，最后调用showNotes（）
+		
 		var li = noteTemplate.replace('[note]',data.cn_note_title);
 		var li = $(li);
 		li.data('NoteId',notes[i].cn_note_id);
@@ -158,6 +180,7 @@ function showAddNoteDialog(){
 	$('#can').load('alert/alert_note.html',function(){
 		$('#input_note').focus();
 		$('.opacity_bg').show();
+		$('#can').on('click','.create-note',addNote);
 	});
 }
 
@@ -277,6 +300,7 @@ function loadNotebooks(){
 	//console.log(2);
 	var url = 'list.do';
 	var data = {UserId:getCookie('UserId')};
+	//console.log(getCookie('UserId'));
 	$.getJSON(url,data,function(result){
 		if(result.state==SUCCESS){
 			var notebooks = result.data;

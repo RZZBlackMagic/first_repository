@@ -1,6 +1,6 @@
 package cn.tedu.note.service;
 
-public class NotebookNotFoundException extends Exception {
+public class NotebookNotFoundException extends RuntimeException {
 
 	public NotebookNotFoundException() {
 		// TODO Auto-generated constructor stub

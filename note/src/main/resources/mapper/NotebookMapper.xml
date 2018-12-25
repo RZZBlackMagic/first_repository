@@ -25,5 +25,18 @@
 	      where
 	          cn_notebook_id=#{id}
 	   </select>
+	   
+	   <insert id="addNotebook" parameterType="cn.tedu.note.entity.Notebook">
+	      insert into 
+	          cn_notebook
+	      values(
+	          #{cn_notebook_id},
+	          #{cn_user_id},
+	          #{cn_notebook_type_id},
+	          #{cn_notebook_name},
+	          #{cn_notebook_desc},
+	          #{cn_notebook_createtime}
+	      )
+	   </insert>
 	    
 	</mapper>

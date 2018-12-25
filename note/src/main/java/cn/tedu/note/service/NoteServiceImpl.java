@@ -51,7 +51,7 @@ public class NoteServiceImpl implements NoteService {
 		note.setCn_user_id(UserID);
 		noteDao.createNewNote(note);
 		Note  backNote = noteDao.findNoteByNoteId(cn_note_id);
-		//当前事务会整合到addStar中，整合为一件事
+		//当前事务会整合到addStar中，整合为一件
 		addStars(UserID,5);
 		return backNote;
 	}

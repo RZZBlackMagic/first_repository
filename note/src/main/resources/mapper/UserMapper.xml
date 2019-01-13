@@ -44,5 +44,13 @@
 	       where
 	           cn_user_id=#{id}
 	    </select>
+	    <update id='updatePassword' parameterType="cn.tedu.note.entity.User">
+	     update
+			cn_user 
+		 set 
+		    cn_user_password = #{password}
+		 where 
+			cn_user_id=#{id} 
+	    </update>
 	    
 	</mapper>

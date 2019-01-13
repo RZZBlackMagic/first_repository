@@ -105,12 +105,10 @@ public class NoteServiceImpl implements NoteService {
 			System.out.println("insert:"+stars);
 			if(n!=1){
 				throw new  RuntimeException();
-				
 			}
 			return true;
 		}else{
 			//有星星，就在现有星星中，执行update，
-
 			int n = star.getCn_stars()+stars;
 			star.setCn_stars(n);
 			if(n<0){

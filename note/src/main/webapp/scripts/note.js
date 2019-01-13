@@ -152,28 +152,35 @@ function closeDialog(){
 }
 function addNote(){
 	//console.log(1);
-	var title = $('#input_notebook').val();
+	var title = $('#input_note').val();
 	//console.log(title);
 	var url = "addNote.do";
 	//var NotebookId = $(document).data('notebookId') ;
 	var NotebookId = $('.checked').parent().data('notebookId');
-	console.log(NotebookId);
+	//console.log(NotebookId);
 	var data = {UserID:getCookie('UserId'),
 			cn_notebook_id:NotebookId,
-			cn_note_title:title};
+			cn_note_title:title
+			};
 	$.getJSON(url,data,function(result){
 		//创建成功，弹出框消失，result是新创建的Note信息
 		$('.opacity_bg').hide();
 		$('#can').empty();
-		console.log(result);
+		//console.log(result);
 		//notebooks(result);
 		//正确的业务是：用NotebookID将所有的Note查询出来返回到这里，遍历将id和title绑到li上，最后调用showNotes（）
 		
+		var cn_note_id = result.data.cn_note_id;
+		var cn_note_title = result.data.cn_note_title;
+		//console.log(cn_note_id);
+		//console.log(cn_note_title);
+		
 		var li = noteTemplate.replace('[note]',data.cn_note_title);
 		var li = $(li);
-		li.data('NoteId',notes[i].cn_note_id);
-		li.data('NoteTitle',notes[i].cn_note_title);
+		li.data('NoteId',cn_note_id);
+		li.data('NoteTitle',cn_note_title);
         $('.contacts-list').append(li);
+		
 	});
 }
 function showAddNoteDialog(){

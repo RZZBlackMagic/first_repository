@@ -29,6 +29,7 @@ public class NoteController extends AbatractController{
 	@ResponseBody
 	public JsonResult addNote(String UserID, String cn_notebook_id, String cn_note_title) throws Exception{
 		Note note = noteService.createNewNote(UserID, cn_notebook_id, cn_note_title);
+		System.out.println(cn_note_title);
 		return new JsonResult(note);
 	}
 	@RequestMapping("/saveBody.do")

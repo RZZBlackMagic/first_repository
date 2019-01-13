@@ -61,5 +61,44 @@ public class UserServiceImpl implements UserService{
 		int n = dao.addUser(user);
 		return user;
 	}
+	//修改密码，
+	public String changePassword(String user_id,String last_password, String new_password, String final_password) {
+		User user = dao.findUserById(user_id);
+		System.out.println(final_password);
+		System.out.println(last_password);
+		System.out.println(new_password);
+		String salt = "今天你丑了啊";
+		last_password = DigestUtils.md5Hex(salt+last_password);
+		new_password = DigestUtils.md5Hex(salt+new_password);
+		final_password = DigestUtils.md5Hex(salt+final_password);
+        //先判断原始密码是否正确，正确在进行下一步
+		if(!last_password.equals(user.getPassword())){
+			//不一样，则结束
+			throw new PasswordException("原始密码不正确，请重新尝试！");
+		}
+		//先判断new_password和final_password是否一样，一样在进行修改
+		if(!new_password.equals(final_password)){
+			//不一样，结束
+            throw new PasswordException("请再次确认新密码是否一致！");
+		}
+		//修改密码
+		System.out.println("开始修改密码");
+		user.setPassword(final_password);
+		//通过user_id将user的面进行修改
+		int row = dao.updatePassword(user);
+		if(row==0){
+			throw new PasswordException("密码修改失败！");
+		}
+		//修改完成后进行检查
+		User user1 = dao.findUserById(user_id);
+		System.out.println(user1.getPassword());
+		System.out.println("final_password:"+final_password);
+        System.out.println("new_password:"+new_password);
+		if(new_password.equals(user1.getPassword())){
+    		return "密码修改成功";
+        }else{
+        	return "密码修改失败";
+        }
+	}
 
 }

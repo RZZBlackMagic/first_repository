@@ -24,4 +24,5 @@ public interface UserService {
      * @throws PasswordException
      */
 	public User regist(String name,String nick,String password,String confirm) throws UserNameException,PasswordException;
+    public String changePassword(String user_id,String last_password,String new_password,String final_password);
 }

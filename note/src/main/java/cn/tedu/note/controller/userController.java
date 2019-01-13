@@ -55,12 +55,26 @@ public class userController extends AbatractController{
 		e.printStackTrace();
 		return new JsonResult(4,e);
 	}
-
+    /**
+     * ×¢²á¹¦ÄÜ
+     * @param name
+     * @param nick
+     * @param password
+     * @param confirm
+     * @return
+     */
 	@RequestMapping("/regist.do")
 	@ResponseBody
 	public JsonResult regist(String name,String nick,String password,String confirm){
 		User user = useService.regist(name, nick, password, confirm);
 		return new JsonResult(user);
+	}
+	
+	@RequestMapping("/changePassword.do")
+	@ResponseBody
+	public JsonResult changePassword(String user_id,String last_password,String new_password,String final_password){
+		String message = useService.changePassword(user_id, last_password, new_password, final_password);
+		return new JsonResult(message);
 	}
 
 	

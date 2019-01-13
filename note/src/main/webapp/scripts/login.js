@@ -6,6 +6,11 @@ $(function(){
 	$('#regist_username').blur(checkRegistName);
 	$('#regist_password').blur(checkRegistPassword);
 	$('final_password').blur(checkConfirm);
+	$('#last_password').blur(checkPassword);
+	$('#new_password').blur(checkPassword);
+	$('#final_password').blur(checkPassword);
+	$('#changePassword').click(change_password);
+	$('#back').click(back_from_change_password);
 });
 //检查验证密码知否正确
 function checkConfirm(){
@@ -161,5 +166,29 @@ function checkPassword(){
 	$('#password').next().empty();
 	return true;
 }
-
-
+//修改密码业务：用户输入原始密码，新密码和确认密码
+function change_password(){
+	var last_password = $('#last_password').val();
+	var new_password = $('#new_password').val();
+	var final_password = $('#final_password').val();
+	var url = 'changePassword.do';
+	var user_id = getCookie('UserId');
+	console.log(last_password);
+	console.log(new_password);
+	console.log(final_password);
+	console.log(user_id);
+	var data = {
+			user_id       : user_id,
+			last_password : last_password,
+			new_password  : new_password,
+			final_password: final_password
+	};
+	$.post(url,data,function(result){
+		console.log(result);
+		window.location.href='http://localhost:8089/note/edit.html';
+	});
+}
+function back_from_change_password(){
+	console.log(111);
+	window.location.href='http://localhost:8089/note/edit.html';
+}

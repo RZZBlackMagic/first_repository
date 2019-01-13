@@ -63,6 +63,8 @@
 		where 
 			cn_note_id=#{cn_note_id} 
 	    </update>
+	    
+	    
 	    <delete id="deleteNoteById" parameterType="String">
 	      delete from cn_note 
 	      where 

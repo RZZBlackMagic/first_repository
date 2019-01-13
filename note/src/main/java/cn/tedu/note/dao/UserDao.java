@@ -9,4 +9,5 @@ public interface UserDao {
 	public User findUserByName(String name);
 	public int addUser(User user);
 	public User findUserById(String UserId);
+	public int updatePassword(User user);
 }

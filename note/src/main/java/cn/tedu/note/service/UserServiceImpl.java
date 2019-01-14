@@ -1,5 +1,7 @@
 package cn.tedu.note.service;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 import javax.annotation.Resource;
@@ -62,24 +64,41 @@ public class UserServiceImpl implements UserService{
 		return user;
 	}
 	//修改密码，
-	public String changePassword(String user_id,String last_password, String new_password, String final_password) {
+	public Map<String,Object> changePassword(String user_id,String last_password, String new_password, String final_password) {
+		Map<String,Object> map = new HashMap<String,Object>();
+		//string 有两个值，第一个是修改状态，其值是0则修改成功，第二个是修改结果，返回“修改成功”
+		               //修改状态为1则修改失败，返回“修改失败”
+		               //修改状态为2则修改失败，原因是密码长度过短
+		               //修改状态为3则修改失败，原因是两次输入的密码不一致
+		               //修改状态为4则修改失败，原因是原始密码输入错误
+		if(new_password.length()<4){
+			map.put("修改状态", 2);
+			map.put("修改结果","修改失败");
+			return map;
+		}
 		User user = dao.findUserById(user_id);
-		System.out.println(final_password);
-		System.out.println(last_password);
-		System.out.println(new_password);
+		//System.out.println(final_password);
+		//System.out.println(last_password);
+		//System.out.println(new_password);
 		String salt = "今天你丑了啊";
 		last_password = DigestUtils.md5Hex(salt+last_password);
 		new_password = DigestUtils.md5Hex(salt+new_password);
 		final_password = DigestUtils.md5Hex(salt+final_password);
         //先判断原始密码是否正确，正确在进行下一步
+		System.out.println("输入的原密码："+last_password);
+		System.out.println("数据库的原密码："+user.getPassword());
 		if(!last_password.equals(user.getPassword())){
 			//不一样，则结束
-			throw new PasswordException("原始密码不正确，请重新尝试！");
+			map.put("修改状态", 4);
+			map.put("修改结果","修改失败");
+			return map;
 		}
 		//先判断new_password和final_password是否一样，一样在进行修改
 		if(!new_password.equals(final_password)){
 			//不一样，结束
-            throw new PasswordException("请再次确认新密码是否一致！");
+			map.put("修改状态", 3);
+			map.put("修改结果","修改失败");
+			return map;
 		}
 		//修改密码
 		System.out.println("开始修改密码");
@@ -91,13 +110,19 @@ public class UserServiceImpl implements UserService{
 		}
 		//修改完成后进行检查
 		User user1 = dao.findUserById(user_id);
-		System.out.println(user1.getPassword());
+		System.out.println("修改后的密码："+user1.getPassword());
 		System.out.println("final_password:"+final_password);
         System.out.println("new_password:"+new_password);
+        
 		if(new_password.equals(user1.getPassword())){
-    		return "密码修改成功";
+			map.put("修改状态", 0);
+			map.put("修改结果","修改成功");
+    		return map;
         }else{
-        	return "密码修改失败";
+        	map.put("修改状态", 1);
+			map.put("修改结果","修改失败");
+    		return map;
+        	
         }
 	}
 

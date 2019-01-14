@@ -6,11 +6,10 @@ $(function(){
 	$('#regist_username').blur(checkRegistName);
 	$('#regist_password').blur(checkRegistPassword);
 	$('final_password').blur(checkConfirm);
-	$('#last_password').blur(checkPassword);
-	$('#new_password').blur(checkPassword);
-	$('#final_password').blur(checkPassword);
+	
 	$('#changePassword').click(change_password);
 	$('#back').click(back_from_change_password);
+	$('#logout').click(exit);//退出登录；
 });
 //检查验证密码知否正确
 function checkConfirm(){
@@ -174,6 +173,7 @@ function change_password(){
 	var url = 'changePassword.do';
 	var user_id = getCookie('UserId');
 	console.log(last_password);
+	
 	console.log(new_password);
 	console.log(final_password);
 	console.log(user_id);
@@ -185,10 +185,46 @@ function change_password(){
 	};
 	$.post(url,data,function(result){
 		console.log(result);
-		window.location.href='http://localhost:8089/note/edit.html';
+		//window.location.href='http://localhost:8089/note/edit.html';
+		console.log(result.data['修改状态']);
+		//第一个是修改状态，其值是0则修改成功，第二个是修改结果，返回“修改成功”
+        //修改状态为1则修改失败，返回“修改失败”
+        //修改状态为2则修改失败，原因是密码长度过短
+        //修改状态为3则修改失败，原因是两次输入的密码不一致
+        //修改状态为4则修改失败，原因是原始密码输入错误
+		//修改成功
+		if(result.data['修改状态']==0){
+			back_from_change_password(); //'http://localhost:8089/note/edit.html';
+			//alert("修改成功");
+		}
+		//修改失败
+		if(result.data['修改状态']==1){
+			alert("修改失败");
+		}
+		//原始密码错误
+		if(result.data['修改状态']==4){
+			$('#warning_2').hide();
+			$('#warning_3').hide();
+			$('#warning_1').show();
+		}
+		//新密码长度过短
+		if(result.data['修改状态']==2){
+			$('#warning_1').hide();
+			$('#warning_3').hide();
+			$('#warning_2').show();
+		}
+		//两次输入的密码长度不一致
+		if(result.data['修改状态']==3){
+			$('#warning_2').hide();
+			$('#warning_1').hide();
+			$('#warning_3').show();
+		}
 	});
 }
 function back_from_change_password(){
 	console.log(111);
-	window.location.href='http://localhost:8089/note/edit.html';
+	window.history.back();//window.location.href='http://localhost:8089/note/edit.html';
+}
+function exit(){
+	console.log(33);
 }

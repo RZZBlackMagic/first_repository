@@ -1,5 +1,7 @@
 package cn.tedu.note.controller;
 
+import java.util.Map;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -73,8 +75,8 @@ public class userController extends AbatractController{
 	@RequestMapping("/changePassword.do")
 	@ResponseBody
 	public JsonResult changePassword(String user_id,String last_password,String new_password,String final_password){
-		String message = useService.changePassword(user_id, last_password, new_password, final_password);
-		return new JsonResult(message);
+		Map<String,Object> map = useService.changePassword(user_id, last_password, new_password, final_password);
+		return new JsonResult(map);
 	}
 
 	

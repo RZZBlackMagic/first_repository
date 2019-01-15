@@ -1,0 +1,157 @@
+package com.ideal.service.impl;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.ideal.common.pojo.MessageResult;
+import com.ideal.common.pojo.TableJsonResult;
+import com.ideal.common.pojo.TreeJsonResult;
+import com.ideal.mapper.CommodityCatMapper;
+import com.ideal.pojo.CommodityCat;
+import com.ideal.pojo.CommodityCatExample;
+import com.ideal.service.CommodityCatService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.*;
+
+/**
+ * @author XINER
+ * @create 2018-11-27 19:17
+ * @desc 商品分类--Service
+ **/
+
+@Service
+public class CommodityCatServiceImpl implements CommodityCatService {
+
+    @Autowired
+    private CommodityCatMapper commodityCatMapper;
+
+    /**
+     * 向 Bootstrap Table 填充的分类表单
+     *
+     * @param pid 按父类Pid检索
+     * @return 父类的子分类
+     */
+    @Override
+    public TableJsonResult getCategoryByPidForTable(long pid, int page, int limit) {
+        //设置分页信息
+        PageHelper.startPage(page, limit);
+        //查询(按升序)
+        CommodityCatExample example = new CommodityCatExample();
+        example.createCriteria().andPidEqualTo(pid);
+        example.setOrderByClause("`sort` ASC,`cid` ASC");
+        List<CommodityCat> list = commodityCatMapper.selectByExample(example);
+        //取查询结果(分页)
+        PageInfo<CommodityCat> pageInfo = new PageInfo<>(list);
+        TableJsonResult result = new TableJsonResult();
+        result.setRows(list);
+        result.setTotal(pageInfo.getTotal());
+        return result;
+    }
+
+    /**
+     * 从 Bootstrap Table 接收的编辑修改请求
+     *
+     * @param commodityCat 修改的分类条目信息
+     * @return MessageResult 反馈消息
+     */
+    @Override
+    public MessageResult editCategoryByPidAndFieldForTable(CommodityCat commodityCat) {
+        //更新--updated字段的更新时间和界面中修改的字段
+        CommodityCatExample example = new CommodityCatExample();
+        example.createCriteria().andCidEqualTo(commodityCat.getCid());
+        commodityCat.setUpdated(new Date().toString());
+        commodityCatMapper.updateByExample(commodityCat, example);
+        return MessageResult.ok();
+    }
+
+    /**
+     * 向 zTree 填充分类树
+     *
+     * @return 全部分类
+     */
+    @Override
+    public List<TreeJsonResult> getCategoryListForTree() {
+        //升序排列
+        CommodityCatExample example = new CommodityCatExample();
+        example.setOrderByClause("`sort` ASC,`cid` ASC");
+        List<CommodityCat> categoryList = commodityCatMapper.selectByExample(example);
+        List<TreeJsonResult> resultList = new ArrayList<>();
+        //装填TreeNode
+        for (CommodityCat cell : categoryList) {
+            TreeJsonResult node = new TreeJsonResult();
+            node.setId(cell.getCid());
+            node.setpId(cell.getPid());
+            node.setName(cell.getName());
+            node.setIsParent(cell.getParent().toString());
+            resultList.add(node);
+        }
+        return resultList;
+    }
+
+    /**
+     * 新增 CommodityCat 商品分类
+     *
+     * @param commodityCat 商品分类表单
+     * @return MessageResult
+     */
+    @Override
+    public MessageResult insertCategory(CommodityCat commodityCat) {
+        //查询父分类的 parent字段 是否为0 是则更新父分类parent
+        CommodityCat commodityCatParent = commodityCatMapper.selectByPrimaryKey(commodityCat.getPid());
+        if (commodityCatParent.getParent() == 0) {
+            //更新父分类
+            CommodityCatExample example = new CommodityCatExample();
+            example.createCriteria().andCidEqualTo(commodityCatParent.getCid());
+            commodityCatParent.setParent((byte) 1);
+            commodityCatParent.setUpdated(new Date().toString());
+            commodityCatMapper.updateByExample(commodityCatParent, example);
+        }
+        //插入
+        commodityCat.setCreated(new Date().toString());
+        commodityCat.setUpdated(new Date().toString());
+        commodityCat.setParent((byte) 0);
+        commodityCatMapper.insert(commodityCat);
+        return MessageResult.ok();
+    }
+
+    /**
+     * 删除 CommodityCat List 商品分类列表
+     * @param cidList 商品分类id的列表
+     * @return MessageResult
+     */
+    @Override
+    public MessageResult deleteCategory(ArrayList<Long> cidList) {
+        //cid对应父节点集合
+        Set<Long> pidList = new HashSet<>();
+        //List中有父节点则返回
+        CommodityCatExample example = new CommodityCatExample();
+
+        for (Long cid : cidList){
+            CommodityCat commodityCatCell = commodityCatMapper.selectByPrimaryKey(cid);
+            pidList.add(commodityCatCell.getPid());
+            if (commodityCatCell.getParent() == 1){
+                return MessageResult.build(200, "只能删除子节点");
+            }
+        }
+        //没有则执行删除
+        for (Long cid : cidList){
+            commodityCatMapper.deleteByPrimaryKey(cid);
+        }
+        //检查父节点是否有null,有则降级为子节点
+        for (Long pid : pidList){
+            example.createCriteria().andPidEqualTo(pid);
+            int count = commodityCatMapper.countByExample(example);
+            example.clear();
+            if (count == 0){
+                example.createCriteria().andCidEqualTo(pid);
+                CommodityCat newCommodityCat = new CommodityCat();
+                newCommodityCat.setCid(pid);
+                newCommodityCat.setParent((byte) 0);
+                newCommodityCat.setUpdated(new Date().toString());
+                commodityCatMapper.updateByExampleSelective(newCommodityCat,example);
+            }
+        }
+        return MessageResult.ok();
+    }
+}

@@ -16,8 +16,15 @@ $(function(){
 	$(document).click(hideNote_menu);
 	//startHartbat();
 	$('#add_notebook').click(showAddNotebookDialog1);
+	$('#trash_button').click(showDeleteNotes);
 
 });
+function showDeleteNotes(){
+	var url = "showDeleteNote.do";
+    $.getJSON(url,function(result){
+    	console.log(result);
+    });
+}
 //添加笔记业务
 function addNotebook(){
 	console.log("添加笔啊");

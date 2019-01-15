@@ -18,6 +18,7 @@ import cn.tedu.note.entity.Note;
 import cn.tedu.note.entity.Notebook;
 import cn.tedu.note.entity.Stars;
 import cn.tedu.note.entity.User;
+import cn.tedu.note.util.JsonResult;
 @Service("noteService")
 public class NoteServiceImpl implements NoteService {
 
@@ -73,6 +74,9 @@ public class NoteServiceImpl implements NoteService {
         noteDao.updateNote(note);
 	}
 	public String deleteNoteById(String NoteId) {
+		Note note = noteDao.findNoteByNoteId(NoteId);
+		System.out.println(note);
+		noteDao.addNoteToDeleteNote(note);
 		int row = noteDao.deleteNoteById(NoteId);
 		if(row==1){
 			return "删除成功";
@@ -123,6 +127,15 @@ public class NoteServiceImpl implements NoteService {
 				throw new  RuntimeException();
 			}*/
 			return true;
+		}
+	}
+	public JsonResult showDeleteNote() {
+        //
+		List<Note> deleteNoteList = noteDao.selectAllDeleteNote();
+		if(deleteNoteList==null){
+			return new JsonResult("回收站无笔记0");
+		}else{
+			return new JsonResult(deleteNoteList);
 		}
 	}
 

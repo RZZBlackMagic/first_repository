@@ -51,5 +51,10 @@ public class NoteController extends AbatractController{
 		String message = noteService.deleteNoteById(NoteId);
 		return new JsonResult(message);
 	}
+	@RequestMapping("/showDeleteNote.do")
+	@ResponseBody
+	public JsonResult showDeleteNote(){
+		return new JsonResult("回收站功能");
+	}
 
 }

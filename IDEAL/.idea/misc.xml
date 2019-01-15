@@ -3,23 +3,26 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB" />
     <file type="web" url="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PORTAL-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE" />
+    <type id="Spring" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/pom.xml" />
+        <option value="$PROJECT_DIR$/_MyBatis/pom.xml" />
+        <option value="$PROJECT_DIR$/_PageHelper/pom.xml" />
         <option value="$PROJECT_DIR$/IDEAL-COMMON/pom.xml" />
         <option value="$PROJECT_DIR$/IDEAL-MANAGER/pom.xml" />
         <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/pom.xml" />
-        <option value="$PROJECT_DIR$/_MyBatis/pom.xml" />
-        <option value="$PROJECT_DIR$/_PageHelper/pom.xml" />
-        <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-DAO/pom.xml" />
-        <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/pom.xml" />
-        <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PORTAL-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PORTAL/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_10" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_9" default="false" project-jdk-name="10" project-jdk-type="JavaSDK" />
 </project>

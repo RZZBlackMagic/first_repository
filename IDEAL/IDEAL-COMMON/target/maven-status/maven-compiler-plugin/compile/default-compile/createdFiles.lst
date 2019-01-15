@@ -1,4 +1,3 @@
-com\ideal\common\CommdoityTableJsonResult.class
-com\ideal\common\CommodityZtreeJsonResult.class
-com\ideal\common\TableJsonResult.class
-com\ideal\common\TreeJsonResult.class
+com\ideal\common\pojo\MessageResult.class
+com\ideal\common\pojo\TableJsonResult.class
+com\ideal\common\pojo\TreeJsonResult.class

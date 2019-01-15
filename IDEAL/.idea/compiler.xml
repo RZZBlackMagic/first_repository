@@ -14,6 +14,9 @@
         <module name="IDEAL-MANAGER-POJO" />
         <module name="IDEAL-MANAGER-SERVICE" />
         <module name="IDEAL-MANAGER-WEB" />
+        <module name="IDEAL-PORTAL-INTERFACE" />
+        <module name="IDEAL-PORTAL-SERVICE" />
+        <module name="IDEAL-PORTAL-WEB" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,7 +30,10 @@
       <module name="IDEAL-MANAGER-SERVICE" target="1.7" />
       <module name="IDEAL-MANAGER-WEB" target="1.7" />
       <module name="IDEAL-PARENT" target="1.7" />
-      <module name="MyBatisGenerator" target="1.7" />
+      <module name="IDEAL-PORTAL" target="1.7" />
+      <module name="IDEAL-PORTAL-INTERFACE" target="1.7" />
+      <module name="IDEAL-PORTAL-SERVICE" target="1.7" />
+      <module name="IDEAL-PORTAL-WEB" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import cn.tedu.note.entity.Note;
+import cn.tedu.note.util.JsonResult;
 
 public interface NoteService {
 
@@ -13,4 +14,5 @@ public interface NoteService {
     public void updateNotebookId(String NoteId,String NotebookId);
     public String deleteNoteById(String NoteId);
     public boolean addStars(String userId,int stars)throws UserNotFoundException;
+    public JsonResult showDeleteNote();
 }

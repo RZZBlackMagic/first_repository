@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amaze UI Admin index Examples</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="PORTAL-WEB-SOURCE/assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="PORTAL-WEB-SOURCE/assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="PORTAL-WEB-SOURCE/assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="PORTAL-WEB-SOURCE/assets/css/admin.css">
+    <link rel="stylesheet" href="PORTAL-WEB-SOURCE/assets/css/app.css">
+    <!-- ZTREE CSS -->
+    <link rel="stylesheet" href="assets/ztree/lib/zTree/v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="assets/ztree/static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/ztree/static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="assets/ztree/lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="assets/ztree/static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="assets/ztree/static/h-ui.admin/css/style.css" />
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <%--
+    <link rel="stylesheet" type="text/css" href="assets/vendor/ztree/css/metroStyle/metroStyle.css" />
+    --%>
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+    <!-- BOOTSTRAP TABLE-->
+    <link rel="stylesheet" href="assets/vendor/bootstrap-table/bootstrap-table.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+    <!-- bootstarpeditable相关css -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="tpl-content-wrapper">
+    <div class="tpl-content-page-title">
+        内容分类管理
+    </div>
+    <ol class="am-breadcrumb">
+        <li><a href="index.html" class="am-icon-home">首页</a></li>
+        <li><a href="#">网页内容管理</a></li>
+        <li class="am-active">内容分类管理</li>
+    </ol>
+    <div class="tpl-portlet-components" style="width:100%;">
+        <div id="left" style="display:inline;width:25%;float:left;border-left:1px solid #b0c4de;border-top:1px solid #b0c4de;border-bottom:1px solid #b0c4de;">
+
+            <ul id="treeDemo" class="ztree" style="left:5px;font-size:10px;color:#000">
+
+            </ul>
+
+        </div>
+
+        <div id="right" style="width:75%;float:left;border:1px solid #b0c4de;">
+            <div id="showTable">
+                <div id="toolbar">
+                    <a><button onclick="clickPlus()" id="add-good" class="btn btn-default" type="button" style="float: left;border-top-right-radius: 0%;border-bottom-right-radius: 0%;">
+                        <span class="fa fa-plus" ></span>
+                    </button></a>
+                    <button onclick="clickMinus()" id="remove-good" class="btn btn-default" type="button" style="margin-right: 5px;float: left;border-top-left-radius: 0%;border-bottom-left-radius: 0%;border-left:0;">
+                        <span class="fa fa-minus"></span>
+                    </button>
+                </div>
+                <table id="table" data-buttons-align="right"></table>
+            </div>
+
+
+            <div class="col-lg-9" id="showForm" style="display:none">
+                <form class="form-horizontal" role="form" onsubmit="clickSubmit()" id="form">
+                    <legend style="margin-bottom: 30px;">添加商品</legend>
+                    <ul>
+                        <li>
+                            <div class="form-group" style="margin-bottom: 20px">
+                                <label for="name" class="col-lg-3 control-label">类别</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" name="name" placeholder="请输入商品所属类别">
+                                </div>
+                            </div>
+                        </li>
+
+
+
+                        <li>
+                            <div class="form-group">
+                                <div class="col-lg-offset-2 col-lg-4" >
+                                    <button type="button" class="btn btn-success" onclick="clickSubmit()">确认</button>
+                                    &nbsp&nbsp&nbsp
+                                    <button type="reset" class="btn btn-default" onclick="clickExit()">返回</button>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="PORTAL-WEB-SOURCE/assets/js/jquery.min.js"></script>
+<script src="PORTAL-WEB-SOURCE/assets/js/amazeui.min.js"></script>
+<script src="PORTAL-WEB-SOURCE/assets/js/iscroll.js"></script>
+<script src="PORTAL-WEB-SOURCE/assets/js/app.js"></script>
+<script src="PORTAL-WEB-SOURCE/assets/js/echarts.min.js"></script>
+<script src="PORTAL-WEB-SOURCE/assets/vendor/ztree/js/jquery.ztree.all.js"></script>
+<%--<script src="PORTAL-WEB-SOURCE/assets/vendor/ztree/js/jquery.ztree.core.js"></script>
+<script src="PORTAL-WEB-SOURCE/assets/vendor/ztree/js/jquery.ztree.excheck.js"></script>
+<script src="PORTAL-WEB-SOURCE/assets/vendor/ztree/js/jquery.ztree.exedit.js"></script>
+<script src="PORTAL-WEB-SOURCE/assets/vendor/ztree/js/jquery.ztree.exhide.js"></script>--%>
+
+
+
+
+<!-- END WRAPPER -->
+<!-- Javascript -->
+<%--
+<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+--%>
+<script src="assets/scripts/klorofil-common.js"></script>
+<script src="assets/scripts/custom-scripts.js"></script>
+
+<!-- bootstrap-editable相关js -->
+
+<!--     <script src="js/jquery-1.9.1.min.js"></script>
+ -->
+<script src="PORTAL-WEB-SOURCE/assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="PORTAL-WEB-SOURCE/assets/vendor/bootstrap3-editable/js/bootstrap-editable.js"></script>
+<script src="PORTAL-WEB-SOURCE/assets/vendor/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="PORTAL-WEB-SOURCE/assets/vendor/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
+<script src="assets/vendor/bootstrap3-editable/js/bootstrap-table-editable.js"></script>
+
+
+<!-- bootstrap-editable相关js -->
+
+<script>
+
+
+    console.log(1);
+    var url='/portal/ztree/content_category.do';
+    $.ajax({
+        url:url,
+        dataType:'json',
+        processData: false,
+        type:'get',
+        success:function(result){
+            console.log(result);
+            console.log('您现在访问的是：'+url);
+            var zNodes=result.data;
+            var t = $("#treeDemo");
+            //初始化ztree
+            t = $.fn.zTree.init(t, setting, zNodes);
+        },
+        error:function(XMLHttpRequest, textStatus, errorThrown) {
+            console.log('fail');
+        }});
+
+    var setting= {
+
+        view: {
+            selectedMulti: true, //设置是否能够同时选中多个节点
+            showIcon: true,      //设置是否显示节点图标
+            showLine: true,      //设置是否显示节点与节点之间的连线
+            showTitle: true,     //设置是否显示节点的title提示信息
+
+        },
+
+        data: {
+            simpleData: {
+                enable: true,
+                idKey: "id",
+                pIdKey: "pId",
+                rootPId: ""
+            }
+        },
+
+        callback: {
+            //点击Ztree内容执行事件
+            beforeClick: function (treeId, treeNode) {
+                //console.log(3);
+                console.log(treeNode);
+                var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+                /*if (treeNode.isParent) {
+                    zTree.expandNode(treeNode);
+                    return false;
+                } else {
+                    //demoIframe.attr("src",treeNode.file + ".html");
+                    return true;
+                }*/
+                $("#table").bootstrapTable('destroy');
+                initTable('/portal/bootstrap/editContentCategory.do',treeNode.id);
+            },
+            //树复选框选中事件
+            onCheck: zTreeOnCheck,
+            onRename:ztreeOnRename,
+        }
+        /*edit:{
+            enable:true,
+            showRenameBtn:true,
+            showRemoveBtn:true,
+            removeTitle:"删除",
+            renameTitle:"修改"
+        }*/
+
+
+    }
+    //点击tree执行事件
+    function ztreeOnRename(){
+        //console.log(1);
+        //列表初始化
+        //Table = XINER.initManagerLogoTable("#table");
+        var treeObj=$.fn.zTree.getZTreeObj("treeDemo"),
+            nodes=treeObj.getCheckedNodes(true),
+            name="",
+            cid="";
+        for(var i=0;i<nodes.length;i++){
+            //name+=nodes[i].name + "; ";
+            cid+=nodes[i].id + ",";
+            console.log("节点id:"+nodes[i].id); //获取选中节点的值
+        }
+        //加载table
+
+    }
+
+    //复选框选中执行事件
+    function zTreeOnCheck(event, treeId, treeNode){
+
+    }
+
+
+    //添加商品
+    function clickPlus(){
+        console.log('addGood');
+        $("#showTable").hide();
+        $("#showForm").show();
+
+    }
+    //移除商品
+    function clickMinus(){
+        console.log('removeGood');
+        /*var title = '';
+        $("input[name='btSelectItem']:checked").each(function() { // 遍历选中的checkbox
+
+            n = $(this).parents("tr").index();  // 获取checkbox所在行的顺序
+            //console.log(n);
+            newtitle = $(this).parents("tr").find('td:eq(1)').find('a[data-name="title"]').html();
+            title = title + newtitle+',';
+            // $("table#test_table").find("tr:eq("+n+")").remove();
+        });
+        console.log(title);
+        data={
+            'title':title
+        };
+        $.post('/IDEAL/commodity/removeGood.do',data,function(result){
+            alert(result);
+            console.log('您现在访问的是：/IDEAL/commodity/removeGood.do');
+        });*/
+
+    }
+    function clickExit(){
+        $("#showTable").show();
+        $("#showForm").hide();
+        zTreeOnCheck();
+    }
+
+
+
+
+
+
+
+
+    //初始化table
+    function initTable( edit_url,id) {
+        $(table).data("id",id);
+        $("#table").bootstrapTable({
+            url: "/portal/initTable/contentCategory.do",       //请求后台的URL（*）
+            method: 'get',                      //请求方式（*）
+            contentType: "application/x-www-form-urlencoded",
+            dataType: "json",
+            toolbar: '#toolbar',                //工具按钮用哪个容器
+            cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
+            pagination: true,                   //是否显示分页（*）
+            sortable: true,                     //是否启用排序
+            sortOrder: "asc",                   //排序方式
+            clickToSelect: true,//一定要写！！可以选择：用于edittable
+            sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
+            pageNumber: 1,                       //初始化加载第一页，默认第一页
+            pageSize: 15,                       //每页的记录行数（*）
+            pageList: [15, 30, 50, 100],        //可供选择的每页的行数（*）
+            showColumns: true,                  //是否显示所有的列
+            height: 750,                        //行高，如果没有设置height属性，表格自动根据记录条数觉得表格高度
+            queryParamsType: 'limit',//查询参数组织方式
+            queryParams: function (params) {//上传服务器的参数
+                var temp = {//如果是在服务器端实现分页，limit、offset这两个参数是必须的
+                    id: id,
+                    limit: params.limit, // 每页显示数量
+                    page: (params.offset / params.limit) + 1   //当前页码
+                };
+                return temp;
+            },
+            columns: [
+                {
+                    checkbox: true, // 显示一个勾选框
+                    align: 'center' // 居中显示
+                },
+                {
+                    field: 'name',
+                    title: '商品内容分类名字',
+                    editable: {
+                        type: 'text',
+                        title: '修改商品内容分类名字',
+                        placement: 'right',
+                        emptytext: "空文本",
+                        validate: function(v) {
+                            if (!v) return '用户名不能为空';
+                        }
+                    }
+                },
+                {
+                    field: 'created',
+                    title: '创建时间'
+                },
+                {
+                    field: 'updated',
+                    title: '更新时间'
+                },
+                {
+                    field: '',
+                    title: '操作',
+                    align: 'center',
+                    formatter: function () {
+                        var result = "";
+                        result += "<a href='javascript:;' class='btn btn-xs' title='编辑'><span class='glyphicon glyphicon-cog'></span></a>";
+                        return result;
+                    }
+                }
+
+            ],
+            onEditableSave: function ( field, row ) {
+
+                $.ajax({
+                    type: "post",
+                    url: edit_url,
+                    data:{
+                        'id':row.id,
+                        'parent_id':row.parent_id,
+                        'name':row.name,
+                        'status':row.status,
+                        'sort_order':row.sort_order,
+                        'is_parent':row.is_parent,
+                        'created':row.created,
+                        'updated':row.updated
+
+                    },
+                    dataType: 'JSON',
+                    success: function (result) {
+                        console.log('您现在访问的是：'+url);
+                        /* $("#table").bootstrapTable('refresh',cid);
+                        if (status == "success") {
+                            alert('提交数据成功');
+                        } */
+                    },
+                    error: function () {
+                        date = {
+                            'id':row.id,
+                            'parent_id':row.parent_id,
+                            'name':row.name,
+                            'status':row.status,
+                            'sort_order':row.sort_order,
+                            'is_parent':row.is_parent,
+                            'created':row.created,
+                            'updated':row.updated
+                        }
+                        console.log('编辑失败');
+                        console.log(row);
+                        console.log(date);
+                        console.log(field);
+                    },
+                    complete: function () {
+
+                    }
+
+                });
+            }
+        });
+</script>
+</body>
+</html>

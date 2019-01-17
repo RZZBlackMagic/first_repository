@@ -1,0 +1,4 @@
+com\ideal\portal\service\impl\ContentCategoryManagerServiceImpl.class
+com\ideal\jedis\JedisClient.class
+com\ideal\jedis\JedisClientPool.class
+com\ideal\jedis\JedisClientCluster.class

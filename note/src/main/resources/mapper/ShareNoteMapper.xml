@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" 
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+	<!-- 指定映射文件的位置 -->
+	<mapper namespace="cn.tedu.note.dao.ShareNoteDao">
+	   
+	      <select id="findAllFromShareNote"  resultType="cn.tedu.note.entity.cn_share_note">
+	        select 
+	         *
+	        from
+	           cn_share
+	        
+	      </select>
+	      
+	      
+	      <select id="findNoteByShareId"  parameterType="String" resultType="cn.tedu.note.entity.cn_share_note">
+	        select 
+	           *
+	        from
+	           cn_share
+	        where
+	           cn_share_id= #{shareId}
+	      </select>
+	    
+	     <insert id="addNoteToCollectNote" parameterType="cn.tedu.note.entity.CollectNote" >
+	       insert into cn_collect_note
+	       
+	       values(
+	        #{cn_share_id},
+	        #{cn_share_title},
+	        #{cn_share_body},
+	        #{cn_note_id},
+	        #{cn_user_id}
+	       )
+	    </insert>
+	    
+	    <select id="showCollectNotes"  resultType="cn.tedu.note.entity.CollectNote">
+	        select 
+	          *
+	        from
+	           cn_collect_note
+	        
+	      </select>
+	      
+	      
+	</mapper>

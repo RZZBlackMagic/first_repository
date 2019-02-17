@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FUSUsageTrigger">
+    <session id="1314173967">
+      <usages-collector id="statistics.spring.core.usages.trigger">
+        <counts>
+          <entry key="fixes.SpringFacetInspection.AddFacetFix" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-CART-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-MERCHANT-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-MERCHANT/IDEAL-MERCHANT-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PORTAL-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PRODUCTOR-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PRODUCTOR/IDEAL-PRODUCTOR-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-SSO-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-SSO/IDEAL-SSO-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../IDEAL/IDEAL-SSO-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../IDEAL/IDEAL-SSO/IDEAL-SSO-SERVICE" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/pom.xml" />
+        <option value="$PROJECT_DIR$/_FastDFS/pom.xml" />
+        <option value="$PROJECT_DIR$/_MyBatis/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-COMMON/pom.xml" />
+        <option value="$PROJECT_DIR$/_PageHelper/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-SSO/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-SSO-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PORTAL/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PORTAL-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PRODUCTOR/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PRODUCTOR-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-MERCHANT/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-MERCHANT-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-CART-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-COMMODITY-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-ORDER-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-ORDER/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-SEARCH/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-SEARCH-WEB/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/IDEAL-COMMON/_PageHelper/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../IDEAL/IDEAL-SSO/IDEAL-SSO-INTERFACE/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../IDEAL/IDEAL-SSO/IDEAL-SSO-SERVICE/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../IDEAL/IDEAL-SSO/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/header.jsp" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

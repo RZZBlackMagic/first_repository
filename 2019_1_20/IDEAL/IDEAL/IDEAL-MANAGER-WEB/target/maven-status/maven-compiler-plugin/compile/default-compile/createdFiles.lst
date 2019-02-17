@@ -1,0 +1,6 @@
+cn\ideal\manager\controller\PageController.class
+cn\ideal\manager\controller\AccountManagerController.class
+cn\ideal\manager\controller\ProductorManagerController.class
+cn\ideal\manager\controller\CommodityCatController.class
+cn\ideal\manager\controller\ContentCategoryManagerController.class
+cn\ideal\manager\controller\ContentManagerController.class

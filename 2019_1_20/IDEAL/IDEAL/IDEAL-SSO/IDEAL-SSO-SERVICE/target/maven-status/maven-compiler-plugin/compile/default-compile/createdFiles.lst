@@ -1,0 +1,6 @@
+cn\ideal\sso\service\impl\UserServiceImpl.class
+cn\ideal\jedis\JedisClient.class
+cn\ideal\jedis\JedisClientCluster.class
+cn\ideal\jedis\JedisClientPool.class
+cn\ideal\sso\service\impl\ManagerServiceImpl.class
+cn\ideal\sso\service\impl\ProductorServiceImpl.class

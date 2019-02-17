@@ -1,0 +1,3 @@
+0:0:0:0:0:0:0:1 - - [23/Jan/2019:09:03:17 +0800] "GET /manager_login HTTP/1.1" 200 2975 http-bio-8088-exec-1 918
+0:0:0:0:0:0:0:1 - - [23/Jan/2019:09:03:17 +0800] "GET /assets/css/app.css HTTP/1.1" 304 - http-bio-8088-exec-10 10
+0:0:0:0:0:0:0:1 - - [23/Jan/2019:09:03:51 +0800] "POST /sso/manager/login HTTP/1.1" 200 82 http-bio-8088-exec-11 1770

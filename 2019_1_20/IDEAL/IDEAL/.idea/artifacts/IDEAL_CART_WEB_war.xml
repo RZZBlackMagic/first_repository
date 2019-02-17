@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="IDEAL-CART-WEB:war">
+    <output-path>$PROJECT_DIR$/IDEAL-CART-WEB/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>IDEAL-CART-WEB</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="IDEAL-CART-WEB-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="IDEAL-CART-WEB:war exploded" />
+    </root>
+  </artifact>
+</component>

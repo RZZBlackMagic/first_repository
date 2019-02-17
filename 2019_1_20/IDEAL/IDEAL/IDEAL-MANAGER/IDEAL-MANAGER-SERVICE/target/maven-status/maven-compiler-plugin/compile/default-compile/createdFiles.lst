@@ -1,0 +1,5 @@
+cn\ideal\manager\service\impl\AccountManagerImpl.class
+cn\ideal\manager\service\impl\CommodityCatServiceImpl.class
+cn\ideal\manager\service\impl\ContentCategoryManagerServiceImpl.class
+cn\ideal\manager\service\impl\ProductorManagerServiceImpl.class
+cn\ideal\manager\service\impl\ContentManagerServiceImpl.class

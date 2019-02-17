@@ -1,0 +1,1231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/login.jsp" line="53" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3e8c889d-0938-4af5-9813-2f8ccb251923" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/target/" />
+    <ignored path="$PROJECT_DIR$/_FastDFS/target/" />
+    <ignored path="$PROJECT_DIR$/_MyBatis/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-COMMON/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-COMMON/_PageHelper/target/" />
+    <ignored path="$PROJECT_DIR$/_PageHelper/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-MANAGER/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-DAO/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-MANAGER-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/../../../IDEAL/IDEAL-SSO/IDEAL-SSO-INTERFACE/target/" />
+    <ignored path="$PROJECT_DIR$/../../../IDEAL/IDEAL-SSO/IDEAL-SSO-SERVICE/target/" />
+    <ignored path="$PROJECT_DIR$/../../../IDEAL/IDEAL-SSO/target/" />
+    <ignored path="$PROJECT_DIR$/../../../IDEAL/IDEAL-SSO-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-SSO/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-SSO/IDEAL-SSO-INTERFACE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-SSO/IDEAL-SSO-SERVICE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-SSO-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PORTAL/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PORTAL-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PRODUCTOR/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PRODUCTOR-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-MERCHANT/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-MERCHANT-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-CART-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-COMMODITY-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-ORDER-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-ORDER/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-SEARCH/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-SEARCH-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PRODUCTOR/IDEAL-PRODUCTOR-INTERFACE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PRODUCTOR/IDEAL-PRODUCTOR-SERVICE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PORTAL/IDEAL-PORTAL-INTERFACE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-MERCHANT/IDEAL-MERCHANT-INTERFACE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-MERCHANT/IDEAL-MERCHANT-SERVICE/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/manager_login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="73" column="7" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/AccountManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/AccountProductor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2600">
+              <caret line="201" column="44" selection-start-line="201" selection-start-column="44" selection-end-line="201" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/AccountUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityCat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" column="73" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityCatKey.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityContent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityContentExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityContentCategoryKey.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityContentCategory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>log</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/invoice.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/progress-bars.html" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/404.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/500.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/alerts.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/blank.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/buttons.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/cards.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/chartjs.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/forms.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/layouts-fixed-header.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/layouts-fixed-sidebar.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/layouts-hidden-sidebar.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/layouts-normal.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/login.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/modals.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/progress-bars.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/register.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/settings.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/tabs.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/resources/spring/applicationContext-service.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/TreeJsonResult.java" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/old_views/commodity_content.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityCat.java" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityCatKey.java" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/index1.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/resources/springmvc.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/old_views/commodity_content_category.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/commodity_content_category.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/commodity_content_category.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/notifications.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/nav.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/commodity_category.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/old_commodity_content_category.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/productor_regist.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/productor_unlock.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE/src/main/java/cn/ideal/manager/service/CommodityCatService.java" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/ContentManagerController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/CommodityCatController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/CommodityCatServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/commodity_category.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/content_category.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/list.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/ProductorManagerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/ProductorManagerController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/TableJsonResult.java" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/AccountProductor.java" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/productor_lock.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/manager_login.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/AccountManager.java" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityContentCategory.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="529" />
+    <option name="y" value="104" />
+    <option name="width" value="1298" />
+    <option name="height" value="1033" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-MANAGER" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-MANAGER" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-MANAGER-POJO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-MANAGER" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-MANAGER-POJO" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-MANAGER" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-MANAGER-POJO" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-MANAGER" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-MANAGER-POJO" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-MANAGER" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-MANAGER-POJO" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548154083138" />
+    <property name="jdk.selected.JAVA_MODULE" value="10" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\2019_1_20\IDEAL\IDEAL\IDEAL-MANAGER-WEB\src\main\webapp\MANAGER-WEB-SOURCE\assets\vendor\font-awesome\css" />
+      <recent name="D:\workspace\2019_1_20\IDEAL\IDEAL\IDEAL-MANAGER-WEB\src\main\webapp\MANAGER-WEB-SOURCE\assets\css" />
+      <recent name="D:\workspace\2019_1_20\IDEAL\IDEAL\IDEAL-MANAGER-WEB\src\main\webapp\MANAGER-WEB-SOURCE\assets\vendor" />
+      <recent name="D:\workspace\2019_1_20\IDEAL\IDEAL\IDEAL-MANAGER-WEB\src\main\webapp\MANAGER-WEB-SOURCE\assets\vendor\font-awesome" />
+      <recent name="D:\workspace\2019_1_20\IDEAL\IDEAL\IDEAL-MANAGER-WEB\src\main\webapp\MANAGER-WEB-SOURCE\assets" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.ideal.manager.controller" />
+      <recent name="cn.ideal.manager.service.impl" />
+      <recent name="cn.ideal.manager.service" />
+      <recent name="cn.ideal.common.pojo" />
+      <recent name="cn.ideal.productor.controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IDEAL\IDEAL-SSO-WEB\src\main\resources" />
+      <recent name="D:\IDEAL\IDEAL-MANAGER\IDEAL-MANAGER-SERVICE\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Maven.MANAGER-WEB">
+    <configuration name="FastDFSClient.main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IDEAL-COMMON" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.ideal.common.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.ideal.common.utils" />
+      <option name="MAIN_CLASS_NAME" value="cn.ideal.common.utils.FastDFSClient" />
+      <option name="METHOD_NAME" value="main" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FastDFS.FastDfsClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IDEAL-MANAGER-WEB" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FastDFS" />
+      <option name="METHOD_NAME" value="FastDfsClient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MANAGER-WEB" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-MANAGER-WEB" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="MANAGER" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-MANAGER" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="MERCHANT-WEB" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-MERCHANT-WEB" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="MERCHANT" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-MERCHANT" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="MyBatis" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mybatis-generator:generate" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/_MyBatis" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="PORTAL-WEB" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PORTAL-WEB" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="PORTAL" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PORTAL" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="PRODUCTOR-WEB" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PRODUCTOR-WEB" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="PRODUCTOR" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PRODUCTOR" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="SSO-WEB" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-SSO-WEB" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="SSO" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-SSO" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.FastDFSClient.main" />
+      <item itemvalue="JUnit.FastDFS.FastDfsClient" />
+      <item itemvalue="Maven.SSO" />
+      <item itemvalue="Maven.SSO-WEB" />
+      <item itemvalue="Maven.PRODUCTOR" />
+      <item itemvalue="Maven.PRODUCTOR-WEB" />
+      <item itemvalue="Maven.PORTAL" />
+      <item itemvalue="Maven.MERCHANT" />
+      <item itemvalue="Maven.MERCHANT-WEB" />
+      <item itemvalue="Maven.PORTAL-WEB" />
+      <item itemvalue="Maven.MyBatis" />
+      <item itemvalue="Maven.MANAGER" />
+      <item itemvalue="Maven.MANAGER-WEB" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FastDFS.FastDfsClient" />
+        <item itemvalue="JUnit.FastDFSClient.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\XINER\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e8c889d-0938-4af5-9813-2f8ccb251923" name="Default Changelist" comment="" />
+      <created>1547608077057</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1547608077057</updated>
+      <workItem from="1547608080329" duration="12347000" />
+      <workItem from="1547623937505" duration="280000" />
+      <workItem from="1547694034894" duration="18676000" />
+      <workItem from="1547736874236" duration="6065000" />
+      <workItem from="1547776702703" duration="2772000" />
+      <workItem from="1547781143875" duration="8387000" />
+      <workItem from="1547791486933" duration="4922000" />
+      <workItem from="1547800003125" duration="5890000" />
+      <workItem from="1547822371642" duration="1563000" />
+      <workItem from="1547885049631" duration="1388000" />
+      <workItem from="1547949939148" duration="107000" />
+      <workItem from="1547951092375" duration="5259000" />
+      <workItem from="1547956866534" duration="28577000" />
+      <workItem from="1548032567362" duration="1120000" />
+      <workItem from="1548035597504" duration="32724000" />
+      <workItem from="1548118723470" duration="19011000" />
+      <workItem from="1548205098846" duration="874000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="FastDFS_uploadFile - 2019.01.16 at 12h 16m 19s.xml">
+      <configuration name="FastDFS.uploadFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FastDFS_uploadFile - 2019.01.16 at 12h 17m 36s.xml">
+      <configuration name="FastDFS.uploadFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FastDFS_uploadFile - 2019.01.16 at 12h 18m 01s.xml">
+      <configuration name="FastDFS.uploadFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FastDFS_testFastDfsClient - 2019.01.16 at 12h 25m 53s.xml">
+      <configuration name="FastDFS.testFastDfsClient" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FastDFS_FastDfsClient - 2019.01.20 at 16h 30m 29s.xml">
+      <configuration name="FastDFS.FastDfsClient" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="149962000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24200426" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Learn" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Image Layers" order="7" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27193934" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993135" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32995737" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.12153518" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.32995737" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23933902" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Learn" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Image Layers" order="7" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27193934" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993135" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32995737" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.12153518" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.32995737" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/cards.jsp" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/assets/vendor/bootstrap3-editable/js/bootstrap-editable.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/old_views/commodity_content.jsp" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/invoice.jsp" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/V/css/demo.css" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/index1.jsp" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/old_views/index.jsp" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/resources/springmvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/ContentCategoryManagerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="101" column="38" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/commodity_content_category.jsp" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/old_views/old_commodity_content_category.jsp" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/commodity_content_category.jsp" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/old_commodity_category.jsp" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/old_commodity_content_category.jsp" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/oldproductor_regist.jsp" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/oldproductor_lock.jsp" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/oldproductor_unlock.jsp" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/nav.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/notifications.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/assets/vendor/toastr/toastr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#22#29#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE/src/main/java/cn/ideal/manager/service/CommodityCatService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="53" column="58" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/productor_regist.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2574">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/productor_unlock.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3280">
+          <caret line="28" column="82" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/assets/vendor/bootstrap/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/assets/css/demo.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/assets/vendor/jquery-slimscroll/jquery.slimscroll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/assets/vendor/font-awesome/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/CommodityCatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="772">
+          <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2296#2297#0" expanded="true" />
+            <element signature="e#2363#2364#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/TreeJsonResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+          <folding>
+            <element signature="e#831#832#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/CommodityCatServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="107" column="43" selection-start-line="107" selection-start-column="43" selection-end-line="107" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/ContentManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/ContentManagerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/content_category.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="634" column="34" selection-start-line="634" selection-start-column="34" selection-end-line="634" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/ProductorManagerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="103" column="22" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/commodity_category.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1599">
+          <caret line="366" column="38" lean-forward="true" selection-start-line="366" selection-start-column="38" selection-end-line="366" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/ProductorManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/TableJsonResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/productor_lock.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="175" column="34" lean-forward="true" selection-start-line="175" selection-start-column="34" selection-end-line="175" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-SSO-WEB/src/main/java/cn/ideal/sso/controller/ManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-418">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/AccountManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/AccountProductor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2600">
+          <caret line="201" column="44" selection-start-line="201" selection-start-column="44" selection-end-line="201" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/AccountUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityCat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="73" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityCatKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityContentExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityContentCategoryKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-POJO/src/main/java/cn/ideal/pojo/CommodityContentCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/manager_login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="73" column="7" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>IDEAL-MANAGER-SERVICE:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>IDEAL-MANAGER-POJO</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

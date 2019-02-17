@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="IDEAL-SSO-SERVICE:war">
+    <output-path>$PROJECT_DIR$/IDEAL-SSO/IDEAL-SSO-SERVICE/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>IDEAL-SSO-SERVICE</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="IDEAL-SSO-SERVICE-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="IDEAL-SSO-SERVICE:war exploded" />
+    </root>
+  </artifact>
+</component>

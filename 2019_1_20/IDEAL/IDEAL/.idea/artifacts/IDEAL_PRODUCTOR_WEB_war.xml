@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="IDEAL-PRODUCTOR-WEB:war">
+    <output-path>$PROJECT_DIR$/IDEAL-PRODUCTOR-WEB/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>IDEAL-PRODUCTOR-WEB</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="IDEAL-PRODUCTOR-WEB-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="IDEAL-PRODUCTOR-WEB:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -48,5 +48,8 @@
     <dubbo:service interface="cn.ideal.manager.service.CommodityCatService" ref="goodService" protocol="dubbo" timeout="300000"/>
     <bean class="cn.ideal.manager.service.impl.CommodityCatServiceImpl" id="goodService" />
 
+    <dubbo:service interface="cn.ideal.manager.service.MerchantManagerService" ref="merchantManagerService" protocol="dubbo" timeout="300000"/>
+    <bean class="cn.ideal.manager.service.impl.MerchantManagerImpl" id="merchantManagerService" />
+
 
 </beans>

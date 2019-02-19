@@ -1,5 +1,6 @@
 package cn.tedu.note.service;
 
+import java.sql.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +19,8 @@ import cn.tedu.note.entity.Note;
 import cn.tedu.note.entity.Notebook;
 import cn.tedu.note.entity.Stars;
 import cn.tedu.note.entity.User;
+import cn.tedu.note.entity.cn_share_note;
+import cn.tedu.note.entity.deleteNotes;
 import cn.tedu.note.util.JsonResult;
 @Service("noteService")
 public class NoteServiceImpl implements NoteService {
@@ -26,6 +29,7 @@ public class NoteServiceImpl implements NoteService {
 	private NotebookDao notebookDao;
 	@Resource
 	private NoteDao noteDao;
+	
 	public List<Map<String, Object>> listNotes(String NotebookId) throws NotebookNotFoundException   {
 		List<Map<String,Object>> notes = noteDao.findNoteByNotebookId(NotebookId);
 		if(NotebookId==null||NotebookId.trim().isEmpty()){
@@ -61,8 +65,8 @@ public class NoteServiceImpl implements NoteService {
         if(NoteBody==null||NoteBody.trim().isEmpty()){
         	NoteBody="该笔记本内容为空";
         }
-        if(title==null||title.trim().isEmpty()){
-    		note.setCn_note_title(title);
+        if(title.trim()!=null){
+    		note.setCn_note_title(title.trim());
         }
 		note.setCn_note_body(NoteBody);
 		note.setCn_note_last_modify_time(System.currentTimeMillis());
@@ -70,13 +74,23 @@ public class NoteServiceImpl implements NoteService {
 	}
 	public void updateNotebookId(String NoteId, String NotebookId) {
         Note note = noteDao.findNoteByNoteId(NoteId);
-        note.setCn_notebook_id(NotebookId);
+        
         noteDao.updateNote(note);
 	}
 	public String deleteNoteById(String NoteId) {
 		Note note = noteDao.findNoteByNoteId(NoteId);
 		System.out.println(note);
-		noteDao.addNoteToDeleteNote(note);
+		deleteNotes deletenote = new deleteNotes();
+        deletenote.setCn_note_body(note.getCn_note_body());
+        deletenote.setCn_note_create_time(note.getCn_note_create_time());
+        deletenote.setCn_note_id(note.getCn_note_id());
+        deletenote.setCn_note_last_modify_time(note.getCn_note_last_modify_time());
+        deletenote.setCn_note_status_id(note.getCn_note_status_id());
+        deletenote.setCn_note_title(note.getCn_note_title());
+        deletenote.setCn_notebook_id(note.getCn_notebook_id());
+        deletenote.setCn_type_id(note.getCn_note_type_id());
+        deletenote.setCn_user_id(note.getCn_user_id());
+		noteDao.addNoteToDeleteNote(deletenote);
 		int row = noteDao.deleteNoteById(NoteId);
 		if(row==1){
 			return "删除成功";
@@ -137,6 +151,48 @@ public class NoteServiceImpl implements NoteService {
 		}else{
 			return new JsonResult(deleteNoteList);
 		}
+	}
+	public String shareNoteService(String selectedNoteId) {
+		Note note = noteDao.findNoteByNoteId(selectedNoteId);
+		if(note==null){
+			throw new RuntimeException("请选择正确的笔记！");
+		}
+		cn_share_note shareNote1 = noteDao.findShareNote(selectedNoteId);
+		if(shareNote1!=null){
+			throw new RuntimeException("该笔记已添加至共享笔记");
+		}
+		cn_share_note  shareNote = new cn_share_note();
+		shareNote.setCn_note_id(selectedNoteId);
+		shareNote.setCn_share_body(note.getCn_note_body());
+		String cn_share_id =UUID.randomUUID().toString();
+		
+		shareNote.setCn_share_id(cn_share_id);
+		shareNote.setCn_share_title(note.getCn_note_title());
+		//向share表里面添加
+		noteDao.addNoteToShareNote(shareNote);
+		return "添加成功";
+	}
+	/**
+	 * 先在回收站将该笔记本查出来，在将其在回收站删除，最后将其添加至note表里面
+	 */
+	public String replayDelNoteService(String noteId, String notebookId) {
+        deleteNotes delNote = noteDao.findDelNoteByNoteId(noteId);
+        int row = noteDao.deleteNotesFromDel(noteId);
+        if(row==0){
+        	throw new RuntimeException("移动失败");
+        }
+        Note note = new Note();
+        note.setCn_notebook_id(notebookId);
+        note.setCn_note_body(delNote.getCn_note_body());
+        note.setCn_note_create_time(delNote.getCn_note_create_time());
+        note.setCn_note_id(noteId);
+        note.setCn_note_last_modify_time((System.currentTimeMillis()));
+        note.setCn_note_status_id(delNote.getCn_note_status_id());
+        note.setCn_note_title(delNote.getCn_note_title());
+        note.setCn_user_id(delNote.getCn_user_id());
+        note.setCn_note_type_id(delNote.getCn_type_id());
+        noteDao.createNewNote(note);
+		return "移动成功！";
 	}
 
 

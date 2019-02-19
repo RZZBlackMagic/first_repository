@@ -27,14 +27,12 @@ public class ContentManagerServiceImpl implements ContentManagerService {
         CommodityContentExample example = new CommodityContentExample();
         CommodityContentExample.Criteria criteria = example.createCriteria();
         criteria.andCategoryIdEqualTo(Long.valueOf(id));
-        //criteria.andIdEqualTo(Long.valueOf(id));
         List<CommodityContent> list =  commodityContentMapper.selectByExample(example);
         if(list!=null){
             for(int i=0;i<list.size();i++){
                 allSelectedList.add(list.get(i));
             }
         }
-        System.out.println("********AllselectedList:"+allSelectedList);
         TableJsonResult tableJsonResult = new TableJsonResult(allSelectedList.size(),allSelectedList);
         return tableJsonResult;
     }

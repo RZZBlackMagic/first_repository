@@ -1,10 +1,16 @@
 package cn.ideal.merchant.service;
 
+import cn.ideal.common.pojo.MessageResult;
+import cn.ideal.common.pojo.TableJsonResult;
+import cn.ideal.pojo.RelaMerPro;
+import cn.ideal.pojo.RelaMerProCom;
+
 import java.util.List;
 
 public interface ApplyMerchantService {
-    public List SearchCompanyForTable(String limit, String page, String search);
-    public String ApplyCompany(Long merchantId,String merchantName,Long productorId,String productorName );
-    public List initAppliedComTable(int limit,int page,Long merchantId);
-    public List getCommdityForMer(String productorId);
+     TableJsonResult getCompanyListForTable(Integer limit, Integer page, String search);
+     MessageResult ApplyCompany(RelaMerPro relaMerPro);
+     TableJsonResult getAppliedComListForTable(int limit,int page,Long merchantId);
+     TableJsonResult getCommdityListForMer(int limit,int page,String productorId);
+     MessageResult ApplyCommodityForMer(String id,Long merchantId,Long productorId,String productorName,String merchantName);
 }

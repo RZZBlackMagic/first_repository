@@ -31,5 +31,12 @@ public class NotebookController extends AbatractController {
 		System.out.println(notebook);
 		return new JsonResult(notebook);
 	}
+	@RequestMapping("/renameNotebook.do")
+	@ResponseBody
+	public JsonResult NotebookIdRename(String title,String notebookId){
+		String message = notebookService.notebookRenameService(title, notebookId);
+	
+		return new JsonResult(message);
+	}
 
 }

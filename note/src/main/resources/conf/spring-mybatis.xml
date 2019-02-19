@@ -28,7 +28,7 @@
      </bean>
    <!-- 配置MyBatis的SessionFactory -->
    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-      <property name="dataSource" ref="ds"/>
+       <property name="dataSource" ref="ds"/>
        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
    </bean>
    

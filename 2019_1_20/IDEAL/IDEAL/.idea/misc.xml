@@ -53,15 +53,13 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/IDEAL-COMMON/_PageHelper/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-MERCHANT/IDEAL-MERCHANT-POJO/pom.xml" />
         <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/pom.xml" />
         <option value="$PROJECT_DIR$/../../../IDEAL/IDEAL-SSO/IDEAL-SSO-INTERFACE/pom.xml" />
         <option value="$PROJECT_DIR$/../../../IDEAL/IDEAL-SSO/IDEAL-SSO-SERVICE/pom.xml" />
         <option value="$PROJECT_DIR$/../../../IDEAL/IDEAL-SSO/pom.xml" />
       </set>
     </option>
-  </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/header.jsp" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

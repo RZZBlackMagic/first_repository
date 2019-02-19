@@ -11,7 +11,7 @@ public interface CommodityCatMapper {
 
     int deleteByExample(CommodityCatExample example);
 
-    int deleteByPrimaryKey(Long key);
+    int deleteByPrimaryKey(Long id);
 
     int insert(CommodityCat record);
 
@@ -19,7 +19,7 @@ public interface CommodityCatMapper {
 
     List<CommodityCat> selectByExample(CommodityCatExample example);
 
-    CommodityCat selectByPrimaryKey(Long key);
+    CommodityCat selectByPrimaryKey(Long id);
 
     int updateByExampleSelective(@Param("record") CommodityCat record, @Param("example") CommodityCatExample example);
 

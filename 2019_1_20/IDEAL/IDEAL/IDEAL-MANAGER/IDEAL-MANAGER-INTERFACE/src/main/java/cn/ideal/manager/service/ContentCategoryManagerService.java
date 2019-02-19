@@ -11,6 +11,5 @@ public interface ContentCategoryManagerService {
     public String updateContentCategoryService(String id, String parent_id, String name, String status, String sort_order, String is_parent, String created, String updated);
     public String removeContentcategoryService(String id, String name);
     public String addContentCategoryService(String id, String name);
-    public Integer isParentService(String id);
 
 }

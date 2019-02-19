@@ -38,10 +38,10 @@
 <!-- WRAPPER -->
 <div id="wrapper">
     <!-- NAVBAR -->
-    <jsp:include page="template/nav.jsp"/>
+    <jsp:include page="template/header.jsp"/>
     <!-- END NAVBAR -->
     <!-- LEFT SIDEBAR -->
-    <jsp:include page="template/list.jsp"/>
+    <jsp:include page="template/left-leftbar.jsp"/>
     <!-- END LEFT SIDEBAR -->
     <!-- MAIN -->
     <div class="main">
@@ -129,17 +129,14 @@
 
 
 <script>
-    //console.log(1);
     $("#table").bootstrapTable('destroy');
-    initTable('/manager/bootstrap/editProductorManager.do');
-    //console.log(2);
+    initTable();
     $("input[name='btSelectItem']").parents('.selected').find('td:eq(1)').text();
 
     //初始化内容分类的table
-    function initTable( edit_url) {
-        //$(table).data("id",id);
+    function initTable( ) {
         $("#table").bootstrapTable({
-            url: "/manager/initAllowedTable/productorManager.do",       //请求后台的URL（*）
+            url: "/manager/getAllowedProductorListForTable/productorManager.do",       //请求后台的URL（*）
             method: 'get',                      //请求方式（*）
             contentType: "application/x-www-form-urlencoded",
             dataType: "json",
@@ -225,26 +222,16 @@
 
     //移除商品
     function clickMinus(){
-        //console.log('removeGood');
         var rows = $(table).bootstrapTable('getSelections');
-        //console.log(rows);
-
-        //console.log(rows.length);
         var  id ='';
-        //var idArray = new Array();
         for(var i=0;i<rows.length;i++){
             id=id+rows[i].id+',';
-            //idArray.push(rows[i].id);
-            //console.log(rows[i].id);
         }
-        //console.log(id);
         var data = {
             'id':id
         };
-        //console.log(data);
-        var url = '/manager/bootstrap/clockProductor.do';
-        $.post(url,data,function (result){
-            //console.log(result);
+        var url = '/manager/clockProductor/producotManager.do';
+        $.post(url,data,function (){
             window.location.reload();
         });
 

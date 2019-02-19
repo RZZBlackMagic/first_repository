@@ -12,7 +12,7 @@
             <ul class="nav">
                 <li><a href="Apply_Company.html" onclick="addClass()" class=""><i class="lnr lnr-code"></i> <span>代理商申请代理</span></a></li>
                 <li><a href="merchant_applied.html" onclick="addClass()" class=""><i class="lnr lnr-chart-bars"></i> <span>申请代理商品</span></a></li>
-                <li><a href="commodity_category.html" onclick="addClass()" class=""><i class="lnr lnr-code"></i> <span></span></a></li>
+                <li><a href="merchant_commodity.html" onclick="addClass()" class=""><i class="lnr lnr-code"></i> <span>代理商申请代理商品</span></a></li>
                 <li><a href="content_category.html" onclick="addClass()" class=""><i class="lnr lnr-chart-bars"></i> <span>网站首页内容</span></a></li>
                 <li>
                     <a href="#subPages" data-toggle="collapse" onclick="addClass()" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>生产商注册管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
@@ -23,7 +23,6 @@
                         </ul>
                     </div>
                 </li>
-                <li><a href="merchant_commodity.html" onclick="addClass()" class=""><i class="lnr lnr-chart-bars"></i> <span>代理商申请代理商品</span></a></li>
 
             </ul>
         </nav>

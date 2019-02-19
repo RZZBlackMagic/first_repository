@@ -1,9 +1,12 @@
 package cn.ideal.pojo;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class CommodityCat extends CommodityCatKey implements Serializable {
+public class CommodityCat {
+    private Long id;
+
+    private Long pid;
+
     private String name;
 
     private Byte status;
@@ -15,6 +18,22 @@ public class CommodityCat extends CommodityCatKey implements Serializable {
     private Date created;
 
     private Date updated;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getPid() {
+        return pid;
+    }
+
+    public void setPid(Long pid) {
+        this.pid = pid;
+    }
 
     public String getName() {
         return name;
@@ -61,6 +80,17 @@ public class CommodityCat extends CommodityCatKey implements Serializable {
     }
 
     public void setUpdated(Date updated) {
+        this.updated = updated;
+    }
+
+    public CommodityCat(Long id, Long pid, String name, Byte status, Integer sort, Byte isparent, Date created, Date updated) {
+        this.id = id;
+        this.pid = pid;
+        this.name = name;
+        this.status = status;
+        this.sort = sort;
+        this.isparent = isparent;
+        this.created = created;
         this.updated = updated;
     }
 }

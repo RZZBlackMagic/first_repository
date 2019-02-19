@@ -30,6 +30,10 @@ public class ShareNoteServiceImpl implements ShareNoteService{
 		if(note==null){
 			throw new RuntimeException("该笔记不存在");
 		}
+		CollectNote colNote = shareNoteDao.findNoteByShareIdInCollect(shareId);
+		if(colNote!=null){
+			return "该笔记已是您的收藏笔记！";
+		}
 		CollectNote collectNote = new CollectNote();
 		collectNote.setCn_note_id(note.getCn_note_id());
 		collectNote.setCn_share_body(note.getCn_share_body());
@@ -43,7 +47,7 @@ public class ShareNoteServiceImpl implements ShareNoteService{
 		}
 		return "收藏成功";
 	}
-	public List<CollectNote> showCollectNote(String userId) {
+	public List<CollectNote> getCollectNote(String userId) {
 		List<CollectNote> list = shareNoteDao.showCollectNotes(userId);
 		if(list==null){
 			throw new RuntimeException("暂无收藏笔记");
@@ -57,6 +61,13 @@ public class ShareNoteServiceImpl implements ShareNoteService{
 			throw new RuntimeException("没有找到该笔记");
 		}
 		return shareNote;
+	}
+	public CollectNote showCollectNote(String NoteId) {
+		CollectNote collectNote = shareNoteDao.findNoteByNoteId(NoteId);
+		if(collectNote==null){
+			throw new RuntimeException("没有该笔记");
+		}
+		return collectNote;
 	}
 
 }

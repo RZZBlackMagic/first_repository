@@ -54,7 +54,21 @@ public class NoteController extends AbatractController{
 	@RequestMapping("/showDeleteNote.do")
 	@ResponseBody
 	public JsonResult showDeleteNote(){
-		return new JsonResult("回收站功能");
+		JsonResult jsonResult = noteService.showDeleteNote();
+		return jsonResult;
+	}
+	@RequestMapping("/shareNote.do")
+	@ResponseBody
+	public JsonResult shareNote(String noteId){
+		System.out.println("Controller"+noteId);
+		String message = noteService.shareNoteService(noteId);
+		return new JsonResult(message);
+	}
+	@RequestMapping("/replayDelNote.do")
+	@ResponseBody
+	public JsonResult replayDelNote(String noteId,String notebookId){
+		String message = noteService.replayDelNoteService(noteId, notebookId);
+		return new JsonResult(message);
 	}
 
 }

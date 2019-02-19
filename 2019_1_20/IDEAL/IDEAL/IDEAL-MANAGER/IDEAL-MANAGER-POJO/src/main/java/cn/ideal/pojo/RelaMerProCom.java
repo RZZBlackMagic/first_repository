@@ -12,9 +12,14 @@ public class RelaMerProCom extends RelaMerProComKey implements Serializable {
 
     private String commodityName;
 
+    private Integer status;
+
+
+
     public Date getTime() {
         return time;
     }
+
 
     public void setTime(Date time) {
         this.time = time;
@@ -44,6 +49,14 @@ public class RelaMerProCom extends RelaMerProComKey implements Serializable {
         this.commodityName = commodityName == null ? null : commodityName.trim();
     }
 
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "RelaMerProCom{" +
@@ -51,6 +64,7 @@ public class RelaMerProCom extends RelaMerProComKey implements Serializable {
                 ", merchantName='" + merchantName + '\'' +
                 ", productorName='" + productorName + '\'' +
                 ", commodityName='" + commodityName + '\'' +
+                ", status=" + status +
                 '}';
     }
 }

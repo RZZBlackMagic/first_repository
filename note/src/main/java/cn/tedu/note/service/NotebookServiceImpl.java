@@ -45,5 +45,16 @@ public class NotebookServiceImpl implements NotebookService{
         notebookDao.addNotebook(notebook);
         return notebook;
 	}
+	public String notebookRenameService(String title, String notebookId) {
+		Notebook notebook = new Notebook();
+		notebook.setCn_notebook_name(title);
+		notebook.setCn_notebook_id(notebookId);
+		int row = notebookDao.updateNameForNotebook(notebook);
+		if(row ==1){
+			return "修改成功";
+		}else{
+			return "修改失败";
+		}
+	}
 
 }

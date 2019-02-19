@@ -11,4 +11,6 @@ public interface ShareNoteDao {
 	public cn_share_note findNoteByShareId(String shareId);
 	public int addNoteToCollectNote(CollectNote collectNote);
 	public List<CollectNote> showCollectNotes(String useId);
+	public CollectNote findNoteByShareIdInCollect(String sahreId);
+	public CollectNote findNoteByNoteId(String NoteId);
 }

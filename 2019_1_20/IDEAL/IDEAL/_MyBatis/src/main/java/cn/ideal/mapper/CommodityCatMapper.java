@@ -2,7 +2,6 @@ package cn.ideal.mapper;
 
 import cn.ideal.pojo.CommodityCat;
 import cn.ideal.pojo.CommodityCatExample;
-import cn.ideal.pojo.CommodityCatKey;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
@@ -11,7 +10,7 @@ public interface CommodityCatMapper {
 
     int deleteByExample(CommodityCatExample example);
 
-    int deleteByPrimaryKey(CommodityCatKey key);
+    int deleteByPrimaryKey(Long id);
 
     int insert(CommodityCat record);
 
@@ -19,7 +18,7 @@ public interface CommodityCatMapper {
 
     List<CommodityCat> selectByExample(CommodityCatExample example);
 
-    CommodityCat selectByPrimaryKey(CommodityCatKey key);
+    CommodityCat selectByPrimaryKey(Long id);
 
     int updateByExampleSelective(@Param("record") CommodityCat record, @Param("example") CommodityCatExample example);
 

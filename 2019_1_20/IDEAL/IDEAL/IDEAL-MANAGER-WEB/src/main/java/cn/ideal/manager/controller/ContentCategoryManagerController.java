@@ -25,10 +25,7 @@ public class ContentCategoryManagerController {
     @RequestMapping("/portal/ztree/content_category.do")
     @ResponseBody
     public MessageResult showZtreeList(){
-        Long parent_id = null;
         List list = contentCategoryManagerService.showZtreeListService( );
-        System.out.println(111);
-        System.out.println(list);
         return MessageResult.ok(list);
     }
 
@@ -42,15 +39,11 @@ public class ContentCategoryManagerController {
     @RequestMapping("/portal/initTable/contentCategory.do")
     @ResponseBody
     public TableJsonResult initBootstrapTable(String id, int page, int limit){
-        System.out.println("Controller_ID："+id);
         List list = contentCategoryManagerService.initBootstrapTableService(id,page,limit);
         if(list==null){
             //该节点没有子节点，点击该节点就是显示的内容信息
-
-             String message = "该分类为最低级别类别！请重新选择";
             return new TableJsonResult();
         }else{
-            System.out.println(list);
             TableJsonResult tableJsonResult = new TableJsonResult();
             tableJsonResult.setRows(list);
             tableJsonResult.setTotal(list.size());
@@ -74,8 +67,6 @@ public class ContentCategoryManagerController {
     @RequestMapping("/portal/bootstrap/editContentCategory.do")
     @ResponseBody
     public MessageResult updateContentCategory(String id,String parentId,String name,String status,String sortOrder,String isParent,String created,String updated ){
-        System.out.println("编辑bootstrap");
-        System.out.println(id+  parentId+ name+ status+ sortOrder+isParent+ created+ updated);
         String message = contentCategoryManagerService.updateContentCategoryService(id, parentId, name, status, sortOrder, isParent, created, updated);
         return MessageResult.ok(message);
     }
@@ -94,15 +85,9 @@ public class ContentCategoryManagerController {
     @RequestMapping("/portal/bootstrap/addContentCategory.do")
     @ResponseBody
     public MessageResult addContentCategory(String id,String name){
-        System.out.println(id+name);
         String message = contentCategoryManagerService.addContentCategoryService(id,name);
         return MessageResult.ok(message);
     }
-    @RequestMapping("/portal/ContentCategory/isParent.do")
-    @ResponseBody
-    public MessageResult isParent(String id){
-        Integer integer = contentCategoryManagerService.isParentService(id);
-        return MessageResult.ok(integer);
-    }
+
 
 }

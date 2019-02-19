@@ -33,7 +33,7 @@ public class ShareNoteController {
 	@RequestMapping("/showCollectNotes.do")
 	@ResponseBody
 	public JsonResult showCollectController(String userId){
-		List<CollectNote> list = shareNoteService.showCollectNote(userId);
+		List<CollectNote> list = shareNoteService.getCollectNote(userId);
 		return new JsonResult(list);
 	}
 	@RequestMapping("/showShareNoteBody.do")
@@ -41,5 +41,11 @@ public class ShareNoteController {
 	public JsonResult showShareNoteController(String shareId){
 		cn_share_note shareNote = shareNoteService.showShareNote(shareId);
 		return new JsonResult(shareNote);
+	}
+	@RequestMapping("/showShareNote.do")
+	@ResponseBody
+	public JsonResult showCollectNote(String NoteId){
+		CollectNote collectNote = shareNoteService.showCollectNote(NoteId);
+		return new JsonResult(collectNote);
 	}
 }

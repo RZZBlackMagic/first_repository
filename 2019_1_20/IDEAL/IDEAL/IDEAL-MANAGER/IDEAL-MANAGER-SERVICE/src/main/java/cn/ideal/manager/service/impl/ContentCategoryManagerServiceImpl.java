@@ -6,6 +6,7 @@ import cn.ideal.manager.service.ContentCategoryManagerService;
 import cn.ideal.mapper.CommodityContentCategoryMapper;
 import cn.ideal.pojo.CommodityContentCategory;
 import cn.ideal.pojo.CommodityContentCategoryExample;
+import cn.ideal.pojo.CommodityContentCategoryKey;
 import com.github.pagehelper.PageHelper;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,6 @@ public class ContentCategoryManagerServiceImpl implements ContentCategoryManager
         CommodityContentCategoryExample commodityContentCategoryExample = new CommodityContentCategoryExample();
         commodityContentCategoryExample.createCriteria();
         List<CommodityContentCategory> list =commodityContentCategoryMapper.selectByExample(commodityContentCategoryExample);
-        System.out.println(list);
         List<TreeJsonResult> ztreeList = new ArrayList<TreeJsonResult>();
         for(CommodityContentCategory commodityContentCategory:list){
             TreeJsonResult treeJsonResult = new TreeJsonResult();
@@ -58,7 +58,6 @@ public class ContentCategoryManagerServiceImpl implements ContentCategoryManager
             CommodityContentCategoryExample example = new CommodityContentCategoryExample();
             CommodityContentCategoryExample.Criteria criteria = example.createCriteria();
             criteria.andParentIdEqualTo(Long.valueOf(id));
-            //criteria.andIdEqualTo(Long.valueOf(id));
             List<CommodityContentCategory> list = commodityContentCategoryMapper.selectByExample(example);
             if(list!=null){
                 for(int i=0;i<list.size();i++){
@@ -97,10 +96,9 @@ public class ContentCategoryManagerServiceImpl implements ContentCategoryManager
         List<String> list = IDUtils.SplitString(id);
         for(int i=0;i<list.size();i++){
             Long ID = Long.valueOf(list.get(i));
-            CommodityContentCategoryExample example = new CommodityContentCategoryExample();
-            CommodityContentCategoryExample.Criteria criteria = example.createCriteria();
-            criteria.andIdEqualTo(ID);
-            commodityContentCategoryMapper.deleteByExample(example);
+            CommodityContentCategoryKey commodityContentCategoryKey = new CommodityContentCategoryKey();
+            commodityContentCategoryKey.setId(ID);
+            commodityContentCategoryMapper.deleteByPrimaryKey(commodityContentCategoryKey);
         }
 
 
@@ -123,8 +121,6 @@ public class ContentCategoryManagerServiceImpl implements ContentCategoryManager
         com.setCreated(new Date(System.currentTimeMillis()));
         com.setUpdated(new Date(System.currentTimeMillis()));
         com.setName(name);
-        CommodityContentCategoryExample example = new CommodityContentCategoryExample();
-        CommodityContentCategoryExample.Criteria criteria = example.createCriteria();
         int row = commodityContentCategoryMapper.insert(com);
         if(row==1){
             message = "修改成功；";
@@ -134,21 +130,7 @@ public class ContentCategoryManagerServiceImpl implements ContentCategoryManager
         return message;
     }
 
-    @Override
-    public Integer isParentService(String id) {
-        CommodityContentCategoryExample example = new CommodityContentCategoryExample();
-        CommodityContentCategoryExample.Criteria criteria = example.createCriteria();
-        criteria.andIdEqualTo(Long.valueOf(id));
-        List<CommodityContentCategory> list = commodityContentCategoryMapper.selectByExample(example);
-        if(list.get(0).getIsParent()==0){
-            //不是父节点，即就是子夜节点，初始化内容表
-            return 0;
-        }else{
-            //是父节点，初始化内容分类表
-            return 1;
-        }
 
-    }
 
 
 }

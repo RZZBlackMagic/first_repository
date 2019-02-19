@@ -46,7 +46,7 @@
             </form>
             <ul class="hidden-xs header-menu pull-right">
                 <li>
-                    <a href="activity.html" title="笔记活动">活动</a>
+                    <a href="edit.html" title="笔记活动">活动</a>
                 </li>
             </ul>
         </header>
@@ -141,6 +141,12 @@
 							</div>
 						</div>
 						<div id='more_activity_note'>更多...</div>
+				    <div class="row clear_margin">
+					    <div class="col-xs-4 click" id='trash_button' title='回收站'><i class='fa fa-trash-o' style='font-size:20px;line-height:31px;'></i></div>
+					    <div class="col-xs-4 click" id='like_button' title='收藏笔记本'><i class='fa fa-star' style='font-size:20px;line-height:31px;'></i></div>
+					    <div class="col-xs-4 click" id='action_button' title='参加活动笔记'><i class='fa fa-users' style='font-size:20px;line-height:30px;'></i></div>
+				    </div>
+						
 					</div>
 				</aside>
 			</div>
@@ -158,8 +164,12 @@
 					<div class="module" data-toggle="niceScroll">
 						<div class="chat-contact">
 							<div class="contact-body clear_margin" id="content_body">
-							<h4><strong>笔记标题: </strong>switch多分支结构</h4>
+							<h4><strong>笔记标题: 
+							 <span id="title_content"></span>
+							</strong>
+							</h4>
 								<!-- 填写笔记内容 -->
+							<div id="note_content"></div>
 							</div>
 						</div>
 					</div>
@@ -193,13 +203,7 @@
 		<!-- 全局变量&&AJAX&&回调函数&&COOKIE -->
 		<script type="text/javascript" src="scripts/BaseValues.js"></script>
         <script type="text/javascript" src="scripts/cookie_util.js"></script>
-		<script type="text/javascript" src="scripts/login/login.js"></script>
-        <script type="text/javascript" src="scripts/notebook/notebook_callback.js"></script>
-        <script type="text/javascript" src="scripts/notebook/notebook.js"></script>
-        <script type="text/javascript" src="scripts/note/note_callback.js"></script>
-        <script type="text/javascript" src="scripts/note/note.js"></script>
-        <script type="text/javascript" src="scripts/activity/activity_callback.js"></script>
-        <script type="text/javascript" src="scripts/activity/activity.js"></script>
+        <script type="text/javascript" src="scripts/sharenote.js"></script>
 		<!-- Bootstrap框架JS -->
         <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
         <script type="text/javascript" src="scripts/js-prototype.js"></script>       

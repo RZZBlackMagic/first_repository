@@ -5,7 +5,6 @@ import cn.ideal.common.pojo.TableJsonResult;
 import cn.ideal.common.pojo.TreeJsonResult;
 import cn.ideal.pojo.CommodityCat;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,7 +28,7 @@ public interface CommodityCatService {
      * @param commodityCat 修改的分类条目信息
      * @return MessageResult 反馈消息
      */
-    MessageResult editCategoryByPidAndFieldForTable(String id,String pId,String name,String status,String sort,String isparent,String created,String updated);
+    MessageResult editCategoryByPidAndFieldForTable(CommodityCat commodityCat);
 
     /**
      * 向 zTree 填充分类树

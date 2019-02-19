@@ -42,5 +42,22 @@
 	        
 	      </select>
 	      
+	      <select id="findNoteByShareIdInCollect"  parameterType="String" resultType="cn.tedu.note.entity.CollectNote">
+	        select 
+	           *
+	        from
+	           cn_collect_note
+	        where
+	           cn_share_id= #{shareId}
+	      </select>
 	      
+	      
+	      <select id="findNoteByNoteId"  parameterType="String" resultType="cn.tedu.note.entity.CollectNote">
+	        select 
+	           *
+	        from
+	           cn_collect_note
+	        where
+	           cn_note_id= #{NoteId}
+	      </select>
 	</mapper>

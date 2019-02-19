@@ -38,5 +38,19 @@
 	          #{cn_notebook_createtime}
 	      )
 	   </insert>
-	    
+	   
+	    <update id="updateNameForNotebook" parameterType="cn.tedu.note.entity.Notebook">
+	     update
+			cn_notebook 
+		<set>
+			
+			<if test="cn_notebook_name!=null">
+				cn_notebook_name=#{cn_notebook_name},
+			</if>
+			
+			
+		</set>
+		where 
+			cn_notebook_id=#{cn_notebook_id} 
+	    </update>
 	</mapper>

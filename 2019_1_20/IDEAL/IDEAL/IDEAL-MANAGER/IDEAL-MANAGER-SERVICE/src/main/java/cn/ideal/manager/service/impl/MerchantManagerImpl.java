@@ -1,36 +1,65 @@
 package cn.ideal.manager.service.impl;
 
+import cn.ideal.common.pojo.TableJsonResult;
 import cn.ideal.manager.service.MerchantManagerService;
-import cn.ideal.mapper.RelaMerchantProductorMapper;
-import cn.ideal.pojo.RelaMerchantProductor;
-import cn.ideal.pojo.RelaMerchantProductorExample;
+import cn.ideal.mapper.RelaMerProComMapper;
+import cn.ideal.mapper.RelaMerProMapper;
+import cn.ideal.pojo.*;
 import com.alibaba.dubbo.config.annotation.Service;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class MerchantManagerImpl implements MerchantManagerService {
     @Autowired
-    private RelaMerchantProductorMapper relaMerchantProductorMapper;
+    private RelaMerProMapper relaMerProMapper;
+    @Autowired
+    private RelaMerProComMapper relaMerProComMapper;
     @Override
-    public List<RelaMerchantProductor> initMerchantApplyTable() {
-        System.out.println("哈哈哈哈哈哈哈啊哈哈");
-        RelaMerchantProductorExample relaMerchantProductorExample = new RelaMerchantProductorExample();
-        RelaMerchantProductorExample.Criteria criteria = relaMerchantProductorExample.createCriteria();
-        List<RelaMerchantProductor> list = relaMerchantProductorMapper.selectByExample(relaMerchantProductorExample);
-        List<RelaMerchantProductor> applyList = new ArrayList<RelaMerchantProductor>();
-        List<RelaMerchantProductor> applyCommodityList = new ArrayList<>();
-        for(RelaMerchantProductor relaMerchantProductor:list){
-            if(relaMerchantProductor.getCommodityId()==null){
-                applyList.add(relaMerchantProductor);
-            }else{
-                applyCommodityList.add(relaMerchantProductor);
-            }
-        }
-
-        System.out.println("*88888888888888"+applyList);
-        return applyList;
+    public TableJsonResult getUnRelaMerProListForTable(int limit,int page) {
+        PageHelper.startPage(page,limit);
+        RelaMerProExample example = new RelaMerProExample();
+        RelaMerProExample.Criteria criteria = example.createCriteria();
+        criteria.andStatusEqualTo(0);
+        List<RelaMerPro > list = relaMerProMapper.selectByExample(example);
+        TableJsonResult tableJsonResult = new TableJsonResult();
+        tableJsonResult.setRows(list);
+        tableJsonResult.setTotal(list.size());
+        return tableJsonResult;
+    }
+    public TableJsonResult getRelaMerProListForTable(int limit ,int page){
+        PageHelper.startPage(page,limit);
+        RelaMerProExample example = new RelaMerProExample();
+        RelaMerProExample.Criteria criteria = example.createCriteria();
+        criteria.andStatusEqualTo(1);
+        List<RelaMerPro > list = relaMerProMapper.selectByExample(example);
+        TableJsonResult tableJsonResult = new TableJsonResult();
+        tableJsonResult.setRows(list);
+        tableJsonResult.setTotal(list.size());
+        return tableJsonResult;
+    }
+    public TableJsonResult getRelaProMerComListForTable(int limit ,int page){
+        PageHelper.startPage(page,limit);
+        RelaMerProComExample example = new RelaMerProComExample();
+        RelaMerProComExample.Criteria criteria = example.createCriteria();
+        criteria.andStatusEqualTo(1);
+        List<RelaMerProCom> list = relaMerProComMapper.selectByExample(example);
+        TableJsonResult tableJsonResult = new TableJsonResult();
+        tableJsonResult.setTotal(list.size());
+        tableJsonResult.setRows(list);
+        return tableJsonResult;
+    }
+    public TableJsonResult getUnRelaProMerComListForTable(int limit ,int page){
+        PageHelper.startPage(page,limit);
+        RelaMerProComExample example = new RelaMerProComExample();
+        RelaMerProComExample.Criteria criteria = example.createCriteria();
+        criteria.andStatusEqualTo(0);
+        List<RelaMerProCom> list = relaMerProComMapper.selectByExample(example);
+        TableJsonResult tableJsonResult = new TableJsonResult();
+        tableJsonResult.setTotal(list.size());
+        tableJsonResult.setRows(list);
+        return tableJsonResult;
     }
 }

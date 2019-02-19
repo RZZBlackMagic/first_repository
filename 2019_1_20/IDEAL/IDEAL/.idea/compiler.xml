@@ -70,6 +70,7 @@
       <module name="IDEAL-SSO-INTERFACE" target="1.7" />
       <module name="IDEAL-SSO-SERVICE" target="1.7" />
       <module name="IDEAL-SSO-WEB" target="1.7" />
+      <module name="IDEALMERCHANTPOJO" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

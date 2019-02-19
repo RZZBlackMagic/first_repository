@@ -32,10 +32,10 @@
 <!-- WRAPPER -->
 <div id="wrapper">
     <!-- NAVBAR -->
-    <jsp:include page="template/nav.jsp"/>
+    <jsp:include page="template/header.jsp"/>
     <!-- END NAVBAR -->
     <!-- LEFT SIDEBAR -->
-    <jsp:include page="template/list.jsp"/>
+    <jsp:include page="template/left-leftbar.jsp"/>
     <!-- END LEFT SIDEBAR -->
     <!-- MAIN -->
     <div class="main">
@@ -215,7 +215,6 @@
 <!-- bootstrap-editable相关js -->
 <script>
 
-    //console.log(1);
     var url='/portal/ztree/content_category.do';
     $.ajax({
         url:url,
@@ -223,15 +222,14 @@
         processData: false,
         type:'get',
         success:function(result){
-            //console.log(result);
-            //console.log('您现在访问的是：'+url);
             var zNodes=result.data;
+            console.log(result);
+            console.log("节点："+zNodes);
             var t = $("#treeDemo");
             //初始化ztree
-            t = $.fn.zTree.init(t, setting, zNodes);
+             $.fn.zTree.init(t, setting, zNodes);
         },
         error:function(XMLHttpRequest, textStatus, errorThrown) {
-            //.log('fail');
         }});
 
     var setting= {
@@ -256,64 +254,45 @@
         callback: {
             //点击Ztree内容执行事件
             beforeClick: function (treeId, treeNode) {
-                //console.log(3);
-                //console.log(treeNode);
                 //请求后台根据选中的ID去看他是否为子叶节点，是则初始化内容table，不是则初始化内容分类table
-                var url = "/portal/ContentCategory/isParent.do";
-                var data = {
-                    id:treeNode.id
-                };
+                console.log(treeNode);
+                var isparent = treeNode.isParent;
+                if(isparent==true){
+                    //是子叶节点，初始化内容分类table
+                    $("#table").bootstrapTable('destroy');
+                    initTable('/portal/bootstrap/editContentCategory.do',treeNode.id);
+                    $('#remove-good').unbind();
+                    $('#submit').unbind();
+                    $('#add-good').unbind();
+
+                    $('#add-good').bind('click',clickCategoryPlus)
+                    $('#submit').bind('click',clickCategorySubmit);
+                    $('#remove-good').bind('click',clickMinusCategory);
+                }
+                if(isparent==false){
+                    //不是子叶节点，初始化内容table
+                    $("#table").bootstrapTable('destroy');
+                    initContentTable('/portal/content/editContent.do',treeNode.id);
+                    $('#submit1').unbind();
+                    $('#remove-good').unbind();
+                    $('#add-good').unbind();
+
+                    $('#add-good').bind('click',clickContentPlus);
+                    $('#submit1').bind('click',clickContentSubmit);
+                    $('#remove-good').bind('click',clickMinusContent);
+                }
                 $('#left').data("treeNodeId",treeNode.id);
-                //console.log(data);
-                $.post(url,data,function(result){
-                    //console.log(result);
-                    //console.log(result.data);
-                    if(result.data==0){
-                        //不是子叶节点，初始化内容table
-                        $("#table").bootstrapTable('destroy');
-                        initContentTable('/portal/content/editContent.do',treeNode.id);
-                        // $('#add-good').click(clickPlusContent());
-                        $('#submit1').unbind();
-                        $('#remove-good').unbind();
-                        $('#add-good').unbind();
 
-                        $('#add-good').bind('click',clickContentPlus);
-                        $('#submit1').bind('click',clickContentSubmit);
-                        $('#remove-good').bind('click',clickMinusContent);
-                    }
-                    if(result.data==1){
-                        //是子叶节点，初始化内容分类table
-                        $("#table").bootstrapTable('destroy');
-                        initTable('/portal/bootstrap/editContentCategory.do',treeNode.id);
-                        $('#remove-good').unbind();
-                        $('#submit').unbind();
-                        $('#add-good').unbind();
-
-                        $('#add-good').bind('click',clickCategoryPlus)
-                        $('#submit').bind('click',clickCategorySubmit);
-                        $('#remove-good').bind('click',clickMinusCategory);
-
-                    }
-                });
 
             },
 
         }
-        /*edit:{
-            enable:true,
-            showRenameBtn:true,
-            showRemoveBtn:true,
-            removeTitle:"删除",
-            renameTitle:"修改"
-        }*/
 
 
     }
     //添加商品内容
     function clickContentSubmit(){
         var category_id = $(table).data('id');
-        //console.log(category_id);
-        //console.log('添加商品内容');
         var url = "/protal/content/addContent.do";
         var data = {
             'categoryId':category_id,
@@ -325,12 +304,9 @@
             'pic2':$("input[name='pic2']").val(),
             'content':$("input[name='content']").val()
         }
-        //console.log(data);
         $.post(url,data,function(result){
-            //console.log(result);
             $('input').val("");
             clickExit();
-            //console.log('移除商品'+$('#left').data('treeNodeId'));
             $("#table").bootstrapTable('destroy');
             initContentTable('/portal/content/editContent.do',$('#left').data('treeNodeId'));
         });
@@ -338,22 +314,16 @@
     }
     //移除商品内容
     function clickMinusContent() {
-        var category_id = $(table).data('id');
-        //console.log(category_id);
-        //console.log('移除商品内容');
         var rows = $(table).bootstrapTable('getSelections');
-        //console.log(rows[0].id);
         var  id ='';
         for(var i=0;i<rows.length;i++){
             id=id+rows[i].id+',';
         }
-        //console.log(id);
         var url = '/protal/bootstrap/deleteContent.do';
         var data = {
             id:id
         };
         $.post(url,data,function(result){
-            //console.log('         '+$('#left').data('treeNodeId'));
             $("#table").bootstrapTable('destroy');
             initContentTable('/portal/content/editContent.do',$('#left').data('treeNodeId'));
             //页面局部刷新
@@ -375,45 +345,33 @@
     }
     //移除商品分类
     function clickMinusCategory(){
-        //console.log('移除商品分类');
         var rows = $(table).bootstrapTable('getSelections');
-        //console.log(rows[0].id);
         var  id ='';
         for(var i=0;i<rows.length;i++){
             id=id+rows[i].id+',';
         }
-        //console.log(id);
         var name  = $("input[name='btSelectItem']").parents('.selected').find('td:eq(1)').text();
-        //console.log(name);
         var url = '/portal/bootstrap/removeContentCategory.do';
         var data = {
             'id':id,
             'name':name
         };
-        //console.log(data);
-        $.post(url,data,function(result){
+        $.post(url,data,function(){
             $("#table").bootstrapTable('destroy');
             initTable('/portal/bootstrap/editContentCategory.do',$('#left').data('treeNodeId'));
-            //console.log(result);
         });
 
     }
     function clickCategorySubmit(){
         //console.log('添加商品分类');
-        //console.log($("#form").find('.form-control[name="name"]').val());
-        //console.log($(table).data("id"));
         var name = $("#form").find('.form-control[name="name"]').val()
         var id = $(table).data("id");//新增节点的父节点
-        //console.log(id+name);
-        //$("#cid").attr("placeholder", $("#table").data("category_id"));
         var  data={
             "name":name,
             "id":id
         };
         var url = '/portal/bootstrap/addContentCategory.do';
-        //console.log(data);
         $.post(url,data,function(result){
-            //console.log(result);
             //console.log("成功");
             $('input').val("");
             clickExit();
@@ -511,9 +469,6 @@
 
             ],
             onEditableSave: function ( field, row ) {
-                //console.log(9);
-                //console.log(field);
-                //console.log(row);
                 $.ajax({
                     type: "post",
                     url: edit_url,
@@ -531,10 +486,6 @@
                     dataType: 'JSON',
                     success: function (result) {
                         ///console.log('您现在访问的是：'+edit_url);
-                        /* $("#table").bootstrapTable('refresh',cid);
-                        if (status == "success") {
-                            alert('提交数据成功');
-                        } */
                     },
                     error: function () {
                         //console.log('失败您现在访问的是：'+edit_url);
@@ -549,9 +500,7 @@
                             'updated':row.updated
                         }
                         //console.log('编辑失败');
-                        //console.log(row);
-                        //console.log(date);
-                        //console.log(field);
+
                     },
                     complete: function () {
 
@@ -724,9 +673,6 @@
 
             ],
             onEditableSave: function ( field, row ) {
-                //console.log(9);
-                //console.log(field);
-                //console.log(row);
                 $.ajax({
                     type: "post",
                     url: edit_url,
@@ -747,10 +693,7 @@
                     dataType: 'JSON',
                     success: function (result) {
                         //console.log('您现在访问的是：'+edit_url);
-                        /* $("#table").bootstrapTable('refresh',cid);
-                        if (status == "success") {
-                            alert('提交数据成功');
-                        } */
+
                     },
                     error: function () {
                         //console.log('失败您现在访问的是：'+edit_url);
@@ -768,9 +711,7 @@
                             'content':row.content
                         }
                         //console.log('编辑失败');
-                        //console.log(row);
-                        //console.log(date);
-                       // console.log(field);
+
                     },
                     complete: function () {
 

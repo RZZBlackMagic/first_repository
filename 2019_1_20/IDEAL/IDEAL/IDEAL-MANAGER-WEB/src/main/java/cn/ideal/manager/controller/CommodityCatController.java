@@ -4,16 +4,13 @@ import cn.ideal.common.pojo.MessageResult;
 import cn.ideal.common.pojo.TableJsonResult;
 import cn.ideal.common.pojo.TreeJsonResult;
 import cn.ideal.manager.service.CommodityCatService;
-import cn.ideal.pojo.CommodityCat;
 
+import cn.ideal.pojo.CommodityCat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -50,9 +47,9 @@ public class CommodityCatController {
      */
     @RequestMapping("/manager/bootstrap/editCommodityCategory.do")
     @ResponseBody
-    public MessageResult editCategoryByPidAndFieldForTable(String id,String pId,String name,String status,String sort,String isparent,String created,String updated){
+    public MessageResult editCategoryByPidAndFieldForTable(CommodityCat commodityCat){
 
-        return commodityCatService.editCategoryByPidAndFieldForTable(id,pId,name,status,sort,isparent,created,updated);
+        return commodityCatService.editCategoryByPidAndFieldForTable(commodityCat);
     }
 
 

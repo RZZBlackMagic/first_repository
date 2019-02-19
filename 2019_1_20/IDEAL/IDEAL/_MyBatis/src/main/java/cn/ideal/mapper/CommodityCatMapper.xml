@@ -3,7 +3,7 @@
 <mapper namespace="cn.ideal.mapper.CommodityCatMapper" >
   <resultMap id="BaseResultMap" type="cn.ideal.pojo.CommodityCat" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <id column="pid" property="pid" jdbcType="BIGINT" />
+    <result column="pid" property="pid" jdbcType="BIGINT" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="status" property="status" jdbcType="TINYINT" />
     <result column="sort" property="sort" jdbcType="INTEGER" />
@@ -86,17 +86,15 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="cn.ideal.pojo.CommodityCatKey" >
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
     from commodity_cat
     where id = #{id,jdbcType=BIGINT}
-      and pid = #{pid,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="cn.ideal.pojo.CommodityCatKey" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from commodity_cat
     where id = #{id,jdbcType=BIGINT}
-      and pid = #{pid,jdbcType=BIGINT}
   </delete>
   <delete id="deleteByExample" parameterType="cn.ideal.pojo.CommodityCatExample" >
     delete from commodity_cat
@@ -222,6 +220,9 @@
   <update id="updateByPrimaryKeySelective" parameterType="cn.ideal.pojo.CommodityCat" >
     update commodity_cat
     <set >
+      <if test="pid != null" >
+        pid = #{pid,jdbcType=BIGINT},
+      </if>
       <if test="name != null" >
         name = #{name,jdbcType=VARCHAR},
       </if>
@@ -242,17 +243,16 @@
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
-      and pid = #{pid,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.ideal.pojo.CommodityCat" >
     update commodity_cat
-    set name = #{name,jdbcType=VARCHAR},
+    set pid = #{pid,jdbcType=BIGINT},
+      name = #{name,jdbcType=VARCHAR},
       status = #{status,jdbcType=TINYINT},
       sort = #{sort,jdbcType=INTEGER},
       isparent = #{isparent,jdbcType=TINYINT},
       created = #{created,jdbcType=DATE},
       updated = #{updated,jdbcType=DATE}
     where id = #{id,jdbcType=BIGINT}
-      and pid = #{pid,jdbcType=BIGINT}
   </update>
 </mapper>

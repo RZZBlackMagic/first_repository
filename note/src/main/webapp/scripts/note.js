@@ -5,24 +5,219 @@ $(function(){
 	//var UserId = getCookie('UserId');
 	//console.log(UserId);
 	//网页加载以后立即读取笔记本列表
-	console.log(1);
 	loadNotebooks();
 	//绑定笔记本点击事件，单击后注浆笔记本的内容展示到笔记本的区域
 	$('#notebook-list').on('click','.notebook',notebooks);
-	$('#note-list').on('click','.notebody',notes);
+	//$('#note-list').on('click','.notebody',notes);
 	$('#add_note').click(showAddNoteDialog);
 	$('#can').on('click','.close,.cancel',closeDialog);
 	$('#save_note').click(saveNoteBody);
 	$(document).click(hideNote_menu);
 	//startHartbat();
 	$('#add_notebook').click(showAddNotebookDialog1);
-	$('#trash_button').click(showDeleteNotes);
-
+	$('#trash_button').click(getDeleteNotes);
+    //收藏笔记本
+	//$('#like_button').click(collectNote);
+    $('#second_side_right').on('click','.btn_share',shareNote);
+   // $('#first_side_right').find('li').click(editNotebookTitle);
+    $('#action_button').click(forbid);
+    $('#notebook-list').on('mousedown','.notebook',editNotebookTitle);
+    $('#second_side_right').find("li").click(editNoteTitle);
+    $('#like_button').click(showCollectNotes);
 });
-function showDeleteNotes(){
+function showCollectNotes(){
+	var url = "showCollectNotes.do";
+	var data ={
+			userId:getCookie('UserId')
+	};
+	$.post(url,data,function(result){
+		  console.log(result.data);
+		  var ul = $('#note-list ul');
+			ul.empty();
+				//遍历那个笔记本，将全部笔记展示在全部笔记的区域
+				for(var i=0;i<result.data.length;i++){
+					var li = noteTemplate.replace('[note]',result.data[i].cn_share_title);
+					var li = $(li);
+					li.data('NoteId',result.data[i].cn_note_id);
+					li.data('NoteTitle',result.data[i].cn_share_title);
+					var l = li.html();
+					//console.log(l);
+					ul.append(li);
+				}
+				//定义删除收藏笔记功能
+		        $('#second_side_right').on('click','.notebody',addClassForCollectNote);
+		        
+	});
+}
+function addClassForCollectNote(){
+	$('#second_side_right').find('a').removeClass('checked');
+	$(this).find('a').addClass('checked');
+	showCollectNoteBody();
+}
+function showCollectNoteBody(){
+	console.log("加载共享笔记的内容");
+	var shareNoteId = $('#second_side_right').find('a[class="checked"]').parent().data("NoteId");
+	console.log(shareNoteId);
+	var url = "showShareNote.do";
+	var data = {
+			NoteId : shareNoteId
+	};
+	$.post(url,data,function(result){
+		console.log(result);
+		console.log(result.data);
+		var body = result.data.cn_share_body;
+		var title = result.data.cn_share_title;
+		console.log(body);
+		console.log(title);
+		$('#input_note_title').val(title);
+		var um = UM.getEditor('myEditor');
+		um.setContent(body);
+	});
+}
+function forbid(e){
+	 console.log("禁止");
+}
+function editNoteTitle(){
+	console.log("笔记早上好");
+}
+function editNotebookTitle(e){
+	 e.preventDefault();
+
+	if(e.which==3){
+		console.log("右键单击事件");
+		var title = $(this).text();
+		var notebookId = $(this).data('notebookId');
+		SetCookie('notebookId',notebookId);
+		$('#can').load('alert/alert_rename.html',delayLoad);
+		
+		
+	}
+	
+	 return false;
+}
+function delayLoad(){
+	var ar = $("#renameNotebook").html();
+	console.log(ar);
+    $("#renameNotebook").click(renameNotebookName);
+    console.log(3);
+}
+function renameNotebookName(){
+	console.log(2);
+	var title = $('#input_notebook_rename').val();
+	console.log(title);
+	var notebookId = getCookie('notebookId');
+	console.log(notebookId);
+	var url = "renameNotebook.do";
+	var data = {
+			title:title,
+			notebookId:notebookId
+	};
+	$.post(url,data,function(result){
+		console.log(result);
+		delCookie('notebookId');
+		$('#can').empty();
+		loadNotebooks();
+	});
+}
+
+
+function shareNote(){
+	console.log("1");
+	var url = "shareNote.do";
+	var selectedNoteId = $('#second_side_right').find('a[class="checked"]').parent().data("NoteId");
+	console.log(selectedNoteId);
+	var data = {
+		noteId:selectedNoteId	
+	};
+	console.log(data);
+    $.getJSON(url,data,function(result){
+			console.log(result);
+			if(result.message=='请选择正确的笔记！'){
+				alert("该笔记已被删除！");
+			}else if(result.message=='该笔记已添加至共享笔记'){
+				alert('该笔记已经被添加至共享笔记');
+			}
+		});
+	
+}
+function getDeleteNotes(){
 	var url = "showDeleteNote.do";
     $.getJSON(url,function(result){
     	console.log(result);
+    	console.log(4);
+    	showDeleteNotes(result);
+    	console.log(3);
+    });
+}
+function showDeleteNotes(result){
+	console.log(22);
+	var ul = $('#note-list ul');
+	ul.empty();
+	//遍历那个笔记本，将全部笔记展示在全部笔记的区域
+	for(var i=0;i<result.data.length;i++){
+		//console.log(notes[i]);
+		var li = noteTemplate.replace('[note]',result.data[i].cn_note_title);
+		var li = $(li);
+		li.data('NoteId',result.data[i].cn_note_id);
+		li.data('NoteTitle',result.data[i].cn_note_title);
+		li.click(loadDealDelNote);
+		//li.click(showNote_menu);
+		//var i = li.find('button[class="btn_slide_down"]').html()//click(showNote_menu);
+		var l = li.html();
+		//console.log(i);
+		ul.append(li);
+	}
+	
+}
+
+function loadDealDelNote(){
+	console.log("处理回收站笔记");
+	$('#can').load('alert/alert_replay.html',dealDelNote);
+}
+function dealDelNote(){
+	var noteId = $('#note-list').find('a[class="checked"]').parent().data('NoteId');
+	console.log(noteId);
+	var url = 'list.do';
+	var data = {UserId:getCookie('UserId')};
+	$.getJSON(url,data,function(result){
+		console.log(result);
+		if(result.state==SUCCESS){
+			var notebooks = result.data;
+			//在下面那个方法中将全部笔记本数据显示到notebook-list区域
+			
+			for(var i=0;i<notebooks.length;i++){
+				var notebook = notebooks[i];
+				var options = option.replace('[name]',notebook.cn_notebook_name);
+				var options = $(options);
+				//console.log(options);
+				options.data('NotebookId',notebook.cn_notebook_id);
+				$('#replaySelect').append(options);
+			}
+		}else{
+			alert(result.message);
+		}
+	});
+	//var r = $('#modalBasic_3').find('button[class="btn-replay"]').html();//click(replayNote);
+	//console.log(r);
+    $('.btn-replay').click(replayNote);
+}
+function replayNote(){
+	console.log("开始恢复笔记");
+	var NotebookId = $('#replaySelect option:selected').data('NotebookId');
+	console.log(NotebookId);
+	var noteId = $('#note-list').find('a[class="checked"]').parent().data('NoteId');
+    console.log(noteId);
+    //先在回收站将该该笔记的信息查出来，将notebookId 改为所选中的笔记本，在将该笔记在删掉。完成后重新加载回收站笔记
+    var url = "replayDelNote.do";
+    var data = {
+    	noteId:noteId,
+    	notebookId:NotebookId
+    };
+    $.post(url,data,function(result){
+    	console.log(result);
+    	//移动成功后重新加载回收站
+    	$('#can').empty();
+    	getDeleteNotes();
     });
 }
 //添加笔记业务
@@ -72,7 +267,10 @@ function startHartbat(){
 }
 function moveNote(){
 	//console.log(1);
-	$('#can').load('alert/alert_move.html');
+	$('#can').load('alert/alert_move.html',moveNoteTo);
+	
+}
+function moveNoteTo(){
 	var url = 'list.do';
 	var data = {UserId:getCookie('UserId')};
 	$.getJSON(url,data,function(result){
@@ -151,6 +349,19 @@ function saveNoteBody(){
 	};
 	$.post(url,data,function(result){
 		console.log(result);
+		var notebookId = $('#first_side_right').find('a[class="checked"]').parent().data('notebookId');
+		var url = 'Notelist.do';
+		var data = {NotebookId: notebookId };
+		//console.log(data);
+		$.getJSON(url,data,function(result){
+			if(result.state==SUCCESS){
+				var notes = result.data;
+				//console.log(notes);
+				showNotes(notes);
+			}else{
+				alert(result.message);
+			}
+		});
 	});
 }
 function closeDialog(){
@@ -206,7 +417,7 @@ function notes(){
 	$(this).parent().find('a').removeClass('checked');
 	$(this).find('a').addClass('checked');
 	$.getJSON(url,data,function(result){
-		//console.log(result);
+		console.log(result);
 		var notebodys = result.data;
 		//console.log(notebodys);
 		showNoteBody(notebodys);
@@ -215,6 +426,7 @@ function notes(){
 
 
 function showNoteBody(notebodys){
+	console.log(notebodys);
 	var notebody= notebodys.cn_note_body;
 	//console.log(notebodys);
 	//console.log(notebody);
@@ -275,6 +487,7 @@ function notebooks(){
 		}
 	});
 }
+
 //将笔记列表信息显示到屏幕上
 function showNotes(notes){
 	//console.log(notes);
@@ -294,6 +507,8 @@ function showNotes(notes){
 		ul.append(li);
 	}
 	$('#note-list .btn_slide_down').click(showNote_menu);
+	$('#note-list').on('click','.notebody',notes);
+	
 }
  var noteTemplate = 
 	' <li class="online notebody">'+

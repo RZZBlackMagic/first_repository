@@ -15,4 +15,6 @@ public interface NoteService {
     public String deleteNoteById(String NoteId);
     public boolean addStars(String userId,int stars)throws UserNotFoundException;
     public JsonResult showDeleteNote();
+    public String shareNoteService(String id);
+    public String replayDelNoteService(String noteId,String notebookId);
 }

@@ -13,12 +13,10 @@ public class ProductorManagerController {
 
     @Autowired
     private ProductorManagerService productorManagerService;
-    @RequestMapping("/manager/initTable/productorManager.do")
+    @RequestMapping("/manager/getProductorListForTable/productorManager.do")
     @ResponseBody
-    public TableJsonResult initProductorTable(int page, int limit){
-        System.out.println(111111);
-        TableJsonResult tableJsonResult = productorManagerService.initProductorTableService(page,limit);
-        System.out.println("***********"+tableJsonResult);
+    public TableJsonResult getProductorListForTable(int page, int limit){
+        TableJsonResult tableJsonResult = productorManagerService.getProductorListForTable(page,limit);
         return tableJsonResult;
     }
 
@@ -27,12 +25,11 @@ public class ProductorManagerController {
      * @param id
      * @return
      */
-    @RequestMapping("/manager/bootstrap/editProductorStatus.do")
+    @RequestMapping("/manager/editProductorStatus/productorManager.do")
     @ResponseBody
     public MessageResult editProductorStatus(String id){
-         System.out.println("********"+id);
-         String message = productorManagerService.editProductorStatus(id);
-        return MessageResult.ok(message);
+
+        return productorManagerService.editProductorStatus(id);
     }
 
     /**
@@ -40,11 +37,10 @@ public class ProductorManagerController {
      * @param id
      * @return
      */
-    @RequestMapping("/manager/bootstrap/deleteProductor.do")
+    @RequestMapping("/manager/deleteProductor/productorManager.do")
     @ResponseBody
     public MessageResult deleteProductor(String id){
-        String message = productorManagerService.deleteProductor(id);
-        return MessageResult.ok(message);
+        return productorManagerService.deleteProductor(id);
     }
 
     /**
@@ -53,44 +49,38 @@ public class ProductorManagerController {
      * @param limit
      * @return
      */
-    @RequestMapping("/manager/initAllowedTable/productorManager.do")
+    @RequestMapping("/manager/getAllowedProductorListForTable/productorManager.do")
     @ResponseBody
-    public TableJsonResult initAllowedProductor(int page, int limit){
-         TableJsonResult tableJsonResult = productorManagerService.initAllowedProductorService(page, limit);
-        System.out.println("*****************"+tableJsonResult);
-        return tableJsonResult;
+    public TableJsonResult getAllowedProductorListForTable(int page, int limit){
+        return productorManagerService.getAllowedProductorListForTable(page, limit);
     }
-
     /**
      * 封号操作
      * @param id
      * @return
      */
-    @RequestMapping("/manager/bootstrap/clockProductor.do")
+    @RequestMapping("/manager/clockProductor/producotManager.do")
     @ResponseBody
     public MessageResult clockProductor(String id){
-        String message = productorManagerService.clockProductor(id);
-        return MessageResult.ok(message);
+        return productorManagerService.clockProductor(id);
     }
 
     /**
      * 加载被封号的table
      * @return
      */
-    @RequestMapping("/manager/initTable/clockProductorManager.do")
+    @RequestMapping("/manager/getClockProductorListForTable/productorManager.do")
     @ResponseBody
-    public TableJsonResult initClockProductor(int page, int limit){
-        TableJsonResult tableJsonResult = productorManagerService.initClockProductorService(page,limit);
-        System.out.println("*****************"+tableJsonResult);
+    public TableJsonResult getClockProductorListForTable(int page, int limit){
+        TableJsonResult tableJsonResult = productorManagerService.getClockProductorListForTable(page,limit);
         return tableJsonResult;
     }
     /**
      * 解封操作
      */
-    @RequestMapping("/manager/bootstrap/unClockProductor.do")
+    @RequestMapping("/manager/unClockProductor/productorManager.do")
     @ResponseBody
     public MessageResult unClockProductor(String id){
-        String message = productorManagerService.unClockProductorService(id);
-        return MessageResult.ok(message);
+        return productorManagerService.unClockProductor(id);
     }
 }

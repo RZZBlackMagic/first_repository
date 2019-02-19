@@ -40,10 +40,10 @@
 <!-- WRAPPER -->
 <div id="wrapper">
     <!-- NAVBAR -->
-    <jsp:include page="template/nav.jsp"/>
+    <jsp:include page="template/header.jsp"/>
     <!-- END NAVBAR -->
     <!-- LEFT SIDEBAR -->
-    <jsp:include page="template/list.jsp"/>
+    <jsp:include page="template/left-leftbar.jsp"/>
     <!-- END LEFT SIDEBAR -->
     <!-- MAIN -->
     <div class="main">
@@ -162,14 +162,12 @@
         for(var i=0;i<rows.length;i++){
             id=id+rows[i].id+',';
         }
-        //console.log(id);
         var url = "/manager/bootstrap/removeCate.do";
         var data = {
             'pid':$(table).data('id'),
             'id' : id
         };
         $.post( url,data,function(result){
-            //console.log(result);
             $("#table").bootstrapTable('destroy');
             initTable('/portal/content/editContent.do',$('#left').data('treeNodeId'));
         });
@@ -178,7 +176,6 @@
     function submit(){
         var name = $('#showForm').find('input[name="title"]').val();
         var pid = $(table).data("id");
-        //console.log(name);
         console.log(pid);
         var url = '/manager/bootstrap/commodityCat.do';
         var data = {
@@ -203,9 +200,6 @@
         processData: false,
         type:'get',
         success:function(result){
-            //console.log(result);
-            //console.log('您现在访问的是：'+url);
-            //console.log(result[0].pId);
             for(var i=0;i<result.length;i++){
                 if(result[i].pId==0){
                     result[i].open = true;
@@ -216,10 +210,8 @@
             var zNodes=result;
             var t = $("#treeDemo");
             $('#left').data()
-            //初始化ztree
 
-            t = $.fn.zTree.init(t, setting, zNodes);
-            //console.log(2);
+             $.fn.zTree.init(t, setting, zNodes);
         },
         error:function(XMLHttpRequest, textStatus, errorThrown) {
             console.log('fail');
@@ -244,8 +236,6 @@
         callback: {
             //点击Ztree内容执行事件
             beforeClick: function (treeId, treeNode) {
-                //console.log(3);
-                console.log(treeNode.id);
                 $('#left').data("treeNodeId",treeNode.id);
                 //请求后台根据选中的ID去看他是否为子叶节点，是则初始化内容table，不是则初始化内容分类tabl
                 $("#table").bootstrapTable('destroy');
@@ -370,8 +360,6 @@
 
             ],
             onEditableSave: function ( field, row ) {
-                //console.log(9);
-                //console.log(field);
                 console.log(row);
                 $.ajax({
                     type: "post",
@@ -389,11 +377,7 @@
                     },
                     dataType: 'JSON',
                     success: function (result) {
-                        //console.log('您现在访问的是：'+edit_url);
-                        /* $("#table").bootstrapTable('refresh',cid);
-                        if (status == "success") {
-                            alert('提交数据成功');
-                        } */
+
                     },
                     error: function () {
                         //console.log('失败您现在访问的是：'+edit_url);
@@ -407,10 +391,7 @@
                             'created':row.created,
                             'updated':row.updated
                         }
-                        //console.log('编辑失败');
-                        //console.log(row);
-                        //console.log(date);
-                        //console.log(field);
+
                     },
                     complete: function () {
 

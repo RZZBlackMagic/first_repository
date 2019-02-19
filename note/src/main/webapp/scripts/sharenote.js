@@ -1,7 +1,7 @@
 $(function(){
 	console.log("加载活动页面")
 	loadShareNotes();
-	$('#first_action').on('click','.notebook',addClasses);
+	$('#first_action').on('click','.notebook',addNotebookClasses);
 	$('#like_button').click(collectNote);
 });
 function collectNote(){
@@ -14,11 +14,18 @@ function collectNote(){
 	};
 	$.post(url,data,function(result){
 		console.log(result);
-		//alert("收藏成功！");
+		alert("收藏成功！");
+		$('#can').on('click','.close',closeAlert);
+		$('#can').on('click','.cancel',closeAlert);
 		
 	});
 }
-function addClasses(){
+
+function closeAlert(){
+	//console.log(1111);
+	$('#can').empty();
+}
+function addNotebookClasses(){
 	$('#first_action').find('a').removeClass('checked');
 	$(this).find('a').addClass('checked');
 	//console.log(r);
@@ -68,7 +75,6 @@ function loadShareNotes(){
 				li.data('shareNotebookId',result.data[i].cn_share_id);
 			    $('#first_action').find('.contacts-list').append(li);
 		  }
-		  
 		
 	});
 }

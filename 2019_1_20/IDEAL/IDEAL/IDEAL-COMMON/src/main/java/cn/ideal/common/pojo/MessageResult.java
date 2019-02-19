@@ -149,4 +149,13 @@ public class MessageResult implements Serializable {
             return null;
         }
     }
+
+    @Override
+    public String toString() {
+        return "MessageResult{" +
+                "status=" + status +
+                ", msg='" + msg + '\'' +
+                ", data=" + data +
+                '}';
+    }
 }

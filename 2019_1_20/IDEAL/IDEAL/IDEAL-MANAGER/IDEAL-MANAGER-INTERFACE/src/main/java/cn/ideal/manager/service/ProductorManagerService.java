@@ -1,13 +1,14 @@
 package cn.ideal.manager.service;
 
+import cn.ideal.common.pojo.MessageResult;
 import cn.ideal.common.pojo.TableJsonResult;
 
 public interface ProductorManagerService {
-    public TableJsonResult initProductorTableService(int page, int limit);
-    public String editProductorStatus(String id);
-    public String deleteProductor(String id);
-    public TableJsonResult initAllowedProductorService(int page, int limit);
-    public String clockProductor(String id);
-    public TableJsonResult initClockProductorService(int page, int limit);
-    public String unClockProductorService(String id);
+    public TableJsonResult getProductorListForTable(int page, int limit);
+    public MessageResult editProductorStatus(String id);
+    public MessageResult deleteProductor(String id);
+    public TableJsonResult getAllowedProductorListForTable(int page, int limit);
+    public MessageResult clockProductor(String id);
+    public TableJsonResult getClockProductorListForTable(int page, int limit);
+    public MessageResult unClockProductor(String id);
 }

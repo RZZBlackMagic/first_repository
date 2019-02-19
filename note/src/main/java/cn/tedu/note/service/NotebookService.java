@@ -9,4 +9,5 @@ public interface NotebookService {
 
 	List<Map<String,Object>> listNotebooks(String UserId) throws UserNotFoundException;
 	Notebook addNotebook(String title,String UserId);
+	String notebookRenameService(String title,String notebookId);
 }

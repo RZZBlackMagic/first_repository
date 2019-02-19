@@ -132,34 +132,14 @@
 
 
 <script>
-    //console.log(1);
     $("#table").bootstrapTable('destroy');
-    initTable('/manager/bootstrap/editProductorManager.do');
-    //console.log(2);
-    //$("input[name='btSelectItem']").parents('.selected').find('td:eq(1)').text();
-    /*$(document).keyup(function(event){
-        if(event.keyCode ==13){
-            var company = $('input[class="form-control"]').val();
-            console.log(company);
-            console.log("回撤事件");
-        }
-    });
+    initTable();
 
-    $('.form-control').on('focus',getFocus);
-    $('.form-control').on('blur',missFocus);
-    function getFocus(){
-        console.log("得到焦点事件");
-    }
-    function missFocus(){
-        var company = $('.form-control').val();
-        console.log(company);
-        console.log("失去焦点事件" );
-    }*/
     //初始化内容分类的table
-    function initTable( edit_url) {
+    function initTable( ) {
         //$(table).data("id",id);
         $("#table").bootstrapTable({
-            url: "/merchant/initProductorTable/ApplyMerchant.do",       //请求后台的URL（*）
+            url: "/merchant/getCompanyListForTable/ApplyMerchant.do",       //请求后台的URL（*）
             method: 'get',                      //请求方式（*）
             contentType: "application/x-www-form-urlencoded",
             dataType: "json",
@@ -243,9 +223,10 @@
     function Apply(){
         var rows = $(table).bootstrapTable('getSelections');
         console.log(rows);
-        var url = "/merchant/ApplyCompany/ApplyMerchant.do";
+        var url = "/merchant/applyCompanyForMer/ApplyMerchant.do";
         var merchantId = 2;
         var merchantName = 'renzhangzhe';
+        console.log(rows[0]);
         //参数从Session中拿
         var data = {
             merchantId:merchantId,

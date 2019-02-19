@@ -2,7 +2,11 @@ package cn.ideal.pojo;
 
 import java.util.Date;
 
-public class CommodityCat extends CommodityCatKey {
+public class CommodityCat {
+    private Long id;
+
+    private Long pid;
+
     private String name;
 
     private Byte status;
@@ -14,6 +18,22 @@ public class CommodityCat extends CommodityCatKey {
     private Date created;
 
     private Date updated;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getPid() {
+        return pid;
+    }
+
+    public void setPid(Long pid) {
+        this.pid = pid;
+    }
 
     public String getName() {
         return name;

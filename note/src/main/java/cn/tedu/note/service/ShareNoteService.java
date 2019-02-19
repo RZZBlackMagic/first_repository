@@ -9,6 +9,7 @@ public interface ShareNoteService {
 
 	public List<cn_share_note> loadShareNotesService();
 	public String collectNoteService(String shareId,String userId);
-	public List<CollectNote> showCollectNote(String userId);
+	public List<CollectNote> getCollectNote(String userId);
 	public cn_share_note showShareNote(String shareId);
+	public CollectNote showCollectNote(String NoteId);
 }

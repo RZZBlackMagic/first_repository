@@ -9,6 +9,7 @@
     <result column="merchant_name" property="merchantName" jdbcType="VARCHAR" />
     <result column="productor_name" property="productorName" jdbcType="VARCHAR" />
     <result column="commodity_name" property="commodityName" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -69,7 +70,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    merchant_id, productor_id, commodity_id, time, merchant_name, productor_name, commodity_name
+    merchant_id, productor_id, commodity_id, time, merchant_name, productor_name, commodity_name, 
+    status
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.ideal.pojo.RelaMerProComExample" >
     select
@@ -108,10 +110,10 @@
   <insert id="insert" parameterType="cn.ideal.pojo.RelaMerProCom" >
     insert into rela_mer_pro_com (merchant_id, productor_id, commodity_id, 
       time, merchant_name, productor_name, 
-      commodity_name)
+      commodity_name, status)
     values (#{merchantId,jdbcType=BIGINT}, #{productorId,jdbcType=BIGINT}, #{commodityId,jdbcType=BIGINT}, 
       #{time,jdbcType=TIMESTAMP}, #{merchantName,jdbcType=VARCHAR}, #{productorName,jdbcType=VARCHAR}, 
-      #{commodityName,jdbcType=VARCHAR})
+      #{commodityName,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="cn.ideal.pojo.RelaMerProCom" >
     insert into rela_mer_pro_com
@@ -137,6 +139,9 @@
       <if test="commodityName != null" >
         commodity_name,
       </if>
+      <if test="status != null" >
+        status,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="merchantId != null" >
@@ -159,6 +164,9 @@
       </if>
       <if test="commodityName != null" >
         #{commodityName,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -192,6 +200,9 @@
       <if test="record.commodityName != null" >
         commodity_name = #{record.commodityName,jdbcType=VARCHAR},
       </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -205,7 +216,8 @@
       time = #{record.time,jdbcType=TIMESTAMP},
       merchant_name = #{record.merchantName,jdbcType=VARCHAR},
       productor_name = #{record.productorName,jdbcType=VARCHAR},
-      commodity_name = #{record.commodityName,jdbcType=VARCHAR}
+      commodity_name = #{record.commodityName,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -225,6 +237,9 @@
       <if test="commodityName != null" >
         commodity_name = #{commodityName,jdbcType=VARCHAR},
       </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
     </set>
     where merchant_id = #{merchantId,jdbcType=BIGINT}
       and productor_id = #{productorId,jdbcType=BIGINT}
@@ -235,7 +250,8 @@
     set time = #{time,jdbcType=TIMESTAMP},
       merchant_name = #{merchantName,jdbcType=VARCHAR},
       productor_name = #{productorName,jdbcType=VARCHAR},
-      commodity_name = #{commodityName,jdbcType=VARCHAR}
+      commodity_name = #{commodityName,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER}
     where merchant_id = #{merchantId,jdbcType=BIGINT}
       and productor_id = #{productorId,jdbcType=BIGINT}
       and commodity_id = #{commodityId,jdbcType=BIGINT}

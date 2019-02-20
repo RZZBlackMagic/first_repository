@@ -1,5 +1,6 @@
 package cn.tedu.note.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
@@ -26,6 +27,12 @@ public class userController extends AbatractController{
 	@RequestMapping("/login.do")
 	@ResponseBody//json注解:就是返回一个json
 	public Object login(String name,String password,HttpSession session){
+		String string = "1,2,3,";
+		String[] strin = string.split(",");
+		System.out.println("拆分后："+strin[0]);
+		for(int i=0;i<strin.length;i++){
+			System.out.println(strin[i]);
+		}
 			User user = useService.login(name, password);
 			//登录成功,将User信息放在session里面，用于拦截器的拦截
 			session.setAttribute("UserLogin", user);

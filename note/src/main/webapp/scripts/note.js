@@ -562,3 +562,91 @@ var notebookTemplate = '<li class="online notebook">'+
                        '</i> [name]</a></li>';
 
 
+
+ var t = 
+	 '<div class="item-box">'+
+     '<div class="item-table J_cartGoods" id="item_table" data-info="{ commodity_id:'+'1161200012'+", "+'gettype:'+'buy'+", "+'itemid:'+"'"+'2161200012_0_buy'+"'"+", "+'num:'+"'4'} "+'">'+
+	 '<div class="item-row clearfix">'+
+         '<div class="col col-check">'+
+         '<i class="iconfont icon-checkbox icon-checkbox  J_itemCheckbox" data-itemid="2161200012_0_buy" data-status="0">√</i>'+
+         '</div>'+
+         '<div class="col col-img">'+
+            '<a href="//item.mi.com/1161200012.html" target="_blank" data-stat-id="b3fe5630e5ece9ed" onclick="_msq.push(['+'trackEvent'+","+ ' 5df97b551662ffe7-b3fe5630e5ece9ed'+", "+'//item.mi.com/1161200012.html'+", "+'pcpid'+", "+"'"+"'"+"]);"+'"'+">"+
+            '<img alt="" src="//i1.mifile.cn/a1/pms_1510291188.31088548!80x80.jpg" width="80" height="80">'+
+          '</a>'+
+         '</div>'+
+             '<div class="col col-name">'+
+             '<div class="tags"></div>'+
+         '<div class="tags"></div>'+
+           '<h3 class="name">'
+           '<a href="//item.mi.com/1161200012.html" target="_blank" data-stat-id="23537ce6324466fd" onclick="_msq.push(['+'trackEvent'+", "+'5df97b551662ffe7-23537ce6324466fd'+", "+'//item.mi.com/1161200012.html'+", "+'pcpid'+", "+"'"+"'"+']);"> 小米USB充电器（4口） 白色 </a>'+
+         '</h3>'+
+         '</div>'+
+         '<div class="col col-price"> 59元 </div>'+
+         '<div class="col col-num">'+
+             '<div class="change-goods-num clearfix J_changeGoodsNum">'+
+             '<a href="#" class="J_minus" onclick="sub()">'+
+            '<!--<i class="fa fa-minus"></i>-->'+
+             '<img src="assets/img/sub.png" class="iconfont" style="padding-top: 5px;"/>'+
+           '</a>'+
+        '<input tyep="text" name="2161200012_0_buy" value="1" data-num="4" data-buylimit="5" autocomplete="off" class="goods-num J_goodsNum" "="">'+
+        '<a href="#" class="J_plus">'+
+            '<!--<i class="fa fa-plus"></i>-->'+
+            '<img src="assets/img/add.png" class="iconfont"/>'+
+        '</a>'+
+        '<div class="msg J_canBuyLimit">还可买 1 件</div>'+
+    '</div>'+
+    '</div>'+
+        '<div class="col col-total"> 236元 <p class="pre-info">  </p> </div>'+
+       '<div class="col col-action">'+
+       '<a id="2161200012_0_buy" data-msg="确定删除吗？" href="javascript:void(0);" title="删除" class="del J_delGoods" data-stat-id="163da9c724cdbb9f" onclick="_msq.push(['+'trackEvent'+", "+'5df97b551662ffe7-163da9c724cdbb9f'+", "+'javascript:void0'+", "+'pcpid'+", "+"'"+"'"+']);">'+
+        '<i class="fa fa-remove"></i>'+
+       '</a>'+
+       '</div>'+
+       '</div>';
+	 '</div>'+
+	 '</div>';
+ 
+ '<div class="item-box">'+
+ ' <div class="item-table J_cartGoods" id="item_table" data-info="{ commodity_id:'+"'"+'1161200012'+"'"+', '+"gettype:"+"'"+"buy"+"'"+", "+"itemid:"+"'"+"2161200012_0_buy"+"'"+", num:"+"'"+"4'"+'} ">'+
+     '<div class="item-row clearfix">'+
+'         <div class="col col-check">'+
+'             <i class="iconfont icon-checkbox icon-checkbox  J_itemCheckbox" data-itemid="2161200012_0_buy" data-status="0">√</i>'+
+        ' </div>'+
+         '<div class="col col-img">'+
+            '<a href="//item.mi.com/1161200012.html" target="_blank" data-stat-id="b3fe5630e5ece9ed" onclick="_msq.push(['+"'"+'trackEvent'+"'"+", "+"'"+'5df97b551662ffe7-b3fe5630e5ece9ed'+"'"+', '+"'"+"//item.mi.com/1161200012.html"+"'"+', '+"'"+"pcpid"+"'"+", "+"''"+"]);"+'"'+'>'+
+              '   <img alt="" src="//i1.mifile.cn/a1/pms_1510291188.31088548!80x80.jpg" width="80" height="80">'+
+             '</a>'+
+         '</div>'+
+         '<div class="col col-name">'+
+         '    <div class="tags"></div>'+
+         '    <div class="tags"></div>'+
+          '   <h3 class="name">'+
+               '  <a href="//item.mi.com/1161200012.html" target="_blank" data-stat-id="23537ce6324466fd" onclick="_msq.push(['+"'trackEvent', '5df97b551662ffe7-23537ce6324466fd', '//item.mi.com/1161200012.html', 'pcpid', '']);"+'"'+'> 小米USB充电器（4口） 白色 </a>'+
+             '</h3>'+
+          ' </div>'+
+         '<div class="col col-price"> 59元 </div>'+
+         '<div class="col col-num">'+
+            ' <div class="change-goods-num clearfix J_changeGoodsNum">'+
+              '   <a href="#" class="J_minus" onclick="sub()">'+
+                  '   <!--<i class="fa fa-minus"></i>-->'+
+                  '   <img src="assets/img/sub.png" class="iconfont" style="padding-top: 5px;"/>'+
+                 '</a>'+
+                 '<input tyep="text" name="2161200012_0_buy" value="1" data-num="4" data-buylimit="5" autocomplete="off" class="goods-num J_goodsNum" "="">'+
+                 '<a href="#" class="J_plus">'+
+                    ' <!--<i class="fa fa-plus"></i>-->'+
+                     '<img src="assets/img/add.png" class="iconfont"/>'+
+                 '</a>'+
+                 '<div class="msg J_canBuyLimit">还可买 1 件</div>'+
+             '</div>'+
+        ' </div>'+
+         '<div class="col col-total"> 236元 <p class="pre-info">  </p> </div>'+
+         '<div class="col col-action">'+
+            ' <a id="2161200012_0_buy" data-msg="确定删除吗？" href="javascript:void(0);" title="删除" class="del J_delGoods" data-stat-id="163da9c724cdbb9f" onclick="_msq.push(['+"'trackEvent', '5df97b551662ffe7-163da9c724cdbb9f', 'javascript:void0', 'pcpid', '']);"+'">'+
+                ' <i class="fa fa-remove"></i>'+
+      '         </a>'+
+      '         </div>'+
+      '    </div>'+
+
+     '</div>'+
+     '</div>';

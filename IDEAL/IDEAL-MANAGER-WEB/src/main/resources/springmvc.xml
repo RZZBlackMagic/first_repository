@@ -17,7 +17,7 @@
         <property name="suffix" value=".jsp" />
     </bean>
     <!-- 配置包扫描器，扫描@Controller注解的类 -->
-    <context:component-scan base-package="com.ideal.controller"/>
+    <context:component-scan base-package="cn.ideal.manager.controller"/>
     <!-- 配置资源映射 -->
     <mvc:resources mapping="/assets/**" location="/MANAGER-WEB-SOURCE/assets/" />
     <!-- 引用dubbo服务 -->
@@ -25,6 +25,10 @@
     <dubbo:consumer check="false" />
     <dubbo:registry address="zookeeper://39.105.163.90:2181"/>
 
-    <dubbo:reference interface="com.ideal.service.CommodityCatService" id="commodityCatServiceImpl" />
+    <dubbo:reference interface="cn.ideal.manager.service.ProductManagerService" id="productManagerServiceImpl" />
+    <dubbo:reference interface="cn.ideal.manager.service.ContentCategoryManagerService" id="contentCategoryManagerServiceImpl" />
+    <dubbo:reference interface="cn.ideal.manager.service.ContentManagerService" id="contentManagerServiceImpl" />
+    <dubbo:reference interface="cn.ideal.manager.service.CommodityCatService" id="commodityCatServiceImpl" />
+    <dubbo:reference interface="cn.ideal.manager.service.MerchantManagerService" id="merchantManagerServiceImpl" />
 
 </beans>

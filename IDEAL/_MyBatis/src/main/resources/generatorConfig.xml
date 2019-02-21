@@ -18,19 +18,19 @@
         <javaTypeResolver><property name="forceBigDecimals" value="false"/></javaTypeResolver>
 
         <!-- targetProject:生成PO类的位置 -->
-        <javaModelGenerator targetPackage="com.ideal.pojo" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="cn.ideal.common.pojo" targetProject="src/main/java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
             <!-- 从数据库返回的值被清理前后的空格 -->
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
         <!-- targetProject:mapper映射文件生成的位置 -->
-        <sqlMapGenerator targetPackage="com.ideal.mapper" targetProject="src/main/java">
+        <sqlMapGenerator targetPackage="cn.ideal.common.mapper" targetProject="src/main/java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
         </sqlMapGenerator>
         <!-- targetPackage：mapper接口生成的位置 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.ideal.mapper" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.ideal.common.mapper" targetProject="src/main/java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
@@ -46,10 +46,24 @@
                    enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
             </table>
         -->
+        <!--<table tableName="account_productor" />-->
+        <!--<table tableName="account_manager" />-->
+        <!--<table tableName="account_merchant" />-->
+        <!--<table tableName="commodity_cat" />-->
+        <!--<table tableName="commodity_content">-->
+            <!--<columnOverride column="content" jdbcType="VARCHAR" />-->
+        <!--</table>-->
+        <!--<table tableName="commodity_content_category" />-->
+        <!--<table tableName="commodity_sku" />-->
+        <!--<table tableName="commodity_sku_spev" />-->
+        <!--<table tableName="commodity_spe" />-->
+        <!--<table tableName="commodity_spev" />-->
+        <!--<table tableName="commodity_spu" />-->
+        <!--<table tableName="commodity_spu_spe" />-->
+        <!--<table tableName="commodity_store" />-->
+        <!--<table tableName="rela_mer_pro" />-->
+        <table tableName="commodity_cart" />
 
-        <table tableName="commodity" />
-        <table tableName="commodity_cat" />
-        <table tableName="rela_commodity_cat" />
 
     </context>
 </generatorConfiguration>

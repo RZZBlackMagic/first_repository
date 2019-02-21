@@ -2,12 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
+    <parent>
+        <artifactId>IDEAL-PARENT</artifactId>
+        <groupId>cn.ideal</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../IDEAL-PARENT/pom.xml</relativePath>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.github.pagehelper</groupId>
+
     <artifactId>_PageHelper</artifactId>
-    <packaging>jar</packaging>
-    <version>3.4.2-fix</version>
 
     <dependencies>
         <dependency>
@@ -21,20 +24,4 @@
             <version>0.9</version>
         </dependency>
     </dependencies>
-    <build>
-        <plugins>
-            <!-- java编译插件 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.2</version>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>

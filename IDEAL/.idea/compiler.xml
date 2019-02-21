@@ -6,34 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="_FastDFS" />
         <module name="_MyBatis" />
         <module name="_PageHelper" />
         <module name="IDEAL-COMMON" />
-        <module name="IDEAL-MANAGER-DAO" />
         <module name="IDEAL-MANAGER-INTERFACE" />
-        <module name="IDEAL-MANAGER-POJO" />
         <module name="IDEAL-MANAGER-SERVICE" />
         <module name="IDEAL-MANAGER-WEB" />
-        <module name="IDEAL-PORTAL-INTERFACE" />
-        <module name="IDEAL-PORTAL-SERVICE" />
-        <module name="IDEAL-PORTAL-WEB" />
+        <module name="IDEAL-MERCHANT-INTERFACE" />
+        <module name="IDEAL-MERCHANT-SERVICE" />
+        <module name="IDEAL-MERCHANT-WEB" />
+        <module name="IDEAL-PRODUCT-INTERFACE" />
+        <module name="IDEAL-PRODUCT-SERVICE" />
+        <module name="IDEAL-PRODUCT-WEB" />
+        <module name="IDEAL-SSO-INTERFACE" />
+        <module name="IDEAL-SSO-SERVICE" />
+        <module name="IDEAL-SSO-WEB" />
+        <module name="IDEALCARTWEB" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="_MyBatis" target="1.7" />
-      <module name="_PageHelper" target="1.7" />
-      <module name="IDEAL-COMMON" target="1.7" />
-      <module name="IDEAL-MANAGER" target="1.7" />
-      <module name="IDEAL-MANAGER-DAO" target="1.7" />
-      <module name="IDEAL-MANAGER-INTERFACE" target="1.7" />
-      <module name="IDEAL-MANAGER-POJO" target="1.7" />
-      <module name="IDEAL-MANAGER-SERVICE" target="1.7" />
-      <module name="IDEAL-MANAGER-WEB" target="1.7" />
-      <module name="IDEAL-PARENT" target="1.7" />
-      <module name="IDEAL-PORTAL" target="1.7" />
-      <module name="IDEAL-PORTAL-INTERFACE" target="1.7" />
-      <module name="IDEAL-PORTAL-SERVICE" target="1.7" />
-      <module name="IDEAL-PORTAL-WEB" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>

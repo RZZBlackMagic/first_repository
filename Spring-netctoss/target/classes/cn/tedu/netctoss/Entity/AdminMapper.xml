@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<!-- namespace用于避免id相同的问题 -->
+<mapper namespace="cn.tedu.netctoss.Dao.AdminDao">
+
+  <select id="fingByAdminCode" parameterType="java.lang.String" resultType="cn.tedu.netctoss.Entity.admin">
+    select * from  admin_info_rzz where admin_code = #{adminCode}
+  </select>
+	
+</mapper>

@@ -161,6 +161,39 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->
 </div>
+
+<div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true" style="margin-top: 13%;">
+    <div class="modal-dialog" style="width: 20%">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="myModalLabel1">
+                    添加
+                </h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <button class="btn btn-success" onclick="clickCategoryPlus()">添加分类</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <button class="btn btn-success" onclick="addContent()">添加内容</button>
+                        <%--<div class="form-group">
+                            <input id="content-cat1" style="width: 100%;height: 40px;font-size: 30px;">
+                        </div>--%>
+                    </div>
+                </div>
+            </div>
+            <%--<div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-info" data-dismiss="modal" id="add-spe1" onclick="clickCategorySubmit()">
+                    提交
+                </button>
+            </div>--%>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
 <!-- END WRAPPER -->
 <!-- Javascript -->
 <script src="assets/vendor/ztree/js/jquery.ztree.all.js"></script>
@@ -269,6 +302,7 @@
             'pic2': $("#pic2").val(),
             'content': $("#content").val()
         }
+        console.log(data);
         $.post(url, data, function (result) {
             $('input').val("");
             clickExit();
@@ -299,11 +333,19 @@
 
     //添加商品分类
     function clickCategoryPlus() {
+        $("#Modal1").modal('hide');
         $('#showContentForm').hide();
         $("#Modal").modal('show');
     }
 
     function clickContentPlus() {
+        $("#Modal1").modal('show');
+        /*$("#showTable").hide();
+        $("#showForm").hide();
+        $('#showContentForm').show();*/
+    }
+    function addContent(){
+        $("#Modal1").modal('hide');
         $("#showTable").hide();
         $("#showForm").hide();
         $('#showContentForm').show();

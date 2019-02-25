@@ -27,6 +27,7 @@ public class ContentManagerController {
     @ResponseBody
     public MessageResult addContent(CommodityContent commodityContent) throws Exception {
         FastDFSClient fastDFSClient = new FastDFSClient("client.conf");
+        System.out.println("***************************"+commodityContent.getPic()+"**********"+commodityContent.getPic2());
         commodityContent.setPic("http://39.105.163.90:8888/" + fastDFSClient.uploadFile(commodityContent.getPic()));
         commodityContent.setPic2("http://39.105.163.90:8888/" + fastDFSClient.uploadFile(commodityContent.getPic2()));
 

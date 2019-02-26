@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <div>
+     <h1>自定义图片</h1>
+     <img alt="" src="ImageDemo">
+   </div>
+   <div>
+     <h1>SpringMVC处理自定义图片</h1>
+     <img src="user/image.do">
+   </div>
+   <div>
+    <h1>下载图片</h1>
+    <a href="user/downloadImage.do">图片</a>
+   </div>
+   <div>
+    <h1>下载excel</h1>
+    <a href="user/downloadExcel.do">excel</a>
+   </div>
+   <div>
+     <FORM ENCTYPE="multipart/form-data" ACTION="user/upload.do" METHOD="post">
+       FILE to process:<br>
+       <input name="userfile1" type="file"><br>
+       <input name="userfile2" type="file"><br>
+       <input type="submit" vlaue="Send File">
+     </FORM>
+   </div>
+</body>
+</html>

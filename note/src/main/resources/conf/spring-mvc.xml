@@ -30,5 +30,9 @@
          <ref bean="accessInterceptor"/>
       </mvc:interceptor>
    </mvc:interceptors> -->
+   <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="100000000"/><!-- value是字节，100000就是100k -->
+        <property name="defaultEncoding" value="utf-8" />
+   </bean>
     
 </beans>

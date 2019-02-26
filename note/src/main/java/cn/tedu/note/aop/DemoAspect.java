@@ -39,10 +39,10 @@ public class DemoAspect {
 
 	//@Around("bean(userService)")
 	public Object test4(ProceedingJoinPoint jp)throws Throwable{
-		System.out.println("业务方法之前");
+		/*System.out.println("业务方法之前");
 		Object val =jp.proceed();
 		System.out.println(val);
-		System.out.println("业务方法之后");
-		return val;
+		System.out.println("业务方法之后");*/
+		return null;
 	}
 }

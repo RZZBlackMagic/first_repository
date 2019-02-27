@@ -8,10 +8,10 @@
 
 package org.csource.fastdfs;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
-import org.csource.common.*;
+import org.csource.common.MyException;
+import org.csource.common.NameValuePair;
+
+import java.io.IOException;
 
 /**
 * Storage client for 1 field file id: combined group name and filename
@@ -153,9 +153,9 @@ public class StorageClient1 extends StorageClient
   * @return file id(including group name and filename) if success, <br>
 	*         return null if fail
 	*/
-	public String upload_file1(String group_name, long file_size, 
-	       UploadCallback callback, String file_ext_name, 
-	       NameValuePair[] meta_list) throws IOException, MyException
+	public String upload_file1(String group_name, long file_size,
+                               UploadCallback callback, String file_ext_name,
+                               NameValuePair[] meta_list) throws IOException, MyException
 	{
 		String parts[] = this.upload_file(group_name, file_size, callback, file_ext_name, meta_list);
 		if (parts != null)
@@ -268,9 +268,9 @@ public class StorageClient1 extends StorageClient
   * @return file id(including group name and filename) if success, <br>
 	*         return null if fail
 	*/
-	public String upload_appender_file1(String group_name, long file_size, 
-	       UploadCallback callback, String file_ext_name, 
-	       NameValuePair[] meta_list) throws IOException, MyException
+	public String upload_appender_file1(String group_name, long file_size,
+                                        UploadCallback callback, String file_ext_name,
+                                        NameValuePair[] meta_list) throws IOException, MyException
 	{
 		String parts[] = this.upload_appender_file(group_name, file_size, callback, file_ext_name, meta_list);
 		if (parts != null)
@@ -390,9 +390,9 @@ public class StorageClient1 extends StorageClient
   * @return file id(including group name and filename) if success, <br>
 	*         return null if fail
 	*/
-	public String upload_file1(String master_file_id, String prefix_name, long file_size, 
-	       UploadCallback callback, String file_ext_name, 
-	       NameValuePair[] meta_list) throws IOException, MyException
+	public String upload_file1(String master_file_id, String prefix_name, long file_size,
+                               UploadCallback callback, String file_ext_name,
+                               NameValuePair[] meta_list) throws IOException, MyException
 	{
 		String[] parts = new String[2];
 		this.errno = this.split_file_id(master_file_id, parts);

@@ -8,11 +8,11 @@
 
 package org.csource.fastdfs.test;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
-import org.csource.common.*;
+import org.csource.common.NameValuePair;
 import org.csource.fastdfs.*;
+
+import java.io.File;
+import java.net.InetSocketAddress;
 
 /**
 * client test
@@ -132,7 +132,7 @@ public class TestAppender1
 					System.err.println("");
 				}
 				
-	  		meta_list = new NameValuePair[4];	  		
+	  		meta_list = new NameValuePair[4];
 	  		meta_list[0] = new NameValuePair("width", "1024");
 	  		meta_list[1] = new NameValuePair("heigth", "768");
 	  		meta_list[2] = new NameValuePair("bgcolor", "#000000");

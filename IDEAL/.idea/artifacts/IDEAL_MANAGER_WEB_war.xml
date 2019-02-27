@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="IDEAL-MANAGER-WEB:war">
-    <output-path>$PROJECT_DIR$/IDEAL-MANAGER-WEB/target</output-path>
+    <output-path>$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB/target</output-path>
     <root id="archive" name="IDEAL-MANAGER-WEB-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="IDEAL-MANAGER-WEB:war exploded" />
     </root>

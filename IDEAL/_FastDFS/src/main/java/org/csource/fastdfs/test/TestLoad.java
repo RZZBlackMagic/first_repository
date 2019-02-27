@@ -8,11 +8,9 @@
 
 package org.csource.fastdfs.test;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
-import org.csource.common.*;
 import org.csource.fastdfs.*;
+
+import java.util.Arrays;
 
 /**
 * load test class
@@ -209,7 +207,7 @@ public class TestLoad
     		file_id = "";
 				while (TestLoad.upload_thread_count != 0 || file_id != null)
 				{
-					file_id = (String)TestLoad.file_ids.poll();
+					file_id = (String) TestLoad.file_ids.poll();
 					if (file_id == null)
 					{
 						Thread.sleep(10);
@@ -233,9 +231,9 @@ public class TestLoad
     			}
     		}
     		
-    		for (int i=0; i<3 && TestLoad.total_download_count < TestLoad.total_upload_count; i++)
+    		for (int i = 0; i<3 && TestLoad.total_download_count < TestLoad.total_upload_count; i++)
     		{
-					file_id = (String)TestLoad.file_ids.poll();
+					file_id = (String) TestLoad.file_ids.poll();
 					if (file_id == null)
 					{
 						Thread.sleep(10);

@@ -8,10 +8,10 @@
 
 package org.csource.fastdfs.test;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
-import org.csource.fastdfs.*;
+import org.csource.fastdfs.DownloadCallback;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
 * DowloadCallback test

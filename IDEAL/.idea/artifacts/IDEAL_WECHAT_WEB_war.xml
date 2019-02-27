@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="IDEAL-WECHAT-WEB:war">
+    <output-path>$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB/target</output-path>
+    <root id="archive" name="IDEAL-WECHAT-WEB-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="IDEAL-WECHAT-WEB:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -10,8 +10,8 @@ package org.csource.fastdfs;
 
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.Arrays;
 import java.net.Socket;
+import java.util.Arrays;
 
 /**
 * Tracker client
@@ -140,8 +140,8 @@ public class TrackerClient
 				out.write(bGroupName);
 			}
 	
-			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(trackerSocket.getInputStream(), 
-	                                     ProtoCommon.TRACKER_PROTO_CMD_RESP, 
+			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(trackerSocket.getInputStream(),
+	                                     ProtoCommon.TRACKER_PROTO_CMD_RESP,
 	                                     ProtoCommon.TRACKER_QUERY_STORAGE_STORE_BODY_LEN);
 			this.errno = pkgInfo.errno;
 			if (pkgInfo.errno != 0)
@@ -151,7 +151,7 @@ public class TrackerClient
 			
 			ip_addr = new String(pkgInfo.body, ProtoCommon.FDFS_GROUP_NAME_MAX_LEN, ProtoCommon.FDFS_IPADDR_SIZE-1).trim();
 	
-			port = (int)ProtoCommon.buff2long(pkgInfo.body, ProtoCommon.FDFS_GROUP_NAME_MAX_LEN
+			port = (int) ProtoCommon.buff2long(pkgInfo.body, ProtoCommon.FDFS_GROUP_NAME_MAX_LEN
 	                        + ProtoCommon.FDFS_IPADDR_SIZE-1);
 			store_path = pkgInfo.body[ProtoCommon.TRACKER_QUERY_STORAGE_STORE_BODY_LEN - 1];
 			
@@ -259,7 +259,7 @@ public class TrackerClient
 				out.write(bGroupName);
 			}
 	
-			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(trackerSocket.getInputStream(), 
+			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(trackerSocket.getInputStream(),
 	                                     ProtoCommon.TRACKER_PROTO_CMD_RESP, -1);
 			this.errno = pkgInfo.errno;
 			if (pkgInfo.errno != 0)
@@ -298,7 +298,7 @@ public class TrackerClient
 				ip_addr = new String(pkgInfo.body, offset, ProtoCommon.FDFS_IPADDR_SIZE - 1).trim();
 				offset += ProtoCommon.FDFS_IPADDR_SIZE - 1;
 				
-				port = (int)ProtoCommon.buff2long(pkgInfo.body, offset);
+				port = (int) ProtoCommon.buff2long(pkgInfo.body, offset);
 		    offset += ProtoCommon.FDFS_PROTO_PKG_LEN_SIZE;
 		    
 		    results[i] = new StorageServer(ip_addr, port, store_path);
@@ -345,10 +345,10 @@ public class TrackerClient
 	* @param filename filename on storage server
 	* @return storage server Socket object, return null if fail
 	*/
-	public StorageServer getFetchStorage(TrackerServer trackerServer, 
-			String groupName, String filename) throws IOException
+	public StorageServer getFetchStorage(TrackerServer trackerServer,
+                                         String groupName, String filename) throws IOException
 	{
-		ServerInfo[] servers = this.getStorages(trackerServer, ProtoCommon.TRACKER_PROTO_CMD_SERVICE_QUERY_FETCH_ONE, 
+		ServerInfo[] servers = this.getStorages(trackerServer, ProtoCommon.TRACKER_PROTO_CMD_SERVICE_QUERY_FETCH_ONE,
 				groupName, filename);
 		if (servers == null)
 		{
@@ -367,10 +367,10 @@ public class TrackerClient
 	* @param filename filename on storage server
 	* @return storage server Socket object, return null if fail
 	*/
-	public StorageServer getUpdateStorage(TrackerServer trackerServer, 
-			String groupName, String filename) throws IOException
+	public StorageServer getUpdateStorage(TrackerServer trackerServer,
+                                          String groupName, String filename) throws IOException
 	{
-		ServerInfo[] servers = this.getStorages(trackerServer, ProtoCommon.TRACKER_PROTO_CMD_SERVICE_QUERY_UPDATE, 
+		ServerInfo[] servers = this.getStorages(trackerServer, ProtoCommon.TRACKER_PROTO_CMD_SERVICE_QUERY_UPDATE,
 				groupName, filename);
 		if (servers == null)
 		{
@@ -392,7 +392,7 @@ public class TrackerClient
 	public ServerInfo[] getFetchStorages(TrackerServer trackerServer, 
 			String groupName, String filename) throws IOException
 	{
-		return this.getStorages(trackerServer, ProtoCommon.TRACKER_PROTO_CMD_SERVICE_QUERY_FETCH_ALL, 
+		return this.getStorages(trackerServer, ProtoCommon.TRACKER_PROTO_CMD_SERVICE_QUERY_FETCH_ALL,
 				groupName, filename);
 	}
 	
@@ -458,7 +458,7 @@ public class TrackerClient
 			System.arraycopy(bFileName, 0, wholePkg, header.length + bGroupName.length, bFileName.length);
 			out.write(wholePkg);
 			
-			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(trackerSocket.getInputStream(), 
+			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(trackerSocket.getInputStream(),
 	                                     ProtoCommon.TRACKER_PROTO_CMD_RESP, -1);
 			this.errno = pkgInfo.errno;
 			if (pkgInfo.errno != 0)
@@ -481,7 +481,7 @@ public class TrackerClient
 			ip_addr = new String(pkgInfo.body, ProtoCommon.FDFS_GROUP_NAME_MAX_LEN, ProtoCommon.FDFS_IPADDR_SIZE-1).trim();
 			int offset = ProtoCommon.FDFS_GROUP_NAME_MAX_LEN + ProtoCommon.FDFS_IPADDR_SIZE - 1;
 			
-			port = (int)ProtoCommon.buff2long(pkgInfo.body, offset);
+			port = (int) ProtoCommon.buff2long(pkgInfo.body, offset);
 	    offset += ProtoCommon.FDFS_PROTO_PKG_LEN_SIZE;
 	    
 	    ServerInfo[] servers = new ServerInfo[server_count];
@@ -600,7 +600,7 @@ public class TrackerClient
 			header = ProtoCommon.packHeader(ProtoCommon.TRACKER_PROTO_CMD_SERVER_LIST_GROUP, 0, (byte)0);
 			out.write(header);
 	
-			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(trackerSocket.getInputStream(), 
+			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(trackerSocket.getInputStream(),
 	                                     ProtoCommon.TRACKER_PROTO_CMD_RESP, -1);
 			this.errno = pkgInfo.errno;
 			if (pkgInfo.errno != 0)
@@ -740,7 +740,7 @@ public class TrackerClient
 			}
 			out.write(wholePkg);
 			
-			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(trackerSocket.getInputStream(), 
+			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(trackerSocket.getInputStream(),
 	                                     ProtoCommon.TRACKER_PROTO_CMD_RESP, -1);
 			this.errno = pkgInfo.errno;
 			if (pkgInfo.errno != 0)
@@ -840,7 +840,7 @@ public class TrackerClient
 		System.arraycopy(bIpAddr, 0, wholePkg, header.length + bGroupName.length, ipAddrLen);
 		out.write(wholePkg);
 		
-		ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(trackerSocket.getInputStream(), 
+		ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(trackerSocket.getInputStream(),
                                      ProtoCommon.TRACKER_PROTO_CMD_RESP, 0);
 		this.errno = pkgInfo.errno;
 		return pkgInfo.errno == 0;
@@ -864,8 +864,8 @@ public class TrackerClient
 	* @param storageIpAddr the storage server ip address
 	* @return true for success, false for fail
 	*/
-	public boolean deleteStorage(TrackerGroup trackerGroup, 
-			String groupName, String storageIpAddr) throws IOException
+	public boolean deleteStorage(TrackerGroup trackerGroup,
+                                 String groupName, String storageIpAddr) throws IOException
 	{
 		int serverIndex;
 		int notFoundCount;
@@ -903,7 +903,7 @@ public class TrackerClient
 				{
 					notFoundCount++;
 				}
-				else if (storageStats[0].getStatus() == ProtoCommon.FDFS_STORAGE_STATUS_ONLINE || 
+				else if (storageStats[0].getStatus() == ProtoCommon.FDFS_STORAGE_STATUS_ONLINE ||
 				         storageStats[0].getStatus() == ProtoCommon.FDFS_STORAGE_STATUS_ACTIVE)
 				{
 					this.errno = ProtoCommon.ERR_NO_EBUSY;

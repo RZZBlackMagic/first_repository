@@ -1,11 +1,10 @@
 
 package org.csource.fastdfs.test;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
-import org.csource.common.*;
+import org.csource.common.NameValuePair;
 import org.csource.fastdfs.*;
+
+import java.net.InetSocketAddress;
 
 public class Test1
 {
@@ -37,7 +36,7 @@ public class Test1
 		
 		NameValuePair[] meta_list = null;  //new NameValuePair[0];
 		String item = "c:/windows/system32/notepad.exe";
-		String fileid = sc1.upload_file1(item, "exe", meta_list); //´ËÐÐÒì³£
+		String fileid = sc1.upload_file1(item, "exe", meta_list); //ï¿½ï¿½ï¿½ï¿½ï¿½ì³£
 		
 		System.out.println("Upload local file "+item+" ok, fileid="+fileid);
 		}

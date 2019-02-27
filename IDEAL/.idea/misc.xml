@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/IDEAL-CART-WEB" />
-    <file type="web" url="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB" />
-    <file type="web" url="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE" />
-    <file type="web" url="file://$PROJECT_DIR$/IDEAL-MERCHANT-WEB" />
-    <file type="web" url="file://$PROJECT_DIR$/IDEAL-MERCHANT/IDEAL-MERCHANT-SERVICE" />
-    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PRODUCT-WEB" />
-    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE" />
-    <file type="web" url="file://$PROJECT_DIR$/IDEAL-SSO-WEB" />
-    <file type="web" url="file://$PROJECT_DIR$/IDEAL-SSO/IDEAL-SSO-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH/IDEAL-SEARCH-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT/IDEAL-WECHAT-SERVICE" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/IDEAL-CART-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/pom.xml" />
+        <option value="$PROJECT_DIR$/_FastDFS/pom.xml" />
+        <option value="$PROJECT_DIR$/_MyBatis/pom.xml" />
+        <option value="$PROJECT_DIR$/_PageHelper/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_10" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

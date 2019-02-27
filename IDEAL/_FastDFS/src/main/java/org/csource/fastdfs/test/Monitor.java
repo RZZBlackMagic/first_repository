@@ -8,9 +8,9 @@
 
 package org.csource.fastdfs.test;
 
-import java.text.SimpleDateFormat;
-import org.csource.common.*;
 import org.csource.fastdfs.*;
+
+import java.text.SimpleDateFormat;
 
 /**
 * load test class

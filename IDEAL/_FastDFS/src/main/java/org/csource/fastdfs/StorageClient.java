@@ -8,17 +8,13 @@
 
 package org.csource.fastdfs;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.FileInputStream;
-import java.io.File;
-import java.util.Arrays;
-import java.net.Socket;
+import org.csource.common.Base64;
 import org.csource.common.MyException;
 import org.csource.common.NameValuePair;
-import org.csource.common.Base64;
+
+import java.io.*;
+import java.net.Socket;
+import java.util.Arrays;
 
 /**
 * Storage client for 2 fields file id: group name and filename
@@ -205,7 +201,7 @@ public class StorageClient
 	public String[] upload_file(String group_name, byte[] file_buff, int offset, int length,	
 	       String file_ext_name, NameValuePair[] meta_list) throws IOException, MyException
 	{
-		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_FILE, group_name, null, null, file_ext_name, 
+		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_FILE, group_name, null, null, file_ext_name,
 		           length, new UploadBuff(file_buff, offset, length), meta_list);
 	}
 	
@@ -240,7 +236,7 @@ public class StorageClient
 	public String[] upload_file(String group_name, byte[] file_buff,	
 	       String file_ext_name, NameValuePair[] meta_list) throws IOException, MyException
 	{
-		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_FILE, group_name, null, null, file_ext_name, 
+		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_FILE, group_name, null, null, file_ext_name,
 		           file_buff.length, new UploadBuff(file_buff, 0, file_buff.length), meta_list);
 	}
 	
@@ -263,7 +259,7 @@ public class StorageClient
 		final String master_filename = null;
 		final String prefix_name = null;
 		
-		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_FILE, group_name, master_filename, prefix_name, 
+		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_FILE, group_name, master_filename, prefix_name,
            file_ext_name, file_size, callback, meta_list);
 	}
 	
@@ -304,7 +300,7 @@ public class StorageClient
 		
 		try
 		{
-		  return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_SLAVE_FILE, group_name, master_filename, prefix_name, 
+		  return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_SLAVE_FILE, group_name, master_filename, prefix_name,
 		                           file_ext_name, f.length(), new UploadStream(fis, f.length()), meta_list);
     }
     finally
@@ -336,7 +332,7 @@ public class StorageClient
 			throw new MyException("invalid arguement");
 		}
 
-		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_SLAVE_FILE, group_name, master_filename, prefix_name, 
+		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_SLAVE_FILE, group_name, master_filename, prefix_name,
 		                           file_ext_name, file_buff.length, new UploadBuff(file_buff, 0, file_buff.length), meta_list);
 	}
 	
@@ -366,7 +362,7 @@ public class StorageClient
 			throw new MyException("invalid arguement");
 		}
 
-		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_SLAVE_FILE, group_name, master_filename, prefix_name, 
+		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_SLAVE_FILE, group_name, master_filename, prefix_name,
 		            file_ext_name, length, new UploadBuff(file_buff, offset, length), meta_list);
 	}
 
@@ -388,7 +384,7 @@ public class StorageClient
 	       String prefix_name, long file_size, UploadCallback callback, 
 	       String file_ext_name, NameValuePair[] meta_list) throws IOException, MyException
 	{
-		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_SLAVE_FILE, group_name, master_filename, prefix_name, 
+		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_SLAVE_FILE, group_name, master_filename, prefix_name,
            file_ext_name, file_size, callback, meta_list);
 	}
 	
@@ -462,7 +458,7 @@ public class StorageClient
 	public String[] upload_appender_file(String group_name, byte[] file_buff, int offset, int length,	
 	       String file_ext_name, NameValuePair[] meta_list) throws IOException, MyException
 	{
-		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_APPENDER_FILE, group_name, null, null, file_ext_name, 
+		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_APPENDER_FILE, group_name, null, null, file_ext_name,
 		           length, new UploadBuff(file_buff, offset, length), meta_list);
 	}
 	
@@ -497,7 +493,7 @@ public class StorageClient
 	public String[] upload_appender_file(String group_name, byte[] file_buff,	
 	       String file_ext_name, NameValuePair[] meta_list) throws IOException, MyException
 	{
-		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_APPENDER_FILE, group_name, null, null, file_ext_name, 
+		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_APPENDER_FILE, group_name, null, null, file_ext_name,
 		           file_buff.length, new UploadBuff(file_buff, 0, file_buff.length), meta_list);
 	}
 	
@@ -519,7 +515,7 @@ public class StorageClient
 		final String master_filename = null;
 		final String prefix_name = null;
 		
-		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_APPENDER_FILE, group_name, master_filename, prefix_name, 
+		return this.do_upload_file(ProtoCommon.STORAGE_PROTO_CMD_UPLOAD_APPENDER_FILE, group_name, master_filename, prefix_name,
            file_ext_name, file_size, callback, meta_list);
 	}
 
@@ -786,7 +782,7 @@ public class StorageClient
 				return null;
 			}
 			
-			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(), 
+			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(),
 	                                     ProtoCommon.STORAGE_PROTO_CMD_RESP, -1);
 			this.errno = pkgInfo.errno;
 			if (pkgInfo.errno != 0)
@@ -932,7 +928,7 @@ public class StorageClient
 				return this.errno;
 			}
 			
-			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(), 
+			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(),
 	                                     ProtoCommon.STORAGE_PROTO_CMD_RESP, 0);
 			this.errno = pkgInfo.errno;
 			if (pkgInfo.errno != 0)
@@ -1046,7 +1042,7 @@ public class StorageClient
 				return this.errno;
 			}
 			
-			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(), 
+			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(),
 	                                     ProtoCommon.STORAGE_PROTO_CMD_RESP, 0);
 			this.errno = pkgInfo.errno;
 			if (pkgInfo.errno != 0)
@@ -1110,7 +1106,7 @@ public class StorageClient
 		try
 		{
 			this.send_package(ProtoCommon.STORAGE_PROTO_CMD_DELETE_FILE, group_name, remote_filename);
-			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(), 
+			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(),
 	                                     ProtoCommon.STORAGE_PROTO_CMD_RESP, 0);
 			
 			this.errno = pkgInfo.errno;
@@ -1221,7 +1217,7 @@ public class StorageClient
 			offset += appenderFilenameBytes.length;
 			
 			out.write(wholePkg);
-			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(), 
+			ProtoCommon.RecvPackageInfo pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(),
 	                                     ProtoCommon.STORAGE_PROTO_CMD_RESP, 0);
 			this.errno = pkgInfo.errno;
 			return pkgInfo.errno;
@@ -1298,7 +1294,7 @@ public class StorageClient
 			ProtoCommon.RecvPackageInfo pkgInfo;
 			
 			this.send_download_package(group_name, remote_filename, file_offset, download_bytes);
-			pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(), 
+			pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(),
 	                                     ProtoCommon.STORAGE_PROTO_CMD_RESP, -1);
 			
 			this.errno = pkgInfo.errno;
@@ -1603,7 +1599,7 @@ public class StorageClient
 			ProtoCommon.RecvPackageInfo pkgInfo;
 			
 			this.send_package(ProtoCommon.STORAGE_PROTO_CMD_GET_METADATA, group_name, remote_filename);
-			pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(), 
+			pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(),
 	                                     ProtoCommon.STORAGE_PROTO_CMD_RESP, -1);
 			
 			this.errno = pkgInfo.errno;
@@ -1666,8 +1662,8 @@ public class StorageClient
 	*				       the metadata item not exist, otherwise update it</li></ul>
 	* @return 0 for success, !=0 fail (error code)
 	*/
-	public int set_metadata(String group_name, String remote_filename, 
-							NameValuePair[] meta_list, byte op_flag) throws IOException, MyException
+	public int set_metadata(String group_name, String remote_filename,
+                            NameValuePair[] meta_list, byte op_flag) throws IOException, MyException
 	{
 		boolean bNewConnection = this.newUpdatableStorageConnection(group_name, remote_filename);
 		Socket storageSocket = this.storageServer.getSocket();
@@ -1715,7 +1711,7 @@ public class StorageClient
 			}
 			System.arraycopy(bs, 0, groupBytes, 0, groupLen);
 			
-			header = ProtoCommon.packHeader(ProtoCommon.STORAGE_PROTO_CMD_SET_METADATA, 
+			header = ProtoCommon.packHeader(ProtoCommon.STORAGE_PROTO_CMD_SET_METADATA,
 			           2 * ProtoCommon.FDFS_PROTO_PKG_LEN_SIZE + 1 + groupBytes.length
 			           + filenameBytes.length + meta_buff.length, (byte)0);
 			OutputStream out = storageSocket.getOutputStream();
@@ -1731,7 +1727,7 @@ public class StorageClient
 		  	out.write(meta_buff);
 		  }
 		  
-			pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(), 
+			pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(),
 	                                     ProtoCommon.STORAGE_PROTO_CMD_RESP, 0);
 			
 			this.errno = pkgInfo.errno;
@@ -1792,12 +1788,12 @@ public class StorageClient
 	          return null;
 	  }
 	  
-	  byte[] buff = base64.decodeAuto(remote_filename.substring(ProtoCommon.FDFS_FILE_PATH_LEN, 
+	  byte[] buff = base64.decodeAuto(remote_filename.substring(ProtoCommon.FDFS_FILE_PATH_LEN,
 	  	ProtoCommon.FDFS_FILE_PATH_LEN + ProtoCommon.FDFS_FILENAME_BASE64_LENGTH));
 		
 	  long file_size = ProtoCommon.buff2long(buff, 4 * 2);
-	  if (((remote_filename.length() > ProtoCommon.TRUNK_LOGIC_FILENAME_LENGTH) || 
-	          ((remote_filename.length() > ProtoCommon.NORMAL_LOGIC_FILENAME_LENGTH) && ((file_size & ProtoCommon.TRUNK_FILE_MARK_SIZE) == 0))) || 
+	  if (((remote_filename.length() > ProtoCommon.TRUNK_LOGIC_FILENAME_LENGTH) ||
+	          ((remote_filename.length() > ProtoCommon.NORMAL_LOGIC_FILENAME_LENGTH) && ((file_size & ProtoCommon.TRUNK_FILE_MARK_SIZE) == 0))) ||
 	          ((file_size & ProtoCommon.APPENDER_FILE_SIZE) != 0))
 	  { //slave file or appender file
 	  	FileInfo fi = this.query_file_info(group_name, remote_filename);
@@ -1840,7 +1836,7 @@ public class StorageClient
 			int groupLen;
 			ProtoCommon.RecvPackageInfo pkgInfo;
 			
-			filenameBytes = remote_filename.getBytes(ClientGlobal.g_charset);			
+			filenameBytes = remote_filename.getBytes(ClientGlobal.g_charset);
 			groupBytes = new byte[ProtoCommon.FDFS_GROUP_NAME_MAX_LEN];
 			bs = group_name.getBytes(ClientGlobal.g_charset);
 			
@@ -1855,7 +1851,7 @@ public class StorageClient
 			}
 			System.arraycopy(bs, 0, groupBytes, 0, groupLen);
 			
-			header = ProtoCommon.packHeader(ProtoCommon.STORAGE_PROTO_CMD_QUERY_FILE_INFO, 
+			header = ProtoCommon.packHeader(ProtoCommon.STORAGE_PROTO_CMD_QUERY_FILE_INFO,
 			           + groupBytes.length + filenameBytes.length, (byte)0);
 			OutputStream out = storageSocket.getOutputStream();
 			byte[] wholePkg = new byte[header.length + groupBytes.length + filenameBytes.length];
@@ -1864,9 +1860,9 @@ public class StorageClient
 			System.arraycopy(filenameBytes, 0, wholePkg, header.length + groupBytes.length, filenameBytes.length);
 			out.write(wholePkg);
 		  
-			pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(), 
-	                                     ProtoCommon.STORAGE_PROTO_CMD_RESP, 
-	                                     3 * ProtoCommon.FDFS_PROTO_PKG_LEN_SIZE + 
+			pkgInfo = ProtoCommon.recvPackage(storageSocket.getInputStream(),
+	                                     ProtoCommon.STORAGE_PROTO_CMD_RESP,
+	                                     3 * ProtoCommon.FDFS_PROTO_PKG_LEN_SIZE +
 	                                     ProtoCommon.FDFS_IPADDR_SIZE);
 			
 			this.errno = pkgInfo.errno;
@@ -1876,8 +1872,8 @@ public class StorageClient
 			}
 			
 			long file_size = ProtoCommon.buff2long(pkgInfo.body, 0);
-			int create_timestamp = (int)ProtoCommon.buff2long(pkgInfo.body, ProtoCommon.FDFS_PROTO_PKG_LEN_SIZE);
-			int crc32 = (int)ProtoCommon.buff2long(pkgInfo.body, 2 * ProtoCommon.FDFS_PROTO_PKG_LEN_SIZE);
+			int create_timestamp = (int) ProtoCommon.buff2long(pkgInfo.body, ProtoCommon.FDFS_PROTO_PKG_LEN_SIZE);
+			int crc32 = (int) ProtoCommon.buff2long(pkgInfo.body, 2 * ProtoCommon.FDFS_PROTO_PKG_LEN_SIZE);
 			String source_ip_addr = (new String(pkgInfo.body, 3 * ProtoCommon.FDFS_PROTO_PKG_LEN_SIZE, ProtoCommon.FDFS_IPADDR_SIZE)).trim();
 			return new FileInfo(file_size, create_timestamp, crc32, source_ip_addr);
 		}
@@ -2063,7 +2059,7 @@ public class StorageClient
 		}
 		System.arraycopy(bs, 0, groupBytes, 0, groupLen);
 		
-		header = ProtoCommon.packHeader(ProtoCommon.STORAGE_PROTO_CMD_DOWNLOAD_FILE, 
+		header = ProtoCommon.packHeader(ProtoCommon.STORAGE_PROTO_CMD_DOWNLOAD_FILE,
              bsOffset.length + bsDownBytes.length + groupBytes.length + filenameBytes.length, (byte)0);
 		byte[] wholePkg = new byte[header.length + bsOffset.length + bsDownBytes.length + groupBytes.length + filenameBytes.length];
 		System.arraycopy(header, 0, wholePkg, 0, header.length);

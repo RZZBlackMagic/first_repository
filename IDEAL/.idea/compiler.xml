@@ -13,17 +13,46 @@
         <module name="IDEAL-MANAGER-INTERFACE" />
         <module name="IDEAL-MANAGER-SERVICE" />
         <module name="IDEAL-MANAGER-WEB" />
-        <module name="IDEAL-MERCHANT-INTERFACE" />
-        <module name="IDEAL-MERCHANT-SERVICE" />
-        <module name="IDEAL-MERCHANT-WEB" />
         <module name="IDEAL-PRODUCT-INTERFACE" />
         <module name="IDEAL-PRODUCT-SERVICE" />
         <module name="IDEAL-PRODUCT-WEB" />
+        <module name="IDEAL-SEARCH-INTERFACE" />
+        <module name="IDEAL-SEARCH-SERVICE" />
+        <module name="IDEAL-SEARCH-WEB" />
         <module name="IDEAL-SSO-INTERFACE" />
         <module name="IDEAL-SSO-SERVICE" />
         <module name="IDEAL-SSO-WEB" />
-        <module name="IDEALCARTWEB" />
+        <module name="IDEAL-WECHAT-INTERFACE" />
+        <module name="IDEAL-WECHAT-SERVICE" />
+        <module name="IDEAL-WECHAT-WEB" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="_FastDFS" target="1.8" />
+      <module name="_MyBatis" target="1.8" />
+      <module name="_PageHelper" target="1.8" />
+      <module name="IDEAL-COMMON" target="1.8" />
+      <module name="IDEAL-MANAGER" target="1.8" />
+      <module name="IDEAL-MANAGER-INTERFACE" target="1.8" />
+      <module name="IDEAL-MANAGER-SERVICE" target="1.8" />
+      <module name="IDEAL-MANAGER-WEB" target="1.8" />
+      <module name="IDEAL-PARENT" target="1.8" />
+      <module name="IDEAL-PRODUCT" target="1.8" />
+      <module name="IDEAL-PRODUCT-INTERFACE" target="1.8" />
+      <module name="IDEAL-PRODUCT-SERVICE" target="1.8" />
+      <module name="IDEAL-PRODUCT-WEB" target="1.8" />
+      <module name="IDEAL-SEARCH" target="1.8" />
+      <module name="IDEAL-SEARCH-INTERFACE" target="1.8" />
+      <module name="IDEAL-SEARCH-SERVICE" target="1.8" />
+      <module name="IDEAL-SEARCH-WEB" target="1.8" />
+      <module name="IDEAL-SSO" target="1.8" />
+      <module name="IDEAL-SSO-INTERFACE" target="1.8" />
+      <module name="IDEAL-SSO-SERVICE" target="1.8" />
+      <module name="IDEAL-SSO-WEB" target="1.8" />
+      <module name="IDEAL-WECHAT" target="1.8" />
+      <module name="IDEAL-WECHAT-INTERFACE" target="1.8" />
+      <module name="IDEAL-WECHAT-SERVICE" target="1.8" />
+      <module name="IDEAL-WECHAT-WEB" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -8,14 +8,15 @@
 
 package org.csource.fastdfs;
 
-import java.io.InputStream;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
-import java.net.Socket;
 import org.csource.common.MyException;
 import org.csource.common.NameValuePair;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.Socket;
+import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
 
 /**
 * protocol common functions
@@ -294,8 +295,8 @@ public class ProtoCommon
 * @param filedSeperator field/column seperator
 * @return name value pair array
 */
-	public static NameValuePair[] split_metadata(String meta_buff, 
-						    String  recordSeperator, String  filedSeperator)
+	public static NameValuePair[] split_metadata(String meta_buff,
+                                                 String  recordSeperator, String  filedSeperator)
 	{
 		String[] rows;
 		String[] cols;

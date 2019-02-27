@@ -49,11 +49,12 @@
         <!--<table tableName="account_productor" />-->
         <!--<table tableName="account_manager" />-->
         <!--<table tableName="account_merchant" />-->
+        <!--<table tableName="account_user" />-->
         <!--<table tableName="commodity_cat" />-->
         <!--<table tableName="commodity_content">-->
             <!--<columnOverride column="content" jdbcType="VARCHAR" />-->
         <!--</table>-->
-        <!--<table tableName="commodity_content_category" />-->
+        <table tableName="commodity_content_category" />
         <!--<table tableName="commodity_sku" />-->
         <!--<table tableName="commodity_sku_spev" />-->
         <!--<table tableName="commodity_spe" />-->
@@ -62,7 +63,7 @@
         <!--<table tableName="commodity_spu_spe" />-->
         <!--<table tableName="commodity_store" />-->
         <!--<table tableName="rela_mer_pro" />-->
-        <table tableName="commodity_cart" />
+        <!--<table tableName="rela_mer_pro_com" />-->
 
 
     </context>

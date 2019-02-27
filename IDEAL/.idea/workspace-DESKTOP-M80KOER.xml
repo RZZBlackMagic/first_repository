@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3305f926-bbc1-4e76-b94e-46ed50e17c5f" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/target/" />
+    <ignored path="$PROJECT_DIR$/_FastDFS/target/" />
+    <ignored path="$PROJECT_DIR$/_MyBatis/target/" />
+    <ignored path="$PROJECT_DIR$/_PageHelper/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-INTERFACE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="926591841">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="conf" value="1" />
+          <entry key="java" value="60" />
+          <entry key="properties" value="1" />
+          <entry key="xml" value="23" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="HOCON" value="1" />
+          <entry key="JAVA" value="60" />
+          <entry key="Properties" value="1" />
+          <entry key="XML" value="23" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1" />
+          <entry key="txt" value="8" />
+          <entry key="xml" value="113" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1" />
+          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="XML" value="113" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5415">
+              <caret line="285" column="31" selection-start-line="285" selection-start-column="31" selection-end-line="285" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/src/main/java/cn/ideal/sso/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManageController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/java/cn/ideal/sso/controller/ManageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2052">
+              <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="springmvc.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/resources/springmvc.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="29" column="89" selection-start-line="29" selection-start-column="89" selection-end-line="29" selection-end-column="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestMappingHandlerMapping.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.4.RELEASE/spring-webmvc-4.2.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerMapping.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/java/cn/ideal/sso/controller/PageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext-service.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/src/main/resources/spring/applicationContext-service.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="36" column="75" selection-start-line="36" selection-start-column="75" selection-end-line="36" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/_FastDFS/src/main/java/csource/fastdfs/StorageServer.java" />
+        <option value="$PROJECT_DIR$/_FastDFS/src/main/java/org/csource/fastdfs/StorageServer.java" />
+        <option value="$PROJECT_DIR$/_FastDFS/pom.xml" />
+        <option value="$PROJECT_DIR$/_MyBatis/pom.xml" />
+        <option value="$PROJECT_DIR$/_PageHelper/src/main/java/pagehelper/PageInfo.java" />
+        <option value="$PROJECT_DIR$/_PageHelper/src/main/java/com/github/pagehelper/PageInfo.java" />
+        <option value="$PROJECT_DIR$/_PageHelper/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/common/mapper/CommodityContentMapper.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityContentMapper.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/utils/FastDFSClient.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-INTERFACE/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/java/cn/ideal/sso/controller/ManagerController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/src/main/resources/spring/applicationContext-service.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/resources/springmvc.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/java/cn/ideal/sso/controller/ManageController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="_MyBatis" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="_MyBatis" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="_PageHelper" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="_PageHelper" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="IDEAL-PARENT" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="IDEAL-PARENT" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="470" />
+    <option name="y" value="30" />
+    <option name="width" value="1140" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-SERVICE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-SERVICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-SERVICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-SERVICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-SERVICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ideal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-SERVICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ideal" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-SERVICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-SERVICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="10" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\XINER\OneDrive\Workspace\IDEAL\IDEAL-PARENT\IDEAL-SSO-WEB\src\main" />
+      <recent name="C:\Users\XINER\OneDrive\Workspace\IDEAL\IDEAL-PARENT\src\main" />
+      <recent name="C:\Users\XINER\OneDrive\Workspace\IDEAL\IDEAL-PARENT\IDEAL-SSO\IDEAL-SSO-SERVICE\src\main" />
+      <recent name="C:\Users\XINER\OneDrive\Workspace\IDEAL\IDEAL-PARENT\IDEAL-SSO\IDEAL-SSO-INTERFACE\src\main\java" />
+      <recent name="C:\Users\XINER\OneDrive\Workspace\IDEAL\IDEAL-PARENT\IDEAL-COMMON\src\main\java" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Maven.SSO-WEB">
+    <configuration name="SSO-WEB" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
+    <configuration name="SSO" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
+    <configuration name="_MyBatis" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mybatis-generator:generate" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/_MyBatis" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
+    <list>
+      <item itemvalue="Maven._MyBatis" />
+      <item itemvalue="Maven.SSO" />
+      <item itemvalue="Maven.SSO-WEB" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\XINER\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3305f926-bbc1-4e76-b94e-46ed50e17c5f" name="Default Changelist" comment="" />
+      <created>1550744534571</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550744534571</updated>
+      <workItem from="1550744535756" duration="2876000" />
+      <workItem from="1550747570513" duration="738000" />
+      <workItem from="1550813861276" duration="71000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3685000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32905984" />
+      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.18967828" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3233618" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info id="Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2774799" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info id="Learn" order="5" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/_MyBatis/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PageHelper/src/main/java/pagehelper/SqlParser.java" />
+    <entry file="file://$PROJECT_DIR$/_PageHelper/src/main/java/pagehelper/Page.java" />
+    <entry file="file://$PROJECT_DIR$/_PageHelper/src/main/java/pagehelper/SqlUtil.java" />
+    <entry file="file://$PROJECT_DIR$/_PageHelper/src/main/java/pagehelper/PageHelper.java" />
+    <entry file="file://$PROJECT_DIR$/_PageHelper/src/main/java/pagehelper/PageInfo.java" />
+    <entry file="file://$PROJECT_DIR$/_PageHelper/src/main/java/com/github/pagehelper/SqlParser.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PageHelper/src/main/java/com/github/pagehelper/Page.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PageHelper/src/main/java/com/github/pagehelper/SqlUtil.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PageHelper/src/main/java/com/github/pagehelper/PageHelper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PageHelper/src/main/java/com/github/pagehelper/PageInfo.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_FastDFS/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="17" selection-start-line="10" selection-start-column="4" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PageHelper/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/common/pojo/CommodityContent.java" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/common/pojo/CommoditySkuSpevKey.java" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/common/utils/JsonUtils.java" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/common/pojo/RelaMerProComExample.java" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/common/pojo/AccountManagerExample.java" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/common/mapper/CommodityContentCategoryMapper.java" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/common/pojo/CommoditySpuSpeExample.java" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/common/pojo/AccountMerchantExample.java" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/common/mapper/CommodityContentMapper.java" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/common/pojo/AccountProductor.java" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityContent.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySkuSpevKey.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/utils/JsonUtils.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/RelaMerProComExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/AccountManagerExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityContentCategoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpuSpeExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/AccountProductor.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/AccountMerchantExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityContentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/utils/FastDFSClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-INTERFACE/src/main/java/cn/ideal/sso/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-INTERFACE/src/main/java/cn/ideal/sso/service/ManageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2140">
+          <caret line="107" column="12" selection-start-line="107" selection-start-column="12" selection-end-line="107" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-INTERFACE/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/src/main/java/cn/ideal/sso/service/impl/ManageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/src/main/java/cn/ideal/sso/controller/PageController.java" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5415">
+          <caret line="285" column="31" selection-start-line="285" selection-start-column="31" selection-end-line="285" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/java/cn/ideal/sso/controller/PageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/src/main/java/cn/ideal/sso/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Server/JDK/lib/src.zip!/java.base/java/util/concurrent/ThreadPoolExecutor.java" />
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/src/main/resources/spring/applicationContext-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" column="75" selection-start-line="36" selection-start-column="75" selection-end-line="36" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/resources/springmvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="89" selection-start-line="29" selection-start-column="89" selection-end-line="29" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.4.RELEASE/spring-webmvc-4.2.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerMapping.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/java/cn/ideal/sso/controller/ManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>IDEAL-COMMON</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.github.jsqlparser:jsqlparser:0.9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

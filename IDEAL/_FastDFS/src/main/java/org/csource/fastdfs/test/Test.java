@@ -8,10 +8,7 @@
 
 package org.csource.fastdfs.test;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
-import org.csource.common.*;
+import org.csource.common.NameValuePair;
 import org.csource.fastdfs.*;
 
 /**

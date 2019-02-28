@@ -39,5 +39,6 @@
     <dubbo:reference interface="cn.ideal.product.service.CommodityCatService" id="commodityCatServiceImpl" />
     <!--<dubbo:reference interface="cn.ideal.productor.service.CommoditySpeService" id="commoditySpeServiceImpl" />-->
     <dubbo:reference interface="cn.ideal.product.service.MerchantManagerService" id="merchantManagerServiceImpl" />
+    <dubbo:reference interface="cn.ideal.product.service.IndexService" id="indexServiceImpl" />
 
 </beans>

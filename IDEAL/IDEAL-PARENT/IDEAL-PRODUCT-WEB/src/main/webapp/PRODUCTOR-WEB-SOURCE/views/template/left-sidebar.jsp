@@ -29,7 +29,7 @@
                 <li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
                 <li><a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
                 <li><a href="typography.html" class=""><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
-                <li><a href="icons.html" class=""><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
+                <li><a href="index_show.html" class=""><i class="lnr lnr-linearicons"></i> <span>首页</span></a></li>
             </ul>
         </nav>
     </div>

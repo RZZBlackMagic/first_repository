@@ -5,10 +5,11 @@ $(function(){
 	//var UserId = getCookie('UserId');
 	//console.log(UserId);
 	//网页加载以后立即读取笔记本列表
+	console.log("dfa");
 	loadNotebooks();
 	//绑定笔记本点击事件，单击后注浆笔记本的内容展示到笔记本的区域
 	$('#notebook-list').on('click','.notebook',notebooks);
-	//$('#note-list').on('click','.notebody',notes);
+	$('#note-list').on('click','.notebody',notess);
 	$('#add_note').click(showAddNoteDialog);
 	$('#can').on('click','.close,.cancel',closeDialog);
 	$('#save_note').click(saveNoteBody);
@@ -24,14 +25,69 @@ $(function(){
     $('#notebook-list').on('mousedown','.notebook',editNotebookTitle);
     $('#second_side_right').find("li").click(editNoteTitle);
     $('#like_button').click(showCollectNotes);
+    $('#upload_note').click(showUploadAlert);
 });
+//加载上传笔记的对话框
+function showUploadAlert(){
+	$('#can').load('alert/alert_upload.html',reloadSuccess);
+}
+function reloadSuccess(){
+	$('#upload').click(uploadNote);
+}
+//上传笔记
+function uploadNote(){
+	 console.log("可似乎上传笔记");
+    	 var file1 = $('#file1')[0].files[0];
+    	 console.log("file"+file1.webkitRelativePath);
+    	 
+    	 var filename = document.getElementById("file1").value;
+    	    // 这时的filename不是 importFile 框中的值
+    	 console.log("路径："+filename);
+    	    
+    	 //创建内存中的表单对象
+    	 var form = new FormData();
+    	 //添加向服务器传输的数据
+    	 form.append('uploadFile',file1);
+    	 //console.log(form);
+
+    	 $.ajax({
+    		 url:'upload.do',
+    		 data:form,
+    		 type:'POST',
+    		 dataType:'json',
+    		 contentType:false,
+    		 processData:false,
+    		 success:function(obj){
+    			 console.log(obj)
+    			 $('#can').empty();
+    		 }
+    	 });
+     
+}
+//下载笔记
+function download(){
+	console.log("开始下载笔记");
+	var r = $(this).parent().parent().parent().parent().html();
+	console.log(r);
+	var noteId = $(this).parent().parent().parent().parent().data("NoteId");
+	console.log(noteId);
+	var url = "download.do";
+	var path = "D:\\demo1\\test";
+	var data = {
+			path : path,
+			noteId : noteId
+	};
+	$.post(url,data,function(result){
+		   console.log(result);
+	});
+}
 function showCollectNotes(){
 	var url = "showCollectNotes.do";
 	var data ={
 			userId:getCookie('UserId')
 	};
 	$.post(url,data,function(result){
-		  console.log(result.data);
+		  //console.log(result.data);
 		  var ul = $('#note-list ul');
 			ul.empty();
 				//遍历那个笔记本，将全部笔记展示在全部笔记的区域
@@ -55,36 +111,36 @@ function addClassForCollectNote(){
 	showCollectNoteBody();
 }
 function showCollectNoteBody(){
-	console.log("加载共享笔记的内容");
+	//console.log("加载共享笔记的内容");
 	var shareNoteId = $('#second_side_right').find('a[class="checked"]').parent().data("NoteId");
-	console.log(shareNoteId);
+	//console.log(shareNoteId);
 	var url = "showShareNote.do";
 	var data = {
 			NoteId : shareNoteId
 	};
 	$.post(url,data,function(result){
-		console.log(result);
-		console.log(result.data);
+		//console.log(result);
+		//console.log(result.data);
 		var body = result.data.cn_share_body;
 		var title = result.data.cn_share_title;
-		console.log(body);
-		console.log(title);
+		//console.log(body);
+		//console.log(title);
 		$('#input_note_title').val(title);
 		var um = UM.getEditor('myEditor');
 		um.setContent(body);
 	});
 }
 function forbid(e){
-	 console.log("禁止");
+	 //console.log("禁止");
 }
 function editNoteTitle(){
-	console.log("笔记早上好");
+	//console.log("笔记早上好");
 }
 function editNotebookTitle(e){
 	 e.preventDefault();
 
 	if(e.which==3){
-		console.log("右键单击事件");
+		//console.log("右键单击事件");
 		var title = $(this).text();
 		var notebookId = $(this).data('notebookId');
 		SetCookie('notebookId',notebookId);
@@ -97,23 +153,23 @@ function editNotebookTitle(e){
 }
 function delayLoad(){
 	var ar = $("#renameNotebook").html();
-	console.log(ar);
+	//console.log(ar);
     $("#renameNotebook").click(renameNotebookName);
     console.log(3);
 }
 function renameNotebookName(){
-	console.log(2);
+	//console.log(2);
 	var title = $('#input_notebook_rename').val();
-	console.log(title);
+	//console.log(title);
 	var notebookId = getCookie('notebookId');
-	console.log(notebookId);
+	//console.log(notebookId);
 	var url = "renameNotebook.do";
 	var data = {
 			title:title,
 			notebookId:notebookId
 	};
 	$.post(url,data,function(result){
-		console.log(result);
+		//console.log(result);
 		delCookie('notebookId');
 		$('#can').empty();
 		loadNotebooks();
@@ -122,14 +178,14 @@ function renameNotebookName(){
 
 
 function shareNote(){
-	console.log("1");
+	//console.log("1");
 	var url = "shareNote.do";
 	var selectedNoteId = $('#second_side_right').find('a[class="checked"]').parent().data("NoteId");
-	console.log(selectedNoteId);
+	//console.log(selectedNoteId);
 	var data = {
 		noteId:selectedNoteId	
 	};
-	console.log(data);
+	//console.log(data);
     $.getJSON(url,data,function(result){
 			console.log(result);
 			if(result.message=='请选择正确的笔记！'){
@@ -143,14 +199,14 @@ function shareNote(){
 function getDeleteNotes(){
 	var url = "showDeleteNote.do";
     $.getJSON(url,function(result){
-    	console.log(result);
-    	console.log(4);
+    	//console.log(result);
+    	//console.log(4);
     	showDeleteNotes(result);
-    	console.log(3);
+    	//console.log(3);
     });
 }
 function showDeleteNotes(result){
-	console.log(22);
+	//console.log(22);
 	var ul = $('#note-list ul');
 	ul.empty();
 	//遍历那个笔记本，将全部笔记展示在全部笔记的区域
@@ -171,16 +227,16 @@ function showDeleteNotes(result){
 }
 
 function loadDealDelNote(){
-	console.log("处理回收站笔记");
+	//console.log("处理回收站笔记");
 	$('#can').load('alert/alert_replay.html',dealDelNote);
 }
 function dealDelNote(){
 	var noteId = $('#note-list').find('a[class="checked"]').parent().data('NoteId');
-	console.log(noteId);
+	//console.log(noteId);
 	var url = 'list.do';
 	var data = {UserId:getCookie('UserId')};
 	$.getJSON(url,data,function(result){
-		console.log(result);
+		//console.log(result);
 		if(result.state==SUCCESS){
 			var notebooks = result.data;
 			//在下面那个方法中将全部笔记本数据显示到notebook-list区域
@@ -202,11 +258,11 @@ function dealDelNote(){
     $('.btn-replay').click(replayNote);
 }
 function replayNote(){
-	console.log("开始恢复笔记");
+	//console.log("开始恢复笔记");
 	var NotebookId = $('#replaySelect option:selected').data('NotebookId');
-	console.log(NotebookId);
+	//console.log(NotebookId);
 	var noteId = $('#note-list').find('a[class="checked"]').parent().data('NoteId');
-    console.log(noteId);
+    //console.log(noteId);
     //先在回收站将该该笔记的信息查出来，将notebookId 改为所选中的笔记本，在将该笔记在删掉。完成后重新加载回收站笔记
     var url = "replayDelNote.do";
     var data = {
@@ -214,7 +270,7 @@ function replayNote(){
     	notebookId:NotebookId
     };
     $.post(url,data,function(result){
-    	console.log(result);
+    	//console.log(result);
     	//移动成功后重新加载回收站
     	$('#can').empty();
     	getDeleteNotes();
@@ -222,18 +278,18 @@ function replayNote(){
 }
 //添加笔记业务
 function addNotebook(){
-	console.log("添加笔啊");
+	//console.log("添加笔啊");
 	var title1 = $('#input_notebook').val();
-	console.log('title'+title1);
+	//console.log('title'+title1);
 	var UserId1 = getCookie('UserId');
-	console.log('UserId'+UserId1);
+	//console.log('UserId'+UserId1);
 	var url = "addNotebook.do";
 	var data={
 		title:title1,
 		UserId:UserId1
 	};
 	$.post(url,data,function(result){
-		console.log(result);
+		//console.log(result);
 		//添加成功，先关闭添加笔记对话框，在重新将笔记展示到笔记本区域
 		$('.opacity_bg').hide();
 		$('#can').empty();
@@ -243,18 +299,18 @@ function addNotebook(){
 }
 //展示添加笔记本对话框
 function showAddNotebookDialog1(){
-	console.log("添加笔记本");
+	//console.log("添加笔记本");
 	$('#can').load('alert/alert_notebook.html',function(){
 		$('#input_note').focus();
 		$('.opacity_bg').show();
-		console.log("hh");
+		//console.log("hh");
 		addNotebookTran();
 	});
 }
 function addNotebookTran(){
-	console.log(2);
+	//console.log(2);
 	var context = $('#can').find('button[class="create_notebook"]').html();
-	console.log(context);
+	//console.log(context);
 	$('#can').on('click','.create_notebook',addNotebook);
 }
 function startHartbat(){
@@ -331,8 +387,8 @@ function showNote_menu(){
 	//将所有的惨淡都收起来，在显示点击的那个
 	//hide放啊是异步的，调用之后的等一会才会收起来，完成之后再去调用function函数
 	//$('.note_menu').hide();
-	
 	$(this).parent('.checked').next().show();
+    $('#second_side_right').find('button[title="download"]').click(download);
 	return false;
 	
 }
@@ -348,7 +404,7 @@ function saveNoteBody(){
 	    title:cn_note_title
 	};
 	$.post(url,data,function(result){
-		console.log(result);
+		//console.log(result);
 		var notebookId = $('#first_side_right').find('a[class="checked"]').parent().data('notebookId');
 		var url = 'Notelist.do';
 		var data = {NotebookId: notebookId };
@@ -409,15 +465,16 @@ function showAddNoteDialog(){
 	});
 }
 
-function notes(){
+function notess(){
 	//console.log(1);
+	//console.log("展示笔记");
 	var url = 'showText.do';
 	var data = {NoteId:$(this).data('NoteId')};
 	
 	$(this).parent().find('a').removeClass('checked');
 	$(this).find('a').addClass('checked');
 	$.getJSON(url,data,function(result){
-		console.log(result);
+		//console.log(result);
 		var notebodys = result.data;
 		//console.log(notebodys);
 		showNoteBody(notebodys);
@@ -426,7 +483,7 @@ function notes(){
 
 
 function showNoteBody(notebodys){
-	console.log(notebodys);
+	//console.log(notebodys);
 	var notebody= notebodys.cn_note_body;
 	//console.log(notebodys);
 	//console.log(notebody);
@@ -445,14 +502,14 @@ function deleteNote(){
 	//console.log("删除笔记");
 	var url = "deleteNote.do";
 	var data1= $(this).parent().parent().parent().parent().data('NoteId');
-	console.log(data1);
+	//console.log(data1);
 	var data = {
 			NoteId:data1
 	}
 	var NotebookId = $("#first_side_right").find('a[class="checked"]').parent().data('notebookId');
-    console.log(NotebookId);
+    //console.log(NotebookId);
 	$.post(url,data,function(result){
-		console.log(result);
+		//console.log(result);
 		//删除成功，重新加载笔记列表
 		var url = "Notelist.do";
 		var NotebookId = $("#first_side_right").find('a[class="checked"]').parent().data('notebookId');
@@ -472,6 +529,7 @@ function deleteNote(){
 }
 //笔记本项目点击事件处理方法，加载全部笔记
 function notebooks(){
+	//console.log("开始加载笔记本");
 	$(this).parent().find('a').removeClass('checked');
 	$(this).find('a').addClass('checked');
 	var url = 'Notelist.do';
@@ -507,7 +565,7 @@ function showNotes(notes){
 		ul.append(li);
 	}
 	$('#note-list .btn_slide_down').click(showNote_menu);
-	$('#note-list').on('click','.notebody',notes);
+	$('#note-list').on('click','.notebody',notess);
 	
 }
  var noteTemplate = 
@@ -520,17 +578,19 @@ function showNotes(notes){
 			'<dt><button type="button" class="btn btn-default btn-xs btn_move" title="移动至..."><i class="fa fa-random"></i></button></dt>'+
 			'<dt><button type="button" class="btn btn-default btn-xs btn_share" title="分享"><i class="fa fa-sitemap"></i></button></dt>'+
 			'<dt><button type="button" class="btn btn-default btn-xs btn_delete" title="删除"><i class="fa fa-times"></i></button></dt>'+
+			'<dt><button type="button" class="btn btn-default btn-xs " title="download"><i class="fa fa-times"></i></button></dt>'+
 		'</dl>'+
 	'</div>'+
     '</li>';
 function loadNotebooks(){
 	//调用Ajax从服务器获取数据.
 	//$.getJSON和$.post的作用和用法都一致。我们习惯上从服务器获取用get，向服务器发送用post。
-	//console.log(2);
+	console.log(2);
 	var url = 'list.do';
 	var data = {UserId:getCookie('UserId')};
 	//console.log(getCookie('UserId'));
 	$.getJSON(url,data,function(result){
+		console.log(result);
 		if(result.state==SUCCESS){
 			var notebooks = result.data;
 			//在下面那个方法中将全部笔记本数据显示到notebook-list区域
@@ -543,6 +603,7 @@ function loadNotebooks(){
 function showNotebooks(notebooks){
 	//找到显示笔记本列表的区域
 	var ul = $('#notebook-list ul');
+	//console.log("定义展开笔记ben ");
 	ul.empty();
 	//遍历notebooks数组，将为每个对象创建一个li元素，添加到ul元素中
 	for(var i=0;i<notebooks.length;i++){

@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.RandomAccessFile;
 import java.util.List;
 import java.util.Map;
 
@@ -32,35 +33,33 @@ import cn.tedu.note.service.UserService;
 import cn.tedu.note.util.JsonResult;
 
 @Controller
-@RequestMapping()
+
 public class UserController extends AbatractController{
 
 	@Resource(name="userService")
 	private UserService useService;
 	@RequestMapping("/login.do")
-	@ResponseBody//json×¢½â:¾ÍÊÇ·µ»ØÒ»¸öjson
+	@ResponseBody//jsonæ³¨é”Ÿæ–¤æ‹·:é”Ÿæ–¤æ‹·é”Ÿè§’å‡¤æ‹·é”Ÿæ–¤æ‹·ä¸€é”Ÿæ–¤æ‹·json
 	public Object login(String name,String password,HttpSession session){
-		
-		
 			User user = useService.login(name, password);
-			//µÇÂ¼³É¹¦,½«UserĞÅÏ¢·ÅÔÚsessionÀïÃæ£¬ÓÃÓÚÀ¹½ØÆ÷µÄÀ¹½Ø
+			//é”Ÿæ–¤æ‹·å½•é”Ÿç¼´ç™¸æ‹·,é”Ÿæ–¤æ‹·Useré”Ÿæ–¤æ‹·æ¯é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·sessioné”Ÿæ–¤æ‹·é”ŸèŠ¥ï¼Œé”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 			session.setAttribute("UserLogin", user);
 			return new JsonResult(user);
 	}
 	/*@ExceptionHandler(Exception.class)
-	@ResponseBody//json×¢ÊÍ£º¾ÍÊÇ·µ»ØÒ»¸öjson¶ÔÏó
+	@ResponseBody//jsonæ³¨é”Ÿé…µï½æ‹·é”Ÿæ–¤æ‹·é”Ÿè§’å‡¤æ‹·é”Ÿæ–¤æ‹·ä¸€é”Ÿæ–¤æ‹·jsoné”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 	public Object handlerException(Exception e){
 		e.printStackTrace();
 		return new JsonResult(e);
 	}*/
 
-	//ÓÃ»§ÃûÒì³£
+	//é”ŸçŸ«ä¼™æ‹·é”Ÿæ–¤æ‹·é”Ÿå±Šå¸¸
 	@ExceptionHandler(UserNotFoundException.class)
 	@ResponseBody
 	public Object handleUserNotFound(UserNotFoundException e){
 		return new JsonResult(2,e);
 	}
-	//ÃÜÂë´íÎó
+	//é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿï¿½
 	@ExceptionHandler(PasswordException.class)
 	@ResponseBody
 	public Object handlePasswordException(PasswordException e){
@@ -74,7 +73,7 @@ public class UserController extends AbatractController{
 		return new JsonResult(4,e);
 	}
     /**
-     * ×¢²á¹¦ÄÜ
+     * æ³¨é”Ÿç»“åŠŸé”Ÿæ–¤æ‹·
      * @param name
      * @param nick
      * @param password
@@ -96,36 +95,36 @@ public class UserController extends AbatractController{
 	}
 	/**
 	 * 
-	 * ´´½¨Ò»¸öÍ¼Æ¬£¬²¢ÇÒ±àÂëÎªPNG¸ñÊ½£¬·µ»Ø±àÂëÒÔºóµÄÊı¾İ
+	 * é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·ä¸€é”Ÿæ–¤æ‹·å›¾ç‰‡é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ­æ†‹æ‹·é”Ÿæ–¤æ‹·ä¸ºPNGé”Ÿæ–¤æ‹·å¼é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæˆªæ†‹æ‹·é”Ÿæ–¤æ‹·é”Ÿçš†çŒ´æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿï¿½
 	 * @return
 	 * @throws IOException 
 	 */
 	private byte[] createPng() throws IOException{
 		BufferedImage img = new BufferedImage(200,80,BufferedImage.TYPE_3BYTE_BGR
 				);
-		//ÔÚÍ¼Æ¬ÉÏ»æÖÆ¶«Î÷
+		//é”Ÿæ–¤æ‹·å›¾ç‰‡é”Ÿè¾ƒä¼™æ‹·é”Ÿç‹¡è®¹æ‹·é”Ÿæ–¤æ‹·
 		img.setRGB(100, 40, 0xffffff);
-		//½«Í¼Æ¬±àÂëÎªPNG
+		//é”Ÿæ–¤æ‹·å›¾ç‰‡é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·ä¸ºPNG
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		ImageIO.write(img, "png", out);
 		out.close();
 		byte[] png = out.toByteArray();
 		return png;
 	}
-	//producesÓÃÓÚÉèÖÃcontent_type
+	//producesé”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·content_type
 	@RequestMapping(value="user/image.do",produces= "image/png")
 	@ResponseBody
 	public byte[] image() throws Exception{
 		return createPng();
 	}
-	//ÏÂÔØÍ¼Æ¬
+	//é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·å›¾ç‰‡
 	@RequestMapping(value="user/downloadImage.do",produces="application/octet-stream")
 	@ResponseBody
 	public byte[] downloadImage(HttpServletResponse res) throws IOException{
 		res.setHeader("Content-Disposition", "attachment; filename=\"demo.png\"");
 		return createPng();
 	}
-	//ÏÂÔØExcel
+	//é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·Excel
 	@RequestMapping(value="user/downloadExcel.do",produces="application/octet-stream")
 	@ResponseBody
 	public byte[] downloadExcel(HttpServletResponse res) throws IOException{
@@ -133,52 +132,53 @@ public class UserController extends AbatractController{
 		return createExcel();
 	}
 	private byte[] createExcel() throws IOException{
-		//´´½¨¹¤×÷²¾
+		//é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 		HSSFWorkbook workbook = new HSSFWorkbook();
-		//´´½¨¹¤×÷±í
+		//é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 		HSSFSheet sheet = workbook.createSheet("demo");
-		//ÔÚ¹¤×÷±íÖĞ´´½¨Êı¾İĞĞ
+		//é”ŸèŠ‚ç™¸æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿå«è¾¾æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 		HSSFRow row = sheet.createRow(0);
-		//´´½¨ĞĞÖĞµÄ¸ñ×Ó
+		//é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿå«çš„é©æ‹·é”Ÿæ–¤æ‹·
 		HSSFCell cell = row.createCell(0);
-		//Ïò¸ñ×ÓÖĞÌí¼ÓÊı¾İ
+		//é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 		cell.setCellValue("hello world ");
-		//½«ExcelÎÄ¼ş±£´æÎªbyteÊı×é
+		//é”Ÿæ–¤æ‹·Excelé”Ÿä¾¥ç¡·æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·ä¸ºbyteé”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
         workbook.write(out);
         out.close();
 		return out.toByteArray();
 	}
 	
-	//ÉÏ´«ÎÄ¼ş
+	//é”Ÿè¾ƒè¾¾æ‹·é”Ÿä¾¥ç¡·æ‹·
 	@RequestMapping("user/upload.do")
 	@ResponseBody
 	public JsonResult upload(MultipartFile userfile1,MultipartFile userfile2) throws Exception{
-		//Spring MVC ÖĞ¿ÉÒÔÀûÓÃMultipartFile½ÓÊÕµ½ÉÏ´«µÄÎÄ¼ş£¡ÎÄ¼şÖĞµÄÒ»ÇĞÊı¾İ¶¼¿ÉÒÔ´ÓMultipartFile¶ÔÏóÖĞÕÒµ½
-		//»ñÈ¡ÉÏ´«ÊÇÔ­Ê¼ÎÄ¼şÃû
+		//Spring MVC é”Ÿå«åŒ¡æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·MultipartFileé”Ÿæ–¤æ‹·é”Ÿç§¸ç¢‰æ‹·é”Ÿè¾ƒè¾¾æ‹·é”Ÿæ–¤æ‹·é”Ÿä¾¥ç¡·æ‹·é”Ÿæ–¤æ‹·é”Ÿä¾¥ç¡·æ‹·é”Ÿå«ç¢‰æ‹·ä¸€é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ·è®¹æ‹·é”Ÿæ–¤æ‹·é”Ÿçš†è¾¾æ‹·MultipartFileé”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ­ç¢‰æ‹·
+		//é”Ÿæ–¤æ‹·å–é”Ÿè¾ƒè¾¾æ‹·é”Ÿæ–¤æ‹·åŸå§‹é”Ÿä¾¥ç¡·æ‹·é”Ÿæ–¤æ‹·
 		String file1 = userfile1.getOriginalFilename();
 		String file2 = userfile2.getOriginalFilename();
 		System.out.println(file1);
 		System.out.println(file2);
-		//±£´æÎÄ¼şµÄ3ÖĞ·½·¨£º
-		// 1 transferTo(Ä¿±êÎÄ¼ş)
-		//   ½«ÎÄ¼şÖ±½Ó±£´æµ½Ä¿±êÎÄ¼ş£¬¿ÉÒÔ´¦Àí´óÎÄ¼ş
-		// 2 userfile1.getBytes()»ñÈ¡ÎÄ¼şµÄÈ«²¿Êı¾İ
-		//   ½«ÎÄ¼şÈ«²¿¶ÁÈ¡µ½ÄÚ´æ£¬ÉçºÍ´¦ÀíĞ¡ÎÄ¼ş
-		// 3 userfile2.getInputStream()
-		//   »ñÈ¡ÉÏÔØÎÄ¼şµÄÁ÷£¬ÊÊºÏ´¦Àí´óÎÄ¼ş
 		
-		//±£´æµÄÄ¿µÄÎÄ¼ş¼Ğ
 		File file = new File("D:/demo");
 		file.mkdir();
 		File f1 = new File(file,file1);
 		File f2 = new File(file,file2);
-		//µÚÒ»ÖÖ±£´æÎÄ¼ş
+		/*//é”Ÿæ–¤æ‹·ä¸€é”Ÿè¡—æ†‹æ‹·é”Ÿæ–¤æ‹·é”Ÿä¾¥ç¡·æ‹·
 		userfile1.transferTo(f1);
-		userfile2.transferTo(f2);
+		userfile2.transferTo(f2);*/
 		
-		//µÚÈıÖÖ ÀûÓÃ Á÷¸´ÖÆÊı¾İ
 		InputStream in1 = userfile1.getInputStream();
+		
+		byte[] data = new byte[200];
+		String fileName = f1.getPath();
+		System.out.println(fileName);
+		RandomAccessFile raf = new RandomAccessFile(fileName,"r");
+		int len = raf.read(data);
+		String string = new String(data,0,len,"utf-8");
+		System.out.println(string);
+		raf.close();
+		
 		FileOutputStream out1 = new FileOutputStream(f1);
 		int b;
 		while((b=in1.read())!=-1){

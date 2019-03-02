@@ -1,7 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset='utf-8'" />
         <title>我的笔记</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="x-pjax-version" content="v173">
@@ -14,7 +15,7 @@
         <link rel="stylesheet" href="styles/icon.css"/>
         <link rel="stylesheet" href="styles/main.css"/>
 		<!-- Google-Code代码高亮CSS -->
-        <link rel="stylesheet" href="styles/prettify.css"/>
+        <link rel="stylesheet"  href="styles/prettify.css"/>
 		<!-- Ueditor编辑器CSS -->
 		<link href="styles/umeditor.min.css" type="text/css" rel="stylesheet">
     </head>
@@ -104,6 +105,7 @@
 												<dt><button type="button" class="btn btn-default btn-xs btn_move" title='移动至...'><i class="fa fa-random"></i></button></dt>
 												<dt><button type="button" class="btn btn-default btn-xs btn_share" title='分享'><i class="fa fa-sitemap"></i></button></dt>
 												<dt><button type="button" class="btn btn-default btn-xs btn_delete" title='删除'><i class="fa fa-times"></i></button></dt>
+												<dt><button type="button" class="btn btn-default btn-xs " title='下载'><i class="fa fa-times"></i></button></dt>
 											</dl>
 										</div>
 									</li>
@@ -195,7 +197,7 @@
 							<h3>编辑笔记</h3>
 						</div>
 						<div class="col-xs-3">
-							<!--  <button type="button" class="btn btn-block btn-sm btn-primary" id='save_note' >保存笔记</button>-->
+						    <button type="button" class="btn btn-block btn-sm btn-primary" id='upload_note' >上传笔记</button>
 							<input type="button" class="btn btn-block btn-sm btn-primary" id='save_note' value="保存笔记"/>
 						</div>
 					</div>
@@ -315,6 +317,9 @@
 		
 		<script type="text/javascript"
 			src="scripts/note.js" charset="utf-8"></script>
+			
+			<script type="text/javascript"
+			src="scripts/download.js" charset="utf-8"></script>
 		
 		</body>		
 </html>

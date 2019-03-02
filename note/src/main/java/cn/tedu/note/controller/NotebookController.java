@@ -16,6 +16,8 @@ import cn.tedu.note.util.JsonResult;
 @Controller
 public class NotebookController extends AbatractController {
 
+	
+
 	@Resource
 	private NotebookService notebookService;
 	@RequestMapping("/list.do")

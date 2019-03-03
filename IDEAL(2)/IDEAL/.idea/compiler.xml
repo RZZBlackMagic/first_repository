@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="_FastDFS" />
+        <module name="_MyBatis" />
+        <module name="_PageHelper" />
+        <module name="IDEAL-COMMON" />
+        <module name="IDEAL-MANAGER-INTERFACE" />
+        <module name="IDEAL-MANAGER-SERVICE" />
+        <module name="IDEAL-MANAGER-WEB" />
+        <module name="IDEAL-MERCHANT-INTERFACE" />
+        <module name="IDEAL-MERCHANT-SERVICE" />
+        <module name="IDEAL-MERCHANT-WEB" />
+        <module name="IDEAL-PRODUCT-INTERFACE" />
+        <module name="IDEAL-PRODUCT-SERVICE" />
+        <module name="IDEAL-PRODUCT-WEB" />
+        <module name="IDEAL-SSO-INTERFACE" />
+        <module name="IDEAL-SSO-SERVICE" />
+        <module name="IDEAL-SSO-WEB" />
+        <module name="IDEALCARTWEB" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

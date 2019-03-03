@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<!--导入 css-->
+		<!--<link rel="stylesheet" href="css/bootstrap.min.css" />-->
+		
+			
+		<!--导入font-awesome-->
+		<link rel="stylesheet" href="css/font-awesome.min.css"/>
+		<!--导入jquery.js-->
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<!--导入bootstrap.js-->
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		
+		<style>
+			/*基本样式可以在这里调节*/
+			
+			a{
+				color: #757575;
+				text-decoration: none;
+			}
+			
+			input{
+				line-height: normal;
+				font-size: 100%;
+				margin: 0;
+				vertical-align: baseline;
+			}
+			
+			.cart-goods-list {
+			    background-color: #fff;
+			}
+			
+			.cart-goods-list .list-head {
+			    height: 70px;
+			    line-height: 70px;
+			    padding-right: 26px;
+			    color: #424242;
+			}
+			
+			.cart-goods-list .list-head .col {
+			    float: left;
+			}
+			
+			.cart-goods-list .col-check {
+			    width: 110px;
+			}
+			
+			.cart-goods-list .col-check .icon-checkbox {
+			    display: inline-block;
+			    width: 18px;
+			    height: 18px;
+			    line-height: 18px;
+			    border: 1px solid #e0e0e0;
+			    margin-left: 24px;
+			    background-color: #fff;
+			    color: #fff;
+			    font-size: 20px;
+			    text-align: center;
+			    vertical-align: middle;
+			    position: relative;
+			    top: -1px;
+			    cursor: pointer;
+			}
+			
+			.cart-goods-list .item-box .col-price,.cart-goods-list .item-box .col-num{
+				font-size: 16px;
+			}
+			
+			.cart-goods-list .list-head .col-img {
+			    width: 120px;
+			}
+			
+			.cart-goods-list .col-name {
+			    width: 380px;
+			}
+			
+			.cart-goods-list .col-name .name{
+			line-height: 1;
+			    margin-top: 8px;
+			    margin-bottom: 8px;
+			    font-size: 18px;
+			    font-weight: normal;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			    overflow: hidden;
+			    _zoom: 1;
+			}
+			
+			.cart-goods-list .col-name .name  a{
+			    color: #424242;
+			    padding-left: 35px;
+			}
+						
+			.cart-goods-list .list-head .col-name {
+			    width: 380px;
+			}
+			
+			.cart-goods-list .list-head .col {
+			    float: left;
+			}
+			
+			.cart-goods-list .col-price {
+			    width: 75px;
+			    padding-right: 84px;
+			    text-align: right;
+			    color: #424242;
+			}
+			
+			.cart-goods-list .col-num {
+			    width: 150px;
+			    text-align: center;
+			    color: #424242;
+			}
+			
+			.cart-goods-list .col-total {
+			    width: 120px;
+			    padding-right: 81px;
+			    text-align: right;
+			}
+			
+			.cart-goods-list .col-action {
+			    width: 80px;
+			    text-align: center;
+			}
+			
+			.cart-goods-list .list-head .icon-checkbox {
+			    margin-right: 15px;
+			}
+
+			.cart-goods-list .item-box {
+			    padding: 15px 26px 15px 0;
+			    border-top: 1px solid #e0e0e0;
+			}
+			
+			.cart-goods-list .item-box .col-price{
+				font-size: 16px;
+				padding-left: 50px;
+			}
+			
+			.cart-goods-list .item-box .col-total{
+				color: #FF6700;
+				font-size: 16px;
+			}
+			
+			.cart-goods-list .item-table {
+			    display: table;
+			    border-collapse: collapse;
+			    border-spacing: 0;
+			}
+			
+			.cart-goods-list .item-table .col {
+			    display: table-cell;
+			    vertical-align: middle;
+			}
+			
+			.cart-goods-list .item-table .item-row {
+			    display: table-row;
+			}
+			
+			.change-goods-num {
+			    width: 148px;
+			    height: 38px;
+			    border: 1px solid #e0e0e0;
+			    text-align: center;
+			    background-color: #fff;
+			    position: relative;
+			    zoom: 1;
+			}
+			
+			.change-goods-num a {
+			    float: left;
+			    width: 38px;
+			    height: 38px;
+			    line-height: 38px;
+			    color: #757575;
+			    font-size: 20px;
+			    -webkit-transition: all .3s;
+			    transition: all .3s;
+			}
+			
+			.change-goods-num input {
+			    float: left;
+			    width: 72px;
+			    height: 38px;
+			    line-height: 38px;
+			    padding: 0;
+			    border-width: 0;
+			    color: #424242;
+			    font-size: 16px;
+			    text-align: center;
+			}
+			
+			.change-goods-num .msg {
+			    position: absolute;
+			    width: 100%;
+			    left: 0;
+			    bottom: -24px;
+			    font-size: 12px;
+			    color: #b0b0b0;
+			}
+			
+			.iconfont{
+				font-family:"iconfont" !important;
+				font-style: normal;
+				-webkit-font-smoothing: antialiased;
+				-webkit-text-stroke-width: 0.2px;
+			}
+			
+			img {
+			    border: 0;
+			    -ms-interpolation-mode: bicubic;
+			}
+			
+			li {
+			    display: list-item;
+			    text-align: -webkit-match-parent;
+			}
+			
+			.page-main {
+			    padding-top: 38px;
+			    padding-bottom: 38px;
+				background: #f5f5f5;
+			}
+			
+			.table_css{
+				width:120px;
+				height: 70px;
+				margin-right: 0px;
+				margin-top:0px;
+				margin-left: 30px;
+				/*background-color: #080808;*/
+				
+			}
+			.tablecss_object{
+				width: 100px;
+				height: 120px;
+				margin-right: 0px;
+				margin-top:0px;
+				margin-left: 30px;
+			}
+			
+			.container{
+				width: 1226px;
+				margin-right: auto;
+				margin-left: auto;
+			}
+			.site-mini-header{
+				font-size: 12px;
+				border-bottom: 2px solid #FF6700;
+				background-color: #FFFFFF;
+				color: #B0B0B0;
+			}
+			.site-mini-header .header-logo{
+				float:left;
+				width: 62px;
+				margin-top: 22px;
+			}
+			
+			.site-mini-header .has-more{
+				height: 48px;
+			}
+			
+			.site-mini-header .header-title{
+				float: left;
+				margin-top: 26px;
+			}
+			.site-mini-header .has-more h2{
+				float: left;
+				line-height: 48px;
+				margin-bottom: 0;
+				font-size: 28px;
+				font-weight: normal;
+				color: #424242;
+			}
+			
+			.site-mini-header .has-more p{
+				float: left;
+				height: 20px;
+				line-height: 20px;
+				margin-top: 20px;
+				margin-left: 15px;
+				color: #757575;
+			}
+			
+			.site-mini-header .topbar-info{
+				margin-top: 30px;
+				line-height: 40px;
+				position: relative;
+				float: right;
+				height: 40px;
+			}
+			
+			.site-mini-header .topbar-info .link {
+			    padding: 0 5px;
+			    float: left;
+			}
+			
+			.site-mini-header .topbar-info .sep {
+			    color: #e0e0e0;
+			    margin: 0;
+			    float: left;
+			    font-family: sans-serif;
+			}
+			
+			.site-mini-header .user{
+				position: relative;
+				width: 110px;
+				padding: 0px;
+				white-space: nowrap;
+			}
+			
+			.site-mini-header .user-menu{
+				display: none;
+			    position: absolute;
+			    left: 0;
+			    /*left: -1px \9;*/
+			    top: 40px;
+			    z-index: 3;
+			    width: 120px;
+			    margin: 0;
+			    padding: 7px 0;
+			    border: 1px solid #e0e0e0 \9;
+			    border-top: 0 \9;
+			    list-style-type: none;
+			    background: #fff;
+			    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+			    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+			}
+			
+			.site-mini-header a {
+			    color: #757575;
+			}
+			
+			.site-mini-header .user-menu a {
+			    display: block;
+			    padding: 3px 30px;
+			    line-height: 2;
+			}
+			
+			.site-mini-header .topbar-info .user{
+				float: left;
+			}
+			
+			.site-mini-header a{
+				color: #757575;
+			}
+			
+			.site-mini-header .user-name{
+				position: relative;
+				z-index: 5;
+				display: block;
+				width: 120px;
+				height: 40px;
+				text-align: center;
+			}
+			
+			.site-mini-header .user-name .name{
+				display: inline-block;
+				width: auto;
+				max-width: 75px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+				vertical-align: text-bottom;
+			}
+			
+			.site-mini-header .user-name i{
+         		font-size: 24px;
+         		line-height: 24px;
+         		vertical-align: 9px;
+			}
+			
+			.site-header{
+				position: relative;
+				z-index: 20;
+				height: 100px;
+			} 
+			.site-header .header-logo{
+				width: 93px;
+				margin-top: 26px;
+			}
+			
+			div{
+				display: block;
+			}
+			body{
+				font-style: normal;
+				font-variant-ligatures:normal;
+				font-variant-caps: normal;
+			    font-variant-numeric: normal;
+			    font-variant-east-asian: normal;
+			    font-weight: normal;
+			    font-stretch: normal;
+			    font-size: 14px;
+			    line-height: 1.5;
+			    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif; 
+				color: #333333;
+				background-color: #FFFFFF;
+				min-width: 1226px;
+			}
+		</style>
+		<!--有报错就不会在这里执行-->
+		<script type="text/javascript">
+			var number;
+			var money;
+			$(function(){
+				$("#selectAll").click(function(){
+					$(".itemSelect").prop("checked",$("#selectAll").prop("checked"));
+				});
+			});
+//			function sub(num){
+//				number = $("#Numberinput_"+num).attr("value");
+//				if(number>=2){
+//					money=$("#money_"+num).html();
+//					money=String(money).substring(0,String(money).length-1);
+//					money=Number(money)/Number(number);
+////					alert(money);
+//					number=Number(number)-1;
+//					money=Number(money)*Number(number);
+////					alert(money);
+//					$("#Numberinput_"+num).attr("value",number);
+//					money=String(money)+'元';
+//					$("#money_"+num).html(money);
+//				}
+//			};
+			function sub(){
+				number = $(this).tagName;
+				alert(number);
+			}
+			function add_number(num){
+				number = $("#Numberinput_"+num).attr("value");
+				if(number<=5){
+					money=$("#money_"+num).html();
+					money=String(money).substring(0,String(money).length-1);
+					money=Number(money)/Number(number);
+//					alert(money);
+					number = Number(number) + 1;
+					money=Number(money)*Number(number);
+//					alert(money);
+					$("#Numberinput_"+num).attr("value",number);
+					money=String(money)+'元';
+					$("#money_"+num).html(money);
+				}
+			};
+			
+			function focus(){
+				$("user-menu").css("display","block");
+				alert("执行le");
+			};
+			
+			function focusclose(){
+				$("user-menu").css("display","none");
+			};
+		</script>
+	</head>
+	<body>
+		<div class="site-header site-mini-header">
+			<div class="container">
+				<div class="header-logo">
+					<a  href="#" style="width:100px"><img src="img/logo_top.png" style="width: 50px;height: 50px;"></a>	
+	   			</div>
+	   			<div class="header-title has-more" id="J_minHeaderTitle" style="width: 491px;">
+	   				<h2 style="margin-top: 0px;">我的购物车</h2>
+	   				<p>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
+	   			</div>
+	   			<div class="topbar-info" id="J_userInfo">
+	   				<span class="user">
+	   					<!--rel不要跟踪默认连接-->
+	   					<a rel="nofollow" class="user-name" href="#" target="_blank">
+	   						<span class="name" tabindex="0" hidefocus="true" onfocus="focus()" onblur="focusclose()">about you</span>
+	   						<i class="fa fa-angle-down fa-fw " aria-hidden="true"></i>
+	   					</a>
+	   					<ul class="user-menu" style="display: none;">
+			   				<li>
+			   					<a rel="nofollow" href="#" target="_blank">个人中心</a>
+			   				</li>
+			   				<li>
+			   					<a rel="nofollow" href="#" target="_blank">评价晒单</a>
+			   				</li>
+			   				<li>
+			   					<a rel="nofollow" href="#" target="_blank">我的喜欢</a>
+			   				</li>
+			   				<li>
+			   					<a rel="nofollow" href="#" target="_blank">小米账户</a>
+			   				</li>
+			   				<li>
+			   					<a rel="nofollow" href="#" target="_blank">退出登录</a>
+			   				</li>
+			   			</ul>
+	   				</span>
+	   				<span class="sep"> | </span>
+	   				<a rel="nofollow" class="link link-order" href="#" target="_blank">我的订单</a>
+	   			</div>
+	   		</div>
+		</div>
+		<div class="page-main">
+		    <div class="container">
+		        <div id="J_cartBox" class="">
+		            <div class="cart-goods-list">
+		                <div class="list-head clearfix">
+		                    <div class="col col-check"><i class="iconfont icon-checkbox" id="J_selectAll">√</i>全选</div>
+		                    <div class="col col-img">&nbsp;</div>
+		                    <div class="col col-name">商品名称</div>
+		                    <div class="col col-price">单价</div>
+		                    <div class="col col-num">数量</div>
+		                    <div class="col col-total">小计</div>
+		                    <div class="col col-action">操作</div>
+		                </div>
+		                <div class="list-body" id="J_cartListBody">   
+		                	<div class="item-box"> 
+		                		<div class="item-table J_cartGoods" data-info="{ commodity_id:'1161200012', gettype:'buy', itemid:'2161200012_0_buy', num:'4'} "> 
+		                			<div class="item-row clearfix"> 
+		                				<div class="col col-check"> 
+		                					<i class="iconfont icon-checkbox icon-checkbox  J_itemCheckbox" data-itemid="2161200012_0_buy" data-status="0">√</i> 
+		                				</div> 
+		                				<div class="col col-img">  
+		                					<a href="//item.mi.com/1161200012.html" target="_blank" data-stat-id="b3fe5630e5ece9ed" onclick="_msq.push(['trackEvent', '5df97b551662ffe7-b3fe5630e5ece9ed', '//item.mi.com/1161200012.html', 'pcpid', '']);">
+		                						<img alt="" src="//i1.mifile.cn/a1/pms_1510291188.31088548!80x80.jpg" width="80" height="80"> 
+		                					</a>  
+		                				</div> 
+		                				<div class="col col-name">  
+		                					<div class="tags"></div>     
+		                					<div class="tags"></div>  
+		                					<h3 class="name">  
+		                						<a href="//item.mi.com/1161200012.html" target="_blank" data-stat-id="23537ce6324466fd" onclick="_msq.push(['trackEvent', '5df97b551662ffe7-23537ce6324466fd', '//item.mi.com/1161200012.html', 'pcpid', '']);"> 小米USB充电器（4口） 白色 </a>     
+		                					</h3>     
+		                				</div> 
+		                				<div class="col col-price"> 59元 </div> 
+		                				<div class="col col-num">  
+		                					<div class="change-goods-num clearfix J_changeGoodsNum"> 
+		                						<a href="#" class="J_minus" onclick="sub()">
+		                							<!--<i class="fa fa-minus"></i>-->
+		                							<img src="img/sub.png" class="iconfont" style="padding-top: 5px;"/>
+		                						</a> 
+		                						<input tyep="text" name="2161200012_0_buy" value="1" data-num="4" data-buylimit="5" autocomplete="off" class="goods-num J_goodsNum" "=""> 
+		                						<a href="#" class="J_plus">
+		                							<!--<i class="fa fa-plus"></i>-->
+		                							<img src="img/add.png" class="iconfont"/>
+		                						</a>    
+		                							<div class="msg J_canBuyLimit">还可买 1 件</div>   
+		                					</div>  
+		                				</div> 
+		                				<div class="col col-total"> 236元 <p class="pre-info">  </p> </div> 
+		                				<div class="col col-action"> 
+		                					<a id="2161200012_0_buy" data-msg="确定删除吗？" href="javascript:void(0);" title="删除" class="del J_delGoods" data-stat-id="163da9c724cdbb9f" onclick="_msq.push(['trackEvent', '5df97b551662ffe7-163da9c724cdbb9f', 'javascript:void0', 'pcpid', '']);">
+		                					<i class="fa fa-remove"></i>
+		                					</a> 
+		                				</div> 
+		                			</div> 
+		                		</div>           
+		                	</div>    
+		                </div>
+		        </div>
+		    </div>
+		</div>
+	</body>
+</html>

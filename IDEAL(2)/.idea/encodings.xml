@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-CART-WEB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-COMMON" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-MANAGER" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-MANAGER-WEB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-MERCHANT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-MERCHANT-WEB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-MERCHANT/IDEAL-MERCHANT-INTERFACE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-MERCHANT/IDEAL-MERCHANT-SERVICE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-PARENT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-PRODUCT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-PRODUCT-WEB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-PRODUCT/IDEAL-PRODUCT-INTERFACE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-SSO" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-SSO-WEB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-SSO/IDEAL-SSO-INTERFACE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/IDEAL-SSO/IDEAL-SSO-SERVICE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/_FastDFS" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/_MyBatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL/_PageHelper" charset="UTF-8" />
+  </component>
+</project>

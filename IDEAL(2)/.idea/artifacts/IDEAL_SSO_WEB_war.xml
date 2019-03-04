@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="IDEAL-SSO-WEB:war">
+    <output-path>$PROJECT_DIR$/IDEAL/IDEAL-SSO-WEB/target</output-path>
+    <root id="archive" name="IDEAL-SSO-WEB-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="IDEAL-SSO-WEB:war exploded" />
+    </root>
+  </artifact>
+</component>

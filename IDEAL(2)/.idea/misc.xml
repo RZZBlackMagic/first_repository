@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL/IDEAL-CART-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL/IDEAL-MANAGER-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL/IDEAL-MERCHANT-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL/IDEAL-MERCHANT/IDEAL-MERCHANT-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL/IDEAL-PRODUCT-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL/IDEAL-SSO-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL/IDEAL-SSO/IDEAL-SSO-SERVICE" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/IDEAL/_FastDFS/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/_MyBatis/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/_PageHelper/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-CART-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-COMMON/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-MANAGER/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-MANAGER-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-MERCHANT/IDEAL-MERCHANT-INTERFACE/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-MERCHANT/IDEAL-MERCHANT-SERVICE/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-MERCHANT/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-MERCHANT-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-PARENT/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-PRODUCT/IDEAL-PRODUCT-INTERFACE/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-PRODUCT/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-PRODUCT-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-SSO/IDEAL-SSO-INTERFACE/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-SSO/IDEAL-SSO-SERVICE/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-SSO/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/IDEAL-SSO-WEB/pom.xml" />
+        <option value="$PROJECT_DIR$/IDEAL/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_10" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

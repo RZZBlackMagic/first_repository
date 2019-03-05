@@ -191,7 +191,7 @@
                 <div class="section-body clearfix">
                     <ul class="clearfix J_optionList options ">
                         <li data-type="shipment" class="J_option selected" data-amount="10" data-value="2">
-                            快递配送（运费 10 元）                                                    </li>
+                            快递配送 (邮费: 10 元)                                                    </li>
                     </ul>
 
                     <div class="service-self-tip" id="J_serviceSelfTip" style="display: none;"></div>
@@ -376,15 +376,15 @@
                         </li>
                         <li class="clearfix">
                             <label>活动优惠：</label>
-                            <span class="val">-0元</span>
+                            <span class="val"><i id="J_actionVal">-0</i>元</span>
                         </li>
                         <li class="clearfix">
                             <label>优惠券抵扣：</label>
-                            <span class="val"><i id="J_couponVal">-0</i>元</span>
+                            <span class="val">-<i id="J_couponVal">0</i>元</span>
                         </li>
                         <li class="clearfix">
                             <label>运费：</label>
-                            <span class="val"><i data-id="J_postageVal">10</i>元</span>
+                            <span class="val">+<i data-id="J_postageVal">10</i>元</span>
                         </li>
                         <li class="clearfix total-price">
                             <label>应付总额：</label>
@@ -557,7 +557,6 @@
     }
     //点击关闭添加地址窗口
     function closeAddAddressWindow(){
-        console.log("取消保存");
         $('#J_addressZipcodeInput').val('');
         $('#J_addressNameInput').val('');
         $('#J_addressPhoneInput').val('');
@@ -612,19 +611,27 @@
          idList:idList,
          numList:numList
     };
+    var orderCommodityList ;
     $.getJSON(url,data,function(result){
-        console.log(result);
+        orderCommodityList=result;
         var payAllPrice =0 ;
         for(var i=0;i<result.data.length;i++){
-            payAllPrice = payAllPrice +result.data[i].price;
-            var allPrice = eval(result.data[i].num)*eval(result.data[i].price);
+            var price = eval(result.data[i].price);
+            var Num = eval(result.data[i].num);
+            var allPrice = price*Num;
             var li = goods_li.replace("TITLE",result.data[i].title).replace("NUM",result.data[i].num).replace("PRICE",result.data[i].price).replace("ALLPRICE",allPrice);
+            var payAllPrice = payAllPrice+price*Num;
             var Li = $(li);
             $('#J_goodsList').append(Li);
-            console.log(li);
         }
         $('#J_moneyBox').children().children('li').eq(0).children('span').text(result.data.length+"件");
         $('#J_moneyBox').children().children('li').eq(1).children('span').text(payAllPrice+"元");
+        var postageVal = $('i[data-id="J_postageVal"]').text();
+        var coupon = $('i[id="J_couponVal"]').text();//优惠券抵扣
+        var actionText = $('#J_actionVal').text();
+        var actionVal = actionText.split('-');
+        var payPrice = eval(payAllPrice) + eval(postageVal) - eval(coupon) - eval(actionVal[1]);
+        $('.total-price').find('span').text(payPrice+"元");
 
     });
     function goBack(){
@@ -656,7 +663,6 @@
     //保存地址
     $('#J_editAddressSave').click(saveAddress);
     function saveAddress(){
-        console.log("保存地址");
         var zipCode = $('#J_addressZipcodeInput').val();
         var userName = $('#J_addressNameInput').val();
         var phone = $('#J_addressPhoneInput').val();
@@ -693,10 +699,8 @@
               detailAddress:detailAddress,
               addressTag:addressTag
           };
-          console.log("修改："+data);
           $.post(url,data,function(result){
               $('#J_addressList').empty();
-              console.log(result);
               for(var i=0;i<result.data.length;i++){
                   var li = addressLi.replace("UserName",result.data[i].userName).replace("Phone",result.data[i].phone).replace("Address",result.data[i].address).replace("detailAddress",result.data[i].detailAddress).replace("0",result.data[i].id);
                   var finalLi = $(li);
@@ -726,7 +730,7 @@
         $('#J_addressDetailInput').parent().removeClass("form-section-focus"  );
         $('#J_addressTagInput').parent().removeClass("form-section-focus");
         $(this).parent().addClass("form-section-focus form-section-active");
-    })
+    });
     $('#J_addressPhoneInput').click(function(){
         $('#J_addressZipcodeInput').parent().removeClass("form-section-focus");
         $('#J_addressNameInput').parent().removeClass("form-section-focus");
@@ -750,7 +754,7 @@
         $('#J_selectAddressTrigger').parent().removeClass("form-section-focus");
         $('#J_addressTagInput').parent().removeClass("form-section-focus");
         $(this).parent().addClass("form-section-focus form-section-active");
-    })
+    });
     $('#J_addressTagInput').click(function(){
         $('#J_addressZipcodeInput').parent().removeClass("form-section-focus");
         $('#J_addressNameInput').parent().removeClass("form-section-focus");
@@ -762,12 +766,9 @@
     var url = "cart/getAddressList/cartManager.do";
     var data = {};
     $.post(url,data,function(result){
-        console.log(result);
         for(var i=0;i<result.data.length;i++){
             var li = addressLi.replace("UserName",result.data[i].userName).replace("Phone",result.data[i].phone).replace("Address",result.data[i].address).replace("detailAddress",result.data[i].detailAddress).replace("zipCode",result.data[i].zipCode).replace("addressTag",result.data[i].addressTag).replace("0",result.data[i].id);
             var finalLi = $(li);
-            /*$(li).data('zipCode',result.data[i].zipCode);
-            $(li).data('addressTag',result.data[i].addressTag);*/
             $('#J_addressList').prepend(finalLi);
             $('#J_addressList').children('div').eq(0).click(selectAddress);
         }
@@ -794,7 +795,6 @@
         var addressTag = $('#J_addressList').find('div[class="address-item J_addressItem selected"]').attr('data-tag_name');
         var zipCode = $('#J_addressList').find('div[class="address-item J_addressItem selected"]').attr('data-zipcode');
         var id = $('#J_addressList').find('div[class="address-item J_addressItem selected"]').attr('data-id');
-        console.log("ID："+id);
         var address =  allAddress.split('<');
         var detailAddress = allAddress.split('>');
         $('#J_addressZipcodeInput').val(zipCode);
@@ -803,21 +803,7 @@
         $('#J_selectAddressTrigger').val(address[0]);
         $('#J_addressDetailInput').val(detailAddress[1]);
         $('#J_addressTagInput').val(addressTag);
-        //开始修改
-        /*var url = "cart/editAddressList/cartManager.do";
-        var data = {
-            //加个id
-            id:id,
-            userName:name,
-            zipCode:zipCode,
-            phone:phone,
-            address:address,
-            detailAddress:detailAddress,
-            addressTag:addressTag
-        }
-        $.post(url,data,function(result){
-            console.log(result);
-        })*/
+
     }
 
     var addressLi =
@@ -844,6 +830,113 @@
     $.post(url,data,function(result){
         console.log(result);
     });*/
+    //创建订单，向Commodity_Order表中insert
+    var user_id = 1;
+    var user_name = "woshirencai55";
+    var url = "order/insertIntoCommodityOrder/orderManager.do";
+    var paymentText = $('.total-price').find('span').text();
+    var payment = paymentText.split('元');
+    var orderId = random_No(10);
+    $(document).data('orderId',orderId);
+    var data = {
+        id:orderId,
+        payment:payment[0],
+        paymentType:1,
+        userId:user_id,
+        postFee:10,
+        buyerNick:user_name
+    };
+    $.post(url,data,function(result){
+          //console.log(result);
+    });
+    function random_No(j) {
+        var random_no = "";
+        for (var i = 0; i < j; i++) //j位随机数，用以加在时间戳后面。
+        {
+            random_no += Math.floor(Math.random() * 10);
+        }
+        random_no = new Date().getTime() + random_no;
+        return random_no;
+    };
+
+    //点击支付按钮
+    $('#J_checkoutToPay').click(payForOrder);
+    //支付后在Commodity_order表中设置订单更新时间，物流名称，物流单号,付款时间
+    //在Commodity_order_item中根据商品类别添加数据，订单有两类商品，就根据每个商品Id分别添加数据
+    //在Commodity_order_shipping中添加数据：每个订单号对应一个收获地址
+    //将购物车中的该商品删除
+    function payForOrder(){
+        //支付后在Commodity_order表中设置订单更新时间，物流名称，物流单号,付款时间
+        //获取订单名称
+        var orderName = '' ;
+        var id = '';
+        var num = '';
+        var pic = '';
+        var price = '';
+        var title = '';
+        for(var i=0;i<orderCommodityList.data.length;i++){
+            if(orderCommodityList.data[i].pic==''){
+                price = price  + 'a#';
+            }else{
+                price = price + orderCommodityList.data[i].price + '#';
+            }
+            id = id + orderCommodityList.data[i].id + '#';
+            num = num + orderCommodityList.data[i].num +'#';
+            pic = pic + orderCommodityList.data[i].pic + '#';
+            title = title + orderCommodityList.data[i].title + '#';
+            orderName = orderName + orderCommodityList.data[i].title + "  ";
+        }
+        var url = "order/updateCommodityOrder/orderManager.do";
+        var data = {
+            id:$(document).data('orderId'),
+            shippingCode:random_No(10),
+            shippingName:orderName
+        }
+        $.post(url,data,function(result){
+            //console.log(result);
+        })
+        //在Commodity_order_item中根据商品类别添加数据，订单有两类商品，就根据每个商品Id分别添加数据
+        var url = "order/insertIntoCommodityOrderItem/orderManager.do";
+        var data = {
+            orderId:$(document).data('orderId'),
+            itemId:id,
+            number:num,
+            title:title,
+            price:price,
+            picPath:pic
+        }
+        $.post(url,data,function(result){
+            //console.log(result);
+        })
+        //在Commodity_order_shipping中添加数据：每个订单号对应一个收获地址
+        var name = $('#J_addressList').find('div[class="address-item J_addressItem selected"]').find('em[class="uname"]').text();
+        var phone = $('#J_addressList').find('div[class="address-item J_addressItem selected"]').find('dd[class="utel"]').text();
+        var allAddress = $('#J_addressList').find('div[class="address-item J_addressItem selected"]').find('dd[class="uaddress"]').html();
+        var addressTag = $('#J_addressList').find('div[class="address-item J_addressItem selected"]').attr('data-tag_name');
+        var zipCode = $('#J_addressList').find('div[class="address-item J_addressItem selected"]').attr('data-zipcode');
+        var address =  allAddress.split('<');
+        var detailAddress = allAddress.split('>');
+        var url = "order/insertIntoCommodityOrderShipping/orderManager.do";
+        var data = {
+            orderId:$(document).data('orderId'),
+            receiverName:name,
+            receiverMobile:phone,
+            receiverDetailAddress:detailAddress[1],
+            receiverAddress:address[0],
+            receiverZip:zipCode
+        };
+        $.post(url,data,function(result){
+           // console.log(result);
+        })
+        //将购物车中的该商品删除
+        var url ="cart/deleteComFromCookie/cartManager.do";
+        var data = {
+            id:idList
+        };
+        $.post(url,data,function(result){
+            //console.log(result);
+        })
+    }
 </script>
 </body>
 </html>

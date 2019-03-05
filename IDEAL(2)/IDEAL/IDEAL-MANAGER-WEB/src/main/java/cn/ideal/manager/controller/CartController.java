@@ -51,7 +51,7 @@ public class CartController {
         Integer nId = 2;
         Integer nnum = 1;
         Integer nprice = 777;
-        CommodityCart commodityCart1 = new CommodityCart(nId.longValue(),"华硕",nnum.longValue(),nprice.longValue(),"");
+        CommodityCart commodityCart1 = new CommodityCart(nId.longValue(),"华硕",nnum.longValue(),nprice.longValue(),"//i1.mifile.cn/a1/pms_1510291188.31088548!80x80.jpg");
         cookieList.add(commodityCart);
         cookieList.add(commodityCart1);
         CookieUtils.setCookie(httpServletRequest,httpServletResponse,cookieName,JsonUtils.objectToJson(cookieList),604800,true);
@@ -61,20 +61,22 @@ public class CartController {
     }
     @RequestMapping("cart/deleteComFromCookie/cartManager.do")
     @ResponseBody
-    public MessageResult deleteComFromCookie(Long id,HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
+    public MessageResult deleteComFromCookie(String id,HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
+        String[] idArray = id.split(",");
         //从cookie拿出数据
        List<CommodityCart> list = getCartListFromCookie(httpServletRequest);
-       //判断删除相应的数据
-        Iterator<CommodityCart> iterator = list.iterator();
-        while(iterator.hasNext()){
-            CommodityCart commodityCart = iterator.next();
-            if(commodityCart.getId()==id){
-                iterator.remove();   //注意这个地方
-            }
-        }
-       System.out.println("*******************"+list.size());
-       //将剩余的设置Cookie
-       CookieUtils.setCookie(httpServletRequest,httpServletResponse,cookieName,JsonUtils.objectToJson(list),604800,true);
+       for(int i=0;i<idArray.length;i++){
+           //判断删除相应的数据
+           Iterator<CommodityCart> iterator = list.iterator();
+           while(iterator.hasNext()){
+               CommodityCart commodityCart = iterator.next();
+               if(commodityCart.getId()==Long.valueOf(idArray[i])){
+                   iterator.remove();   //注意这个地方
+               }
+           }
+       }
+        //将剩余的设置Cookie
+        CookieUtils.setCookie(httpServletRequest,httpServletResponse,cookieName,JsonUtils.objectToJson(list),604800,true);
         //从cookie中取出购物车列表,返回到前端，重新加载网页
         List<CommodityCart> cartList = getCartListFromCookie(httpServletRequest);
         return MessageResult.ok(cartList);
@@ -93,16 +95,12 @@ public class CartController {
                 finalList.add(list.get(i));
             }
         }
-        System.out.println("*****************"+finalList);
         return MessageResult.ok(finalList);
     }
     @RequestMapping("cart/setAddress/cartManager.do")
     @ResponseBody
     public MessageResult setAddress(UserAddress userAddress,HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
-        System.out.println("**************!!!!!!!"+userAddress);
         List<UserAddress> oldList = getUserAddressListFromCookie(httpServletRequest);
-
-        System.out.println("************************SIZE:::"+oldList.size());
         for(int i=0;i<oldList.size();i++){
             if(oldList.get(i).getAddress().equals(userAddress.getAddress())&&
                         oldList.get(i).getAddressTag().equals(userAddress.getAddressTag())&&
@@ -110,17 +108,15 @@ public class CartController {
                         oldList.get(i).getPhone().equals(userAddress.getPhone())&&
                         oldList.get(i).getUserName().equals(userAddress.getUserName())&&
                         oldList.get(i).getZipCode().equals(userAddress.getZipCode())){
-                    return MessageResult.ok("该地址已存在");
+                    return MessageResult.ok();
             }
         }
-        System.out.println("******************IIDD:"+userAddress.getId());
         if(userAddress.getId()!=null){
             if(oldList.size()!=0) {
                 Iterator<UserAddress> iterator = oldList.iterator();
                 while (iterator.hasNext()) {
                     UserAddress userAddress1 = iterator.next();
                     if (userAddress.getId().equals(userAddress1.getId())) {
-                        System.out.println("******删除" + userAddress1);
                         iterator.remove();
                     }
                 }
@@ -129,10 +125,8 @@ public class CartController {
         String id = UUID.randomUUID().toString();
         userAddress.setId(id);
         oldList.add(userAddress);
-        System.out.println("**************!!!!!!!oldList:"+oldList);
         CookieUtils.setCookie(httpServletRequest,httpServletResponse,"userAddress",JsonUtils.objectToJson(oldList),604800,true);
         List<UserAddress> list = getUserAddressListFromCookie(httpServletRequest);
-        System.out.println("***********!!!!!!!return :"+list);
         return MessageResult.ok(oldList);
     }
     @RequestMapping("cart/getAddressList/cartManager.do")
@@ -145,28 +139,7 @@ public class CartController {
     @ResponseBody
     public MessageResult deleteAddressList(HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse){
         CookieUtils.deleteCookie(httpServletRequest,httpServletResponse, "userAddress");
-        return MessageResult.ok("删除成功");
+        return MessageResult.ok();
     }
-    /*@RequestMapping("cart/editAddressList/cartManager.do")
-    @ResponseBody
-    public MessageResult editAddressList(UserAddress userAddress,HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
-        addressFlag++;
-        userAddress.setId(addressFlag);
-        System.out.println("*********************!!!!!!!!!!!!!"+userAddress);
-        List<UserAddress> oldList = getUserAddressListFromCookie(httpServletRequest);
-        //判断删除相应的数据
-        Iterator<UserAddress> iterator = oldList.iterator();
-        while(iterator.hasNext()){
-            UserAddress userAddress1 = iterator.next();
-            if(userAddress.getId()==userAddress1.getId()){
-                System.out.println("******删除"+userAddress1);
-                iterator.remove();
-            }
-        }
-        oldList.add(userAddress);
-        System.out.println("*******************!!!!!!!!!"+oldList);
-        CookieUtils.setCookie(httpServletRequest,httpServletResponse,"userAddress",JsonUtils.objectToJson(oldList),604800,true);
-        List<UserAddress> returnList = getUserAddressListFromCookie(httpServletRequest);
-        return MessageResult.ok(returnList);
-    }*/
+
 }

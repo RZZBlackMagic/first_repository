@@ -46,7 +46,10 @@
                    enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
             </table>
         -->
-        <table tableName="account_productor" />
+<!--
+        <table tableName="commodity_order_item" />
+-->
+        <table tableName="commodity_order_shipping" />
         <!--<table tableName="account_manager" />-->
         <!--<table tableName="account_merchant" />-->
         <!--<table tableName="commodity_cat" />-->

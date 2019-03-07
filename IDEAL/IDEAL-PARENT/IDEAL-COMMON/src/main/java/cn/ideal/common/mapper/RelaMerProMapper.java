@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface RelaMerProMapper {
-    int countByExample(RelaMerProExample example);
+    long countByExample(RelaMerProExample example);
 
     int deleteByExample(RelaMerProExample example);
 

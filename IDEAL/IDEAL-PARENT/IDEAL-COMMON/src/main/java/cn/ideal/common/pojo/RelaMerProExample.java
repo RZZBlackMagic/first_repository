@@ -225,66 +225,6 @@ public class RelaMerProExample {
             return (Criteria) this;
         }
 
-        public Criteria andApplyTimeIsNull() {
-            addCriterion("apply_time is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andApplyTimeIsNotNull() {
-            addCriterion("apply_time is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andApplyTimeEqualTo(Date value) {
-            addCriterion("apply_time =", value, "applyTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andApplyTimeNotEqualTo(Date value) {
-            addCriterion("apply_time <>", value, "applyTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andApplyTimeGreaterThan(Date value) {
-            addCriterion("apply_time >", value, "applyTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andApplyTimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("apply_time >=", value, "applyTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andApplyTimeLessThan(Date value) {
-            addCriterion("apply_time <", value, "applyTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andApplyTimeLessThanOrEqualTo(Date value) {
-            addCriterion("apply_time <=", value, "applyTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andApplyTimeIn(List<Date> values) {
-            addCriterion("apply_time in", values, "applyTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andApplyTimeNotIn(List<Date> values) {
-            addCriterion("apply_time not in", values, "applyTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andApplyTimeBetween(Date value1, Date value2) {
-            addCriterion("apply_time between", value1, value2, "applyTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andApplyTimeNotBetween(Date value1, Date value2) {
-            addCriterion("apply_time not between", value1, value2, "applyTime");
-            return (Criteria) this;
-        }
-
         public Criteria andMerchantNameIsNull() {
             addCriterion("merchant_name is null");
             return (Criteria) this;
@@ -425,63 +365,63 @@ public class RelaMerProExample {
             return (Criteria) this;
         }
 
-        public Criteria andStatusIsNull() {
-            addCriterion("status is null");
+        public Criteria andApplyTimeIsNull() {
+            addCriterion("apply_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andStatusIsNotNull() {
-            addCriterion("status is not null");
+        public Criteria andApplyTimeIsNotNull() {
+            addCriterion("apply_time is not null");
             return (Criteria) this;
         }
 
-        public Criteria andStatusEqualTo(Integer value) {
-            addCriterion("status =", value, "status");
+        public Criteria andApplyTimeEqualTo(Date value) {
+            addCriterion("apply_time =", value, "applyTime");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotEqualTo(Integer value) {
-            addCriterion("status <>", value, "status");
+        public Criteria andApplyTimeNotEqualTo(Date value) {
+            addCriterion("apply_time <>", value, "applyTime");
             return (Criteria) this;
         }
 
-        public Criteria andStatusGreaterThan(Integer value) {
-            addCriterion("status >", value, "status");
+        public Criteria andApplyTimeGreaterThan(Date value) {
+            addCriterion("apply_time >", value, "applyTime");
             return (Criteria) this;
         }
 
-        public Criteria andStatusGreaterThanOrEqualTo(Integer value) {
-            addCriterion("status >=", value, "status");
+        public Criteria andApplyTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("apply_time >=", value, "applyTime");
             return (Criteria) this;
         }
 
-        public Criteria andStatusLessThan(Integer value) {
-            addCriterion("status <", value, "status");
+        public Criteria andApplyTimeLessThan(Date value) {
+            addCriterion("apply_time <", value, "applyTime");
             return (Criteria) this;
         }
 
-        public Criteria andStatusLessThanOrEqualTo(Integer value) {
-            addCriterion("status <=", value, "status");
+        public Criteria andApplyTimeLessThanOrEqualTo(Date value) {
+            addCriterion("apply_time <=", value, "applyTime");
             return (Criteria) this;
         }
 
-        public Criteria andStatusIn(List<Integer> values) {
-            addCriterion("status in", values, "status");
+        public Criteria andApplyTimeIn(List<Date> values) {
+            addCriterion("apply_time in", values, "applyTime");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotIn(List<Integer> values) {
-            addCriterion("status not in", values, "status");
+        public Criteria andApplyTimeNotIn(List<Date> values) {
+            addCriterion("apply_time not in", values, "applyTime");
             return (Criteria) this;
         }
 
-        public Criteria andStatusBetween(Integer value1, Integer value2) {
-            addCriterion("status between", value1, value2, "status");
+        public Criteria andApplyTimeBetween(Date value1, Date value2) {
+            addCriterion("apply_time between", value1, value2, "applyTime");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotBetween(Integer value1, Integer value2) {
-            addCriterion("status not between", value1, value2, "status");
+        public Criteria andApplyTimeNotBetween(Date value1, Date value2) {
+            addCriterion("apply_time not between", value1, value2, "applyTime");
             return (Criteria) this;
         }
 
@@ -542,6 +482,66 @@ public class RelaMerProExample {
 
         public Criteria andAgreeTimeNotBetween(Date value1, Date value2) {
             addCriterion("agree_time not between", value1, value2, "agreeTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusIsNull() {
+            addCriterion("status is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusIsNotNull() {
+            addCriterion("status is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusEqualTo(Byte value) {
+            addCriterion("status =", value, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusNotEqualTo(Byte value) {
+            addCriterion("status <>", value, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusGreaterThan(Byte value) {
+            addCriterion("status >", value, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusGreaterThanOrEqualTo(Byte value) {
+            addCriterion("status >=", value, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusLessThan(Byte value) {
+            addCriterion("status <", value, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusLessThanOrEqualTo(Byte value) {
+            addCriterion("status <=", value, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusIn(List<Byte> values) {
+            addCriterion("status in", values, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusNotIn(List<Byte> values) {
+            addCriterion("status not in", values, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusBetween(Byte value1, Byte value2) {
+            addCriterion("status between", value1, value2, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusNotBetween(Byte value1, Byte value2) {
+            addCriterion("status not between", value1, value2, "status");
             return (Criteria) this;
         }
     }

@@ -3,8 +3,16 @@ package cn.ideal.common.pojo;
 import java.io.Serializable;
 import java.util.Date;
 
-public class RelaMerProCom extends RelaMerProComKey implements Serializable {
-    private Date time;
+public class RelaMerProCom implements Serializable {
+    private Long id;
+
+    private Long merchantId;
+
+    private Long productorId;
+
+    private Long commodityId;
+
+    private Long cid;
 
     private String merchantName;
 
@@ -12,26 +20,70 @@ public class RelaMerProCom extends RelaMerProComKey implements Serializable {
 
     private String commodityName;
 
-    private Integer status;
+    private String location;
+
+    private Date applyTime;
+
+    private Date agreeTime;
+
+    private Byte status;
 
     public RelaMerProCom() {
     }
 
-    public RelaMerProCom(Long merchantId, Long productorId, Long commodityId, Date time, String merchantName, String productorName, String commodityName, Integer status) {
-        super(merchantId, productorId, commodityId);
-        this.time = time;
+    public RelaMerProCom(Long id, Long merchantId, Long productorId, Long commodityId, Long cid, String merchantName, String productorName, String commodityName, String location, Date applyTime, Date agreeTime, Byte status) {
+        this.id = id;
+        this.merchantId = merchantId;
+        this.productorId = productorId;
+        this.commodityId = commodityId;
+        this.cid = cid;
         this.merchantName = merchantName;
         this.productorName = productorName;
         this.commodityName = commodityName;
+        this.location = location;
+        this.applyTime = applyTime;
+        this.agreeTime = agreeTime;
         this.status = status;
     }
 
-    public Date getTime() {
-        return time;
+    public Long getId() {
+        return id;
     }
 
-    public void setTime(Date time) {
-        this.time = time;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getMerchantId() {
+        return merchantId;
+    }
+
+    public void setMerchantId(Long merchantId) {
+        this.merchantId = merchantId;
+    }
+
+    public Long getProductorId() {
+        return productorId;
+    }
+
+    public void setProductorId(Long productorId) {
+        this.productorId = productorId;
+    }
+
+    public Long getCommodityId() {
+        return commodityId;
+    }
+
+    public void setCommodityId(Long commodityId) {
+        this.commodityId = commodityId;
+    }
+
+    public Long getCid() {
+        return cid;
+    }
+
+    public void setCid(Long cid) {
+        this.cid = cid;
     }
 
     public String getMerchantName() {
@@ -58,11 +110,35 @@ public class RelaMerProCom extends RelaMerProComKey implements Serializable {
         this.commodityName = commodityName == null ? null : commodityName.trim();
     }
 
-    public Integer getStatus() {
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location == null ? null : location.trim();
+    }
+
+    public Date getApplyTime() {
+        return applyTime;
+    }
+
+    public void setApplyTime(Date applyTime) {
+        this.applyTime = applyTime;
+    }
+
+    public Date getAgreeTime() {
+        return agreeTime;
+    }
+
+    public void setAgreeTime(Date agreeTime) {
+        this.agreeTime = agreeTime;
+    }
+
+    public Byte getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(Byte status) {
         this.status = status;
     }
 }

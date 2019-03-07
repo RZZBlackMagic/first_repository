@@ -13,6 +13,12 @@
         <module name="IDEAL-MANAGER-INTERFACE" />
         <module name="IDEAL-MANAGER-SERVICE" />
         <module name="IDEAL-MANAGER-WEB" />
+        <module name="IDEAL-MERCHANT-INTERFACE" />
+        <module name="IDEAL-MERCHANT-SERVICE" />
+        <module name="IDEAL-MERCHANT-WEB" />
+        <module name="IDEAL-PORTAL-INTERFACE" />
+        <module name="IDEAL-PORTAL-SERVICE" />
+        <module name="IDEAL-PORTAL-WEB" />
         <module name="IDEAL-PRODUCT-INTERFACE" />
         <module name="IDEAL-PRODUCT-SERVICE" />
         <module name="IDEAL-PRODUCT-WEB" />
@@ -36,7 +42,15 @@
       <module name="IDEAL-MANAGER-INTERFACE" target="1.8" />
       <module name="IDEAL-MANAGER-SERVICE" target="1.8" />
       <module name="IDEAL-MANAGER-WEB" target="1.8" />
+      <module name="IDEAL-MERCHANT" target="1.8" />
+      <module name="IDEAL-MERCHANT-INTERFACE" target="1.8" />
+      <module name="IDEAL-MERCHANT-SERVICE" target="1.8" />
+      <module name="IDEAL-MERCHANT-WEB" target="1.8" />
       <module name="IDEAL-PARENT" target="1.8" />
+      <module name="IDEAL-PORTAL" target="1.8" />
+      <module name="IDEAL-PORTAL-INTERFACE" target="1.8" />
+      <module name="IDEAL-PORTAL-SERVICE" target="1.8" />
+      <module name="IDEAL-PORTAL-WEB" target="1.8" />
       <module name="IDEAL-PRODUCT" target="1.8" />
       <module name="IDEAL-PRODUCT-INTERFACE" target="1.8" />
       <module name="IDEAL-PRODUCT-SERVICE" target="1.8" />

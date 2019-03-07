@@ -7,41 +7,63 @@ import java.io.Serializable;
  * @create 2019-02-07 20:30
  * @desc SKU Result
  **/
-public class SKUResult implements Serializable {
+public class SkuResult implements Serializable {
+
     private Long id;
 
     private Long spuid;
 
-    private Long csid;
+    private Long csid; //生产商id
+
+    private Long cid;
+
+    private String spuName;
+
+    private String categoryName;
 
     private String spe;
 
-    private Float price;
+    private Integer price;
+
+    private Integer discount;
 
     private Integer quantity;
 
-    private String image;
+    private String spu_image;
+
+    private String sku_image;
 
     private String position;
 
-    private Byte status;
+    private String sellpoint;
 
-    private String desc;
+    private String descp;
 
-    public SKUResult() {
+    private Byte spu_status;
+
+    private Byte sku_status;
+
+    public SkuResult() {
     }
 
-    public SKUResult(Long id, Long spuid, Long csid, String spe, Float price, Integer quantity, String image, String position, Byte status, String desc) {
+    public SkuResult(Long id, Long spuid, Long csid, Long cid, String spuName, String categoryName, String spe, Integer price, Integer discount, Integer quantity, String spu_image, String sku_image, String position, String sellpoint, String descp, Byte spu_status, Byte sku_status) {
         this.id = id;
         this.spuid = spuid;
         this.csid = csid;
+        this.cid = cid;
+        this.spuName = spuName;
+        this.categoryName = categoryName;
         this.spe = spe;
         this.price = price;
+        this.discount = discount;
         this.quantity = quantity;
-        this.image = image;
+        this.spu_image = spu_image;
+        this.sku_image = sku_image;
         this.position = position;
-        this.status = status;
-        this.desc = desc;
+        this.sellpoint = sellpoint;
+        this.descp = descp;
+        this.spu_status = spu_status;
+        this.sku_status = sku_status;
     }
 
     public Long getId() {
@@ -68,6 +90,30 @@ public class SKUResult implements Serializable {
         this.csid = csid;
     }
 
+    public Long getCid() {
+        return cid;
+    }
+
+    public void setCid(Long cid) {
+        this.cid = cid;
+    }
+
+    public String getSpuName() {
+        return spuName;
+    }
+
+    public void setSpuName(String spuName) {
+        this.spuName = spuName;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
     public String getSpe() {
         return spe;
     }
@@ -76,12 +122,20 @@ public class SKUResult implements Serializable {
         this.spe = spe;
     }
 
-    public Float getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    public Integer getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(Integer discount) {
+        this.discount = discount;
     }
 
     public Integer getQuantity() {
@@ -92,12 +146,20 @@ public class SKUResult implements Serializable {
         this.quantity = quantity;
     }
 
-    public String getImage() {
-        return image;
+    public String getSpu_image() {
+        return spu_image;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setSpu_image(String spu_image) {
+        this.spu_image = spu_image;
+    }
+
+    public String getSku_image() {
+        return sku_image;
+    }
+
+    public void setSku_image(String sku_image) {
+        this.sku_image = sku_image;
     }
 
     public String getPosition() {
@@ -108,35 +170,35 @@ public class SKUResult implements Serializable {
         this.position = position;
     }
 
-    public Byte getStatus() {
-        return status;
+    public String getSellpoint() {
+        return sellpoint;
     }
 
-    public void setStatus(Byte status) {
-        this.status = status;
+    public void setSellpoint(String sellpoint) {
+        this.sellpoint = sellpoint;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescp() {
+        return descp;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescp(String descp) {
+        this.descp = descp;
     }
 
-    @Override
-    public String toString() {
-        return "SKUResult{" +
-                "id=" + id +
-                ", spuid=" + spuid +
-                ", csid=" + csid +
-                ", spe='" + spe + '\'' +
-                ", price=" + price +
-                ", quantity=" + quantity +
-                ", image='" + image + '\'' +
-                ", position='" + position + '\'' +
-                ", status=" + status +
-                ", desc='" + desc + '\'' +
-                '}';
+    public Byte getSpu_status() {
+        return spu_status;
+    }
+
+    public void setSpu_status(Byte spu_status) {
+        this.spu_status = spu_status;
+    }
+
+    public Byte getSku_status() {
+        return sku_status;
+    }
+
+    public void setSku_status(Byte sku_status) {
+        this.sku_status = sku_status;
     }
 }

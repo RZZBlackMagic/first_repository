@@ -2,17 +2,16 @@ package cn.ideal.common.mapper;
 
 import cn.ideal.common.pojo.RelaMerProCom;
 import cn.ideal.common.pojo.RelaMerProComExample;
-import cn.ideal.common.pojo.RelaMerProComKey;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 public interface RelaMerProComMapper {
-    int countByExample(RelaMerProComExample example);
+    long countByExample(RelaMerProComExample example);
 
     int deleteByExample(RelaMerProComExample example);
 
-    int deleteByPrimaryKey(RelaMerProComKey key);
+    int deleteByPrimaryKey(Long id);
 
     int insert(RelaMerProCom record);
 
@@ -20,7 +19,7 @@ public interface RelaMerProComMapper {
 
     List<RelaMerProCom> selectByExample(RelaMerProComExample example);
 
-    RelaMerProCom selectByPrimaryKey(RelaMerProComKey key);
+    RelaMerProCom selectByPrimaryKey(Long id);
 
     int updateByExampleSelective(@Param("record") RelaMerProCom record, @Param("example") RelaMerProComExample example);
 

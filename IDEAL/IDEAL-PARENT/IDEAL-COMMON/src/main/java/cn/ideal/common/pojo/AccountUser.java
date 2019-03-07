@@ -10,6 +10,10 @@ public class AccountUser implements Serializable {
 
     private String password;
 
+    private String nickname;
+
+    private String image;
+
     private String pwdQuestion;
 
     private String pwdAnswer;
@@ -47,10 +51,12 @@ public class AccountUser implements Serializable {
     public AccountUser() {
     }
 
-    public AccountUser(Long id, String username, String password, String pwdQuestion, String pwdAnswer, String realName, String idCard, String sex, String telephone, String email, String country, String address, String zip, Byte vip, Byte status, Long point, Date lastVisitTime, String lastVisitIp, Date created, Date updated) {
+    public AccountUser(Long id, String username, String password, String nickname, String image, String pwdQuestion, String pwdAnswer, String realName, String idCard, String sex, String telephone, String email, String country, String address, String zip, Byte vip, Byte status, Long point, Date lastVisitTime, String lastVisitIp, Date created, Date updated) {
         this.id = id;
         this.username = username;
         this.password = password;
+        this.nickname = nickname;
+        this.image = image;
         this.pwdQuestion = pwdQuestion;
         this.pwdAnswer = pwdAnswer;
         this.realName = realName;
@@ -92,6 +98,22 @@ public class AccountUser implements Serializable {
 
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname == null ? null : nickname.trim();
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image == null ? null : image.trim();
     }
 
     public String getPwdQuestion() {

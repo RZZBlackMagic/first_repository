@@ -19,6 +19,10 @@
         <module>IDEAL-SEARCH-WEB</module>
         <module>IDEAL-PRODUCT</module>
         <module>IDEAL-PRODUCT-WEB</module>
+        <module>IDEAL-MERCHANT</module>
+        <module>IDEAL-MERCHANT-WEB</module>
+        <module>IDEAL-PORTAL-WEB</module>
+        <module>IDEAL-PORTAL</module>
     </modules>
     <packaging>pom</packaging>
 

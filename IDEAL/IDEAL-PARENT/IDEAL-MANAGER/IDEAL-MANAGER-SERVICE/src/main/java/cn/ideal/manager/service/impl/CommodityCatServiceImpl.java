@@ -3,7 +3,6 @@ package cn.ideal.manager.service.impl;
 import cn.ideal.common.mapper.CommodityCatMapper;
 import cn.ideal.common.pojo.CommodityCat;
 import cn.ideal.common.pojo.CommodityCatExample;
-import cn.ideal.common.pojo.CommoditySku;
 import cn.ideal.common.results.MessageResult;
 import cn.ideal.common.results.TableJsonResult;
 import cn.ideal.common.results.TreeJsonResult;

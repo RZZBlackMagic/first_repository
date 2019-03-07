@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="IDEAL-MERCHANT-WEB:war">
+    <output-path>$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB/target</output-path>
+    <root id="archive" name="IDEAL-MERCHANT-WEB-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="IDEAL-MERCHANT-WEB:war exploded" />
+    </root>
+  </artifact>
+</component>

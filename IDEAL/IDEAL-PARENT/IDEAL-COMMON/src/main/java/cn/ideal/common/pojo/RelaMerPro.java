@@ -4,46 +4,26 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class RelaMerPro extends RelaMerProKey implements Serializable {
-    private Date applyTime;
-
     private String merchantName;
 
     private String productorName;
 
-    private Integer status;
+    private Date applyTime;
 
     private Date agreeTime;
+
+    private Byte status;
 
     public RelaMerPro() {
     }
 
-    public RelaMerPro(Long merchantId, Long productorId) {
+    public RelaMerPro(Long merchantId, Long productorId, String merchantName, String productorName, Date applyTime, Date agreeTime, Byte status) {
         super(merchantId, productorId);
-    }
-
-    public RelaMerPro(Date applyTime, String merchantName, String productorName, Integer status, Date agreeTime) {
-        this.applyTime = applyTime;
         this.merchantName = merchantName;
         this.productorName = productorName;
-        this.status = status;
-        this.agreeTime = agreeTime;
-    }
-
-    public RelaMerPro(Long merchantId, Long productorId, Date applyTime, String merchantName, String productorName, Integer status, Date agreeTime) {
-        super(merchantId, productorId);
         this.applyTime = applyTime;
-        this.merchantName = merchantName;
-        this.productorName = productorName;
-        this.status = status;
         this.agreeTime = agreeTime;
-    }
-
-    public Date getApplyTime() {
-        return applyTime;
-    }
-
-    public void setApplyTime(Date applyTime) {
-        this.applyTime = applyTime;
+        this.status = status;
     }
 
     public String getMerchantName() {
@@ -62,12 +42,12 @@ public class RelaMerPro extends RelaMerProKey implements Serializable {
         this.productorName = productorName == null ? null : productorName.trim();
     }
 
-    public Integer getStatus() {
-        return status;
+    public Date getApplyTime() {
+        return applyTime;
     }
 
-    public void setStatus(Integer status) {
-        this.status = status;
+    public void setApplyTime(Date applyTime) {
+        this.applyTime = applyTime;
     }
 
     public Date getAgreeTime() {
@@ -76,5 +56,13 @@ public class RelaMerPro extends RelaMerProKey implements Serializable {
 
     public void setAgreeTime(Date agreeTime) {
         this.agreeTime = agreeTime;
+    }
+
+    public Byte getStatus() {
+        return status;
+    }
+
+    public void setStatus(Byte status) {
+        this.status = status;
     }
 }

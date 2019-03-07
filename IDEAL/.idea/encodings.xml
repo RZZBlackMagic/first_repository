@@ -12,6 +12,14 @@
     <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/CommodityCatController.java" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT/IDEAL-MERCHANT-INTERFACE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT/IDEAL-MERCHANT-SERVICE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-INTERFACE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-INTERFACE" charset="UTF-8" />

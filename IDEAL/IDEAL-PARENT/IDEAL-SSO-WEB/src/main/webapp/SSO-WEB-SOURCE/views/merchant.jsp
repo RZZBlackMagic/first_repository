@@ -26,6 +26,11 @@
         <input type="password" id="reg-pwd" placeholder="密码"/>
         <input type="text" id="reg-email" placeholder="电子邮箱"/>
         <input type="text" id="reg-phone" placeholder="手机">
+        <select id="reg-location" style="width: 100%;border: 0;margin: 0 0 15px;padding: 15px;background: #f2f2f2;border-radius: 3px;box-sizing: border-box;font-size: 14px;appearance:none; -moz-appearance:none; -webkit-appearance:none;">
+            <option value="CHINA" selected>中国</option>
+            <option value="AMERICA">美国</option>
+            <option value="FRANCE">法国</option>
+        </select>
         <button id="merchant-register">注册</button>
         <p class="message">Already registered? <a href="#">Sign In</a></p>
     </form>
@@ -79,7 +84,7 @@
         });
     });
     $("#merchant-register").click(function () {
-        if ($("#reg-username").val()&&$("#reg-pwd").val()&&$("#reg-phone").val()&&$("#reg-email").val()){
+        if ($("#reg-location").val()&&$("#reg-username").val()&&$("#reg-pwd").val()&&$("#reg-phone").val()&&$("#reg-email").val()){
             $.ajax({
                 type: "post",
                 url: "/sso/merchant/register",
@@ -87,11 +92,11 @@
                     username: $("#reg-username").val(),
                     password: $("#reg-pwd").val(),
                     phone:$("#reg-phone").val(),
-                    email:$("#reg-email").val()
+                    email:$("#reg-email").val(),
+                    location: $("#reg-location").val()
                 },
                 dataType: 'JSON',
                 success: function (res, status) {
-                    console.log(res)
                     if (res.status == 400){
                         toastr.error(res.msg);
                     } else if (res.status == 200) {

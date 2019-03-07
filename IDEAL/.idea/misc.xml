@@ -3,6 +3,10 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB" />
     <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT/IDEAL-MERCHANT-SERVICE" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB" />
+    <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE" />
     <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB" />
     <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE" />
     <file type="web" url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH-WEB" />
@@ -22,7 +26,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

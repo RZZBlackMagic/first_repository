@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.LinkedList;
 import java.util.List;
 
 @Service
@@ -36,7 +35,7 @@ public class MerchantManagerServiceImpl implements MerchantManagerService {
         RelaMerProExample example = new RelaMerProExample();
         RelaMerProExample.Criteria criteria = example.createCriteria();
         criteria.andProductorIdEqualTo(product_id);
-        criteria.andStatusEqualTo(0);
+        criteria.andStatusEqualTo((byte) 0);
         List<RelaMerPro> list = relaMerProMapper.selectByExample(example);
         //取查询结果
         PageInfo<RelaMerPro> pageInfo = new PageInfo<>(list);
@@ -48,14 +47,14 @@ public class MerchantManagerServiceImpl implements MerchantManagerService {
     public MessageResult handleMerchantApply(Long product_id, String merchant_id, String option) {
         for (String mid : merchant_id.split(",")){
             if (option.compareTo("AGREE") == 0)
-                relaMerProMapper.updateByPrimaryKeySelective(new RelaMerPro(Long.parseLong(mid), product_id, null, null, null, 1, new Date(System.currentTimeMillis())));
+                relaMerProMapper.updateByPrimaryKeySelective(new RelaMerPro(Long.parseLong(mid), product_id, null, null, null, new Date(System.currentTimeMillis()), (byte)1));
             else if (option.compareTo("DELETE") == 0)
                 relaMerProMapper.deleteByPrimaryKey(new RelaMerProKey(Long.parseLong(mid), product_id));
             else if (option.compareTo("LOCK") == 0){
                 if (relaMerProMapper.selectByPrimaryKey(new RelaMerProKey(Long.parseLong(mid), product_id)).getStatus() == 1)
-                    relaMerProMapper.updateByPrimaryKeySelective(new RelaMerPro(Long.parseLong(mid), product_id, null, null, null, 2, null));
+                    relaMerProMapper.updateByPrimaryKeySelective(new RelaMerPro(Long.parseLong(mid), product_id, null, null, null, null, (byte) 2));
                 else
-                    relaMerProMapper.updateByPrimaryKeySelective(new RelaMerPro(Long.parseLong(mid), product_id, null, null, null, 1, null));
+                    relaMerProMapper.updateByPrimaryKeySelective(new RelaMerPro(Long.parseLong(mid), product_id, null, null, null, null, (byte) 1));
             }
         }
         return MessageResult.ok(true);
@@ -69,7 +68,7 @@ public class MerchantManagerServiceImpl implements MerchantManagerService {
         RelaMerProExample example = new RelaMerProExample();
         RelaMerProExample.Criteria criteria = example.createCriteria();
         criteria.andProductorIdEqualTo(product_id);
-        criteria.andStatusEqualTo(1);
+        criteria.andStatusEqualTo((byte) 1);
         List<RelaMerPro> list = relaMerProMapper.selectByExample(example);
         List<MerchantRelaJsonResult> sList = new ArrayList<>();
         for (RelaMerPro cell : list){
@@ -77,7 +76,7 @@ public class MerchantManagerServiceImpl implements MerchantManagerService {
             RelaMerProComExample.Criteria criteria1 = example1.createCriteria();
             criteria1.andProductorIdEqualTo(product_id);
             criteria1.andMerchantIdEqualTo(cell.getMerchantId());
-            sList.add(new MerchantRelaJsonResult(cell.getMerchantId(), cell.getProductorId(), cell.getApplyTime(), cell.getMerchantName(), cell.getProductorName(), cell.getStatus(), cell.getAgreeTime(), relaMerProComMapper.countByExample(example1)));
+            sList.add(new MerchantRelaJsonResult(cell.getMerchantId(), cell.getProductorId(), cell.getApplyTime(), cell.getMerchantName(), cell.getProductorName(), cell.getStatus(), cell.getAgreeTime(), (int)relaMerProComMapper.countByExample(example1)));
         }
         //取查询结果
         PageInfo<MerchantRelaJsonResult> pageInfo = new PageInfo<>(sList);

@@ -7,12 +7,18 @@ import java.io.Serializable;
  * @create 2019-02-01 21:51
  * @desc SPU
  **/
-public class SPUResult implements Serializable {
+public class SpuResult implements Serializable {
     private Long id;
+
+    private Long cid;
+
+    private Long apid;
 
     private String title;
 
     private String category;
+
+    private String productor;
 
     private String sellpoint;
 
@@ -20,13 +26,16 @@ public class SPUResult implements Serializable {
 
     private Byte status;
 
-    public SPUResult() {
+    public SpuResult() {
     }
 
-    public SPUResult(Long id, String title, String category, String sellpoint, String image, Byte status) {
+    public SpuResult(Long id, Long cid, Long apid, String title, String category, String productor, String sellpoint, String image, Byte status) {
         this.id = id;
+        this.cid = cid;
+        this.apid = apid;
         this.title = title;
         this.category = category;
+        this.productor = productor;
         this.sellpoint = sellpoint;
         this.image = image;
         this.status = status;
@@ -38,6 +47,22 @@ public class SPUResult implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getCid() {
+        return cid;
+    }
+
+    public void setCid(Long cid) {
+        this.cid = cid;
+    }
+
+    public Long getApid() {
+        return apid;
+    }
+
+    public void setApid(Long apid) {
+        this.apid = apid;
     }
 
     public String getTitle() {
@@ -54,6 +79,14 @@ public class SPUResult implements Serializable {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public String getProductor() {
+        return productor;
+    }
+
+    public void setProductor(String productor) {
+        this.productor = productor;
     }
 
     public String getSellpoint() {

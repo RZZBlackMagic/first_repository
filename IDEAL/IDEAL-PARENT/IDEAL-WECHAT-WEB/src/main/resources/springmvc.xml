@@ -12,19 +12,17 @@
     <context:property-placeholder location="classpath:client.conf" />
     <!-- 配置注解驱动 -->
     <mvc:annotation-driven />
-    <!-- 视图解析器 -->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/MANAGER-WEB-SOURCE/views/" />
-        <property name="suffix" value=".jsp" />
-    </bean>
     <!-- 配置包扫描器，扫描@Controller注解的类 -->
     <context:component-scan base-package="cn.ideal.wechat.controller"/>
     <!-- 引用dubbo服务 -->
-    <dubbo:application name="IDEAL-MANAGER-WEB"/>
+    <dubbo:application name="IDEAL-WECHAT-WEB"/>
     <dubbo:consumer check="false" />
     <dubbo:registry address="zookeeper://39.105.163.90:2181"/>
 
     <dubbo:reference interface="cn.ideal.wechat.service.CommodityCatService" id="commodityCatServiceImpl" />
     <dubbo:reference interface="cn.ideal.wechat.service.CommodityService" id="commodityServiceImpl" />
+    <dubbo:reference interface="cn.ideal.wechat.service.CommodityCartService" id="commodityCartServiceImpl" />
+    <dubbo:reference interface="cn.ideal.wechat.service.CommodityOrderService" id="commodityOrderServiceImpl" />
+    <dubbo:reference interface="cn.ideal.wechat.service.CommodityAddressService" id="commodityAddressServiceImpl" />
 
 </beans>

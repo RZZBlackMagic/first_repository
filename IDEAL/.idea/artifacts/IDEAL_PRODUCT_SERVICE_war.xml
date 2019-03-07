@@ -1,12 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="IDEAL-PRODUCT-SERVICE:war">
     <output-path>$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE/target</output-path>
-    <properties id="maven-jee-properties">
-      <options>
-        <module>IDEAL-PRODUCT-SERVICE</module>
-        <packaging>war</packaging>
-      </options>
-    </properties>
     <root id="archive" name="IDEAL-PRODUCT-SERVICE-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="IDEAL-PRODUCT-SERVICE:war exploded" />
     </root>

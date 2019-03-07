@@ -75,13 +75,6 @@ public class UserServiceImpl implements UserService {
         if (StringUtils.isBlank(user.getPassword())) {
             return MessageResult.build(400, "密码不能为空");
         }
-        if (StringUtils.isNotBlank(user.getTelephone())) {
-            //是否重复校验
-            messageResult = checkData(user.getTelephone(), 2);
-            if (!(boolean) messageResult.getData()) {
-                return MessageResult.build(400, "电话号码重复");
-            }
-        }
         //补全pojo的属性
         user.setCreated(new Date());
         user.setUpdated(new Date());
@@ -111,10 +104,6 @@ public class UserServiceImpl implements UserService {
                 .equals(user.getPassword())) {
             //返回登录失败
             return MessageResult.build(400, "用户名或密码不正确");
-        }
-        if (user.getStatus() != 1){
-            //返回登录失败
-            return MessageResult.build(400, "管理员审核未通过");
         }
         //生成token，使用uuid
         String token = UUID.randomUUID().toString();

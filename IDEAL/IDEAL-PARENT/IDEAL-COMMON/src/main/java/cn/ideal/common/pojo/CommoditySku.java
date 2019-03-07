@@ -9,7 +9,9 @@ public class CommoditySku implements Serializable {
 
     private Long csid;
 
-    private Float price;
+    private Integer price;
+
+    private Integer discount;
 
     private Integer quantity;
 
@@ -24,11 +26,12 @@ public class CommoditySku implements Serializable {
     public CommoditySku() {
     }
 
-    public CommoditySku(Long id, Long spuid, Long csid, Float price, Integer quantity, String image, String position, Byte status, String descp) {
+    public CommoditySku(Long id, Long spuid, Long csid, Integer price, Integer discount, Integer quantity, String image, String position, Byte status, String descp) {
         this.id = id;
         this.spuid = spuid;
         this.csid = csid;
         this.price = price;
+        this.discount = discount;
         this.quantity = quantity;
         this.image = image;
         this.position = position;
@@ -60,12 +63,20 @@ public class CommoditySku implements Serializable {
         this.csid = csid;
     }
 
-    public Float getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    public Integer getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(Integer discount) {
+        this.discount = discount;
     }
 
     public Integer getQuantity() {

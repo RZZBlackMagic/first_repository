@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="IDEAL-PORTAL-SERVICE:war">
-    <output-path>$PROJECT_DIR$/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/target</output-path>
+    <output-path>$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/target</output-path>
     <root id="archive" name="IDEAL-PORTAL-SERVICE-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="IDEAL-PORTAL-SERVICE:war exploded" />
     </root>

@@ -19,21 +19,21 @@ public class UserController {
     private UserService userService;
 
 
-    @RequestMapping(value = "/sso/user/register", method = RequestMethod.POST)
+    @RequestMapping(value = "/sso/wechat/register")
     @ResponseBody
     public MessageResult register(AccountUser user){
         return userService.userRegister(user);
     }
 
 
-    @RequestMapping(value = "/sso/wechat/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/sso/wechat/login")
     @ResponseBody
-    public MessageResult login(String username, String password, String type){
+    public MessageResult login(String username, String password){
         MessageResult result = userService.loginForWeChat(username, password);
         return result;
     }
 
-    @RequestMapping(value = "/sso/user/token/{token}", method = RequestMethod.GET)
+    @RequestMapping(value = "/sso/wechat/token/{token}", method = RequestMethod.GET)
     @ResponseBody
     public Object getManagerByToken(@PathVariable String token, String callback){
         MessageResult result = userService.getMessageByToken(token);

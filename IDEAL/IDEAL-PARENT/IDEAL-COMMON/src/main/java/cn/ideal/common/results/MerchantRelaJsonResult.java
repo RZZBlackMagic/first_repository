@@ -15,7 +15,7 @@ public class MerchantRelaJsonResult implements Serializable {
 
     private String productorName;
 
-    private Integer status;
+    private Byte status;
 
     private Date agreeTime;
 
@@ -24,7 +24,7 @@ public class MerchantRelaJsonResult implements Serializable {
     public MerchantRelaJsonResult() {
     }
 
-    public MerchantRelaJsonResult(Long merchantId, Long productorId, Date applyTime, String merchantName, String productorName, Integer status, Date agreeTime, Integer relaComNum) {
+    public MerchantRelaJsonResult(Long merchantId, Long productorId, Date applyTime, String merchantName, String productorName, Byte status, Date agreeTime, Integer relaComNum) {
         this.merchantId = merchantId;
         this.productorId = productorId;
         this.applyTime = applyTime;
@@ -75,11 +75,11 @@ public class MerchantRelaJsonResult implements Serializable {
         this.productorName = productorName;
     }
 
-    public Integer getStatus() {
+    public Byte getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(Byte status) {
         this.status = status;
     }
 

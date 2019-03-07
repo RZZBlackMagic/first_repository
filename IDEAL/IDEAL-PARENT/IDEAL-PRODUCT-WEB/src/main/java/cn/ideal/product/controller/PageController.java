@@ -17,7 +17,11 @@ public class PageController {
     public String displayIndex(){
         return "index";
     }
-
+    /**
+     * 其他页面
+     * @param page 页面名称
+     * @return 页面名称字段
+     */
     @RequestMapping("/{page}")
     public String displayPage(@PathVariable String page){
         return page;

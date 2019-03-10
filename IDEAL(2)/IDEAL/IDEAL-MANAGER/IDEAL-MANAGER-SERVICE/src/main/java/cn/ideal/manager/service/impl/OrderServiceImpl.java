@@ -1,18 +1,16 @@
 package cn.ideal.manager.service.impl;
 
+import cn.ideal.common.mapper.CommodityAddressMapper;
 import cn.ideal.common.mapper.CommodityOrderItemMapper;
 import cn.ideal.common.mapper.CommodityOrderMapper;
 import cn.ideal.common.mapper.CommodityOrderShippingMapper;
-import cn.ideal.common.pojo.CommodityOrder;
-import cn.ideal.common.pojo.CommodityOrderItem;
-import cn.ideal.common.pojo.CommodityOrderShipping;
+import cn.ideal.common.pojo.*;
 import cn.ideal.common.results.MessageResult;
 import cn.ideal.manager.service.OrderService;
 import com.alibaba.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.Date;
-import java.util.Random;
+import java.util.*;
 
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -22,6 +20,8 @@ public class OrderServiceImpl implements OrderService {
     private CommodityOrderItemMapper commodityOrderItemMapper;
     @Autowired
     private CommodityOrderShippingMapper commodityOrderShippingMapper;
+    @Autowired
+    private CommodityAddressMapper commodityAddressMapper;
     @Override
     public MessageResult getComFromCookieById(String idList, String numList) {
 
@@ -57,7 +57,6 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public MessageResult insertIntoCommodityOrderItem(CommodityOrderItem commodityOrderItem) {
-        System.out.println("*****************!!!!!!!!!!!!!"+commodityOrderItem);
         String[] itemIdArray = commodityOrderItem.getItemId().split("#");
         String[] number = commodityOrderItem.getNumber().split("#");
         String[] title = commodityOrderItem.getTitle().split("#");
@@ -79,5 +78,48 @@ public class OrderServiceImpl implements OrderService {
         commodityOrderShipping.setUpdated(new Date(System.currentTimeMillis()));
         commodityOrderShippingMapper.insert(commodityOrderShipping);
         return MessageResult.ok();
+    }
+
+    @Override
+    public MessageResult getAddressList(Long userId ) {
+        CommodityAddressExample example = new CommodityAddressExample();
+        CommodityAddressExample.Criteria criteria = example.createCriteria();
+        criteria.andUserIdEqualTo(userId);
+        List<CommodityAddress> list = commodityAddressMapper.selectByExample(example);
+        return MessageResult.ok(list);
+    }
+
+    @Override
+    public MessageResult insertIntoCommodityAddress(CommodityAddress commodityAddress) {
+        if(commodityAddress.getId()!=null){
+            commodityAddressMapper.deleteByPrimaryKey(commodityAddress.getId());
+        }
+        commodityAddress.setId(null);
+        commodityAddressMapper.insert(commodityAddress);
+        MessageResult messageResult = getAddressList(commodityAddress.getUserId());
+        return messageResult;
+    }
+
+    @Override
+    public MessageResult getOrderInfo(String orderId) {
+        CommodityOrderShipping commodityOrderShipping = commodityOrderShippingMapper.selectByPrimaryKey(orderId);
+        Map<String,Object> map = new HashMap<>();
+        map.put("orderId",orderId);
+        map.put("name",commodityOrderShipping.getReceiverName());
+        map.put("phone", commodityOrderShipping.getReceiverMobile());
+        map.put("address",commodityOrderShipping.getReceiverAddress()+" "+commodityOrderShipping.getReceiverDetailAddress());
+        CommodityOrderItemExample example = new CommodityOrderItemExample();
+        CommodityOrderItemExample.Criteria criteria = example.createCriteria();
+        criteria.andOrderIdEqualTo(orderId);
+        List<CommodityOrderItem> list = commodityOrderItemMapper.selectByExample(example);
+        Long totalFee = Long.valueOf(0);
+        String CommodityTitle = "";
+        for(CommodityOrderItem commodityOrderItem:list){
+            CommodityTitle = CommodityTitle + commodityOrderItem.getTitle() + "  ";
+            totalFee = totalFee +Long.valueOf(commodityOrderItem.getTotalFee());
+        }
+        map.put("ComTitle",CommodityTitle);
+        map.put("totalFee",totalFee);
+        return MessageResult.ok(map);
     }
 }

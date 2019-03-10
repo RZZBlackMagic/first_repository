@@ -49,7 +49,7 @@
 <!--
         <table tableName="commodity_order_item" />
 -->
-        <table tableName="commodity_order_shipping" />
+        <table tableName="commodity_address" />
         <!--<table tableName="account_manager" />-->
         <!--<table tableName="account_merchant" />-->
         <!--<table tableName="commodity_cat" />-->

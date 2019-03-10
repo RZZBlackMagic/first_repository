@@ -1,5 +1,6 @@
 package cn.ideal.manager.controller;
 
+import cn.ideal.common.pojo.CommodityAddress;
 import cn.ideal.common.pojo.CommodityOrder;
 import cn.ideal.common.pojo.CommodityOrderItem;
 import cn.ideal.common.pojo.CommodityOrderShipping;
@@ -42,6 +43,24 @@ public class OrderController {
     @ResponseBody
     public MessageResult insertIntoCommodityOrderShipping(CommodityOrderShipping commodityOrderShipping){
         MessageResult messageResult = orderService.insertIntoCommodityOrderShipping(commodityOrderShipping);
+        return messageResult;
+    }
+    @RequestMapping("order/getAddressList/orderManager.do")
+    @ResponseBody
+    public MessageResult getAddressList(Long userId){
+        MessageResult messageResult = orderService.getAddressList(userId);
+        return messageResult;
+    }
+    @RequestMapping("order/insertIntoCommodityAddress/orderManager.do")
+    @ResponseBody
+    public MessageResult insertIntoCommodityAddress(CommodityAddress commodityAddress){
+        MessageResult messageResult = orderService.insertIntoCommodityAddress(commodityAddress);
+        return messageResult;
+    }
+    @RequestMapping("order/getOrderInfo/orderManager.do")
+    @ResponseBody
+    public MessageResult getOrderInfo(String orderId){
+        MessageResult messageResult = orderService.getOrderInfo(orderId);
         return messageResult;
     }
 

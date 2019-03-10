@@ -1,7 +1,6 @@
 package cn.ideal.manager.controller;
 
 import cn.ideal.common.pojo.CommodityCart;
-import cn.ideal.common.pojo.UserAddress;
 import cn.ideal.common.results.MessageResult;
 import cn.ideal.common.utils.CookieUtils;
 import cn.ideal.common.utils.JsonUtils;
@@ -15,10 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.UUID;
 
 @Controller
 public class CartController {
+
 
     private static long addressFlag = 0 ;
     private static String cookieName = "cartList";
@@ -30,14 +29,14 @@ public class CartController {
         List<CommodityCart> list = JsonUtils.jsonToList(json,CommodityCart.class);
          return list;
     }
-    private List<UserAddress> getUserAddressListFromCookie(HttpServletRequest httpServletRequest){
+    /*private List<UserAddress> getUserAddressListFromCookie(HttpServletRequest httpServletRequest){
         String json = CookieUtils.getCookieValue(httpServletRequest,"userAddress",true);
         if(StringUtils.isNullOrEmpty(json)){
             return new ArrayList();
         }
         List<UserAddress> list = JsonUtils.jsonToList(json,UserAddress.class);
         return list;
-    }
+    }*/
 
     @RequestMapping("cart/getCartList/cartManager.do")
     @ResponseBody
@@ -97,49 +96,23 @@ public class CartController {
         }
         return MessageResult.ok(finalList);
     }
-    @RequestMapping("cart/setAddress/cartManager.do")
+   /* @RequestMapping("cart/setAddress/cartManager.do")
     @ResponseBody
-    public MessageResult setAddress(UserAddress userAddress,HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
-        List<UserAddress> oldList = getUserAddressListFromCookie(httpServletRequest);
-        for(int i=0;i<oldList.size();i++){
-            if(oldList.get(i).getAddress().equals(userAddress.getAddress())&&
-                        oldList.get(i).getAddressTag().equals(userAddress.getAddressTag())&&
-                        oldList.get(i).getDetailAddress().equals(userAddress.getDetailAddress())&&
-                        oldList.get(i).getPhone().equals(userAddress.getPhone())&&
-                        oldList.get(i).getUserName().equals(userAddress.getUserName())&&
-                        oldList.get(i).getZipCode().equals(userAddress.getZipCode())){
-                    return MessageResult.ok();
-            }
-        }
-        if(userAddress.getId()!=null){
-            if(oldList.size()!=0) {
-                Iterator<UserAddress> iterator = oldList.iterator();
-                while (iterator.hasNext()) {
-                    UserAddress userAddress1 = iterator.next();
-                    if (userAddress.getId().equals(userAddress1.getId())) {
-                        iterator.remove();
-                    }
-                }
-            }
-        }
-        String id = UUID.randomUUID().toString();
-        userAddress.setId(id);
-        oldList.add(userAddress);
-        CookieUtils.setCookie(httpServletRequest,httpServletResponse,"userAddress",JsonUtils.objectToJson(oldList),604800,true);
-        List<UserAddress> list = getUserAddressListFromCookie(httpServletRequest);
-        return MessageResult.ok(oldList);
+    public MessageResult insertAddress(CommodityAddress commodityAddress){
+        MessageResult messageResult = cartService.insertAddress(commodityAddress);
+        return messageResult;
     }
     @RequestMapping("cart/getAddressList/cartManager.do")
     @ResponseBody
-    public MessageResult getAddressList(HttpServletRequest httpServletRequest){
-        List<UserAddress> list = getUserAddressListFromCookie(httpServletRequest);
-        return MessageResult.ok(list);
+    public MessageResult getAddressList(){
+        MessageResult messageResult= cartService.getAddressList();
+        return messageResult;
     }
     @RequestMapping("cart/deleteAddressList/cartManager.do")
     @ResponseBody
     public MessageResult deleteAddressList(HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse){
         CookieUtils.deleteCookie(httpServletRequest,httpServletResponse, "userAddress");
         return MessageResult.ok();
-    }
+    }*/
 
 }

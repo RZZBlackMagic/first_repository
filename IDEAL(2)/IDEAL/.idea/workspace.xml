@@ -69,27 +69,50 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/order.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="952" lean-forward="true" selection-start-line="952" selection-end-line="952" />
+            <state relative-caret-position="468">
+              <caret line="952" column="7" selection-start-line="952" selection-start-column="7" selection-end-line="952" selection-end-column="7" />
               <folding>
-                <element signature="e#35355#35911#0#HTML" />
                 <element signature="e#425#431#1" expanded="true" />
-                <element signature="e#40602#41077#0#HTML" />
-                <element signature="e#41125#41605#0#HTML" />
-                <element signature="e#41654#42131#0#HTML" />
-                <element signature="e#42183#42657#0#HTML" />
-                <element signature="e#42707#43183#0#HTML" />
-                <element signature="e#43230#43709#0#HTML" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/OrderServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/orderInfo.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="103" column="47" lean-forward="true" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="47" />
+            <state relative-caret-position="220">
+              <caret line="211" selection-start-line="211" selection-end-line="211" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/cart.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4840">
+              <caret line="242" column="36" selection-start-line="242" selection-start-column="36" selection-end-line="242" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="548">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/CartController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="814">
+              <caret line="107" column="36" selection-start-line="107" selection-start-column="36" selection-end-line="107" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,25 +121,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/orderInfo.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-88">
-              <caret line="110" column="44" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
-              <folding>
-                <element signature="e#1166#1722#0#HTML" />
-                <element signature="n#li#3;n#ul#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#li#4;n#ul#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="-532">
+              <caret line="142" column="28" selection-start-line="142" selection-start-column="28" selection-end-line="142" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,59 +133,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityAddress.java">
+        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="110" column="13" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/CartController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE/src/main/java/cn/ideal/manager/service/CartService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/CartServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/UserAddress.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-              <folding>
-                <element signature="e#1559#1560#0" expanded="true" />
-                <element signature="e#1609#1610#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="10220">
+              <caret line="511" selection-start-line="511" selection-end-line="511" />
             </state>
           </provider>
         </entry>
@@ -209,13 +168,13 @@
       <find>J_addressList</find>
       <find>Long</find>
       <find>jquery</find>
+      <find>J_selTotalNum</find>
+      <find>结算</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/ProductorManagerController.java" />
-        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/MerchantManagerController.java" />
         <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/rela_mer_pro_com.jsp" />
         <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/rela_mer_pro.jsp" />
         <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/productor_lock.jsp" />
@@ -246,7 +205,6 @@
         <option value="$PROJECT_DIR$/IDEAL-MERCHANT/IDEAL-MERCHANT-SERVICE/src/main/java/cn/ideal/merchant/service/impl/ApplyMerchantServiceImpl.java" />
         <option value="$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/AccountProductor.java" />
         <option value="$PROJECT_DIR$/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/product.jsp" />
-        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/cart.jsp" />
         <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/resources/spring/applicationContext-service.xml" />
         <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/resources/springmvc.xml" />
         <option value="$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/UserAddress.java" />
@@ -260,11 +218,14 @@
         <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/order_two.jsp" />
         <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE/src/main/java/cn/ideal/manager/service/CartService.java" />
         <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/CartServiceImpl.java" />
-        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/CartController.java" />
-        <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/utils/PaymentUtil.java" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/cart.jsp" />
         <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/OrderController.java" />
-        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/order.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/resources/merchantInfo.properties" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/CartController.java" />
         <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/orderInfo.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/order.jsp" />
       </list>
     </option>
   </component>
@@ -277,7 +238,17 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="IDEAL" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="IDEAL" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -292,14 +263,59 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
               <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
@@ -438,6 +454,14 @@
               <item name="IDEAL-MANAGER-WEB" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-MANAGER-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -459,6 +483,66 @@
               <item name="MANAGER-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PRODUCT-WEB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PRODUCT-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PRODUCT-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PRODUCT-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PRODUCT-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="PRODUCTOR-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PRODUCT-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="PRODUCTOR-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PRODUCT-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="PRODUCTOR-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -469,9 +553,9 @@
     <property name="DatabaseDriversLRU" value="mariadb&#10;mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551852280784" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551852290620" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IDEAL" />
+    <property name="last_opened_file_path" value="D:/支付/code/store" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -480,19 +564,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\workspace\IDEAL(2)\IDEAL\IDEAL-MANAGER-WEB\src\main\webapp\MANAGER-WEB-SOURCE\views" />
-      <recent name="D:\workspace\IDEAL(2)\IDEAL\IDEAL-COMMON\src\main\java\cn\ideal\common\pojo" />
-      <recent name="D:\workspace\IDEAL(2)\IDEAL\IDEAL-COMMON\src\main\java\cn\ideal\common\mapper" />
-      <recent name="D:\workspace\IDEAL(2)\IDEAL\IDEAL-PRODUCT-WEB\src\main\webapp\PRODUCTOR-WEB-SOURCE\assets" />
-      <recent name="D:\workspace\IDEAL(2)\IDEAL\IDEAL-PRODUCT-WEB\src\main\webapp\PRODUCTOR-WEB-SOURCE\assets\css" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\XINER\OneDrive\IDEAL\IDEAL-MERCHANT-WEB\src\main\webapp" />
+      <recent name="C:\Users\XINER\OneDrive\IDEAL\IDEAL-MERCHANT-WEB\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.ideal.manager.controller" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\XINER\OneDrive\IDEAL\IDEAL-MERCHANT-WEB\src\main\webapp" />
-      <recent name="C:\Users\XINER\OneDrive\IDEAL\IDEAL-MERCHANT-WEB\src\main\resources" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\IDEAL(2)\IDEAL\IDEAL-MANAGER-WEB\src\main\resources" />
+      <recent name="D:\workspace\IDEAL(2)\IDEAL\IDEAL-COMMON\src\main\java\cn\ideal\common\utils" />
+      <recent name="D:\workspace\IDEAL(2)\IDEAL\IDEAL-MANAGER-WEB\src\main\webapp\MANAGER-WEB-SOURCE\views" />
+      <recent name="D:\workspace\IDEAL(2)\IDEAL\IDEAL-COMMON\src\main\java\cn\ideal\common\pojo" />
+      <recent name="D:\workspace\IDEAL(2)\IDEAL\IDEAL-COMMON\src\main\java\cn\ideal\common\mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -823,12 +907,15 @@
       <workItem from="1551501151511" duration="41632000" />
       <workItem from="1551698924042" duration="8045000" />
       <workItem from="1551772581511" duration="20803000" />
-      <workItem from="1551838720153" duration="13425000" />
+      <workItem from="1551838720153" duration="13626000" />
+      <workItem from="1551956148710" duration="2314000" />
+      <workItem from="1552184451659" duration="20299000" />
+      <workItem from="1552304566483" duration="8463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372126000" />
+    <option name="totallyTimeSpent" value="403403000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -841,9 +928,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.195629" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18336888" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -855,7 +941,43 @@
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32951945" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49932975" visible="true" weight="0.30877572" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49932975" visible="true" weight="0.30877572" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3974359" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32905984" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50067025" side_tool="true" weight="0.36467236" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.14285715" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info active="true" anchor="right" id="Maven Projects" order="6" visible="true" weight="0.15616623" />
+      <window_info anchor="right" id="Maven" order="7" visible="true" weight="0.24040511" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18176973" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Image Layers" order="8" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32951945" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32827735" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49932975" visible="true" weight="0.30877572" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3974359" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -877,92 +999,12 @@
       <window_info anchor="right" id="Maven" order="7" weight="0.24040511" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19349681" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Learn" order="6" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Image Layers" order="8" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32951945" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49932975" visible="true" weight="0.30877572" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.3974359" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32905984" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Spring" order="9" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50067025" side_tool="true" weight="0.36467236" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.14285715" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info active="true" anchor="right" id="Maven Projects" order="6" visible="true" weight="0.15616623" />
-      <window_info anchor="right" id="Maven" order="7" weight="0.24200426" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/IDEAL-PRODUCT-WEB/src/main/webapp/PRODUCTOR-WEB-SOURCE/views/manage-sku.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3172">
-          <caret line="170" column="33" lean-forward="true" selection-start-line="170" selection-start-column="33" selection-end-line="170" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#th#1;n#tr#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/productor_regist.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3900" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/productor_lock.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3612" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-MERCHANT-WEB/src/main/webapp/MERCHANT-WEB-SOURCE/views/allowed_apply.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="208" column="72" selection-start-line="208" selection-start-column="54" selection-end-line="208" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-MERCHANT-WEB/src/main/webapp/MERCHANT-WEB-SOURCE/views/apply_commodity.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="132" column="32" lean-forward="true" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="32" />
-          <folding>
-            <element signature="e#8969#9745#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/resources/springmvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="30" column="52" lean-forward="true" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/resources/spring/applicationContext-service.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
@@ -1076,27 +1118,10 @@
     <entry file="file://$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderShippingExample.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1647">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1017">
           <caret line="112" column="1" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PRODUCT-WEB/src/main/webapp/PRODUCTOR-WEB-SOURCE/views/index_show.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="1565" column="9" lean-forward="true" selection-start-line="1565" selection-start-column="9" selection-end-line="1565" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1147,16 +1172,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/cart.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="309" column="37" selection-start-line="309" selection-start-column="37" selection-end-line="309" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/ideal_project/jdk1.8.0_45/jre/lib/jfr.jar!/com/oracle/jrockit/jfr/ContentType.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1185,37 +1200,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE/src/main/java/cn/ideal/manager/service/CartService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityAddress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
+        <state relative-caret-position="1480">
           <caret line="110" column="13" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/CartController.java">
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE/src/main/java/cn/ideal/manager/service/CartService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="120">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1224,18 +1219,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/CartServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+        <state relative-caret-position="697">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PRODUCT-WEB/src/main/webapp/PRODUCTOR-WEB-SOURCE/views/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="419" column="10" lean-forward="true" selection-start-line="419" selection-start-column="10" selection-end-line="419" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PRODUCT-WEB/src/main/webapp/PRODUCTOR-WEB-SOURCE/views/index_show.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="1560" column="12" selection-start-line="1560" selection-start-column="12" selection-end-line="1560" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/支付/resource/在线支付/PaymentUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-941">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/ideal_project/jdk1.8.0_45/src.zip!/java/util/ResourceBundle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="286" column="22" selection-start-line="286" selection-start-column="22" selection-end-line="286" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="103" column="47" lean-forward="true" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="47" />
+        <state relative-caret-position="1800">
+          <caret line="100" column="53" selection-start-line="100" selection-start-column="53" selection-end-line="100" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/cart.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4840">
+          <caret line="242" column="36" selection-start-line="242" selection-start-column="36" selection-end-line="242" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10220">
+          <caret line="511" selection-start-line="511" selection-end-line="511" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/utils/PaymentUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3146">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/resources/merchantInfo.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1244,30 +1305,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/order.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="952" lean-forward="true" selection-start-line="952" selection-end-line="952" />
+        <state relative-caret-position="468">
+          <caret line="952" column="7" selection-start-line="952" selection-start-column="7" selection-end-line="952" selection-end-column="7" />
           <folding>
-            <element signature="e#35355#35911#0#HTML" />
             <element signature="e#425#431#1" expanded="true" />
-            <element signature="e#40602#41077#0#HTML" />
-            <element signature="e#41125#41605#0#HTML" />
-            <element signature="e#41654#42131#0#HTML" />
-            <element signature="e#42183#42657#0#HTML" />
-            <element signature="e#42707#43183#0#HTML" />
-            <element signature="e#43230#43709#0#HTML" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/orderInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
-          <caret line="110" column="44" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
+        <state relative-caret-position="220">
+          <caret line="211" selection-start-line="211" selection-end-line="211" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/CartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="107" column="36" selection-start-line="107" selection-start-column="36" selection-end-line="107" selection-end-column="36" />
           <folding>
-            <element signature="e#1166#1722#0#HTML" />
-            <element signature="n#li#3;n#ul#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#4;n#ul#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-532">
+          <caret line="142" column="28" selection-start-line="142" selection-start-column="28" selection-end-line="142" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

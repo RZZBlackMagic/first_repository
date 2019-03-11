@@ -228,6 +228,7 @@
         var HTML = $(this).html();
         console.log(HTML);
         if($(this).hasClass("icon-checkbox-selected")){
+            var selectedNum = $('J_selTotalNum').text();
             $(this).removeClass("icon-checkbox-selected");
             $('#J_selectAll').removeClass("icon-checkbox-selected");
             $('#J_selTotalNum').text(eval(selectedNum)-1);

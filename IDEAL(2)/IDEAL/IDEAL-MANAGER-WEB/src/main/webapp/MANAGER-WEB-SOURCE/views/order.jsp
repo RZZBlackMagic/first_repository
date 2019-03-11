@@ -613,6 +613,7 @@
     };
     var orderCommodityList ;
     $.getJSON(url,data,function(result){
+        console.log("展示商品："+result.data);
         orderCommodityList=result;
         var payAllPrice =0 ;
         for(var i=0;i<result.data.length;i++){
@@ -869,9 +870,10 @@
     //在Commodity_order_item中根据商品类别添加数据，订单有两类商品，就根据每个商品Id分别添加数据
     //在Commodity_order_shipping中添加数据：每个订单号对应一个收获地址
     //将购物车中的该商品删除
-    var title = '';
     function payForOrder(){
         if($('#J_addressList').find('div[class="address-item J_addressItem selected"]').html()!=null){
+            var title = '';
+
             //支付后在Commodity_order表中设置订单更新时间，物流名称，物流单号,付款时间
             //获取订单名称
             var orderName = '' ;
@@ -943,9 +945,8 @@
             //跳转到订单信息：商品名称，订单号，用户名称，两个地址
             window.location.href = "http://localhost:8081/orderInfo.html?"+'orderId='+orderId;
         }else{
-            console.log("请先选择地址")
+            console.log("请先选择地址");
         }
-
     }
 </script>
 </body>

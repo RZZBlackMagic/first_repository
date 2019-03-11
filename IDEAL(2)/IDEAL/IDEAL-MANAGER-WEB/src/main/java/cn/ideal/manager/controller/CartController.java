@@ -45,11 +45,11 @@ public class CartController {
         List<CommodityCart> cookieList = new ArrayList<>();
         Integer id =1;
         Integer num =2;
-        Integer price = 2999;
+        Integer price = 1;
         CommodityCart commodityCart = new CommodityCart(id.longValue(),"小米",num.longValue(),price.longValue(),"//i1.mifile.cn/a1/pms_1510291188.31088548!80x80.jpg");
         Integer nId = 2;
         Integer nnum = 1;
-        Integer nprice = 777;
+        Integer nprice = 1;
         CommodityCart commodityCart1 = new CommodityCart(nId.longValue(),"华硕",nnum.longValue(),nprice.longValue(),"//i1.mifile.cn/a1/pms_1510291188.31088548!80x80.jpg");
         cookieList.add(commodityCart);
         cookieList.add(commodityCart1);
@@ -87,13 +87,20 @@ public class CartController {
         String[] NUMList = numList.split(",");
         //从cookie拿出数据
         List<CommodityCart> list = getCartListFromCookie(httpServletRequest);
+        System.out.println("***********!!!!!!!!!!!!cookie中的商品："+IDList[0]);
+        System.out.println(IDList.length);
         List<CommodityCart> finalList = new ArrayList<>();
-        for(int i=0;i<IDList.length;i++){
-            if(list.get(i).getId()==Long.valueOf(IDList[i])){
-                list.get(i).setNum(Long.valueOf(NUMList[i]));
-                finalList.add(list.get(i));
-            }
+        for(int i=0;i<list.size();i++){
+           for(int j=0;j<IDList.length;j++){
+               if(list.get(i).getId()==Long.valueOf(IDList[j])){
+                   list.get(i).setNum(Long.valueOf(NUMList[j]));
+                   System.out.println("执行了："+list.get(j));
+                   finalList.add(list.get(i));
+                   System.out.println("!!!!!!!!!!"+finalList);
+               }
+           }
         }
+        System.out.println("查到的list:"+finalList);
         return MessageResult.ok(finalList);
     }
    /* @RequestMapping("cart/setAddress/cartManager.do")

@@ -16,61 +16,6 @@
     <link rel="stylesheet" href="//s01.mifile.cn/css/base.min.css?v2019022501a">
     <link rel="stylesheet" type="text/css" href="//s01.mifile.cn/css/pay-confirm.min.css?v=2016081101">
     <script type="text/javascript" src="assets/js/jquery-1.11.0.js"></script>
-    <script>
-        $(function(){
-            $(".show-detail").click(function(){
-                if($(".order-detail").css("display")=="block"){
-                    $(".order-detail").css("display","none");
-                }
-                else if($(".order-detail").css("display")=="none"){
-                    $(".order-detail").css("display","block");
-                }
-            })
-
-            //得到路径参数
-            function getUrlParam() {
-                //获取连接地址
-                var url = document.location.toString();
-                //分隔开连接,用?把传的值取出来
-                var arrObj = url.split("?");
-                //创建一个空对象
-                var result = {};
-                //判断连接里面是不是有值,如果有则执行下面操作
-                if (arrObj.length > 1) {
-                    //取出所有传的值
-                    var arrPara = arrObj[1].split("&");
-                    var arr;
-                    for (var i = 0; i < arrPara.length; i++) {
-
-                        arr = arrPara[i].split("=");
-                        //把第二个值赋值给第一个值
-                        result[arr[0]] = arr[1];
-
-                    }
-                }
-                return result;
-            }
-            var urlData = getUrlParam();
-            var orderId = urlData.orderId;
-            var url = "order/getOrderInfo/orderManager.do";
-            var data = {
-                orderId:orderId
-            }
-            var params ;
-            $.post(url,data,function(result){
-                params = result.data;
-                $('#J_postInfo').html('收货信息：'+ params.name+params.phone+'  &nbsp;&nbsp;\n' +
-                    params.address+'&nbsp;&nbsp; ');
-                $('span[class="order-num"]').text(params.orderId);
-                $('span[class="money"]').find('em').text(params.totalFee);
-                $('#order-detail-ul').children('li').eq(1).find('div[class="content"]').html(params.address);
-                $('#order-detail-ul').children('li').eq(2).find('div[class="content"]').html(params.ComTitle);
-            });
-
-
-        })
-
-    </script>
 </head>
 <body>
 <div class="site-header site-mini-header">
@@ -136,7 +81,7 @@
             </div>
 
 
-            <%--<div class="section section-payment">
+            <div class="section section-payment">
                 <div class="cash-title" id="J_cashTitle">
                     选择以下支付方式付款
                 </div>
@@ -160,12 +105,54 @@
                         <h3 class="title">银行借记卡及信用卡</h3>
                     </div>
                     <div class="payment-body">
-                        <ul class="clearfix payment-list payment-list-much J_paymentList J_linksign-customize">
-                            <li class="J_bank" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="CMB" value="CMB"> <img src="//s01.mifile.cn/i/banklogo/payOnline_zsyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="ICBCB2C" value="ICBCB2C"> <img src="//s01.mifile.cn/i/banklogo/payOnline_gsyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="CCB" value="CCB"> <img src="//s01.mifile.cn/i/banklogo/payOnline_jsyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="COMM" value="COMM"> <img src="//s01.mifile.cn/i/banklogo/payOnline_jtyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="ABC" value="ABC"> <img src="//s01.mifile.cn/i/banklogo/payOnline_nyyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="BOCB2C" value="BOCB2C"> <img src="//s01.mifile.cn/i/banklogo/payOnline_zgyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="PSBC-DEBIT" value="PSBC-DEBIT"> <img src="//s01.mifile.cn/i/banklogo/payOnline_youzheng.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="GDB" value="GDB"> <img src="//s01.mifile.cn/i/banklogo/payOnline_gfyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="SPDB" value="SPDB"> <img src="//s01.mifile.cn/i/banklogo/payOnline_pufa.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="CEBBANK" value="CEBBANK"> <img src="//s01.mifile.cn/i/banklogo/payOnline_gdyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="CIB" value="CIB"> <img src="//s01.mifile.cn/i/banklogo/payOnline_xyyh.png?ver2015" alt=""></li><li class="J_bank hide" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="CMBC" value="CMBC"> <img src="//s01.mifile.cn/i/banklogo/payOnline_msyh.png?ver2015" alt=""></li><li class="J_bank hide" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="SHBANK" value="SHBANK"> <img src="//s01.mifile.cn/i/banklogo/payOnline_shyh.png?ver2015" alt=""></li><li class="J_bank hide" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="BJRCB" value="BJRCB"> <img src="//s01.mifile.cn/i/banklogo/payOnline_bjnsyh.png?ver2015" alt=""></li><li class="J_bank hide" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="NBBANK" value="NBBANK"> <img src="//s01.mifile.cn/i/banklogo/payOnline_nbyh.png?ver2015" alt=""></li><li class="J_bank hide" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="HZCBB2C" value="HZCBB2C"> <img src="//s01.mifile.cn/i/banklogo/payOnline_hzyh.png?ver2015" alt=""></li><li class="J_bank hide" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="SHRCB" value="SHRCB"> <img src="//s01.mifile.cn/i/banklogo/payOnline_shnsyh.png?ver2015" alt=""></li><li class="J_bank hide" data-stat-id="3e7f807e5319a275" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-3e7f807e5319a275', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="FDB" value="FDB"> <img src="//s01.mifile.cn/i/banklogo/payOnline_fcyh.png?ver2015" alt=""></li>                            <li class="J_showMore" data-stat-id="1a75d155ddfb7ea6" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-1a75d155ddfb7ea6', '', 'pcpid', '']);">
-                            <span class="text">查看更多</span>
-                            <span class="text  hide">收起更多</span>
-                        </li>
+                        <ul class="clearfix payment-list J_paymentList J_linksign-customize" id="bankCart">
+                            <li class="J_bank" data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="CMB" value="CMBCHINA-NET-B2C"> <img src="//s01.mifile.cn/i/banklogo/payOnline_zsyh.png?ver2015" alt=""></li>
+                            <li class="J_bank" data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="ICBCB2C" value="ICBC-NET-B2C"> <img src="//s01.mifile.cn/i/banklogo/payOnline_gsyh.png?ver2015" alt=""></li>
+                            <li class="J_bank" data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="CCB" value="CCB-NET-B2C"> <img src="//s01.mifile.cn/i/banklogo/payOnline_jsyh.png?ver2015" alt=""></li>
+                            <li class="J_bank" data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="COMM" value="BOCO-NET-B2C"> <img src="//s01.mifile.cn/i/banklogo/payOnline_jtyh.png?ver2015" alt=""></li>
+                            <li class="J_bank" data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="ABC" value="ABC-NET-B2C"> <img src="//s01.mifile.cn/i/banklogo/payOnline_nyyh.png?ver2015" alt=""></li>
+                            <li class="J_bank" data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="BOCB2C" value="BOC-NET-B2C"> <img src="//s01.mifile.cn/i/banklogo/payOnline_zgyh.png?ver2015" alt=""></li>
+                            <li class="J_bank" data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="PSBC-DEBIT" value="POST-NET-B2C"> <img src="//s01.mifile.cn/i/banklogo/payOnline_youzheng.png?ver2015" alt=""></li>
+
+<%--
+                            <li class="J_bank" data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="GDB" value="GDB"> <img src="//s01.mifile.cn/i/banklogo/payOnline_gfyh.png?ver2015" alt=""></li>
+--%>
+
+
+                            <li class="J_bank" data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="SPDB" value="SPDB-NET-B2C "> <img src="//s01.mifile.cn/i/banklogo/payOnline_pufa.png?ver2015" alt=""></li>
+
+                            <li class="J_bank" data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="CEBBANK" value="CEB-NET-B2C"> <img src="//s01.mifile.cn/i/banklogo/payOnline_gdyh.png?ver2015" alt=""></li>
+                            <li class="J_bank" data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="CIB" value="CIB-NET-B2C "> <img src="//s01.mifile.cn/i/banklogo/payOnline_xyyh.png?ver2015" alt=""></li>
+<%--
+                            <li class="J_bank " data-stat-id="3e7f807e5319a275" ><input type="radio" name="payOnlineBank" id="CMBC" value="CMBC"> <img src="//s01.mifile.cn/i/banklogo/payOnline_msyh.png?ver2015" alt=""></li>
+--%>
+                            <li class="J_bank " data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="SHBANK" value="SHB-NET-B2C "> <img src="//s01.mifile.cn/i/banklogo/payOnline_shyh.png?ver2015" alt=""></li>
+                            <li class="J_bank " data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="BJRCB" value="BJRCB-NET-B2C "> <img src="//s01.mifile.cn/i/banklogo/payOnline_bjnsyh.png?ver2015" alt=""></li>
+                            <li class="J_bank " data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="NBBANK" value="NBCB-NET-B2C "> <img src="//s01.mifile.cn/i/banklogo/payOnline_nbyh.png?ver2015" alt=""></li>
+<%--
+                            <li class="J_bank " data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="HZCBB2C" value="HZCBB2C"> <img src="//s01.mifile.cn/i/banklogo/payOnline_hzyh.png?ver2015" alt=""></li>
+--%>
+<%--
+                            <li class="J_bank " data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="SHRCB" value="SHRCB"> <img src="//s01.mifile.cn/i/banklogo/payOnline_shnsyh.png?ver2015" alt=""></li>
+--%>
+<%--
+                            <li class="J_bank " data-stat-id="3e7f807e5319a275" ><input type="radio" name="pd_FrpId" id="FDB" value="FDB"> <img src="//s01.mifile.cn/i/banklogo/payOnline_fcyh.png?ver2015" alt=""></li>
+--%>
+                            <%--<li class="J_showMore" data-stat-id="1a75d155ddfb7ea6" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-1a75d155ddfb7ea6', '', 'pcpid', '']);">
+                            &lt;%&ndash;<span class="text">查看更多</span>
+                            <span class="text  hide">收起更多</span>&ndash;%&gt;
+                        </li>--%>
                         </ul>
+                    </div>
+                </div>
+                <div class="section-bar clearfix">
+                    <div class="fl">
+                        <div class="seleced-address hide" id="J_confirmAddress">
+                        </div>
+                        <div class="big-pro-tip hide J_confirmBigProTip"></div>
+                    </div>
+                    <div class="fr" >
+                        <a href="javascript:void(0);"  class="btn btn-primary" id="J_checkoutToPay" data-stat-id="9dc0c7cf32a1c0ca" >去结算</a>
                     </div>
                 </div>
 
@@ -215,9 +202,100 @@
                         </div>
                     </div>
                 </div>
-            </div>--%>
+            </div>
         </form>
     </div>
 </div>
+<script>
+    $(function(){
+
+
+        $(".show-detail").click(function(){
+            if($(".order-detail").css("display")=="block"){
+                $(".order-detail").css("display","none");
+            }
+            else if($(".order-detail").css("display")=="none"){
+                $(".order-detail").css("display","block");
+            }
+        })
+
+        //得到路径参数
+        function getUrlParam() {
+            //获取连接地址
+            var url = document.location.toString();
+            //分隔开连接,用?把传的值取出来
+            var arrObj = url.split("?");
+            //创建一个空对象
+            var result = {};
+            //判断连接里面是不是有值,如果有则执行下面操作
+            if (arrObj.length > 1) {
+                //取出所有传的值
+                var arrPara = arrObj[1].split("&");
+                var arr;
+                for (var i = 0; i < arrPara.length; i++) {
+
+                    arr = arrPara[i].split("=");
+                    //把第二个值赋值给第一个值
+                    result[arr[0]] = arr[1];
+
+                }
+            }
+            return result;
+        }
+        var urlData = getUrlParam();
+        var orderId = urlData.orderId;
+        var url = "order/getOrderInfo/orderManager.do";
+        var data = {
+            orderId:orderId
+        }
+        var params ;
+
+        $.post(url,data,function(result){
+            console.log(result);
+            params = result.data;
+            $('#J_postInfo').html('收货信息：'+ params.name+params.phone+'  &nbsp;&nbsp;\n' +
+                params.address+'&nbsp;&nbsp; ');
+            $('span[class="order-num"]').text(params.orderId);
+            $('span[class="money"]').find('em').text(params.totalFee);
+            $('#order-detail-ul').children('li').eq(1).find('div[class="content"]').html(params.address);
+            $('#order-detail-ul').children('li').eq(2).find('div[class="content"]').html(params.ComTitle);
+        });
+
+        for(var i=0;i<13;i++){
+            $('#bankCart').children('li').eq(i).click(addClassForCart);
+        }
+        function addClassForCart() {
+            console.log(2);
+            console.log($(this).html())
+            if($(this).hasClass('selected')){
+                console.log("选中");
+                $(this).removeClass('selected');
+            }else{
+                $('li[class="J_bank selected"]').removeClass('selected');
+                $(this).addClass('selected');
+                console.log("没选中");
+            }
+        }
+        $('#J_checkoutToPay').click(pay);
+        function pay(){
+            var pd_FrpId = $('li[class="J_bank selected"]').find('input').attr('value');
+            console.log(pd_FrpId);
+            var url = "order/payForCommodity/orderManager.do";
+            var data= {
+                oid:orderId,
+                pd_FrpId:pd_FrpId
+            };
+            $.post(url,data,function (result) {
+                console.log(result);
+                //window.location.href=result.data;
+            });
+
+        }
+
+
+
+    })
+
+</script>
 </body>
 </html>

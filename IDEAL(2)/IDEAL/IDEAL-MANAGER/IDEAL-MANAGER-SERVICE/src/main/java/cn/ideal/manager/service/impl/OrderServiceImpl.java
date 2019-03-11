@@ -63,8 +63,11 @@ public class OrderServiceImpl implements OrderService {
         String[] price = commodityOrderItem.getPrice().split("#");
         String[] picPath = commodityOrderItem.getPicPath().split("#");
         for(int i=0;i<itemIdArray.length;i++){
+
+            CommodityOrder commodityOrder = commodityOrderMapper.selectByPrimaryKey(commodityOrderItem.getOrderId());
+            commodityOrderItem.getOrderId();
             String id = (String.valueOf(System.currentTimeMillis()+new Random().nextInt(10)));
-            String totalFee = String.valueOf(Long.valueOf(price[i])*Long.valueOf(number[i]));
+            String totalFee = String.valueOf((Long.valueOf(price[i])*Long.valueOf(number[i])+Long.valueOf(commodityOrder.getPostFee())));//加上邮费
             CommodityOrderItem commodityOrderItem1 = new CommodityOrderItem(id,itemIdArray[i],commodityOrderItem.getOrderId(),number[i],title[i],price[i],totalFee,picPath[i]);
             commodityOrderItemMapper.insert(commodityOrderItem1);
         }

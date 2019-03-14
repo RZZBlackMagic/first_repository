@@ -31,6 +31,9 @@
     <dubbo:reference interface="cn.ideal.manager.service.CommodityCatService" id="commodityCatServiceImpl" />
     <dubbo:reference interface="cn.ideal.manager.service.MerchantManagerService" id="merchantManagerServiceImpl" />
     <dubbo:reference interface="cn.ideal.manager.service.OrderService" id="orderServiceImpl" />
+    <dubbo:reference interface="cn.ideal.manager.service.IndexService" id="indexServiceImpl" />
+    <dubbo:reference interface="cn.ideal.manager.service.CommodityDetailService" id="commodityDetailServiceImpl" />
+
 
 
 </beans>

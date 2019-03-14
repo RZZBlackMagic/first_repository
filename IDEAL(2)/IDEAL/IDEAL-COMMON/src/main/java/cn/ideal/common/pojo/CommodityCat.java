@@ -1,8 +1,9 @@
 package cn.ideal.common.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class CommodityCat {
+public class CommodityCat implements Serializable {
     private Long id;
 
     private Long pid;

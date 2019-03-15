@@ -1,0 +1,1702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3305f926-bbc1-4e76-b94e-46ed50e17c5f" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/target/" />
+    <ignored path="$PROJECT_DIR$/_FastDFS/target/" />
+    <ignored path="$PROJECT_DIR$/_MyBatis/target/" />
+    <ignored path="$PROJECT_DIR$/_PageHelper/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-INTERFACE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT/IDEAL-WECHAT-INTERFACE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT/IDEAL-WECHAT-SERVICE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH/IDEAL-SEARCH-SERVICE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH/IDEAL-SEARCH-INTERFACE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-INTERFACE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT/IDEAL-MERCHANT-INTERFACE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT/IDEAL-MERCHANT-SERVICE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-INTERFACE/target/" />
+    <ignored path="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="IDEAL" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3429">
+              <caret line="80" column="27" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/cart.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="315" column="8" selection-start-line="315" selection-start-column="8" selection-end-line="315" selection-end-column="8" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/commodity_detail.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="504" column="36" lean-forward="true" selection-start-line="504" selection-start-column="36" selection-end-line="504" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/order.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="958" selection-start-line="958" selection-end-line="958" />
+              <folding>
+                <element signature="e#425#431#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/CartController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/PCCommodityCart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/PageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+              <folding>
+                <element signature="e#1800#1801#0" expanded="true" />
+                <element signature="e#1829#1830#0" expanded="true" />
+                <element signature="e#1848#1849#0" expanded="true" />
+                <element signature="e#1877#1878#0" expanded="true" />
+                <element signature="e#1941#1942#0" expanded="true" />
+                <element signature="e#1971#1972#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/OrderServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1095">
+              <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/OrderController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="184" column="46" selection-start-line="184" selection-start-column="46" selection-end-line="184" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>bootstrap</find>
+      <find>edit_url</find>
+      <find>.do</find>
+      <find>result</find>
+      <find>background</find>
+      <find>remen fl</find>
+      <find>url</find>
+      <find>J_slider</find>
+      <find>购物车</find>
+      <find>购物</find>
+      <find>spevs</find>
+      <find>equals</find>
+      <find>start banner_y</find>
+      <find>main</find>
+      <find>getUrlParam</find>
+      <find>购买按钮</find>
+      <find>立即购买</find>
+      <find>commodity.spu</find>
+      <find>commodity.sku</find>
+      <find>skuMapper</find>
+      <find>${spes.sku.image}</find>
+      <find>加入</find>
+      <find>img</find>
+      <find>立</find>
+      <find>8081</find>
+      <find>立即</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/index.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/ContentManagerController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-INTERFACE/src/main/java/cn/ideal/portal/service/CartService.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/CartServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/src/main/java/cn/ideal/sso/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/RelaMerProComMapper.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/AccountManager.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/AccountMerchant.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/AccountProductor.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/AccountUser.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/RelaMerProCom.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityStore.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityCart.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/resources/springmvc.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/resources/spring/applicationContext-service.xml" />
+        <option value="$PROJECT_DIR$/_MyBatis/src/main/java/cn/ideal/common/pojo/CommodityOrderItem.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderItem.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderShipping.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/PCCommodityCart.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySku.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/RelaMerPro.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/RelaMerProKey.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityOrderItemMapper.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityOrderMapper.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityOrderShippingMapper.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-INTERFACE/src/main/java/cn/ideal/portal/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/OrderController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/orderInfo.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/order.jsp" />
+        <option value="$PROJECT_DIR$/_MyBatis/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityCat.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityCatMapper.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/IndexServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/user.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpu.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/CommodityDetailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpe.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpev.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpuSpeKey.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySkuSpevKey.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrder.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityContentCategory.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityContent.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityAddress.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/PageController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/CartController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/commodity_detail.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/cart.jsp" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="IDEAL-COMMON" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="340" />
+    <option name="y" value="-25" />
+    <option name="width" value="1360" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="_MyBatis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="_MyBatis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="_MyBatis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="_MyBatis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="_MyBatis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-INTERFACE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-INTERFACE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-INTERFACE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-INTERFACE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-INTERFACE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ideal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ideal" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="PORTAL-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="PORTAL-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="PORTAL-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="PORTAL-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="SSO-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="SSO-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552620861268" />
+    <property name="jdk.selected.JAVA_MODULE" value="10" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../new1/IDEAL/IDEAL" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\new\IDEAL\IDEAL\IDEAL-PARENT\IDEAL-SSO-WEB\src\main\webapp\SSO-WEB-SOURCE\views" />
+      <recent name="D:\workspace\new\IDEAL\IDEAL\IDEAL-PARENT\IDEAL-COMMON\src\main\java\cn\ideal\common\pojo" />
+      <recent name="D:\workspace\new\IDEAL\IDEAL\IDEAL-PARENT\IDEAL-COMMON\src\main\java\cn\ideal\common\mapper" />
+      <recent name="D:\workspace\new\IDEAL\IDEAL\IDEAL-PARENT\IDEAL-PORTAL-WEB\src\main\webapp\PORTAL-WEB-SOURCE\assets\vendor" />
+      <recent name="D:\workspace\new\IDEAL\IDEAL\IDEAL-PARENT\IDEAL-COMMON\src\main\java\cn\ideal\common" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.ideal.portal.controller" />
+      <recent name="cn.ideal.common.pojo" />
+      <recent name="cn.ideal.portal.service.impl" />
+      <recent name="cn.ideal.portal.service" />
+      <recent name="cn.ideal.wechat.controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AEROSOL.XINER\OneDrive\Workspace\IDEAL\IDEAL-PARENT\IDEAL-PORTAL-WEB\src\main\webapp\PORTAL-WEB-SOURCE\views" />
+      <recent name="C:\Users\AEROSOL.XINER\OneDrive\Workspace\IDEAL\IDEAL-PARENT\IDEAL-PORTAL-WEB\src\main\webapp\PORTAL-WEB-SOURCE\assets\vendor" />
+      <recent name="C:\Users\AEROSOL.XINER\OneDrive\Workspace\IDEAL\IDEAL-PARENT\IDEAL-PRODUCT\IDEAL-PRODUCT-SERVICE\src\main\resources\spring" />
+      <recent name="C:\Users\AEROSOL.XINER\OneDrive\Workspace\IDEAL\IDEAL-PARENT\IDEAL-SEARCH-WEB\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Maven.PORTAL-WEB">
+    <configuration name="MANAGER-WEB" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="MANAGER" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="MERCHANT-WEB" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="MERCHANT" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="PORTAL-WEB" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="PORTAL" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="PRODUCT-WEB" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="PRODUCT" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="SEARCH-WEB" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH-WEB" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="SEARCH" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="SSO-WEB" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="SSO" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="WECHAT-WEB" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="WECHAT" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="_MyBatis" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mybatis-generator:generate" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/_MyBatis" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Maven._MyBatis" />
+      <item itemvalue="Maven.WECHAT" />
+      <item itemvalue="Maven.WECHAT-WEB" />
+      <item itemvalue="Maven.MERCHANT" />
+      <item itemvalue="Maven.MERCHANT-WEB" />
+      <item itemvalue="Maven.PORTAL" />
+      <item itemvalue="Maven.PORTAL-WEB" />
+      <item itemvalue="Maven.PRODUCT" />
+      <item itemvalue="Maven.PRODUCT-WEB" />
+      <item itemvalue="Maven.SSO" />
+      <item itemvalue="Maven.SSO-WEB" />
+      <item itemvalue="Maven.MANAGER" />
+      <item itemvalue="Maven.MANAGER-WEB" />
+      <item itemvalue="Maven.SEARCH" />
+      <item itemvalue="Maven.SEARCH-WEB" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\XINER\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3305f926-bbc1-4e76-b94e-46ed50e17c5f" name="Default Changelist" comment="" />
+      <created>1550744534571</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550744534571</updated>
+      <workItem from="1550744535756" duration="2876000" />
+      <workItem from="1550747570513" duration="738000" />
+      <workItem from="1550816956785" duration="466000" />
+      <workItem from="1550817443974" duration="10864000" />
+      <workItem from="1550908384344" duration="6475000" />
+      <workItem from="1550917485550" duration="30000" />
+      <workItem from="1550924077092" duration="11743000" />
+      <workItem from="1550978022456" duration="19920000" />
+      <workItem from="1551081203124" duration="3437000" />
+      <workItem from="1551087726220" duration="158000" />
+      <workItem from="1551090604780" duration="3340000" />
+      <workItem from="1551142501366" duration="6338000" />
+      <workItem from="1551149470178" duration="562000" />
+      <workItem from="1551150065275" duration="29000" />
+      <workItem from="1551153583236" duration="6446000" />
+      <workItem from="1551172951294" duration="12294000" />
+      <workItem from="1551256344039" duration="8361000" />
+      <workItem from="1551277712830" duration="362000" />
+      <workItem from="1551327230000" duration="899000" />
+      <workItem from="1551340473756" duration="6584000" />
+      <workItem from="1551350300790" duration="10019000" />
+      <workItem from="1551367933821" duration="56000" />
+      <workItem from="1551435849419" duration="7987000" />
+      <workItem from="1551497234784" duration="775000" />
+      <workItem from="1551510084566" duration="17262000" />
+      <workItem from="1551587090138" duration="16456000" />
+      <workItem from="1551668869294" duration="5738000" />
+      <workItem from="1551686156813" duration="1083000" />
+      <workItem from="1551707138407" duration="5462000" />
+      <workItem from="1551753870077" duration="4556000" />
+      <workItem from="1551772648177" duration="4061000" />
+      <workItem from="1551783961877" duration="7618000" />
+      <workItem from="1551797659285" duration="3843000" />
+      <workItem from="1551863036598" duration="13239000" />
+      <workItem from="1551922661847" duration="41000" />
+      <workItem from="1551930554322" duration="2427000" />
+      <workItem from="1551942208681" duration="6983000" />
+      <workItem from="1551952683558" duration="1786000" />
+      <workItem from="1551955106183" duration="882000" />
+      <workItem from="1551956025542" duration="86000" />
+      <workItem from="1551956743841" duration="7455000" />
+      <workItem from="1552018208262" duration="4444000" />
+      <workItem from="1552043290086" duration="1196000" />
+      <workItem from="1552195139454" duration="13644000" />
+      <workItem from="1552220319443" duration="11331000" />
+      <workItem from="1552270257340" duration="9545000" />
+      <workItem from="1552290620428" duration="5701000" />
+      <workItem from="1552301130065" duration="1677000" />
+      <workItem from="1552311647893" duration="3804000" />
+      <workItem from="1552398326226" duration="870000" />
+      <workItem from="1552473060787" duration="12249000" />
+      <workItem from="1552489585107" duration="6058000" />
+      <workItem from="1552552979362" duration="12975000" />
+      <workItem from="1552614133435" duration="6656000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="309887000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985755" visible="true" weight="0.18976545" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Learn" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.5014245" side_tool="true" weight="0.28619304" />
+      <window_info id="Image Layers" order="7" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4966488" visible="true" weight="0.37703142" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3986637" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
+      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5033512" side_tool="true" weight="0.42307693" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32889125" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.16689008" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.32995737" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH/IDEAL-SEARCH-SERVICE/src/main/java/cn/ideal/search/service/impl/SearchCommodityServiceImpl.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH/IDEAL-SEARCH-SERVICE/src/main/java/cn/ideal/search/service/impl/SearchServiceImpl.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/template/left-sidebar.jsp</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderItemExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityOrderItemMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityOrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityOrderShippingMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-INTERFACE/src/main/java/cn/ideal/portal/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE/src/main/java/cn/ideal/product/service/impl/MerchantManagerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="53" column="91" selection-start-line="53" selection-start-column="91" selection-end-line="53" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/assets/vendor/toastr/toastr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#22#29#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/orderInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_MyBatis/src/main/resources/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1460">
+          <caret line="73" column="3" selection-start-line="60" selection-start-column="7" selection-end-line="73" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityCatMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityCatMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityCatExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityCart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/CartServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/product.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="78" column="48" selection-start-line="78" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/user.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="77" column="65" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PageHelper/src/main/java/com/github/pagehelper/PageHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/CommodityDetailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/resources/springmvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="37" column="62" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/resources/spring/applicationContext-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpuSpeKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpev.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySkuSpevExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySkuSpevKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-275">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderShipping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-511">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySku.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.2.2/mybatis-spring-1.2.2.jar!/org/mybatis/spring/SqlSessionTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.2.2/mybatis-spring-1.2.2.jar!/org/mybatis/spring/MyBatisExceptionTranslator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/IndexServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityContentCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="48" column="185" selection-start-line="48" selection-start-column="185" selection-end-line="48" selection-end-column="185" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityCat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="41" column="161" selection-start-line="41" selection-start-column="161" selection-end-line="41" selection-end-column="161" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/AccountUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-160">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="61" column="35" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+          <folding>
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/order.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="958" selection-start-line="958" selection-end-line="958" />
+          <folding>
+            <element signature="e#425#431#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3429">
+          <caret line="80" column="27" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="184" column="46" selection-start-line="184" selection-start-column="46" selection-end-line="184" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/PageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+          <folding>
+            <element signature="e#1800#1801#0" expanded="true" />
+            <element signature="e#1829#1830#0" expanded="true" />
+            <element signature="e#1848#1849#0" expanded="true" />
+            <element signature="e#1877#1878#0" expanded="true" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1971#1972#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/PCCommodityCart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/CartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/commodity_detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="504" column="36" lean-forward="true" selection-start-line="504" selection-start-column="36" selection-end-line="504" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/cart.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="315" column="8" selection-start-line="315" selection-start-column="8" selection-end-line="315" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>IDEAL-MANAGER-SERVICE:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>IDEAL-MANAGER</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.github.jsqlparser:jsqlparser:0.9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

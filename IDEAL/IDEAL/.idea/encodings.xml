@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/results/MessageResult.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/utils/CookieUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/utils/IDUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/utils/JsonUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/CommodityCatController.java" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER/IDEAL-MANAGER-INTERFACE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT/IDEAL-MERCHANT-INTERFACE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT/IDEAL-MERCHANT-SERVICE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-INTERFACE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-INTERFACE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH-WEB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH/IDEAL-SEARCH-INTERFACE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH/IDEAL-SEARCH-SERVICE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/assets/css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/assets/js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-INTERFACE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT/IDEAL-WECHAT-INTERFACE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT/IDEAL-WECHAT-SERVICE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/_FastDFS" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/_FastDFS" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/_FastDFS/src/main/java/org/csource/common/Base64.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/_MyBatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/_MyBatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/_PageHelper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/_PageHelper" charset="UTF-8" />
+  </component>
+</project>

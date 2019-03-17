@@ -21,21 +21,46 @@ public class UserController {
 
     @RequestMapping(value = "/sso/wechat/register")
     @ResponseBody
-    public MessageResult register(AccountUser user){
+    public MessageResult registerForWechat(AccountUser user){
         return userService.userRegister(user);
     }
 
+    @RequestMapping(value = "/sso/web/register")
+    @ResponseBody
+    public MessageResult registerForWeb(AccountUser user){
+        return userService.userRegister(user);
+    }
 
     @RequestMapping(value = "/sso/wechat/login")
     @ResponseBody
-    public MessageResult login(String username, String password){
+    public MessageResult loginForWechat(String username, String password){
+        MessageResult result = userService.loginForWeChat(username, password);
+        return result;
+    }
+
+    @RequestMapping(value = "/sso/web/login")
+    @ResponseBody
+    public MessageResult loginForWeb(String username, String password){
         MessageResult result = userService.loginForWeChat(username, password);
         return result;
     }
 
     @RequestMapping(value = "/sso/wechat/token/{token}", method = RequestMethod.GET)
     @ResponseBody
-    public Object getManagerByToken(@PathVariable String token, String callback){
+    public Object getUserByTokenForWechat(@PathVariable String token, String callback){
+        MessageResult result = userService.getMessageByToken(token);
+        if (StringUtils.isNotBlank(callback)) {
+            MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(result);
+            //设置回调方法
+            mappingJacksonValue.setJsonpFunction(callback);
+            return mappingJacksonValue;
+        }
+        return result;
+    }
+
+    @RequestMapping(value = "/sso/web/token/{token}", method = RequestMethod.GET)
+    @ResponseBody
+    public Object getUserByTokenForWeb(@PathVariable String token, String callback){
         MessageResult result = userService.getMessageByToken(token);
         if (StringUtils.isNotBlank(callback)) {
             MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(result);

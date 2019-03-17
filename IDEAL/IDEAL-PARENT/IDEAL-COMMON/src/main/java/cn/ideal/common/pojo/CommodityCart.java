@@ -25,6 +25,7 @@ public class CommodityCart implements Serializable {
     private Byte checked;
 
     public CommodityCart() {
+
     }
 
     public CommodityCart(Long id, Long userId, Long skuId, String title, String image, Integer price, Integer amount, String spe, Date created, Byte checked) {

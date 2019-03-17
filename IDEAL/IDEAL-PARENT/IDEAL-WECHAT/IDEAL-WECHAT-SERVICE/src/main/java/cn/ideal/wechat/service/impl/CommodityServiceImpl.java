@@ -9,6 +9,7 @@ import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.rmi.MarshalledObject;
 import java.util.*;
 
 @Service
@@ -24,6 +25,8 @@ public class CommodityServiceImpl implements CommodityService {
     private CommoditySpevMapper commoditySpevMapper;
     @Autowired
     private CommoditySpuSpeMapper commoditySpuSpeMapper;
+    @Autowired
+    private CommodityContentMapper commodityContentMapper;
     @Autowired
     private RelaMerProComMapper relaMerProComMapper;
     @Autowired
@@ -200,5 +203,39 @@ public class CommodityServiceImpl implements CommodityService {
             }
         }
         return MessageResult.build(400, "商品不存在!");
+    }
+
+    @Override
+    public MessageResult getIndex() {
+
+        Map<String, Object> resMap = new HashMap<>();
+
+        resMap.put("goodsCount", getGoodsCount());
+        resMap.put("banner", LoadIndexGoodsListByCategoryId((long) 36));
+        resMap.put("newGoods", LoadIndexGoodsListByCategoryId((long) 37));
+        resMap.put("hotGoods", LoadIndexGoodsListByCategoryId((long) 38));
+        resMap.put("floorGoods", LoadIndexGoodsListByCategoryId((long) 40));
+        resMap.put("channel", LoadIndexGoodsListByCategoryId((long) 42));
+
+        return MessageResult.ok(resMap);
+    }
+
+    private List<Map<String, Object>> LoadIndexGoodsListByCategoryId(Long cid){
+        CommodityContentExample contentExample = new CommodityContentExample();
+        CommodityContentExample.Criteria criteria = contentExample.createCriteria();
+        criteria.andCategoryIdEqualTo(cid);
+        List<CommodityContent> contents = commodityContentMapper.selectByExample(contentExample);
+        List<Map<String, Object>> List = new LinkedList<>();
+        for (CommodityContent content : contents){
+            Map<String, Object> map = new HashMap<>();
+            map.put("id", content.getId());
+            map.put("url", content.getUrl());
+            map.put("list_pic_url", content.getPic());
+            map.put("name", content.getTitle());
+            map.put("retail_price", content.getSubTitle());
+            map.put("goods_brief", content.getContent());
+            List.add(map);
+        }
+        return List;
     }
 }

@@ -45,5 +45,28 @@ public class CommodityAddressServiceImpl implements CommodityAddressService {
         return MessageResult.ok();
     }
 
+    @Override
+    public MessageResult changeAddressDefault(Long addressId) {
+
+        CommodityAddress key = commodityAddressMapper.selectByPrimaryKey(addressId);
+
+
+        CommodityAddressExample addressExample = new CommodityAddressExample();
+        CommodityAddressExample.Criteria addressCriteria = addressExample.createCriteria();
+        addressCriteria.andUserIdEqualTo(key.getUserId());
+        addressCriteria.andIsDefaultEqualTo((byte) 1);
+        List<CommodityAddress> addresses = commodityAddressMapper.selectByExample(addressExample);
+        for (CommodityAddress cell : addresses){
+            cell.setIsDefault((byte) 0);
+            commodityAddressMapper.updateByPrimaryKey(cell);
+        }
+        key.setIsDefault((byte) 1);
+        commodityAddressMapper.updateByPrimaryKey(key);
+
+        addressCriteria.andUserIdEqualTo(key.getUserId());
+        List<CommodityAddress> res = commodityAddressMapper.selectByExample(addressExample);
+        return MessageResult.ok(res);
+    }
+
 
 }

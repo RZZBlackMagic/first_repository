@@ -36,5 +36,6 @@
     <dubbo:registry address="zookeeper://39.105.163.90:2181"/>
 
     <dubbo:reference interface="cn.ideal.portal.service.IndexService" id="indexServiceImpl" />
+    <dubbo:reference interface="cn.ideal.portal.service.CommodityDetailService" id="commodityDetailServiceImpl" />
 
 </beans>

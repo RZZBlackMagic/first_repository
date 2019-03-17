@@ -16,6 +16,12 @@ public class CommodityController {
     @Autowired
     private CommodityService commodityService;
 
+    @RequestMapping("/index/index")
+    @ResponseBody
+    public MessageResult getIndex(){
+        return commodityService.getIndex();
+    }
+
     @RequestMapping("/goods/count")
     @ResponseBody
     public Integer getGoodsCount(){

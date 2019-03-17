@@ -35,4 +35,10 @@ public class CommodityAddressController {
         return commodityAddressService.deleteAddressItem(id);
     }
 
+    @RequestMapping("/address/change")
+    @ResponseBody
+    public MessageResult changeAddressDefault(Long addressId){
+        return commodityAddressService.changeAddressDefault(addressId);
+    }
+
 }

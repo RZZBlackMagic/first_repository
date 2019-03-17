@@ -18,4 +18,6 @@ public interface CommodityAddressService {
     MessageResult addAddressItem(CommodityAddress address) throws UnsupportedEncodingException;
 
     MessageResult deleteAddressItem(Long id);
+
+    MessageResult changeAddressDefault(Long addressId);
 }

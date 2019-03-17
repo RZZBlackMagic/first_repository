@@ -15,4 +15,6 @@ public interface CommodityService {
     Map<String, Object> getGoodDetail(Long id);
 
     MessageResult checkSku(String id);
+
+    MessageResult getIndex();
 }

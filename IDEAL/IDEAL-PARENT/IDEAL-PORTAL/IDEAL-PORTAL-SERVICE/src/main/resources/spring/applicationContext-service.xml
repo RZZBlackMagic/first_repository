@@ -33,5 +33,7 @@
 
     <dubbo:service interface="cn.ideal.portal.service.IndexService" ref="indexService" protocol="dubbo" timeout="300000"/>
     <bean class="cn.ideal.portal.service.impl.IndexServiceImpl" id="indexService" />
+    <dubbo:service interface="cn.ideal.portal.service.CommodityDetailService" ref="commodityDetailService" protocol="dubbo" timeout="300000"/>
+    <bean class="cn.ideal.portal.service.impl.CommodityDetailServiceImpl" id="commodityDetailService" />
 
 </beans>

@@ -61,9 +61,10 @@
 </nav>
 <!-- END NAVBAR -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/toastr/toastr.min.js"></script>
 <script src="assets/vendor/jquery/jquery.cookie.js"></script>
 <script src="assets/vendor/jquery/jquery.session.js"></script>
+
+<script src="assets/vendor/toastr/toastr.min.js"></script>
 <script src="assets/scripts/custom-scripts.js"></script>
 <script>
     toastr.options = {

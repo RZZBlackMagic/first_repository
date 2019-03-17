@@ -118,4 +118,20 @@ public class CommoditySku implements Serializable {
     public void setDescp(String descp) {
         this.descp = descp == null ? null : descp.trim();
     }
+
+    @Override
+    public String toString() {
+        return "CommoditySku{" +
+                "id=" + id +
+                ", spuid=" + spuid +
+                ", csid=" + csid +
+                ", price=" + price +
+                ", discount=" + discount +
+                ", quantity=" + quantity +
+                ", image='" + image + '\'' +
+                ", position='" + position + '\'' +
+                ", status=" + status +
+                ", descp='" + descp + '\'' +
+                '}';
+    }
 }

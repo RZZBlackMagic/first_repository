@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- dtd文件的作用：决定此xml文件可以使用那些标签 -->
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+     <!-- 访问路径为：项目名/demo/hello.action -->
+    <!-- <package name="demo" namespace="/demo" extends="struts-default">
+       namespace:匹配请求路径(demo)
+       extend="struct-default"
+       
+       <action name="hello" class="cn.tedu.HelloAction">
+          name: 匹配具体请求 hello
+          class:请求的具体类
+          
+          <result name="success">
+            exectue方法返回值是success的时候的结果处理（struts匹配默认exectu方法时）
+            name:返回到浏览器的参数名
+            /WEB-INF/msg.jsp
+          </result>
+       </action>
+    </package>  -->
+    <!-- <package name="demo" namespace="/demo" extends= "struts-default">
+       <action name="hello" class="cn.tedu.HelloAction">
+         <result name="success">
+          /WEB-INF/msg.jsp
+         </result>
+       </action>
+    </package> -->
+    <package name="message" namespace="/message" extends="struts-default">
+      <action name="loginForm">
+         <result>
+           /WEB-INF/login.jsp
+         </result>
+      </action>
+      <action name="login" class="cn.tedu.LoginAction">
+        <result>
+           /WEB-INF/msg.jsp
+        </result>
+      </action>
+    </package>
+</struts>

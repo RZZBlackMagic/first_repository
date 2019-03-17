@@ -1,5 +1,6 @@
 package cn.ideal.wechat.service.impl;
 
+import cn.ideal.common.mapper.CommodityCartMapper;
 import cn.ideal.common.mapper.CommodityOrderItemMapper;
 import cn.ideal.common.mapper.CommodityOrderMapper;
 import cn.ideal.common.mapper.CommodityOrderShippingMapper;
@@ -26,6 +27,8 @@ public class CommodityOrderServiceImpl implements CommodityOrderService {
     private CommodityOrderMapper commodityOrderMapper;
     @Autowired
     private CommodityOrderItemMapper commodityOrderItemMapper;
+    @Autowired
+    private CommodityCartMapper commodityCartMapper;
 
     @Override
     public MessageResult getOrderList(Long uid) {
@@ -76,4 +79,6 @@ public class CommodityOrderServiceImpl implements CommodityOrderService {
         }
         return MessageResult.ok(resList);
     }
+
+
 }

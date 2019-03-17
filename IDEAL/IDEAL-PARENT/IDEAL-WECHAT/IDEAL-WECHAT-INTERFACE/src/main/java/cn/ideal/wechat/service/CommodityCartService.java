@@ -13,4 +13,6 @@ public interface CommodityCartService {
     MessageResult updateCart(Long id, Integer number);
 
     MessageResult deleteCart(String cartIds);
+
+    MessageResult checkOutCart(Long uid);
 }

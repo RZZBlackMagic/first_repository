@@ -1,6 +1,9 @@
 package cn.ideal.wechat.service.impl;
 
+import cn.ideal.common.mapper.CommodityAddressMapper;
 import cn.ideal.common.mapper.CommodityCartMapper;
+import cn.ideal.common.pojo.CommodityAddress;
+import cn.ideal.common.pojo.CommodityAddressExample;
 import cn.ideal.common.pojo.CommodityCart;
 import cn.ideal.common.pojo.CommodityCartExample;
 import cn.ideal.common.results.MessageResult;
@@ -8,6 +11,7 @@ import cn.ideal.wechat.service.CommodityCartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.rmi.MarshalledObject;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -23,6 +27,8 @@ public class CommodityCartServiceImpl implements CommodityCartService {
 
     @Autowired
     private CommodityCartMapper commodityCartMapper;
+    @Autowired
+    private CommodityAddressMapper commodityAddressMapper;
 
     @Override
     public Map<String, Object> getCartList(Long uid) {
@@ -88,5 +94,54 @@ public class CommodityCartServiceImpl implements CommodityCartService {
             commodityCartMapper.deleteByPrimaryKey(Long.valueOf(cartId));
         }
         return MessageResult.ok();
+    }
+
+    @Override
+    public MessageResult checkOutCart(Long uid) {
+        Map<String, Object> resMap = new HashMap<>();
+        List<Map<String, Object>> checkedGoodsList = new LinkedList<>();
+        Integer goodsTotalPrice = 0;
+
+        CommodityCartExample cartExample = new CommodityCartExample();
+        CommodityCartExample.Criteria cartCriteria = cartExample.createCriteria();
+        cartCriteria.andUserIdEqualTo(uid);
+        List<CommodityCart> carts = commodityCartMapper.selectByExample(cartExample);
+        for (CommodityCart cart : carts){
+            if (cart.getChecked() == (byte)0)
+                continue;
+            //组装checkedGoodsList
+            Map<String, Object> checkedGoodsMap = new HashMap<>();
+            checkedGoodsMap.put("id", cart.getId());
+            checkedGoodsMap.put("list_pic_url", cart.getImage());
+            checkedGoodsMap.put("goods_name", cart.getTitle());
+            checkedGoodsMap.put("number", cart.getAmount());
+            checkedGoodsMap.put("goods_specifition_name_value", cart.getSpe());
+            checkedGoodsMap.put("retail_price", cart.getPrice());
+            checkedGoodsList.add(checkedGoodsMap);
+
+            //组装总价格
+            goodsTotalPrice += cart.getPrice() * cart.getAmount();
+
+        }
+
+        resMap.put("checkedGoodsList", checkedGoodsList);
+
+        CommodityAddressExample addressExample = new CommodityAddressExample();
+        CommodityAddressExample.Criteria addressCriteria = addressExample.createCriteria();
+        addressCriteria.andUserIdEqualTo(uid);
+        addressCriteria.andIsDefaultEqualTo((byte) 1);
+        List<CommodityAddress> addresses = commodityAddressMapper.selectByExample(addressExample);
+        if (addresses.size() == 1)
+            resMap.put("checkedAddress", addresses.get(0));
+
+        resMap.put("goodsTotalPrice", goodsTotalPrice);
+
+        resMap.put("freightPrice", 0);
+
+        resMap.put("orderTotalPrice", goodsTotalPrice + 0);
+
+        resMap.put("actualPrice", goodsTotalPrice + 0);
+
+        return MessageResult.ok(resMap);
     }
 }

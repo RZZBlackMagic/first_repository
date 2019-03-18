@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface AccountManagerMapper {
-    long countByExample(AccountManagerExample example);
+    int countByExample(AccountManagerExample example);
 
     int deleteByExample(AccountManagerExample example);
 

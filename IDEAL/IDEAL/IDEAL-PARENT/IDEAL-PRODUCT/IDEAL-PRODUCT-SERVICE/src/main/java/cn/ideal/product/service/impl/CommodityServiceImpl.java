@@ -6,6 +6,7 @@ import cn.ideal.common.results.*;
 import cn.ideal.product.service.CommodityService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -56,7 +57,6 @@ public class CommodityServiceImpl implements CommodityService {
             CommoditySpe spe = new CommoditySpe(null, key);
             commoditySpeMapper.insert(spe);
             spe_ids.add(spe.getId());
-
         }
         //装载SPU_SPE
         for (Long spe_id : spe_ids){

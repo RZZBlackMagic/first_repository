@@ -24,6 +24,9 @@ public class CommodityCat implements Serializable {
 
     private Date updated;
 
+    public CommodityCat() {
+    }
+
     public CommodityCat(Long id, Long pid, String name, String image, String frontName, Byte status, Integer sort, Byte isparent, Date created, Date updated) {
         this.id = id;
         this.pid = pid;
@@ -35,25 +38,6 @@ public class CommodityCat implements Serializable {
         this.isparent = isparent;
         this.created = created;
         this.updated = updated;
-    }
-
-    @Override
-    public String toString() {
-        return "CommodityCat{" +
-                "id=" + id +
-                ", pid=" + pid +
-                ", name='" + name + '\'' +
-                ", image='" + image + '\'' +
-                ", frontName='" + frontName + '\'' +
-                ", status=" + status +
-                ", sort=" + sort +
-                ", isparent=" + isparent +
-                ", created=" + created +
-                ", updated=" + updated +
-                '}';
-    }
-
-    public CommodityCat() {
     }
 
     public Long getId() {
@@ -134,5 +118,21 @@ public class CommodityCat implements Serializable {
 
     public void setUpdated(Date updated) {
         this.updated = updated;
+    }
+
+    @Override
+    public String toString() {
+        return "CommodityCat{" +
+                "id=" + id +
+                ", pid=" + pid +
+                ", name='" + name + '\'' +
+                ", image='" + image + '\'' +
+                ", frontName='" + frontName + '\'' +
+                ", status=" + status +
+                ", sort=" + sort +
+                ", isparent=" + isparent +
+                ", created=" + created +
+                ", updated=" + updated +
+                '}';
     }
 }

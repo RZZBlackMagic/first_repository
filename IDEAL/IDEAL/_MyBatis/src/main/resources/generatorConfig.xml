@@ -46,32 +46,30 @@
                    enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
             </table>
         -->
-       <!-- <table tableName="account_productor" />
-        <table tableName="account_manager" />
-        <table tableName="account_merchant" />
-        <table tableName="account_user" />
-        <table tableName="commodity_address" />-->
-        <table tableName="commodity_cat" />
-       <!-- <table tableName="commodity_cart" />
-        <table tableName="commodity_content"/>-->
-<!--
-            <columnOverride column="content" jdbcType="VARCHAR" />
--->
+        <!--<table tableName="account_productor" />-->
+        <!--<table tableName="account_manager" />-->
+        <!--<table tableName="account_merchant" />-->
+        <!--<table tableName="account_user" />-->
+        <table tableName="commodity_address" />
+        <!--<table tableName="commodity_cat" />-->
+        <!--<table tableName="commodity_cart" />-->
+        <!--<table tableName="commodity_content">-->
+            <!--<columnOverride column="content" jdbcType="VARCHAR" />-->
         <!--</table>-->
-       <!-- <table tableName="commodity_content_category" />
-        <table tableName="commodity_sku" />
-        <table tableName="commodity_sku_spev" />
-        <table tableName="commodity_spe" />
-        <table tableName="commodity_spev" />
-        <table tableName="commodity_spu" />
-        <table tableName="commodity_spu_spe" />
-        <table tableName="commodity_store" />
-        <table tableName="commodity_order" />
-        <table tableName="commodity_order_item" />
-        <table tableName="commodity_order_shipping" />
-        <table tableName="rela_mer_pro" />
-        <table tableName="rela_mer_pro_com" />
--->
+        <!--<table tableName="commodity_content_category" />-->
+        <!--<table tableName="commodity_sku" />-->
+        <!--<table tableName="commodity_sku_spev" />-->
+        <!--<table tableName="commodity_spe" />-->
+        <!--<table tableName="commodity_spev" />-->
+        <!--<table tableName="commodity_spu" />-->
+        <!--<table tableName="commodity_spu_spe" />-->
+        <!--<table tableName="commodity_store" />-->
+        <!--<table tableName="commodity_order" />-->
+        <!--<table tableName="commodity_order_item" />-->
+        <!--<table tableName="commodity_order_shipping" />-->
+        <!--<table tableName="rela_mer_pro" />-->
+        <!--<table tableName="rela_mer_pro_com" />-->
+
 
     </context>
 </generatorConfiguration>

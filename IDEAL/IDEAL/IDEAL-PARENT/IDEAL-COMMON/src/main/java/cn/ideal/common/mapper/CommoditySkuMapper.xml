@@ -104,7 +104,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="cn.ideal.common.pojo.CommoditySku">
+  <insert id="insert" parameterType="cn.ideal.common.pojo.CommoditySku" useGeneratedKeys="true" keyProperty="id">
     insert into commodity_sku (id, spuid, csid, 
       price, discount, quantity, 
       image, position, status, 
@@ -114,7 +114,7 @@
       #{image,jdbcType=VARCHAR}, #{position,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, 
       #{descp,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="cn.ideal.common.pojo.CommoditySku">
+  <insert id="insertSelective" parameterType="cn.ideal.common.pojo.CommoditySku" useGeneratedKeys="true" keyProperty="id">
     insert into commodity_sku
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">

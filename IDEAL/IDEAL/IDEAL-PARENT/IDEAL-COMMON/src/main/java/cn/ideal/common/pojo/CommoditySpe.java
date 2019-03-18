@@ -7,6 +7,14 @@ public class CommoditySpe implements Serializable {
 
     private String name;
 
+    public CommoditySpe() {
+    }
+
+    public CommoditySpe(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }
@@ -17,14 +25,6 @@ public class CommoditySpe implements Serializable {
 
     public String getName() {
         return name;
-    }
-
-    public CommoditySpe(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public CommoditySpe() {
     }
 
     public void setName(String name) {

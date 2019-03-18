@@ -101,6 +101,9 @@ public class ApplyMerchantServiceImpl implements ApplyMerchantService {
      */
     public TableJsonResult getCommdityListForMer(int limit, int page, String productorId) {
         PageHelper.startPage(page, limit);
+        if(productorId.equals(null)){
+            return null;
+        }
         CommoditySpuExample example = new CommoditySpuExample();
         CommoditySpuExample.Criteria criteria = example.createCriteria();
         criteria.andApidEqualTo(Long.valueOf(productorId));

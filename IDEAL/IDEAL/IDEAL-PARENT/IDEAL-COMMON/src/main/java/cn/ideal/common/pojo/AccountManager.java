@@ -18,6 +18,19 @@ public class AccountManager implements Serializable {
 
     private String email;
 
+    public AccountManager() {
+    }
+
+    public AccountManager(Long id, String username, String password, Date created, Date updated, String phone, String email) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.created = created;
+        this.updated = updated;
+        this.phone = phone;
+        this.email = email;
+    }
+
     public Long getId() {
         return id;
     }

@@ -2,15 +2,9 @@ package cn.ideal.portal.service.impl;
 
 import cn.ideal.common.mapper.CommoditySkuMapper;
 import cn.ideal.common.mapper.CommoditySpuMapper;
-import cn.ideal.common.pojo.CommoditySku;
-import cn.ideal.common.pojo.CommoditySkuExample;
-import cn.ideal.common.pojo.CommoditySpu;
-import cn.ideal.common.pojo.PCCommodityCart;
 import cn.ideal.common.results.MessageResult;
 import cn.ideal.portal.service.CartService;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.List;
 
 public class CartServiceImpl implements CartService {
     @Autowired

@@ -24,20 +24,21 @@ public class CommodityCart implements Serializable {
 
     private Byte checked;
 
-    @Override
-    public String toString() {
-        return "CommodityCart{" +
-                "id=" + id +
-                ", userId=" + userId +
-                ", skuId=" + skuId +
-                ", title='" + title + '\'' +
-                ", image='" + image + '\'' +
-                ", price=" + price +
-                ", amount=" + amount +
-                ", spe='" + spe + '\'' +
-                ", created=" + created +
-                ", checked=" + checked +
-                '}';
+    public CommodityCart() {
+
+    }
+
+    public CommodityCart(Long id, Long userId, Long skuId, String title, String image, Integer price, Integer amount, String spe, Date created, Byte checked) {
+        this.id = id;
+        this.userId = userId;
+        this.skuId = skuId;
+        this.title = title;
+        this.image = image;
+        this.price = price;
+        this.amount = amount;
+        this.spe = spe;
+        this.created = created;
+        this.checked = checked;
     }
 
     public Long getId() {

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+    <link rel="stylesheet" href="assets/vendor/toastr/toastr.css">
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
@@ -113,11 +114,15 @@
 <!-- bootstrap-editable相关js -->
 <script src="assets/vendor/bootstrap-table/bootstrap-table.min.js"></script>
 <script src="assets/vendor/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
+<script src="assets/vendor/toastr/toastrjs"></script>
 
 <script>
 
     var urlData = getUrlParam();
     $("#table").bootstrapTable('destroy');
+    if(urlData.merchantId==null&&urlData.productorId==null){
+        toastr.info("请先选择代理公司");
+    }
     var  merchantId = urlData.merchantId;
     var  productorId = urlData.productorId;
     var  productorName = urlData.productorName;

@@ -28,6 +28,24 @@ public class RelaMerProCom implements Serializable {
 
     private Byte status;
 
+    public RelaMerProCom() {
+    }
+
+    public RelaMerProCom(Long id, Long merchantId, Long productorId, Long commodityId, Long cid, String merchantName, String productorName, String commodityName, String location, Date applyTime, Date agreeTime, Byte status) {
+        this.id = id;
+        this.merchantId = merchantId;
+        this.productorId = productorId;
+        this.commodityId = commodityId;
+        this.cid = cid;
+        this.merchantName = merchantName;
+        this.productorName = productorName;
+        this.commodityName = commodityName;
+        this.location = location;
+        this.applyTime = applyTime;
+        this.agreeTime = agreeTime;
+        this.status = status;
+    }
+
     public Long getId() {
         return id;
     }
@@ -122,23 +140,5 @@ public class RelaMerProCom implements Serializable {
 
     public void setStatus(Byte status) {
         this.status = status;
-    }
-
-    @Override
-    public String toString() {
-        return "RelaMerProCom{" +
-                "id=" + id +
-                ", merchantId=" + merchantId +
-                ", productorId=" + productorId +
-                ", commodityId=" + commodityId +
-                ", cid=" + cid +
-                ", merchantName='" + merchantName + '\'' +
-                ", productorName='" + productorName + '\'' +
-                ", commodityName='" + commodityName + '\'' +
-                ", location='" + location + '\'' +
-                ", applyTime=" + applyTime +
-                ", agreeTime=" + agreeTime +
-                ", status=" + status +
-                '}';
     }
 }

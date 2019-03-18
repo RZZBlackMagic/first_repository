@@ -20,6 +20,9 @@ public class CommodityContentCategory implements Serializable {
 
     private Date updated;
 
+    public CommodityContentCategory() {
+    }
+
     public CommodityContentCategory(Long id, Long parentId, String name, Integer status, Integer sortOrder, Integer isParent, Date created, Date updated) {
         this.id = id;
         this.parentId = parentId;
@@ -29,23 +32,6 @@ public class CommodityContentCategory implements Serializable {
         this.isParent = isParent;
         this.created = created;
         this.updated = updated;
-    }
-
-    public CommodityContentCategory() {
-    }
-
-    @Override
-    public String toString() {
-        return "CommodityContentCategory{" +
-                "id=" + id +
-                ", parentId=" + parentId +
-                ", name='" + name + '\'' +
-                ", status=" + status +
-                ", sortOrder=" + sortOrder +
-                ", isParent=" + isParent +
-                ", created=" + created +
-                ", updated=" + updated +
-                '}';
     }
 
     public Long getId() {

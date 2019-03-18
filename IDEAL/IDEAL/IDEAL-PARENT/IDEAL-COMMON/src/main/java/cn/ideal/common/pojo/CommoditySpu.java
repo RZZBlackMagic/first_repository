@@ -20,6 +20,16 @@ public class CommoditySpu implements Serializable {
     public CommoditySpu() {
     }
 
+    public CommoditySpu(Long id, String title, Long cid, Long apid, String sellpoint, String image, Byte status) {
+        this.id = id;
+        this.title = title;
+        this.cid = cid;
+        this.apid = apid;
+        this.sellpoint = sellpoint;
+        this.image = image;
+        this.status = status;
+    }
+
     public Long getId() {
         return id;
     }
@@ -70,16 +80,6 @@ public class CommoditySpu implements Serializable {
 
     public Byte getStatus() {
         return status;
-    }
-
-    public CommoditySpu(Long id, String title, Long cid, Long apid, String sellpoint, String image, Byte status) {
-        this.id = id;
-        this.title = title;
-        this.cid = cid;
-        this.apid = apid;
-        this.sellpoint = sellpoint;
-        this.image = image;
-        this.status = status;
     }
 
     public void setStatus(Byte status) {

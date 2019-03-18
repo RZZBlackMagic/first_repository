@@ -20,33 +20,16 @@ public class CommodityContent implements Serializable {
 
     private String pic2;
 
+    private String content;
+
     private Date created;
 
     private Date updated;
 
-    private String content;
-
-    @Override
-    public String toString() {
-        return "CommodityContent{" +
-                "id=" + id +
-                ", categoryId=" + categoryId +
-                ", title='" + title + '\'' +
-                ", subTitle='" + subTitle + '\'' +
-                ", titleDesc='" + titleDesc + '\'' +
-                ", url='" + url + '\'' +
-                ", pic='" + pic + '\'' +
-                ", pic2='" + pic2 + '\'' +
-                ", created=" + created +
-                ", updated=" + updated +
-                ", content='" + content + '\'' +
-                '}';
-    }
-
     public CommodityContent() {
     }
 
-    public CommodityContent(Long id, Long categoryId, String title, String subTitle, String titleDesc, String url, String pic, String pic2, Date created, Date updated, String content) {
+    public CommodityContent(Long id, Long categoryId, String title, String subTitle, String titleDesc, String url, String pic, String pic2, String content, Date created, Date updated) {
         this.id = id;
         this.categoryId = categoryId;
         this.title = title;
@@ -55,9 +38,9 @@ public class CommodityContent implements Serializable {
         this.url = url;
         this.pic = pic;
         this.pic2 = pic2;
+        this.content = content;
         this.created = created;
         this.updated = updated;
-        this.content = content;
     }
 
     public Long getId() {
@@ -124,6 +107,14 @@ public class CommodityContent implements Serializable {
         this.pic2 = pic2 == null ? null : pic2.trim();
     }
 
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content == null ? null : content.trim();
+    }
+
     public Date getCreated() {
         return created;
     }
@@ -140,11 +131,20 @@ public class CommodityContent implements Serializable {
         this.updated = updated;
     }
 
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content == null ? null : content.trim();
+    @Override
+    public String toString() {
+        return "CommodityContent{" +
+                "id=" + id +
+                ", categoryId=" + categoryId +
+                ", title='" + title + '\'' +
+                ", subTitle='" + subTitle + '\'' +
+                ", titleDesc='" + titleDesc + '\'' +
+                ", url='" + url + '\'' +
+                ", pic='" + pic + '\'' +
+                ", pic2='" + pic2 + '\'' +
+                ", content='" + content + '\'' +
+                ", created=" + created +
+                ", updated=" + updated +
+                '}';
     }
 }

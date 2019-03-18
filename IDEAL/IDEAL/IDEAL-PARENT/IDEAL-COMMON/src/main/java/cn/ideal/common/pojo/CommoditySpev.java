@@ -9,6 +9,15 @@ public class CommoditySpev implements Serializable {
 
     private String value;
 
+    public CommoditySpev() {
+    }
+
+    public CommoditySpev(Long id, Long speid, String value) {
+        this.id = id;
+        this.speid = speid;
+        this.value = value;
+    }
+
     public Long getId() {
         return id;
     }
@@ -19,15 +28,6 @@ public class CommoditySpev implements Serializable {
 
     public Long getSpeid() {
         return speid;
-    }
-
-    public CommoditySpev(Long id, Long speid, String value) {
-        this.id = id;
-        this.speid = speid;
-        this.value = value;
-    }
-
-    public CommoditySpev() {
     }
 
     public void setSpeid(Long speid) {

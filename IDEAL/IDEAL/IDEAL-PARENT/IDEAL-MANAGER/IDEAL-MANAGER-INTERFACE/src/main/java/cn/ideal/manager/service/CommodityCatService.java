@@ -1,6 +1,7 @@
 package cn.ideal.manager.service;
 
 
+import cn.ideal.common.pojo.CommodityCat;
 import cn.ideal.common.results.MessageResult;
 import cn.ideal.common.results.TableJsonResult;
 import cn.ideal.common.results.TreeJsonResult;

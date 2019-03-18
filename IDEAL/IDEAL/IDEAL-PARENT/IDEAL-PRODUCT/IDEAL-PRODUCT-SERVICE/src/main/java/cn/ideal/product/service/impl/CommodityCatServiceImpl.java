@@ -1,5 +1,8 @@
 package cn.ideal.product.service.impl;
 
+import cn.ideal.common.mapper.CommodityCatMapper;
+import cn.ideal.common.pojo.CommodityCat;
+import cn.ideal.common.pojo.CommodityCatExample;
 import cn.ideal.common.results.TreeJsonResult;
 import cn.ideal.product.service.CommodityCatService;
 import org.springframework.beans.factory.annotation.Autowired;

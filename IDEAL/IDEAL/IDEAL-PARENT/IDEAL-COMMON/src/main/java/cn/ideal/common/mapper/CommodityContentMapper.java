@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface CommodityContentMapper {
-    long countByExample(CommodityContentExample example);
+    int countByExample(CommodityContentExample example);
 
     int deleteByExample(CommodityContentExample example);
 
@@ -17,21 +17,15 @@ public interface CommodityContentMapper {
 
     int insertSelective(CommodityContent record);
 
-    List<CommodityContent> selectByExampleWithBLOBs(CommodityContentExample example);
-
     List<CommodityContent> selectByExample(CommodityContentExample example);
 
     CommodityContent selectByPrimaryKey(Long id);
 
     int updateByExampleSelective(@Param("record") CommodityContent record, @Param("example") CommodityContentExample example);
 
-    int updateByExampleWithBLOBs(@Param("record") CommodityContent record, @Param("example") CommodityContentExample example);
-
     int updateByExample(@Param("record") CommodityContent record, @Param("example") CommodityContentExample example);
 
     int updateByPrimaryKeySelective(CommodityContent record);
-
-    int updateByPrimaryKeyWithBLOBs(CommodityContent record);
 
     int updateByPrimaryKey(CommodityContent record);
 }

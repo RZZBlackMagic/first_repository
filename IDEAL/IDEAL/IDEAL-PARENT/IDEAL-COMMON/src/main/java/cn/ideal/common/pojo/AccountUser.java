@@ -48,6 +48,34 @@ public class AccountUser implements Serializable {
 
     private Date updated;
 
+    public AccountUser() {
+    }
+
+    public AccountUser(Long id, String username, String password, String nickname, String image, String pwdQuestion, String pwdAnswer, String realName, String idCard, String sex, String telephone, String email, String country, String address, String zip, Byte vip, Byte status, Long point, Date lastVisitTime, String lastVisitIp, Date created, Date updated) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.nickname = nickname;
+        this.image = image;
+        this.pwdQuestion = pwdQuestion;
+        this.pwdAnswer = pwdAnswer;
+        this.realName = realName;
+        this.idCard = idCard;
+        this.sex = sex;
+        this.telephone = telephone;
+        this.email = email;
+        this.country = country;
+        this.address = address;
+        this.zip = zip;
+        this.vip = vip;
+        this.status = status;
+        this.point = point;
+        this.lastVisitTime = lastVisitTime;
+        this.lastVisitIp = lastVisitIp;
+        this.created = created;
+        this.updated = updated;
+    }
+
     public Long getId() {
         return id;
     }

@@ -7,6 +7,14 @@ public class CommoditySpuSpeKey implements Serializable {
 
     private Long speid;
 
+    public CommoditySpuSpeKey() {
+    }
+
+    public CommoditySpuSpeKey(Long spuid, Long speid) {
+        this.spuid = spuid;
+        this.speid = speid;
+    }
+
     public Long getSpuid() {
         return spuid;
     }
@@ -17,14 +25,6 @@ public class CommoditySpuSpeKey implements Serializable {
 
     public Long getSpeid() {
         return speid;
-    }
-
-    public CommoditySpuSpeKey(Long spuid, Long speid) {
-        this.spuid = spuid;
-        this.speid = speid;
-    }
-
-    public CommoditySpuSpeKey() {
     }
 
     public void setSpeid(Long speid) {

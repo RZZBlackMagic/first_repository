@@ -64,6 +64,43 @@ public class AccountMerchant implements Serializable {
 
     private Date updated;
 
+
+    public AccountMerchant() {
+    }
+
+    public AccountMerchant(Long id, String username, String password, String phone, String email, String companyZh, String companyEn, String location, String address, String zip, String job, String telephone, String fax, String ci, String ein, String legalRepresentative, String legalCode, String mainProprietor, String leaderCode, Long registedFund, String bank, String bankAccount, String bankPermit, Long employee, String power, String employeeAnalysis, String businessField, Byte isFixedSource, Date created, Date updated) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.phone = phone;
+        this.email = email;
+        this.companyZh = companyZh;
+        this.companyEn = companyEn;
+        this.location = location;
+        this.address = address;
+        this.zip = zip;
+        this.job = job;
+        this.telephone = telephone;
+        this.fax = fax;
+        this.ci = ci;
+        this.ein = ein;
+        this.legalRepresentative = legalRepresentative;
+        this.legalCode = legalCode;
+        this.mainProprietor = mainProprietor;
+        this.leaderCode = leaderCode;
+        this.registedFund = registedFund;
+        this.bank = bank;
+        this.bankAccount = bankAccount;
+        this.bankPermit = bankPermit;
+        this.employee = employee;
+        this.power = power;
+        this.employeeAnalysis = employeeAnalysis;
+        this.businessField = businessField;
+        this.isFixedSource = isFixedSource;
+        this.created = created;
+        this.updated = updated;
+    }
+
     public Long getId() {
         return id;
     }

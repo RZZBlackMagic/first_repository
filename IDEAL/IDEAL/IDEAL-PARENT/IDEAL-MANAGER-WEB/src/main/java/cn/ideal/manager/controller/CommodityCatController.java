@@ -1,5 +1,6 @@
 package cn.ideal.manager.controller;
 
+import cn.ideal.common.pojo.CommodityCat;
 import cn.ideal.common.results.MessageResult;
 import cn.ideal.common.results.TableJsonResult;
 import cn.ideal.common.results.TreeJsonResult;

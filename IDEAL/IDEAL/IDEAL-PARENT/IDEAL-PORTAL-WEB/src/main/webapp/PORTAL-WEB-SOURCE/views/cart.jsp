@@ -14,6 +14,7 @@
     <title></title>
     <!--导入 css-->
     <!--<link rel="stylesheet" href="css/bootstrap.min.css" />-->
+    <link rel="stylesheet" href="assets/vendor/toastr/toastr.css">
 
     <link rel="shortcut icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon">
     <link rel="icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon">
@@ -112,17 +113,18 @@
         </div>
     </div>
 </div>
+<script src="assets/vendor/toastr/toastr.min.js"></script>
+
 <script>
+
     $(function(){
     });
     var resultNum;
-    console.log(1);
     //首页添加商品到购物车中时，将商品列表信息存到cookie中，本页面展示商品就从cookie中拿
     var url = "cart/getCartList/cartManager.do";
     var data  = {};
     $.getJSON(url,data,function(result){
         resultNum = result.data.length;
-        console.log(result);
         for(var i=0;i<result.data.length;i++){
             var ID = result.data[i].id;
             var TITLE = result.data[i].title;
@@ -138,12 +140,10 @@
             $('#J_cartTotalNum').text(result.data.length);
             //$('#J_cartListBody').find('button[value="√"]').click(selectCom);//选中商品事件
         }
-
         $('#J_cartListBody').find('button[value="√"]').click(selectCom);//选中商品事件
         $('#J_cartListBody').find('a[class="J_plus"]').find('img').click(add);//商品个数加一事件
         $('#J_cartListBody').find('a[class="J_minus"]').find('img').click(sub);//商品个数减一事件
         $('.col-action').click(remove);//商品移除事件
-
     });
 
 
@@ -193,7 +193,6 @@
 
     function add(){
         //实现加一
-        //console.log("加一");
         var num = $(this).parent().parent().find('input[class="goods-num J_goodsNum"]').val();
         num = eval(num) +1;
         $(this).parent().parent().find('input[class="goods-num J_goodsNum"]').val(num);
@@ -210,7 +209,7 @@
         //实现减一
         var num = $(this).parent().parent().find('input[class="goods-num J_goodsNum"]').val();
         if(eval(num)==0){
-            console.log("还他妈点");
+            //toastr.info("");
         }else{
             num = eval(num) -1 ;
             $(this).parent().parent().find('input[class="goods-num J_goodsNum"]').val(num);
@@ -221,14 +220,11 @@
         var allPrice = num*eval(price);
         $(this).parent().parent().parent().next().attr('data-info',allPrice);
         $(this).parent().parent().parent().next().text(allPrice+'元');
-        //console.log("allPrice"+allPrice);
         //改变购物车总费用
         addPrice();
     }
     function selectCom(){
-        //console.log("选择商品");
         var HTML = $(this).html();
-        console.log(HTML);
         if($(this).hasClass("icon-checkbox-selected")){
             var selectedNum = $('J_selTotalNum').text();
             $(this).removeClass("icon-checkbox-selected");
@@ -241,19 +237,15 @@
         }
     }
     function selectAll(){
-        console.log('全选');
         if($('#J_selectAll').hasClass("icon-checkbox-selected")){
-            console.log("去掉");
             $('#J_selectAll').removeClass("icon-checkbox-selected");
             for(var i=0;i<resultNum;i++){
                 //取消全选，下面的商品全部取消选中状态
                 $('#J_cartListBody').children('div').eq(i).find('button').removeClass("icon-checkbox-selected");
-                //console.log(r);
             }
             $('#J_selTotalNum').text(0);
             addPrice();
         }else{
-            console.log("选中");
             $('#J_selectAll').addClass("icon-checkbox-selected");
             for(var i=0;i<resultNum;i++){
                 $('#J_cartListBody').children('div').eq(i).find('button[class="iconfont icon-checkbox  J_itemCheckbox"]').addClass("icon-checkbox-selected");
@@ -264,7 +256,6 @@
 
     }
     function addPrice(){
-        //console.log(resultNum);
         var total = 0;//目前总价格
         var flag = 0;//选中个数
         for(var i=0;i<resultNum;i++){
@@ -274,46 +265,35 @@
                 flag = flag +1;
                 $('#J_selTotalNum').text(flag);
 
-                //console.log("price:"+total);
             }
         }
         $('#J_cartTotalPrice').text(total);
     }
     function remove(){
-        console.log("删除商品");
         var id = $(this).parents('div[class="item-box"]').attr('id');
-        console.log(id);
         //根据id去cookie删除商品
         var url = "cart/deleteComFromCookie/cartManager.do";
         var data = {id:id};
         $.post(url,data,function(result){
-            console.log(result);
             window.location.reload();
         });
     }
     function goToPay() {
         var allPrice = $('#J_cartTotalPrice').text();
-        console.log(allPrice);
         if(eval(allPrice)==0){
-            console.log("您还没有选中商品");
+            toastr.info("您还没有选中商品");
         }else {
-            console.log("去结算");
-        }
-        var ID = "";//id字符串
-        var NUMBER = "";
-        for(var i =0;i<resultNum;i++){
-            console.log("单个ID："+$('#J_cartListBody').children('div').eq(i).attr('id'));
-            var num = $('#J_cartListBody').children('div').eq(i).find('button[value="√"]').parents().next().next().next().next().children('div').children('input').attr('value');
-            console.log("num:"+num);
-            if($('#J_cartListBody').children('div').eq(i).find('button[value="√"]').hasClass("icon-checkbox-selected")){
-                ID = ID + $('#J_cartListBody').children('div').eq(i).attr('id')+",";
-                NUMBER = NUMBER + num + ',';
-                console.log("NUMBER:"+NUMBER);
+            var ID = "";//id字符串
+            var NUMBER = "";
+            for (var i = 0; i < resultNum; i++) {
+                var num = $('#J_cartListBody').children('div').eq(i).find('button[value="√"]').parents().next().next().next().next().children('div').children('input').attr('value');
+                if ($('#J_cartListBody').children('div').eq(i).find('button[value="√"]').hasClass("icon-checkbox-selected")) {
+                    ID = ID + $('#J_cartListBody').children('div').eq(i).attr('id') + ",";
+                    NUMBER = NUMBER + num + ',';
+                }
             }
+            window.location.href = "http://localhost:8080/order.html?idList=" + ID + '&numList=' + NUMBER;
         }
-        console.log("id字符串："+ID);
-        console.log("个数字符串："+NUMBER);
-        window.location.href = "http://localhost:8080/order.html?idList="+ID+'&numList='+NUMBER;
     }
 </script>
 </body>

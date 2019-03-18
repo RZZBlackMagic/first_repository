@@ -1,6 +1,5 @@
 package cn.ideal.wechat.controller;
 
-import cn.ideal.common.pojo.CommodityOrder;
 import cn.ideal.common.results.MessageResult;
 import cn.ideal.wechat.service.CommodityOrderService;
 import org.springframework.beans.factory.annotation.Autowired;

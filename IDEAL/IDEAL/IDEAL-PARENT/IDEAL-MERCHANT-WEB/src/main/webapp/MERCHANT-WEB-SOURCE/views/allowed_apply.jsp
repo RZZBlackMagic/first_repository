@@ -192,7 +192,7 @@
         var merchantId = rows[0].merchantId;
         var merchantName = rows[0].merchantName;
         var productorName = rows[0].productorName;
-        window.location.href = "http://localhost:8086/merchant_commodity?productorId="+productorId+"&productorName="+productorName+"&merchantId="+merchantId+"&merchantName="+merchantName;
+        window.location.href = "http://localhost:8083/apply_commodity?productorId="+productorId+"&productorName="+productorName+"&merchantId="+merchantId+"&merchantName="+merchantName;
     }
 
     //移除商品

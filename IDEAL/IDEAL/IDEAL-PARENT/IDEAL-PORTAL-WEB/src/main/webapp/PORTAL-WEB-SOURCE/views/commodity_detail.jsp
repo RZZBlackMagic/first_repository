@@ -14,7 +14,7 @@
     <link rel="dns-prefetch" href="//i8.mifile.cn"/>
     <link rel="dns-prefetch" href="//v.mifile.cn"/>
     <link rel="dns-prefetch" href="//a.huodong.mi.cn"/>
-
+    <link rel="stylesheet" href="assets/vendor/toastr/toastr.css">
     <link rel="shortcut icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon"/>
     <link rel="icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon"/>
     <link rel="search" title="mi.com" href="//s1.mi.com/search.xml?v1.0" type="application/opensearchdescription+xml"/>
@@ -390,18 +390,21 @@
     </div>
 </div>
 <!--</div>-->
+<script src="assets/vendor/toastr/toastr.min.js"></script>
+
 <script type="text/javascript">
 
     $(function () {
         initSpeDisplay();
     });
+    var commodity_name ;
     function initSpeDisplay(){
         var spev = JSON.parse("${spes.default_data}");
         var name_group = $("li[data-index]");
         for (var j = 0; j < name_group.length; j++) {
             if (spev.indexOf($(name_group[j]).data("id")) != -1) {
                 $(name_group[j]).attr("class", "btn btn-biglarge active");
-                $(name_group[j]).parent().data("value", $(name_group[j]).data("value"))
+                $(name_group[j]).parent().data("value", $(name_group[j]).data("value"));
             }
             else {
                 $(name_group[j]).attr("class", "btn btn-biglarge");
@@ -413,6 +416,7 @@
             html_str += $(ul_group[i]).data("value") + "&nbsp&nbsp&nbsp&nbsp"
         }
         $("#commodity_name").html(html_str + "<span>                 ${spes.sku.price / 100} 元 </span>");
+        commodity_name= (html_str);
     }
     $("li[data-index]").click(function () {
         $(this).parent().data("value", $(this).data("value").toString());
@@ -446,7 +450,7 @@
             else {
                 $(insurance[i]).attr("class", "clearfix");
             }
-        }//end for
+        }
     })
     $(window).scroll(function () {
         var scrollerHeight = $(this).scrollTop();
@@ -478,44 +482,26 @@
         }
         return null;
     }
-    // $.ajax({
-    //     type: "GET",
-    //     url: "portal/commodityDetail/getCommodityDetail",
-    //     data: {id: getUrlParam().id},
-    //     dataType: "json",
-    //     success: function (res) {
-    //
-    //     }
-    // });
+
 
     function addToCart(){
-        //window.location.reload();
-        console.log("添加至购物车;");
-       //检查用户登录
-
-        if(true){
-            //已登录，想购物车添加信息
             var data = {
-                id : getUrlParam().spuid,
-                title:'${commodity.spu.title}',
+                id : ${spes.sku.id},
+                title:commodity_name,
                 price:'${spes.sku.price }',
                 pic:'${spes.sku.image}'
             }
             $.post("cart/getCommodityForCart/cartManager.do",data,function(result){
                 console.log(result);
+                if(result.data==500){
+                    //商品已存在
+                    toastr.info("商品已存在购物车");
+                }
             });
-        }else{
-            //跳转到扥登录页面
-        }
-
-
 
     }
     function purchase(){
-        console.log("卖");
-        //window.location.href = "http://localhost:8080/index.html";
         window.location.href = "http://localhost:8080/cart.html";
-        //window.open('http://localhost:8080/cart.html');
     }
     //得到路径参数
     function getUrlParam() {

@@ -39,5 +39,4 @@
     <bean class="cn.ideal.portal.service.impl.CartServiceImpl" id="cartService" />
     <dubbo:service interface="cn.ideal.portal.service.OrderService" ref="orderService" protocol="dubbo" timeout="300000"/>
     <bean class="cn.ideal.portal.service.impl.OrderServiceImpl" id="orderService" />
-
 </beans>

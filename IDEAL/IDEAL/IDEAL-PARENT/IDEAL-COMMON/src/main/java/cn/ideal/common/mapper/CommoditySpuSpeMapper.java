@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface CommoditySpuSpeMapper {
-    long countByExample(CommoditySpuSpeExample example);
+    int countByExample(CommoditySpuSpeExample example);
 
     int deleteByExample(CommoditySpuSpeExample example);
 

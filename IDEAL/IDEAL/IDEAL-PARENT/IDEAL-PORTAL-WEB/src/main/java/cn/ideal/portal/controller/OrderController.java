@@ -5,6 +5,7 @@ import cn.ideal.common.pojo.CommodityOrder;
 import cn.ideal.common.pojo.CommodityOrderItem;
 import cn.ideal.common.pojo.CommodityOrderShipping;
 import cn.ideal.common.results.MessageResult;
+import cn.ideal.common.utils.PaymentUtil;
 import cn.ideal.portal.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ResourceBundle;
 
 @Controller
 public class OrderController {
@@ -68,7 +70,7 @@ public class OrderController {
     }
     @RequestMapping("order/turnToCallBack/orderManager.do")
     @ResponseBody
-    public MessageResult callback(HttpServletRequest request, HttpServletResponse response) throws Exception{
+    public MessageResult callback(HttpServletRequest request, HttpServletResponse response,String orderId) throws Exception{
         /*String p1_MerId = request.getParameter("p1_MerId");
         String r0_Cmd = request.getParameter("r0_Cmd");
         String r1_Code = request.getParameter("r1_Code");
@@ -98,57 +100,39 @@ public class OrderController {
             // 响应数据有效
             if (r9_BType.equals("1")) {
                 // 浏览器重定向
-                System.out.println("111");
+                System.out.println("*************111");
                 request.setAttribute("msg", "您的订单号为:"+r6_Order+",金额为:"+r3_Amt+"已经支付成功,等待发货~~");
 
             } else if (r9_BType.equals("2")) {
                 // 服务器点对点 --- 支付公司通知你
-                System.out.println("付款成功！222");
+                System.out.println("********付款成功！222");
                 // 修改订单状态 为已付款
                 // 回复支付公司
                 response.getWriter().print("success");
             }
 
-            //修改订单状态
-            OrderService s=(OrderService) BeanFactory.getBean("OrderService");
-            Order order = s.getOrderByOid(r6_Order);
-            order.setState(1);
-            s.updateOrder(order);
 
         } else {
             // 数据无效
             System.out.println("数据被篡改！");
-        }
-*/
+        }*/
+        //修改订单状态
+        MessageResult messageResult = orderService.updateOrderStatus(orderId);
 
-        return MessageResult.ok("回调执行成功");
+
+        return messageResult;
 
     }
     @RequestMapping("order/payForCommodity/orderManager.do")
     @ResponseBody
-    public MessageResult pay(HttpServletRequest request, HttpServletResponse respone) throws Exception{
-        //接受参数
-        /*String address=request.getParameter("address");
-        String name=request.getParameter("name");
-        String telephone=request.getParameter("telephone");*/
-        String oid=request.getParameter("oid");
+    public MessageResult pay(HttpServletRequest request, HttpServletResponse response,String oid,String pd_FrpId) throws Exception {
 
 
-        /*//通过id获取order
-        OrderService s=(OrderService) BeanFactory.getBean("OrderService");
-        Order order = s.getOrderByOid(oid);
-        order.setAddress(address);
-        order.setName(name);
-        order.setTelephone(telephone);
-        //更新order
-        s.updateOrder(order);*/
-
-
-        /*// 组织发送支付公司需要哪些数据
-        String pd_FrpId = request.getParameter("pd_FrpId");
+        // 组织发送支付公司需要哪些数据
+        pd_FrpId = pd_FrpId;
         String p0_Cmd = "Buy";
         String p1_MerId = ResourceBundle.getBundle("merchantInfo").getString("p1_MerId");
-        String p2_Order = oid;
+        String p2_Order = "998028403889509829090809";
         String p3_Amt = "0.01";
         String p4_Cur = "CNY";
         String p5_Pid = "";
@@ -162,10 +146,10 @@ public class OrderController {
         String pr_NeedResponse = "1";
         // 加密hmac 需要密钥
         String keyValue = ResourceBundle.getBundle("merchantInfo").getString("keyValue");
-        String hmac = PaymentUtil.buildHmac(p0_Cmd, p1_MerId, p2_Order, p3_Amt,
-                p4_Cur, p5_Pid, p6_Pcat, p7_Pdesc, p8_Url, p9_SAF, pa_MP,
-                pd_FrpId, pr_NeedResponse, keyValue);
-        //发送给第三方
+        String hmac = PaymentUtil.buildHmac(p0_Cmd, p1_MerId, p2_Order, p3_Amt, p4_Cur, p5_Pid, p6_Pcat, p7_Pdesc,
+                p8_Url, p9_SAF, pa_MP, pd_FrpId, pr_NeedResponse, keyValue);
+
+        // 发送给第三方
         StringBuffer sb = new StringBuffer("https://www.yeepay.com/app-merchant-proxy/node?");
         sb.append("p0_Cmd=").append(p0_Cmd).append("&");
         sb.append("p1_MerId=").append(p1_MerId).append("&");
@@ -181,10 +165,11 @@ public class OrderController {
         sb.append("pd_FrpId=").append(pd_FrpId).append("&");
         sb.append("pr_NeedResponse=").append(pr_NeedResponse).append("&");
         sb.append("hmac=").append(hmac);
+        String url = sb.toString();
+        System.out.println(url);
 
-        //respone.sendRedirect(sb.toString());
-        System.out.println("********************!!!!!!!!!!!!!!"+sb.toString());*/
-        return MessageResult.ok();
+
+        return MessageResult.ok(url);
     }
 
 }

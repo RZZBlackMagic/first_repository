@@ -7,6 +7,14 @@ public class CommoditySkuSpevKey implements Serializable {
 
     private Long spevid;
 
+    public CommoditySkuSpevKey() {
+    }
+
+    public CommoditySkuSpevKey(Long skuid, Long spevid) {
+        this.skuid = skuid;
+        this.spevid = spevid;
+    }
+
     public Long getSkuid() {
         return skuid;
     }
@@ -17,14 +25,6 @@ public class CommoditySkuSpevKey implements Serializable {
 
     public Long getSpevid() {
         return spevid;
-    }
-
-    public CommoditySkuSpevKey(Long skuid, Long spevid) {
-        this.skuid = skuid;
-        this.spevid = spevid;
-    }
-
-    public CommoditySkuSpevKey() {
     }
 
     public void setSpevid(Long spevid) {

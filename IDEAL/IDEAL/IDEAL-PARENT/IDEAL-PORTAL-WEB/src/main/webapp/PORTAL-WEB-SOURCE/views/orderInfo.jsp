@@ -11,6 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <title>选择在线支付方式</title>
+    <link rel="stylesheet" href="assets/vendor/toastr/toastr.css">
     <link rel="shortcut icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon">
     <link rel="icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="//s01.mifile.cn/css/base.min.css?v2019022501a">
@@ -33,7 +34,7 @@
             <div class="section section-order">
                 <div class="order-info clearfix">
                     <div class="fl">
-                        <h2 class="title">付款成功～</h2>
+                        <h2 class="title">请选择银行后支付~</h2>
                         <p class="order-time" id="J_deliverDesc"></p>
                         <p class="order-time">请在<span class="pay-time-tip">48小时0分</span>内完成支付, 超时后将取消订单</p>
                         <p class="post-info" id="J_postInfo">
@@ -152,7 +153,7 @@
                         <div class="big-pro-tip hide J_confirmBigProTip"></div>
                     </div>
                     <div class="fr" >
-                        <a href="javascript:void(0);"  class="btn btn-primary" id="J_checkoutToPay" data-stat-id="9dc0c7cf32a1c0ca" >去结算</a>
+                        <a href="javascript:void(0);"  class="btn btn-primary" id="J_checkoutToPay" data-stat-id="9dc0c7cf32a1c0ca" >付款</a>
                     </div>
                 </div>
 
@@ -206,6 +207,8 @@
         </form>
     </div>
 </div>
+<script src="assets/vendor/toastr/toastr.min.js"></script>
+
 <script>
     $(function(){
 
@@ -233,11 +236,9 @@
                 var arrPara = arrObj[1].split("&");
                 var arr;
                 for (var i = 0; i < arrPara.length; i++) {
-
                     arr = arrPara[i].split("=");
                     //把第二个值赋值给第一个值
                     result[arr[0]] = arr[1];
-
                 }
             }
             return result;
@@ -251,7 +252,6 @@
         var params ;
 
         $.post(url,data,function(result){
-            console.log(result);
             params = result.data;
             $('#J_postInfo').html('收货信息：'+ params.name+params.phone+'  &nbsp;&nbsp;\n' +
                 params.address+'&nbsp;&nbsp; ');
@@ -265,30 +265,31 @@
             $('#bankCart').children('li').eq(i).click(addClassForCart);
         }
         function addClassForCart() {
-            console.log(2);
-            console.log($(this).html())
             if($(this).hasClass('selected')){
-                console.log("选中");
                 $(this).removeClass('selected');
             }else{
                 $('li[class="J_bank selected"]').removeClass('selected');
                 $(this).addClass('selected');
-                console.log("没选中");
             }
         }
         $('#J_checkoutToPay').click(pay);
         function pay(){
             var pd_FrpId = $('li[class="J_bank selected"]').find('input').attr('value');
-            console.log(pd_FrpId);
             var url = "order/payForCommodity/orderManager.do";
-            var data= {
-                oid:orderId,
-                pd_FrpId:pd_FrpId
-            };
-            $.post(url,data,function (result) {
-                console.log(result);
-                //window.location.href=result.data;
-            });
+            if(pd_FrpId!=null){
+                var data= {
+                    oid:orderId,
+                    pd_FrpId:pd_FrpId
+                };
+                $.post(url,data,function (result) {
+                    window.location.href=result.data;
+                    console.log(data);
+                });
+            }else{
+                toastr.info("请选择银行");
+            }
+
+
 
         }
 

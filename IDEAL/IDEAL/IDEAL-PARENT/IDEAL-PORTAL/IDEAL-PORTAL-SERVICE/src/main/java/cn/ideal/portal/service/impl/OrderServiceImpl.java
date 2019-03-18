@@ -68,7 +68,7 @@ public class OrderServiceImpl implements OrderService {
             commodityOrderItem.getOrderId();
             String id = (String.valueOf(System.currentTimeMillis()+new Random().nextInt(10)));
             String totalFee = String.valueOf((Long.valueOf(price[i])*Long.valueOf(number[i])+Long.valueOf(commodityOrder.getPostFee())));//加上邮费
-            CommodityOrderItem commodityOrderItem1 = new CommodityOrderItem(id,itemIdArray[i],commodityOrderItem.getOrderId(),number[i],title[i],price[i],totalFee,picPath[i]);
+            CommodityOrderItem commodityOrderItem1 = new CommodityOrderItem(id,(itemIdArray[i]),commodityOrderItem.getOrderId(),(number[i]),title[i],(price[i]),(totalFee),picPath[i]);
             commodityOrderItemMapper.insert(commodityOrderItem1);
         }
 
@@ -124,5 +124,13 @@ public class OrderServiceImpl implements OrderService {
         map.put("ComTitle",CommodityTitle);
         map.put("totalFee",totalFee);
         return MessageResult.ok(map);
+    }
+
+    @Override
+    public MessageResult updateOrderStatus(String orderId) {
+        CommodityOrder commodityOrder = commodityOrderMapper.selectByPrimaryKey(orderId);
+        commodityOrder.setStatus((byte)2);//状态2：已付款
+        commodityOrderMapper.updateByPrimaryKey(commodityOrder);
+        return MessageResult.ok();
     }
 }

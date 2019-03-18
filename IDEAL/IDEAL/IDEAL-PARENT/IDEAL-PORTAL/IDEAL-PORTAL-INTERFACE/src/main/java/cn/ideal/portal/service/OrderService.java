@@ -15,4 +15,5 @@ public interface OrderService {
     MessageResult getAddressList(Long userId);
     MessageResult insertIntoCommodityAddress(CommodityAddress commodityAddress);
     MessageResult getOrderInfo(String orderId);
+    MessageResult updateOrderStatus(String orderId);
 }

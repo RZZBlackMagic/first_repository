@@ -62,6 +62,41 @@ public class AccountProductor implements Serializable {
 
     private Integer status;
 
+    public AccountProductor() {
+    }
+
+    public AccountProductor(Long id, String username, String password, String companyZh, String companyEn, String logo, Date foundingTime, String loginAddress, String zip, Long employees, Long turnover, String phone, String telephone, String email, String fax, String website, String legalRepresentative, String mainProprietor, String area, String economicType, Byte marketPassport, String stockCode, String businessField, String bank, String bankAccount, String bankPermit, Date created, Date updated, Integer status) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.companyZh = companyZh;
+        this.companyEn = companyEn;
+        this.logo = logo;
+        this.foundingTime = foundingTime;
+        this.loginAddress = loginAddress;
+        this.zip = zip;
+        this.employees = employees;
+        this.turnover = turnover;
+        this.phone = phone;
+        this.telephone = telephone;
+        this.email = email;
+        this.fax = fax;
+        this.website = website;
+        this.legalRepresentative = legalRepresentative;
+        this.mainProprietor = mainProprietor;
+        this.area = area;
+        this.economicType = economicType;
+        this.marketPassport = marketPassport;
+        this.stockCode = stockCode;
+        this.businessField = businessField;
+        this.bank = bank;
+        this.bankAccount = bankAccount;
+        this.bankPermit = bankPermit;
+        this.created = created;
+        this.updated = updated;
+        this.status = status;
+    }
+
     public Long getId() {
         return id;
     }

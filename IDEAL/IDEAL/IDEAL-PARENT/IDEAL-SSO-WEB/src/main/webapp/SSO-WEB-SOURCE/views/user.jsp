@@ -73,7 +73,6 @@
                 if (res.status == 400){
                     toastr.error(res.msg);
                 }else {
-                    console.log(res);
                     toastr.success("登陆成功");
                     window.location.href = "http://localhost:8080/index.html";
                 }

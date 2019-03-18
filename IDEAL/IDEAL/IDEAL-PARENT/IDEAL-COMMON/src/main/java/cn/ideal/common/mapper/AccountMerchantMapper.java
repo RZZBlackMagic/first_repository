@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface AccountMerchantMapper {
-    long countByExample(AccountMerchantExample example);
+    int countByExample(AccountMerchantExample example);
 
     int deleteByExample(AccountMerchantExample example);
 

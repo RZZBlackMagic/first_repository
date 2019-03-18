@@ -39,5 +39,4 @@
     <dubbo:reference interface="cn.ideal.portal.service.CommodityDetailService" id="commodityDetailServiceImpl" />
     <dubbo:reference interface="cn.ideal.portal.service.CartService" id="cartServiceImpl" />
     <dubbo:reference interface="cn.ideal.portal.service.OrderService" id="orderServiceImpl" />
-
 </beans>

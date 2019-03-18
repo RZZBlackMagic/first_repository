@@ -2,7 +2,6 @@ package cn.ideal.portal.service.impl;
 
 import cn.ideal.common.mapper.*;
 import cn.ideal.common.pojo.*;
-import cn.ideal.common.results.MessageResult;
 import cn.ideal.portal.service.CommodityDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -21,21 +21,6 @@ public class CommodityAddress implements Serializable {
 
     private Byte isDefault;
 
-    @Override
-    public String toString() {
-        return "CommodityAddress{" +
-                "id=" + id +
-                ", userId=" + userId +
-                ", name='" + name + '\'' +
-                ", mobile='" + mobile + '\'' +
-                ", fullRegion='" + fullRegion + '\'' +
-                ", address='" + address + '\'' +
-                ", addressTag='" + addressTag + '\'' +
-                ", zip='" + zip + '\'' +
-                ", isDefault=" + isDefault +
-                '}';
-    }
-
     public CommodityAddress() {
     }
 

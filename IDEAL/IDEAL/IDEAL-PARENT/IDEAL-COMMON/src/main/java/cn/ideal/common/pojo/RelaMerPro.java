@@ -17,23 +17,13 @@ public class RelaMerPro extends RelaMerProKey implements Serializable {
     public RelaMerPro() {
     }
 
-    public RelaMerPro(String merchantName, String productorName, Date applyTime, Date agreeTime, Byte status) {
+    public RelaMerPro(Long merchantId, Long productorId, String merchantName, String productorName, Date applyTime, Date agreeTime, Byte status) {
+        super(merchantId, productorId);
         this.merchantName = merchantName;
         this.productorName = productorName;
         this.applyTime = applyTime;
         this.agreeTime = agreeTime;
         this.status = status;
-    }
-
-    @Override
-    public String toString() {
-        return "RelaMerPro{" +
-                "merchantName='" + merchantName + '\'' +
-                ", productorName='" + productorName + '\'' +
-                ", applyTime=" + applyTime +
-                ", agreeTime=" + agreeTime +
-                ", status=" + status +
-                '}';
     }
 
     public String getMerchantName() {

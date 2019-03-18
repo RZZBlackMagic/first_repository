@@ -7,6 +7,14 @@ public class RelaMerProKey implements Serializable {
 
     private Long productorId;
 
+    public RelaMerProKey() {
+    }
+
+    public RelaMerProKey(Long merchantId, Long productorId) {
+        this.merchantId = merchantId;
+        this.productorId = productorId;
+    }
+
     public Long getMerchantId() {
         return merchantId;
     }
@@ -21,15 +29,5 @@ public class RelaMerProKey implements Serializable {
 
     public void setProductorId(Long productorId) {
         this.productorId = productorId;
-    }
-
-
-
-    @Override
-    public String toString() {
-        return "RelaMerProKey{" +
-                "merchantId=" + merchantId +
-                ", productorId=" + productorId +
-                '}';
     }
 }

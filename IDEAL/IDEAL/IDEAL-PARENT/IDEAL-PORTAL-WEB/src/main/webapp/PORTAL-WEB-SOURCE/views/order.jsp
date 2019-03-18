@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon">
     <link rel="icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="//s01.mifile.cn/css/base.min.css?v20190118011a">
-    <link rel="stylesheet" href="assets/vendor/toastr/toastr.min.css">
+    <link rel="stylesheet" href="assets/vendor/toastr/toastr.css">
     <link rel="stylesheet" type="text/css" href="//s01.mifile.cn/css/checkout.min.css?v=2018020602">
     <script type="text/javascript" src="assets/vendor/jquery/jquery.js" ></script>
     <!--导入bootstrap.js-->
@@ -551,7 +551,6 @@
 <script>
     //加载弹出框
     function showNewAddress(){
-        //alert("执行了");
         $("#J_modalEditAddress").attr("class","modal modal-hide fade modal-edit-address in");
         $("#J_modalEditAddress").css({
             "dispaly":"block",
@@ -604,7 +603,6 @@
         return result;
     }
     var urlData = getUrlParam();
-    console.log(urlData);
     var idList = urlData.idList;
     var numList = urlData.numList;
     //从cookie中取要购买的商品数据展示到本页面
@@ -615,15 +613,14 @@
     };
     var orderCommodityList ;
     $.getJSON(url,data,function(result){
-        console.log("展示商品："+result.data);
         orderCommodityList=result;
         var payAllPrice =0 ;
         for(var i=0;i<result.data.length;i++){
             var price = eval(result.data[i].price);
             var Num = eval(result.data[i].num);
             var allPrice = price*Num;
+            payAllPrice = payAllPrice + allPrice;
             var li = goods_li.replace("TITLE",result.data[i].title).replace("NUM",result.data[i].num).replace("PRICE",result.data[i].price).replace("ALLPRICE",allPrice);
-            var payAllPrice = payAllPrice+price*Num;
             var Li = $(li);
             $('#J_goodsList').append(Li);
         }
@@ -674,20 +671,15 @@
         var addressTag = $('#J_addressTagInput').val();
         if(zipCode==''){
             toastr.info("请填写编码");
-        };
-        if(userName==''){
+        }else if(userName==''){
             toastr.info("请填写收件人姓名");
-        };
-        if(phone==''){
+        }else if(phone==''){
             toastr.info("请填写收件人电话号码");
-        };
-        if(address==''){
+        }else if(address==''){
             toastr.info("请填写地址");
-        };
-        if(detailAddress==''){
+        }else if(detailAddress==''){
             toastr.info("请填写详细地址");
-        };
-        if(addressTag==''){
+        }else if(addressTag==''){
             toastr.info("请填写地址标签");
         };
         var id = $('#J_addressList').find('div[class="address-item J_addressItem selected"]').attr('data-id');
@@ -704,7 +696,6 @@
               addressTag:addressTag
           };
           $.post(url,data,function(result){
-              console.log(result);
               $('#J_addressList').empty();
               for(var i=0;i<result.data.length;i++){
                   var li = addressLi.replace("UserName",result.data[i].name).replace("Phone",result.data[i].mobile).replace("Address",result.data[i].fullRegion).replace("detailAddress",result.data[i].address).replace("0",result.data[i].id).replace("zipCode",result.data[i].zip).replace("addressTag",result.data[i].addressTag);
@@ -830,13 +821,7 @@
         '<a href="javascript:void(0);" onclick="editAddress()" class="modify J_addressModify">修改</a>'+
         '</div>'+
         '</div>';
-    /*var url = 'cart/deleteAddressList/cartManager.do';
-    var data = {
 
-    }
-    $.post(url,data,function(result){
-        console.log(result);
-    });*/
     //创建订单，向Commodity_Order表中insert
     var user_id = 1;
     var user_name = "woshirencai55";
@@ -854,7 +839,6 @@
         buyerNick:user_name
     };
     $.post(url,data,function(result){
-          //console.log(result);
     });
     function random_No(j) {
         var random_no = "";
@@ -873,9 +857,11 @@
     //在Commodity_order_shipping中添加数据：每个订单号对应一个收获地址
     //将购物车中的该商品删除
     function payForOrder(){
+        //检查登录
+
+
         if($('#J_addressList').find('div[class="address-item J_addressItem selected"]').html()!=null){
             var title = '';
-
             //支付后在Commodity_order表中设置订单更新时间，物流名称，物流单号,付款时间
             //获取订单名称
             var orderName = '' ;
@@ -902,6 +888,7 @@
                 shippingName:orderName
             }
             $.post(url,data,function(result){
+                commodityOrderTest=result.status;
             })
             //在Commodity_order_item中根据商品类别添加数据，订单有两类商品，就根据每个商品Id分别添加数据
             var url = "order/insertIntoCommodityOrderItem/orderManager.do";
@@ -914,6 +901,7 @@
                 picPath:pic
             }
             $.post(url,data,function(result){
+                commodityOrderItemTest = result.status;
             })
             //在Commodity_order_shipping中添加数据：每个订单号对应一个收获地址
             var name = $('#J_addressList').find('div[class="address-item J_addressItem selected"]').find('em[class="uname"]').text();
@@ -933,6 +921,8 @@
                 receiverZip:zipCode
             };
             $.post(url,data,function(result){
+                commodityOrderShippingTest = result.status;
+                console.log(result);
             })
             //将购物车中的该商品删除
             var url ="cart/deleteComFromCookie/cartManager.do";
@@ -940,14 +930,14 @@
                 id:idList
             };
             $.post(url,data,function(result){
-            })
-            var Title = title.replace("#",' ');
-            var Address = address[0]+'  ' +detailAddress[1];
+            });
             var orderId = $(document).data('orderId');
             //跳转到订单信息：商品名称，订单号，用户名称，两个地址
-            window.location.href = "http://localhost:8080/orderInfo.html?"+'orderId='+orderId;
+
+              window.location.href = "http://localhost:8080/orderInfo.html?"+'orderId='+orderId;
+
         }else{
-            console.log("请先选择地址");
+            toastr.info("请先选择地址");
         }
     }
 </script>

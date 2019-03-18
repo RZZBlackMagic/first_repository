@@ -61,110 +61,92 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/index.jsp">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH-WEB/src/main/java/cn/ideal/search/exception/GlobalExceptionResolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3429">
-              <caret line="80" column="27" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/cart.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="315" column="8" selection-start-line="315" selection-start-column="8" selection-end-line="315" selection-end-column="8" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/commodity_detail.jsp">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.4.RELEASE/spring-webmvc-4.2.4.RELEASE.jar!/org/springframework/web/servlet/HandlerExceptionResolver.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="504" column="36" lean-forward="true" selection-start-line="504" selection-start-column="36" selection-end-line="504" selection-end-column="36" />
+            <state relative-caret-position="120">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/WEB-INF/web.xml">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH/IDEAL-SEARCH-SERVICE/src/main/java/cn/ideal/search/dao/SearchDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            <state relative-caret-position="285">
+              <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/order.jsp">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB/src/main/java/cn/ideal/wechat/controller/CommodityAddressController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="958" selection-start-line="958" selection-end-line="958" />
-              <folding>
-                <element signature="e#425#431#1" expanded="true" />
-              </folding>
+            <state relative-caret-position="-95">
+              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/CartController.java">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB/src/main/java/cn/ideal/wechat/controller/CommodityCartController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
+            <state relative-caret-position="169">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/PCCommodityCart.java">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB/src/main/java/cn/ideal/wechat/controller/CommodityCatController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/PageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
-              <folding>
-                <element signature="e#1800#1801#0" expanded="true" />
-                <element signature="e#1829#1830#0" expanded="true" />
-                <element signature="e#1848#1849#0" expanded="true" />
-                <element signature="e#1877#1878#0" expanded="true" />
-                <element signature="e#1941#1942#0" expanded="true" />
-                <element signature="e#1971#1972#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/OrderServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1095">
-              <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/OrderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="184" column="46" selection-start-line="184" selection-start-column="46" selection-end-line="184" selection-end-column="46" />
+            <state relative-caret-position="220">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB/src/main/java/cn/ideal/wechat/controller/CommodityController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB/src/main/java/cn/ideal/wechat/controller/CommodityOrderController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH/IDEAL-SEARCH-SERVICE/src/main/java/cn/ideal/search/service/impl/SearchCommodityServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH-WEB/src/main/webapp/SEARCH-WEB-SOURCE/views/search.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -193,74 +175,78 @@
       <find>equals</find>
       <find>start banner_y</find>
       <find>main</find>
-      <find>getUrlParam</find>
-      <find>购买按钮</find>
-      <find>立即购买</find>
-      <find>commodity.spu</find>
-      <find>commodity.sku</find>
-      <find>skuMapper</find>
-      <find>${spes.sku.image}</find>
-      <find>加入</find>
-      <find>img</find>
+      <find>cart/getCommodityForCart/cartManager</find>
+      <find>toastr</find>
+      <find>add</find>
+      <find>toastr.css</find>
+      <find>fonts</find>
+      <find>去结算</find>
+      <find>去结</find>
+      <find>付款成功</find>
       <find>立</find>
-      <find>8081</find>
-      <find>立即</find>
+      <find>sub</find>
+      <find>utils</find>
+      <find>submit</find>
+      <find>add-spe</find>
+      <find>null</find>
+      <find>spe</find>
+      <find>disagree</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/index.jsp" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/ContentManagerController.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-INTERFACE/src/main/java/cn/ideal/portal/service/CartService.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/CartServiceImpl.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/src/main/java/cn/ideal/sso/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/RelaMerProComMapper.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/AccountManager.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/AccountMerchant.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/AccountProductor.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/AccountUser.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/RelaMerProCom.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityStore.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityCart.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/resources/springmvc.xml" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/resources/spring/applicationContext-service.xml" />
-        <option value="$PROJECT_DIR$/_MyBatis/src/main/java/cn/ideal/common/pojo/CommodityOrderItem.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderItem.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderShipping.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/PCCommodityCart.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/java/cn/ideal/sso/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/user.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB/src/main/webapp/PRODUCTOR-WEB-SOURCE/views/template/header.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT/IDEAL-WECHAT-INTERFACE/src/main/java/cn/ideal/wechat/service/CommodityOrderService.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT/IDEAL-WECHAT-INTERFACE/src/main/java/cn/ideal/wechat/service/CommodityCartService.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB/src/main/java/cn/ideal/wechat/controller/CommodityCartController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT/IDEAL-WECHAT-INTERFACE/src/main/java/cn/ideal/wechat/service/CommodityAddressService.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT/IDEAL-WECHAT-SERVICE/src/main/java/cn/ideal/wechat/service/impl/CommodityAddressServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB/src/main/java/cn/ideal/wechat/controller/CommodityAddressController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-INTERFACE/src/main/java/cn/ideal/portal/service/CommodityDetailService.java" />
         <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySku.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/RelaMerPro.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/RelaMerProKey.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityOrderItemMapper.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityOrderMapper.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityOrderShippingMapper.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/CommodityDetailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-INTERFACE/src/main/java/cn/ideal/portal/service/IndexService.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/IndexServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-INTERFACE/src/main/java/cn/ideal/portal/service/CartService.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityCart.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/index.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/commodity_detail.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/results/CartJsonResult.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE/src/test/java/TestQueuePro.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE/src/test/java/TestAcMq.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE/src/main/java/cn/ideal/product/service/impl/CommodityServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/PageController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/jedis/JedisClient.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderShipping.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/resources/spring/applicationContext-service.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/resources/springmvc.xml" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/MyPaymentServlet.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/utils/PaymentUtil.java" />
         <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-INTERFACE/src/main/java/cn/ideal/portal/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/orderInfo.jsp" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/order.jsp" />
-        <option value="$PROJECT_DIR$/_MyBatis/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityCat.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityCatMapper.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/IndexServiceImpl.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/user.jsp" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpu.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/CommodityDetailServiceImpl.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpe.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpev.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpuSpeKey.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySkuSpevKey.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrder.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityContentCategory.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityContent.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityAddress.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/PageController.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/CartController.java" />
-        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/commodity_detail.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/resources/merchantInfo.properties" />
         <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/cart.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/order.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT/IDEAL-WECHAT-SERVICE/src/main/java/cn/ideal/wechat/service/impl/CommodityCartServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT/IDEAL-WECHAT-SERVICE/src/main/java/cn/ideal/wechat/service/impl/CommodityOrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT/IDEAL-WECHAT-SERVICE/src/main/java/cn/ideal/wechat/service/impl/CommodityServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/ContentManagerController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/results/CommodityCartResult.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/CartController.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/commodity_category.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/CommodityCatServiceImpl.java" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB/src/main/webapp/PRODUCTOR-WEB-SOURCE/views/add-commodity.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB/src/main/webapp/MERCHANT-WEB-SOURCE/views/allowed_apply.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB/src/main/webapp/MERCHANT-WEB-SOURCE/views/apply_commodity.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB/src/main/webapp/MERCHANT-WEB-SOURCE/views/template/left-sidebar.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB/src/main/webapp/MERCHANT-WEB-SOURCE/views/apply_company.jsp" />
+        <option value="$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT/IDEAL-MERCHANT-SERVICE/src/main/java/cn/ideal/merchant/service/impl/ApplyMerchantServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -273,18 +259,12 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="IDEAL-COMMON" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="340" />
-    <option name="y" value="-25" />
+    <option name="x" value="325" />
     <option name="width" value="1360" />
     <option name="height" value="1040" />
   </component>
@@ -293,66 +273,37 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="_MyBatis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="_MyBatis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="_MyBatis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="_MyBatis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="_MyBatis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
               <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
               <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-WECHAT-WEB" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
               <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-WECHAT-WEB" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
               <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-WECHAT-WEB" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
               <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-WECHAT-WEB" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -360,167 +311,7 @@
             <path>
               <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
               <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-COMMON" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-INTERFACE" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-INTERFACE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-INTERFACE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-INTERFACE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-INTERFACE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ideal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ideal" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-SERVICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-WECHAT-WEB" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -529,129 +320,10 @@
             <path>
               <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
               <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="IDEAL-WECHAT-WEB" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="PORTAL-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="PORTAL-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="PORTAL-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="PORTAL-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-PORTAL-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="SSO-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEAL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEAL-PARENT" type="462c0819:PsiDirectoryNode" />
-              <item name="IDEAL-SSO-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="SSO-WEB-SOURCE" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -662,9 +334,9 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552620861268" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552914941966" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../new1/IDEAL/IDEAL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -674,17 +346,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\workspace\new\IDEAL\IDEAL\IDEAL-PARENT\IDEAL-SSO-WEB\src\main\webapp\SSO-WEB-SOURCE\views" />
-      <recent name="D:\workspace\new\IDEAL\IDEAL\IDEAL-PARENT\IDEAL-COMMON\src\main\java\cn\ideal\common\pojo" />
-      <recent name="D:\workspace\new\IDEAL\IDEAL\IDEAL-PARENT\IDEAL-COMMON\src\main\java\cn\ideal\common\mapper" />
-      <recent name="D:\workspace\new\IDEAL\IDEAL\IDEAL-PARENT\IDEAL-PORTAL-WEB\src\main\webapp\PORTAL-WEB-SOURCE\assets\vendor" />
-      <recent name="D:\workspace\new\IDEAL\IDEAL\IDEAL-PARENT\IDEAL-COMMON\src\main\java\cn\ideal\common" />
+      <recent name="D:\workspace\new1\IDEAL(1)\IDEAL\IDEAL-PARENT\IDEAL-PORTAL-WEB\src\main\webapp\PORTAL-WEB-SOURCE\assets" />
+      <recent name="D:\workspace\new1\IDEAL(1)\IDEAL\IDEAL-PARENT\IDEAL-PORTAL-WEB\src\main\webapp\PORTAL-WEB-SOURCE\assets\vendor" />
+      <recent name="D:\workspace\new1\IDEAL(1)\IDEAL\IDEAL-PARENT\IDEAL-PORTAL-WEB\src\main\webapp\PORTAL-WEB-SOURCE\assets\image" />
+      <recent name="D:\workspace\new1\IDEAL(1)\IDEAL\IDEAL-PARENT\IDEAL-MANAGER-WEB\src\main\webapp\MANAGER-WEB-SOURCE\assets\img" />
+      <recent name="D:\workspace\new1\IDEAL(1)\IDEAL\IDEAL-PARENT\IDEAL-MANAGER-WEB\src\main\webapp\MANAGER-WEB-SOURCE\assets" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cn.ideal.portal.controller" />
+      <recent name="cn.ideal.common.results" />
       <recent name="cn.ideal.common.pojo" />
-      <recent name="cn.ideal.portal.service.impl" />
-      <recent name="cn.ideal.portal.service" />
+      <recent name="cn.ideal.portal.controller" />
       <recent name="cn.ideal.wechat.controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -706,7 +377,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.PORTAL-WEB">
+  <component name="RunManager" selected="Maven.WECHAT-WEB">
     <configuration name="MANAGER-WEB" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -1162,19 +833,38 @@
       <workItem from="1552398326226" duration="870000" />
       <workItem from="1552473060787" duration="12249000" />
       <workItem from="1552489585107" duration="6058000" />
-      <workItem from="1552552979362" duration="12975000" />
-      <workItem from="1552614133435" duration="6656000" />
+      <workItem from="1552623302661" duration="147000" />
+      <workItem from="1552644944140" duration="36000" />
+      <workItem from="1552657590813" duration="6895000" />
+      <workItem from="1552665308910" duration="29000" />
+      <workItem from="1552706654040" duration="1438000" />
+      <workItem from="1552710078521" duration="590000" />
+      <workItem from="1552711160803" duration="2088000" />
+      <workItem from="1552719486237" duration="5638000" />
+      <workItem from="1552738757249" duration="4012000" />
+      <workItem from="1552805795086" duration="452000" />
+      <workItem from="1552806579216" duration="4995000" />
+      <workItem from="1552811730096" duration="2724000" />
+      <workItem from="1552909423118" duration="6067000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309887000" />
+    <option name="totallyTimeSpent" value="325367000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985755" visible="true" weight="0.18976545" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985755" visible="true" weight="0.2228145" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -1184,28 +874,28 @@
       <window_info id="Image Layers" order="7" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4966488" visible="true" weight="0.37703142" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3986637" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4966488" visible="true" weight="0.42036837" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39653304" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
-      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Spring" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5033512" side_tool="true" weight="0.42307693" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32889125" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32908848" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.16689008" />
-      <window_info anchor="right" id="Maven" order="7" weight="0.32995737" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.16689008" />
+      <window_info anchor="right" id="Maven" order="7" visible="true" weight="0.32995737" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
@@ -1216,12 +906,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH/IDEAL-SEARCH-SERVICE/src/main/java/cn/ideal/search/service/impl/SearchCommodityServiceImpl.java</url>
-          <line>45</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH/IDEAL-SEARCH-SERVICE/src/main/java/cn/ideal/search/service/impl/SearchServiceImpl.java</url>
           <line>40</line>
@@ -1237,374 +921,372 @@
       </breakpoints>
     </breakpoint-manager>
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderExample.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderItemExample.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityOrderItemMapper.java">
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-INTERFACE/src/main/java/cn/ideal/portal/service/CartService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityOrderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityOrderShippingMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-INTERFACE/src/main/java/cn/ideal/portal/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE/src/main/java/cn/ideal/product/service/impl/MerchantManagerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="53" column="91" selection-start-line="53" selection-start-column="91" selection-end-line="53" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/assets/vendor/toastr/toastr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#22#29#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/orderInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_MyBatis/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1460">
-          <caret line="73" column="3" selection-start-line="60" selection-start-column="7" selection-end-line="73" selection-end-column="3" />
+        <state relative-caret-position="140">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityCatMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/mapper/CommodityCatMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityCatExample.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityCart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/CartServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/product.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="78" column="48" selection-start-line="78" selection-end-line="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/user.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="77" column="65" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_PageHelper/src/main/java/com/github/pagehelper/PageHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/CommodityDetailServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/resources/springmvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="37" column="62" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/resources/spring/applicationContext-service.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpuSpeKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpev.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySkuSpevExample.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySkuSpevKey.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.2.8/mybatis-3.2.8.jar!/org/apache/ibatis/binding/MapperProxy.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+        <state relative-caret-position="297">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderItem.java">
+    <entry file="jar://C:/ideal_project/jdk1.8.0_45/src.zip!/java/util/concurrent/ConcurrentHashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        <state relative-caret-position="177">
+          <caret line="935" selection-start-line="935" selection-end-line="935" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrderShipping.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.jar!/com/alibaba/dubbo/rpc/proxy/javassist/JavassistProxyFactory.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-511">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySku.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommoditySpu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.2.2/mybatis-spring-1.2.2.jar!/org/mybatis/spring/SqlSessionTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.2.2/mybatis-spring-1.2.2.jar!/org/mybatis/spring/MyBatisExceptionTranslator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/IndexServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+        <state>
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#1298#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityContentCategory.java">
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/results/TreeJsonResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="48" column="185" selection-start-line="48" selection-start-column="185" selection-end-line="48" selection-end-column="185" />
+        <state relative-caret-position="169">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityCat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
-          <caret line="41" column="161" selection-start-line="41" selection-start-column="161" selection-end-line="41" selection-end-column="161" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/AccountUser.java">
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/IndexManagerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-160">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/CommodityOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="61" column="35" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+        <state relative-caret-position="360">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/order.jsp">
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/CommodityCatController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="958" selection-start-line="958" selection-end-line="958" />
-          <folding>
-            <element signature="e#425#431#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3429">
-          <caret line="80" column="27" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="184" column="46" selection-start-line="184" selection-start-column="46" selection-end-line="184" selection-end-column="46" />
+        <state relative-caret-position="1180">
+          <caret line="75" column="7" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/PageController.java">
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB/src/main/webapp/MANAGER-WEB-SOURCE/views/commodity_category.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
-          <folding>
-            <element signature="e#1800#1801#0" expanded="true" />
-            <element signature="e#1829#1830#0" expanded="true" />
-            <element signature="e#1848#1849#0" expanded="true" />
-            <element signature="e#1877#1878#0" expanded="true" />
-            <element signature="e#1941#1942#0" expanded="true" />
-            <element signature="e#1971#1972#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="3860">
+          <caret line="193" column="32" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL/IDEAL-PORTAL-SERVICE/src/main/java/cn/ideal/portal/service/impl/OrderServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER/IDEAL-MANAGER-SERVICE/src/main/java/cn/ideal/manager/service/impl/CommodityCatServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="66" column="53" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
+        <state relative-caret-position="381">
+          <caret line="92" column="28" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-COMMON/src/main/java/cn/ideal/common/pojo/PCCommodityCart.java">
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/java/cn/ideal/sso/controller/ManageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/java/cn/ideal/portal/controller/CartController.java">
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MANAGER-WEB/src/main/java/cn/ideal/manager/controller/ContentCategoryManagerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/commodity_detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="504" column="36" lean-forward="true" selection-start-line="504" selection-start-column="36" selection-end-line="504" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PORTAL-WEB/src/main/webapp/PORTAL-WEB-SOURCE/views/cart.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="315" column="8" selection-start-line="315" selection-start-column="8" selection-end-line="315" selection-end-column="8" />
+        <state relative-caret-position="280">
+          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB/src/main/java/cn/ideal/product/controller/CommodityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-INTERFACE/src/main/java/cn/ideal/product/service/CommodityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE/src/main/java/cn/ideal/product/service/impl/CommodityServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB/src/main/java/cn/ideal/product/controller/CommodityCatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB/src/main/java/cn/ideal/product/controller/PictureController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB/src/main/webapp/PRODUCTOR-WEB-SOURCE/assets/scripts/custom-scripts.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB/src/main/webapp/PRODUCTOR-WEB-SOURCE/views/add-commodity.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="226" column="36" selection-start-line="226" selection-start-column="36" selection-end-line="226" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB/src/main/webapp/PRODUCTOR-WEB-SOURCE/views/manage-spu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="920">
+          <caret line="160" column="34" lean-forward="true" selection-start-line="160" selection-start-column="34" selection-end-line="160" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/product.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/src/main/java/cn/ideal/sso/service/impl/ManageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-400">
+          <caret line="176" column="37" lean-forward="true" selection-start-line="176" selection-start-column="37" selection-end-line="176" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO/IDEAL-SSO-SERVICE/src/main/java/cn/ideal/sso/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-INTERFACE/src/main/java/cn/ideal/product/service/MerchantManagerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB/src/main/webapp/PRODUCTOR-WEB-SOURCE/views/template/left-sidebar.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB/src/main/webapp/PRODUCTOR-WEB-SOURCE/views/manage-merchant-apply.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1780">
+          <caret line="134" column="40" lean-forward="true" selection-start-line="134" selection-start-column="40" selection-end-line="134" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB/src/main/webapp/PRODUCTOR-WEB-SOURCE/assets/vendor/bootstrap-table/bootstrap-table.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="25933" selection-start-line="8" selection-start-column="25933" selection-end-line="8" selection-end-column="25933" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB/src/main/webapp/PRODUCTOR-WEB-SOURCE/views/manage-merchant.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="218" column="45" selection-start-line="218" selection-start-column="45" selection-end-line="218" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SSO-WEB/src/main/webapp/SSO-WEB-SOURCE/views/merchant.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT-WEB/src/main/java/cn/ideal/product/controller/MerchantManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-PRODUCT/IDEAL-PRODUCT-SERVICE/src/main/java/cn/ideal/product/service/impl/MerchantManagerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="48" column="32" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB/src/main/java/cn/ideal/merchant/controller/ApplyMerchantController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="34" column="65" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB/src/main/webapp/MERCHANT-WEB-SOURCE/views/allowed_apply.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-260">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB/src/main/webapp/MERCHANT-WEB-SOURCE/views/template/left-sidebar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="74" lean-forward="true" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB/src/main/webapp/MERCHANT-WEB-SOURCE/views/apply_commodity.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="123" column="19" selection-start-line="123" selection-start-column="19" selection-end-line="123" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT-WEB/src/main/webapp/MERCHANT-WEB-SOURCE/views/apply_company.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="185" column="24" lean-forward="true" selection-start-line="185" selection-start-column="24" selection-end-line="185" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-MERCHANT/IDEAL-MERCHANT-SERVICE/src/main/java/cn/ideal/merchant/service/impl/ApplyMerchantServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="108" column="59" lean-forward="true" selection-start-line="108" selection-start-column="59" selection-end-line="108" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH-WEB/logs/server.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2520">
+          <caret line="99" column="51" lean-forward="true" selection-start-line="99" selection-start-column="51" selection-end-line="99" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH-WEB/src/main/java/cn/ideal/search/controller/SearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/solr/solr-solrj/4.10.3/solr-solrj-4.10.3.jar!/org/apache/solr/common/SolrInputDocument.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH/IDEAL-SEARCH-SERVICE/src/main/java/cn/ideal/search/service/impl/SearchCommodityServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH-WEB/src/main/webapp/SEARCH-WEB-SOURCE/views/search.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH-WEB/src/main/java/cn/ideal/search/exception/GlobalExceptionResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.4.RELEASE/spring-webmvc-4.2.4.RELEASE.jar!/org/springframework/web/servlet/HandlerExceptionResolver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-SEARCH/IDEAL-SEARCH-SERVICE/src/main/java/cn/ideal/search/dao/SearchDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB/src/main/java/cn/ideal/wechat/controller/CommodityAddressController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-95">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB/src/main/java/cn/ideal/wechat/controller/CommodityCartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB/src/main/java/cn/ideal/wechat/controller/CommodityCatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB/src/main/java/cn/ideal/wechat/controller/CommodityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDEAL-PARENT/IDEAL-WECHAT-WEB/src/main/java/cn/ideal/wechat/controller/CommodityOrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1650,7 +1332,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1662,7 +1344,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>IDEAL-MANAGER</last-edited>
+          <last-edited>_MyBatis</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

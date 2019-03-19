@@ -6,10 +6,13 @@ import cn.ideal.common.results.*;
 import cn.ideal.product.service.CommodityService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import javax.jms.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -31,11 +34,14 @@ public class CommodityServiceImpl implements CommodityService {
     private CommodityCatMapper commodityCatMapper;
     @Autowired
     private CommoditySkuSpevMapper commoditySkuSpevMapper;
+    @Autowired
+    private JmsTemplate jmsTemplate;
+    @Resource(name = "itemAddTopic")
+    private Destination destination;
 
     @Override
     public MessageResult addCommodity(CommodityJsonResult commodity) {
         //id字段
-        Long spu_id = null;
         ArrayList<Long> spe_ids = new ArrayList<>();
         //提取规格KV字段
         String[] arr = commodity.getSpe().split("/");
@@ -51,12 +57,13 @@ public class CommodityServiceImpl implements CommodityService {
         //装载SPU
         CommoditySpu spu = new CommoditySpu(null, commodity.getTitle(), commodity.getCategory(), commodity.getApid(), commodity.getSellpoint(), commodity.getImage(), (byte)1);
         commoditySpuMapper.insert(spu);
-        spu_id = spu.getId();
+        final Long spu_id = spu.getId();
         //装载SPE
         for (String key : keys){
             CommoditySpe spe = new CommoditySpe(null, key);
             commoditySpeMapper.insert(spe);
             spe_ids.add(spe.getId());
+
         }
         //装载SPU_SPE
         for (Long spe_id : spe_ids){
@@ -69,6 +76,11 @@ public class CommodityServiceImpl implements CommodityService {
                 commoditySpevMapper.insert(new CommoditySpev(null, spe_ids.get(i), val));
             }
         }
+
+        jmsTemplate.send(destination, session -> {
+            TextMessage textMessage = session.createTextMessage(spu_id + "");
+            return textMessage;
+        });
         return MessageResult.ok();
     }
 

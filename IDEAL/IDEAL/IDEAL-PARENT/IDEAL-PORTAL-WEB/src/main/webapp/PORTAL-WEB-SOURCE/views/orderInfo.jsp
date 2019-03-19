@@ -156,53 +156,6 @@
                         <a href="javascript:void(0);"  class="btn btn-primary" id="J_checkoutToPay" data-stat-id="9dc0c7cf32a1c0ca" >付款</a>
                     </div>
                 </div>
-
-                <div class="payment-box payment-box-last ">
-                    <div class="payment-header clearfix">
-                        <h3 class="title">快捷支付</h3>
-                        <span class="desc">（支持以下各银行信用卡以及部分银行借记卡）</span>
-                    </div>
-                    <div class="payment-body">
-                        <ul class="clearfix payment-list  J_paymentList J_linksign-customize">
-                            <li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="CMB-KQ" value="CMB-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_zsyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="COMM-KQ" value="COMM-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_jtyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="CCB-KQ" value="CCB-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_jsyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="ICBCB2C-KQ" value="ICBCB2C-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_gsyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="CITIC-KQ" value="CITIC-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_zxyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="CEBBANK-KQ" value="CEBBANK-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_gdyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="BOCB2C-KQ" value="BOCB2C-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_zgyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="SRCB-KQ" value="SRCB-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_shncsyyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="JSB-KQ" value="JSB-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_jiangsshuyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="CIB-KQ" value="CIB-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_xyyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="ABC-KQ" value="ABC-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_nyyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="SPABANK-KQ" value="SPABANK-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_payh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="HXB-KQ" value="HXB-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_hyyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="GDB-KQ" value="GDB-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_gfyh.png?ver2015" alt=""></li><li class="J_bank" data-stat-id="beebcefe84431b57" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-beebcefe84431b57', '', 'pcpid', '']);"><input type="radio" name="payOnlineBank" id="BOB-KQ" value="BOB-KQ"> <img src="//s01.mifile.cn/i/banklogo/payOnline_bjyh.png?ver2015" alt=""></li>                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="section section-installment" id="J_paymentFenqi">
-                <div class="payment-box">
-                    <div class="payment-header clearfix">
-                        <h3 class="title">分期付款</h3>
-                        <span class="desc"></span>
-                    </div>
-                    <div class="payment-body">
-                        <ul class="clearfix payment-list J_paymentList J_linksign-customize J_tabSwitch">
-                            <li class="J_bank fenqi" data-isinstalment="true" data-stat-id="9c74efccaa92537a" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-9c74efccaa92537a', '', 'pcpid', '']);"><input autocomplete="off" type="radio" name="payOnlineBank" id="mifinanceinstal" value="mifinanceinstal"> <img src="//c1.mifile.cn/f/i/15/pay/mifinanceinstal.png" alt="分期-小米金融	"></li>                        </ul>
-                        <div class="tab-container clearfix isinstalment-box">
-                            <div class="tab-content  clearfix">
-                                <div class="isinstalment-item  clearfix" style="height:150px;">
-                                    <div class="item-header">
-                                        <h3>79元 × 1期</h3>
-                                        <p>
-                                            <span style="color: #ff6700">免息，无手续费</span>
-                                        </p>
-                                    </div>
-                                    <br>
-                                    <div class="item-footer">
-                                        <input type="radio" name="installments" id="installments_cmbinstal_1" value="1">
-                                        <a href="javascript:void(0);" data-installid="mifinanceinstal" class="btn J_installmentConfirmBtn" data-stat-id="42a8872dcf10f474" onclick="_msq.push(['trackEvent', 'f1542ececd0b6bc5-42a8872dcf10f474', 'javascript:void0', 'pcpid', '']);">选择该分期方式</a>
-                                    </div>
-                                </div>
-
-                                <div class="isinstalment-desc">
-                                    分期付款说明：<br>
-                                    每期还款金额是根据你的订单估算得出的金额，实际支付数额请以小米分期账单为准，小米分期有权决定是否接受您的分期付款申请。
-                                </div>
-                            </div>
-                        </div>
-                        <div class="isinstalment-desc" id="J_isinstalmentPublicDesc">
-                        </div>
-                    </div>
-                </div>
             </div>
         </form>
     </div>
@@ -252,11 +205,16 @@
         var params ;
 
         $.post(url,data,function(result){
+            if(result.status==203){
+                toastr.info("请再次刷新重试！");
+                return;
+            }
+            console.log(result.data);
             params = result.data;
             $('#J_postInfo').html('收货信息：'+ params.name+params.phone+'  &nbsp;&nbsp;\n' +
                 params.address+'&nbsp;&nbsp; ');
             $('span[class="order-num"]').text(params.orderId);
-            $('span[class="money"]').find('em').text(params.totalFee);
+            $('span[class="money"]').find('em').text(params.totalFee/100);
             $('#order-detail-ul').children('li').eq(1).find('div[class="content"]').html(params.address);
             $('#order-detail-ul').children('li').eq(2).find('div[class="content"]').html(params.ComTitle);
         });

@@ -7,4 +7,6 @@ import java.util.List;
 public interface SearchCommodityMapper {
 
     List<SearchJsonResult> getCommodityList();
+
+    SearchJsonResult getItemById(long itemId);
 }

@@ -38,10 +38,6 @@ public class CommodityOrder implements Serializable {
 
     private Date updated;
 
-    public String getId() {
-        return id;
-    }
-
     public CommodityOrder() {
     }
 
@@ -63,6 +59,10 @@ public class CommodityOrder implements Serializable {
         this.buyerRate = buyerRate;
         this.created = created;
         this.updated = updated;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public void setId(String id) {
@@ -195,28 +195,5 @@ public class CommodityOrder implements Serializable {
 
     public void setUpdated(Date updated) {
         this.updated = updated;
-    }
-
-    @Override
-    public String toString() {
-        return "CommodityOrder{" +
-                "id='" + id + '\'' +
-                ", payment='" + payment + '\'' +
-                ", paymentType=" + paymentType +
-                ", postFee='" + postFee + '\'' +
-                ", status=" + status +
-                ", paymentTime=" + paymentTime +
-                ", closeTime=" + closeTime +
-                ", endTime=" + endTime +
-                ", consignTime=" + consignTime +
-                ", shippingName='" + shippingName + '\'' +
-                ", shippingCode='" + shippingCode + '\'' +
-                ", userId=" + userId +
-                ", buyerMessage='" + buyerMessage + '\'' +
-                ", buyerNick='" + buyerNick + '\'' +
-                ", buyerRate=" + buyerRate +
-                ", created=" + created +
-                ", updated=" + updated +
-                '}';
     }
 }

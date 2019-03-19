@@ -3,6 +3,7 @@ package cn.ideal.wechat.service.impl;
 import cn.ideal.common.mapper.CommodityCartMapper;
 import cn.ideal.common.mapper.CommodityOrderItemMapper;
 import cn.ideal.common.mapper.CommodityOrderMapper;
+import cn.ideal.common.mapper.CommodityOrderShippingMapper;
 import cn.ideal.common.pojo.*;
 import cn.ideal.common.results.MessageResult;
 import cn.ideal.wechat.service.CommodityOrderService;

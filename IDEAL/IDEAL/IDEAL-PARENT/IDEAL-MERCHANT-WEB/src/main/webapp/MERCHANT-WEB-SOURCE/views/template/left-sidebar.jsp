@@ -10,7 +10,7 @@
                         <ul class="nav">
                             <li><a href="apply_company.html" class="">申请代理公司</a></li>
                             <li><a href="allowed_apply.html" class="">注册信息审核</a></li>
-                            <li><a href="apply_commodity.html" class="">申请商品代理</a></li>
+                            <li><a href="apply_commodity.html" class="">违章用户处理</a></li>
                         </ul>
                     </div>
                 </li>

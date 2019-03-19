@@ -6,14 +6,6 @@
 <head>
     <meta charset="UTF-8">
     <title>小米MIX 3 - 小米商城</title>
-    <link rel="dns-prefetch" href="//s01.mifile.cn"/>
-    <link rel="dns-prefetch" href="//c1.mifile.cn"/>
-    <link rel="dns-prefetch" href="//i3.mifile.cn"/>
-    <link rel="dns-prefetch" href="//i2.mifile.cn"/>
-    <link rel="dns-prefetch" href="//i1.mifile.cn"/>
-    <link rel="dns-prefetch" href="//i8.mifile.cn"/>
-    <link rel="dns-prefetch" href="//v.mifile.cn"/>
-    <link rel="dns-prefetch" href="//a.huodong.mi.cn"/>
     <link rel="stylesheet" href="assets/vendor/toastr/toastr.css">
     <link rel="shortcut icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon"/>
     <link rel="icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon"/>
@@ -488,11 +480,10 @@
             var data = {
                 id : ${spes.sku.id},
                 title:commodity_name,
-                price:'${spes.sku.price }',
+                price:${spes.sku.price},
                 pic:'${spes.sku.image}'
             }
             $.post("cart/getCommodityForCart/cartManager.do",data,function(result){
-                console.log(result);
                 if(result.data==500){
                     //商品已存在
                     toastr.info("商品已存在购物车");

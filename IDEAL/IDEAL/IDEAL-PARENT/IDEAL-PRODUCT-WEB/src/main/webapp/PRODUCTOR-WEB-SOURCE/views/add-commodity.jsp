@@ -224,14 +224,13 @@
             },
             dataType: 'JSON',
             success: function (data, status) {
-                toastr.info("添加成功");
             },
             error: function () {
                 alert('添加失败');
             }
         });
     });
-    function checkTbodyEmpty() {spe
+    function checkTbodyEmpty() {
         if(document.getElementById("spe").childNodes.length == 0){
             $("#spe").append("<tr id='null'>" + "<td>"+"null"+"</td>" + "<td class=\"text-nowrap\">"+"null"+"</td>" + "</tr>");
         }

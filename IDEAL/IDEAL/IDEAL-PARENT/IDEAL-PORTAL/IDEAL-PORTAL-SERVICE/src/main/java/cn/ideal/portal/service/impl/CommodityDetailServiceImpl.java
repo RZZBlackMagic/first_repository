@@ -2,6 +2,7 @@ package cn.ideal.portal.service.impl;
 
 import cn.ideal.common.mapper.*;
 import cn.ideal.common.pojo.*;
+import cn.ideal.common.results.MessageResult;
 import cn.ideal.portal.service.CommodityDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -30,7 +31,6 @@ public class CommodityDetailServiceImpl implements CommodityDetailService {
     @Override
     public Map<String, Object> getSpuMessage(Long spuid) {
         Map<String, Object> res = new HashMap<>();
-        System.out.println("*****************"+spuid);
         CommoditySpu spu = spuMapper.selectByPrimaryKey(spuid);
         res.put("spu", spu);
         return res;
@@ -42,6 +42,7 @@ public class CommodityDetailServiceImpl implements CommodityDetailService {
         Map<String, Object> res = new HashMap<>();
         Map<String, Object> data = new HashMap<>();
         List<Long> default_data = new LinkedList<>();
+
         CommoditySpuSpeExample spuSpeExample = new CommoditySpuSpeExample();
         CommoditySpuSpeExample.Criteria spuSpeCriteria = spuSpeExample.createCriteria();
         spuSpeCriteria.andSpuidEqualTo(spuid);

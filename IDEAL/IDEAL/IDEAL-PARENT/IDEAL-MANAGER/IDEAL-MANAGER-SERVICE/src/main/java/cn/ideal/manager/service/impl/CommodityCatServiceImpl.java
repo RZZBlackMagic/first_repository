@@ -70,11 +70,9 @@ public class CommodityCatServiceImpl implements CommodityCatService {
     @Override
     public List<TreeJsonResult> getCategoryListForTree() {
         //升序排列
-
         CommodityCatExample example = new CommodityCatExample();
         List<CommodityCat> categoryList = commodityCatMapper.selectByExample(example);
         List<TreeJsonResult> resultList = new ArrayList<>();
-        System.out.println("任章哲***************"+categoryList.size());
         //装填TreeNode
         for (int i = 0; i < categoryList.size(); i++) {
             TreeJsonResult treeJsonResult = new TreeJsonResult();

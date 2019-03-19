@@ -19,6 +19,20 @@ public class CommodityOrderItem implements Serializable {
 
     private String picPath;
 
+    public CommodityOrderItem() {
+    }
+
+    public CommodityOrderItem(String id, String itemId, String orderId, String number, String title, String price, String totalFee, String picPath) {
+        this.id = id;
+        this.itemId = itemId;
+        this.orderId = orderId;
+        this.number = number;
+        this.title = title;
+        this.price = price;
+        this.totalFee = totalFee;
+        this.picPath = picPath;
+    }
+
     public String getId() {
         return id;
     }
@@ -81,33 +95,5 @@ public class CommodityOrderItem implements Serializable {
 
     public void setPicPath(String picPath) {
         this.picPath = picPath == null ? null : picPath.trim();
-    }
-
-    public CommodityOrderItem() {
-    }
-
-    public CommodityOrderItem(String id, String itemId, String orderId, String number, String title, String price, String totalFee, String picPath) {
-        this.id = id;
-        this.itemId = itemId;
-        this.orderId = orderId;
-        this.number = number;
-        this.title = title;
-        this.price = price;
-        this.totalFee = totalFee;
-        this.picPath = picPath;
-    }
-
-    @Override
-    public String toString() {
-        return "CommodityOrderItem{" +
-                "id='" + id + '\'' +
-                ", itemId='" + itemId + '\'' +
-                ", orderId='" + orderId + '\'' +
-                ", number='" + number + '\'' +
-                ", title='" + title + '\'' +
-                ", price='" + price + '\'' +
-                ", totalFee='" + totalFee + '\'' +
-                ", picPath='" + picPath + '\'' +
-                '}';
     }
 }

@@ -183,7 +183,6 @@
             productorId:rows[0].id
         };
         $.post(url,data,function(result){
-            initTable();
             toastr.success("提交申请成功");
         });
     }

@@ -9,6 +9,7 @@ import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.rmi.MarshalledObject;
 import java.util.*;
 
 @Service
@@ -71,8 +72,6 @@ public class CommodityServiceImpl implements CommodityService {
             for (CommoditySku sku : commoditySkus){
                 if (sku.getPrice() < min_price)
                     min_price = sku.getPrice();
-                if (sku.getDiscount() < min_price && sku.getDiscount() != 0)
-                    min_price = sku.getDiscount();
             }
             spuMap.put("retail_price", min_price);
             sList.add(spuMap);
@@ -97,8 +96,6 @@ public class CommodityServiceImpl implements CommodityService {
         LinkedList<HashMap<String, Object>> gallery = new LinkedList<>();
         for (CommoditySku sku : skus){
             //填装价格
-            if (sku.getDiscount() != 0 && sku.getDiscount() < retail_price)
-                retail_price = sku.getDiscount();
             if (sku.getPrice() < retail_price)
                 retail_price = sku.getPrice();
             //填装轮播图

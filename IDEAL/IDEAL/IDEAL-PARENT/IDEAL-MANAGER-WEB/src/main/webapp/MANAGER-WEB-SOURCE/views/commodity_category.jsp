@@ -191,7 +191,6 @@
         processData: false,
         type: 'get',
         success: function (result) {
-            console.log(result);
             for (var i = 0; i < result.length; i++) {
                 if (result[i].pId == 0) {
                     result[i].open = true;
@@ -201,7 +200,7 @@
             }
             var zNodes = result;
             var t = $("#treeDemo");
-            $('#left').data();
+            $('#left').data()
             //初始化ztree
             t = $.fn.zTree.init(t, setting, zNodes);
         },

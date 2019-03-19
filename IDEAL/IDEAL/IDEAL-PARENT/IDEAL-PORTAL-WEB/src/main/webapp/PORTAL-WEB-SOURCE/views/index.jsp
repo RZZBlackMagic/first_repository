@@ -44,7 +44,7 @@
             </ul>
         </div>
         <div class="right fr">
-            <div class="gouwuche fr"><a href="">购物车</a></div>
+            <div class="gouwuche fr"><a href="/cart.html">购物车</a></div>
             <div class="fr">
                 <ul>
                     <li><a href="./login.html" target="_blank">登录</a></li>
@@ -63,7 +63,7 @@
 
 <!-- start banner_x -->
 <div class="banner_x center">
-    <a href="./index.html" target="_blank"><div class="logo fl"></div></a>
+    <a href="/" target="_blank"><div class="logo fl"></div></a>
     <a href=""><div class="ad_top fl"></div></a>
     <div class="nav fl">
         <ul>
@@ -182,8 +182,8 @@
                 <div class="mingxing fl">
                     <div class="sub_mingxing"><a href="${i.url}"><img src="${i.pic}"></a></div>
                     <div class="pinpai"><a href="">${i.title}</a></div>
-                    <div class="youhui">${i.titleDesc}</div>
-                    <div class="jiage">${i.content}</div>
+                    <div class="youhui">${i.subTitle}</div>
+                    <div class="jiage">${i.titleDesc/100}元</div>
                 </div>
             </c:forEach>
             <div class="clear"></div>
@@ -202,7 +202,7 @@
                         <div class="tu"><a><img src="${i.pic}"></a></div>
                         <div class="miaoshu"><a href="">${i.title}</a></div>
                         <div class="pingjia">${i.subTitle}</div>
-                        <div class="jiage">${i.titleDesc}</div>
+                        <div class="jiage">${i.titleDesc/100}元</div>
                         <div class="piao">
                             <a href="">
                                 <span>${i.content}</span>
@@ -220,7 +220,7 @@
                         <div class="tu"><a><img src="${i.pic}"></a></div>
                         <div class="miaoshu"><a href="">${i.title}</a></div>
                         <div class="pingjia">${i.subTitle}</div>
-                        <div class="jiage">${i.titleDesc}</div>
+                        <div class="jiage">${i.titleDesc/100}</div>
                         <div class="piao">
                             <a href="">
                                 <span>${i.content}</span>

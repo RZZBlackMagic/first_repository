@@ -24,4 +24,29 @@
         GROUP BY
             a.id
     </select>
+    <select id="getCommodityById" parameterType="Long" resultType="cn.ideal.common.results.SearchJsonResult">
+        SELECT
+            a.id,
+            a.title,
+            a.sellpoint,
+            a.image,
+            b.name category_name,
+            d.company_zh productor_name,
+            min(c.price) price,
+            c.discount
+        FROM
+            commodity_spu a
+        LEFT JOIN
+            commodity_cat b ON a.cid=b.id
+        LEFT JOIN
+            commodity_sku c ON a.id=c.spuid
+        LEFT JOIN
+            account_productor d ON a.apid=d.id
+        WHERE
+            c.`status`=1 AND a.`status`=1
+        AND
+            a.id = #{itemId}
+        GROUP BY
+            a.id
+    </select>
 </mapper>

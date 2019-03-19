@@ -20,57 +20,60 @@ import java.util.ResourceBundle;
 public class OrderController {
     @Autowired
     private OrderService orderService;
-    @RequestMapping("order1/getComFromCookieById/orderManager.do")
-    @ResponseBody
-    public MessageResult getComFromCookieById(String idList, String numList){
-        MessageResult messageResult = orderService.getComFromCookieById(idList,numList);
-        return messageResult;
-    }
+
+
     @RequestMapping("order/insertIntoCommodityOrder/orderManager.do")
     @ResponseBody
-    public MessageResult insertIntoCommodityOrder(CommodityOrder commodityOrder){
+    public MessageResult insertIntoCommodityOrder(CommodityOrder commodityOrder) {
         MessageResult messageResult = orderService.insertIntoCommodityOrder(commodityOrder);
         return messageResult;
     }
+
     @RequestMapping("order/updateCommodityOrder/orderManager.do")
     @ResponseBody
-    public MessageResult updateCommodityOrder(String id, String shippingCode, String shippingName){
-        MessageResult messageResult = orderService.updateCommodityOrder(id,shippingCode,shippingName);
+    public MessageResult updateCommodityOrder(String id, String shippingCode, String shippingName) {
+        MessageResult messageResult = orderService.updateCommodityOrder(id, shippingCode, shippingName);
         return messageResult;
     }
+
     @RequestMapping("order/insertIntoCommodityOrderItem/orderManager.do")
     @ResponseBody
-    public MessageResult insertIntoCommodityOrderItem(CommodityOrderItem commodityOrderItem){
+    public MessageResult insertIntoCommodityOrderItem(CommodityOrderItem commodityOrderItem) {
         MessageResult messageResult = orderService.insertIntoCommodityOrderItem(commodityOrderItem);
         return messageResult;
     }
+
     @RequestMapping("order/insertIntoCommodityOrderShipping/orderManager.do")
     @ResponseBody
-    public MessageResult insertIntoCommodityOrderShipping(CommodityOrderShipping commodityOrderShipping){
+    public MessageResult insertIntoCommodityOrderShipping(CommodityOrderShipping commodityOrderShipping) {
         MessageResult messageResult = orderService.insertIntoCommodityOrderShipping(commodityOrderShipping);
         return messageResult;
     }
+
     @RequestMapping("order/getAddressList/orderManager.do")
     @ResponseBody
-    public MessageResult getAddressList(Long userId){
+    public MessageResult getAddressList(Long userId) {
         MessageResult messageResult = orderService.getAddressList(userId);
         return messageResult;
     }
+
     @RequestMapping("order/insertIntoCommodityAddress/orderManager.do")
     @ResponseBody
-    public MessageResult insertIntoCommodityAddress(CommodityAddress commodityAddress){
+    public MessageResult insertIntoCommodityAddress(CommodityAddress commodityAddress) {
         MessageResult messageResult = orderService.insertIntoCommodityAddress(commodityAddress);
         return messageResult;
     }
+
     @RequestMapping("order/getOrderInfo/orderManager.do")
     @ResponseBody
-    public MessageResult getOrderInfo(String orderId){
+    public MessageResult getOrderInfo(String orderId) {
         MessageResult messageResult = orderService.getOrderInfo(orderId);
         return messageResult;
     }
+
     @RequestMapping("order/turnToCallBack/orderManager.do")
     @ResponseBody
-    public MessageResult callback(HttpServletRequest request, HttpServletResponse response,String orderId) throws Exception{
+    public MessageResult callback(HttpServletRequest request, HttpServletResponse response, String orderId) throws Exception {
         /*String p1_MerId = request.getParameter("p1_MerId");
         String r0_Cmd = request.getParameter("r0_Cmd");
         String r1_Code = request.getParameter("r1_Code");
@@ -100,12 +103,10 @@ public class OrderController {
             // 响应数据有效
             if (r9_BType.equals("1")) {
                 // 浏览器重定向
-                System.out.println("*************111");
                 request.setAttribute("msg", "您的订单号为:"+r6_Order+",金额为:"+r3_Amt+"已经支付成功,等待发货~~");
 
             } else if (r9_BType.equals("2")) {
                 // 服务器点对点 --- 支付公司通知你
-                System.out.println("********付款成功！222");
                 // 修改订单状态 为已付款
                 // 回复支付公司
                 response.getWriter().print("success");
@@ -123,9 +124,10 @@ public class OrderController {
         return messageResult;
 
     }
+
     @RequestMapping("order/payForCommodity/orderManager.do")
     @ResponseBody
-    public MessageResult pay(HttpServletRequest request, HttpServletResponse response,String oid,String pd_FrpId) throws Exception {
+    public MessageResult pay(String oid, String pd_FrpId, HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 
         // 组织发送支付公司需要哪些数据
@@ -166,7 +168,6 @@ public class OrderController {
         sb.append("pr_NeedResponse=").append(pr_NeedResponse).append("&");
         sb.append("hmac=").append(hmac);
         String url = sb.toString();
-        System.out.println(url);
 
 
         return MessageResult.ok(url);

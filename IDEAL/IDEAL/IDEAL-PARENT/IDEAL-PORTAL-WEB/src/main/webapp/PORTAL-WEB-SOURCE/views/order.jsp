@@ -613,10 +613,12 @@
     };
     var orderCommodityList ;
     $.getJSON(url,data,function(result){
+
+        console.log(result);
         orderCommodityList=result;
         var payAllPrice =0 ;
         for(var i=0;i<result.data.length;i++){
-            var price = eval(result.data[i].price);
+            var price = eval(result.data[i].price)/100;
             var Num = eval(result.data[i].num);
             var allPrice = price*Num;
             payAllPrice = payAllPrice + allPrice;
@@ -832,10 +834,10 @@
     $(document).data('orderId',orderId);
     var data = {
         id:orderId,
-        payment:payment[0],
+        payment:payment[0]*100,
         paymentType:1,
         userId:user_id,
-        postFee:10,
+        postFee:1000,
         buyerNick:user_name
     };
     $.post(url,data,function(result){
@@ -873,7 +875,8 @@
                 if(orderCommodityList.data[i].pic==''){
                     price = price  + 'a#';
                 }else{
-                    price = price + orderCommodityList.data[i].price + '#';
+                    orderPrice = orderCommodityList.data[i].price;
+                    price = price + orderPrice + '#';
                 }
                 id = id + orderCommodityList.data[i].id + '#';
                 num = num + orderCommodityList.data[i].num +'#';
@@ -888,7 +891,6 @@
                 shippingName:orderName
             }
             $.post(url,data,function(result){
-                commodityOrderTest=result.status;
             })
             //在Commodity_order_item中根据商品类别添加数据，订单有两类商品，就根据每个商品Id分别添加数据
             var url = "order/insertIntoCommodityOrderItem/orderManager.do";
@@ -901,7 +903,7 @@
                 picPath:pic
             }
             $.post(url,data,function(result){
-                commodityOrderItemTest = result.status;
+                console.log(data);
             })
             //在Commodity_order_shipping中添加数据：每个订单号对应一个收获地址
             var name = $('#J_addressList').find('div[class="address-item J_addressItem selected"]').find('em[class="uname"]').text();
@@ -921,7 +923,6 @@
                 receiverZip:zipCode
             };
             $.post(url,data,function(result){
-                commodityOrderShippingTest = result.status;
                 console.log(result);
             })
             //将购物车中的该商品删除

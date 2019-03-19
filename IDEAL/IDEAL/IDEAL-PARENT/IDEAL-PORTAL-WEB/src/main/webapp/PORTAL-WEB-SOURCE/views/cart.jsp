@@ -124,12 +124,13 @@
     var url = "cart/getCartList/cartManager.do";
     var data  = {};
     $.getJSON(url,data,function(result){
+        console.log(result);
         resultNum = result.data.length;
         for(var i=0;i<result.data.length;i++){
             var ID = result.data[i].id;
             var TITLE = result.data[i].title;
             var PIC = result.data[i].pic;
-            var PRICE = result.data[i].price;
+            var PRICE = result.data[i].price/100;
             var NUM = result.data[i].num;
             var ALLPRICE = NUM*PRICE;
             $('#item_table').data("allprice",ALLPRICE);
@@ -264,7 +265,6 @@
                 total = total +eval(price);
                 flag = flag +1;
                 $('#J_selTotalNum').text(flag);
-
             }
         }
         $('#J_cartTotalPrice').text(total);

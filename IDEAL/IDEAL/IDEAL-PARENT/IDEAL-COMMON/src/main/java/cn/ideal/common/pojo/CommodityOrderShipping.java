@@ -22,6 +22,21 @@ public class CommodityOrderShipping implements Serializable {
 
     private Date updated;
 
+    public CommodityOrderShipping() {
+    }
+
+    public CommodityOrderShipping(String orderId, String receiverName, String receiverPhone, String receiverMobile, String receiverDetailAddress, String receiverAddress, String receiverZip, Date created, Date updated) {
+        this.orderId = orderId;
+        this.receiverName = receiverName;
+        this.receiverPhone = receiverPhone;
+        this.receiverMobile = receiverMobile;
+        this.receiverDetailAddress = receiverDetailAddress;
+        this.receiverAddress = receiverAddress;
+        this.receiverZip = receiverZip;
+        this.created = created;
+        this.updated = updated;
+    }
+
     public String getOrderId() {
         return orderId;
     }
@@ -92,35 +107,5 @@ public class CommodityOrderShipping implements Serializable {
 
     public void setUpdated(Date updated) {
         this.updated = updated;
-    }
-
-    public CommodityOrderShipping() {
-    }
-
-    public CommodityOrderShipping(String orderId, String receiverName, String receiverPhone, String receiverMobile, String receiverDetailAddress, String receiverAddress, String receiverZip, Date created, Date updated) {
-        this.orderId = orderId;
-        this.receiverName = receiverName;
-        this.receiverPhone = receiverPhone;
-        this.receiverMobile = receiverMobile;
-        this.receiverDetailAddress = receiverDetailAddress;
-        this.receiverAddress = receiverAddress;
-        this.receiverZip = receiverZip;
-        this.created = created;
-        this.updated = updated;
-    }
-
-    @Override
-    public String toString() {
-        return "CommodityOrderShipping{" +
-                "orderId='" + orderId + '\'' +
-                ", receiverName='" + receiverName + '\'' +
-                ", receiverPhone='" + receiverPhone + '\'' +
-                ", receiverMobile='" + receiverMobile + '\'' +
-                ", receiverDetailAddress='" + receiverDetailAddress + '\'' +
-                ", receiverAddress='" + receiverAddress + '\'' +
-                ", receiverZip='" + receiverZip + '\'' +
-                ", created=" + created +
-                ", updated=" + updated +
-                '}';
     }
 }

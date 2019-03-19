@@ -14,6 +14,7 @@ import java.util.*;
 
 @Service
 public class OrderServiceImpl implements OrderService {
+
     @Autowired
     private CommodityOrderMapper commodityOrderMapper;
     @Autowired
@@ -22,25 +23,20 @@ public class OrderServiceImpl implements OrderService {
     private CommodityOrderShippingMapper commodityOrderShippingMapper;
     @Autowired
     private CommodityAddressMapper commodityAddressMapper;
-    @Override
-    public MessageResult getComFromCookieById(String idList, String numList) {
-
-        return null;
-    }
 
     @Override
-    public MessageResult insertIntoCommodityOrder(CommodityOrder commodityOrder) {
-        CommodityOrder commodityOrder1 = commodityOrderMapper.selectByPrimaryKey(commodityOrder.getId());
-        if(commodityOrder1!=null){
+    public MessageResult insertIntoCommodityOrder(CommodityOrder order) {
+        CommodityOrder commodityOrder = commodityOrderMapper.selectByPrimaryKey(order.getId());
+        if (commodityOrder != null) {
             return MessageResult.ok();
         }
         //设置订单创建时间
-        commodityOrder.setCreated(new Date(System.currentTimeMillis()));
+        order.setCreated(new Date(System.currentTimeMillis()));
         //设置订单状态：未付款
-        commodityOrder.setStatus((byte) 1);
+        order.setStatus((byte) 1);
         //设置订单更新时间
-        commodityOrder.setUpdated(new Date(System.currentTimeMillis()));
-        commodityOrderMapper.insert(commodityOrder);
+        order.setUpdated(new Date(System.currentTimeMillis()));
+        commodityOrderMapper.insert(order);
         return MessageResult.ok();
     }
 
@@ -62,13 +58,15 @@ public class OrderServiceImpl implements OrderService {
         String[] title = commodityOrderItem.getTitle().split("#");
         String[] price = commodityOrderItem.getPrice().split("#");
         String[] picPath = commodityOrderItem.getPicPath().split("#");
-        for(int i=0;i<itemIdArray.length;i++){
+        for (int i = 0; i < itemIdArray.length; i++) {
 
             CommodityOrder commodityOrder = commodityOrderMapper.selectByPrimaryKey(commodityOrderItem.getOrderId());
             commodityOrderItem.getOrderId();
-            String id = (String.valueOf(System.currentTimeMillis()+new Random().nextInt(10)));
-            String totalFee = String.valueOf((Long.valueOf(price[i])*Long.valueOf(number[i])+Long.valueOf(commodityOrder.getPostFee())));//加上邮费
-            CommodityOrderItem commodityOrderItem1 = new CommodityOrderItem(id,(itemIdArray[i]),commodityOrderItem.getOrderId(),(number[i]),title[i],(price[i]),(totalFee),picPath[i]);
+            String id = (String.valueOf(System.currentTimeMillis() + new Random().nextInt(10)));
+            System.out.println("**************"+Float.valueOf(price[i])/100);
+            System.out.println("**************"+Float.valueOf(commodityOrder.getPostFee())/100);
+            String totalFee = String.valueOf((Long.valueOf(price[i]) * Long.valueOf(number[i]) + Long.valueOf(commodityOrder.getPostFee())));//加上邮费
+            CommodityOrderItem commodityOrderItem1 = new CommodityOrderItem(id, (itemIdArray[i]), commodityOrderItem.getOrderId(), (number[i]), title[i], (price[i]), (totalFee), picPath[i]);
             commodityOrderItemMapper.insert(commodityOrderItem1);
         }
 
@@ -84,7 +82,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public MessageResult getAddressList(Long userId ) {
+    public MessageResult getAddressList(Long userId) {
         CommodityAddressExample example = new CommodityAddressExample();
         CommodityAddressExample.Criteria criteria = example.createCriteria();
         criteria.andUserIdEqualTo(userId);
@@ -94,7 +92,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public MessageResult insertIntoCommodityAddress(CommodityAddress commodityAddress) {
-        if(commodityAddress.getId()!=null){
+        if (commodityAddress.getId() != null) {
             commodityAddressMapper.deleteByPrimaryKey(commodityAddress.getId());
         }
         commodityAddress.setId(null);
@@ -106,30 +104,34 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public MessageResult getOrderInfo(String orderId) {
         CommodityOrderShipping commodityOrderShipping = commodityOrderShippingMapper.selectByPrimaryKey(orderId);
-        Map<String,Object> map = new HashMap<>();
-        map.put("orderId",orderId);
-        map.put("name",commodityOrderShipping.getReceiverName());
+        if(commodityOrderShipping==null){
+            return MessageResult.build(203,"异步异常");
+        }
+        Map<String, Object> map = new HashMap<>();
+        map.put("orderId", orderId);
+        map.put("name", commodityOrderShipping.getReceiverName());
         map.put("phone", commodityOrderShipping.getReceiverMobile());
-        map.put("address",commodityOrderShipping.getReceiverAddress()+" "+commodityOrderShipping.getReceiverDetailAddress());
+        map.put("address", commodityOrderShipping.getReceiverAddress() + " " + commodityOrderShipping.getReceiverDetailAddress());
         CommodityOrderItemExample example = new CommodityOrderItemExample();
         CommodityOrderItemExample.Criteria criteria = example.createCriteria();
         criteria.andOrderIdEqualTo(orderId);
         List<CommodityOrderItem> list = commodityOrderItemMapper.selectByExample(example);
         Long totalFee = Long.valueOf(0);
         String CommodityTitle = "";
-        for(CommodityOrderItem commodityOrderItem:list){
+        for (CommodityOrderItem commodityOrderItem : list) {
             CommodityTitle = CommodityTitle + commodityOrderItem.getTitle() + "  ";
-            totalFee = totalFee +Long.valueOf(commodityOrderItem.getTotalFee());
+            totalFee = totalFee + Long.valueOf(commodityOrderItem.getTotalFee());
         }
-        map.put("ComTitle",CommodityTitle);
-        map.put("totalFee",totalFee);
+        map.put("ComTitle", CommodityTitle);
+        map.put("totalFee", totalFee);
         return MessageResult.ok(map);
     }
 
     @Override
     public MessageResult updateOrderStatus(String orderId) {
+
         CommodityOrder commodityOrder = commodityOrderMapper.selectByPrimaryKey(orderId);
-        commodityOrder.setStatus((byte)2);//状态2：已付款
+        commodityOrder.setStatus((byte) 2);//状态2：已付款
         commodityOrderMapper.updateByPrimaryKey(commodityOrder);
         return MessageResult.ok();
     }

@@ -79,7 +79,7 @@
                                                     <input id="title" name="title" type="text" class="form-control" placeholder="">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="subTitle" class="form-control-label" >子标题</label>
+                                                    <label for="subTitle" class="form-control-label" >价格</label>
                                                     <input id="subTitle" name="subTitle" type="text" class="form-control" placeholder="">
                                                 </div>
                                                 <div class="form-group">
@@ -517,11 +517,11 @@
                 },
                 {
                     field: 'titleDesc',
-                    title: '具体内容',
+                    title: '价格',
                     visible: false,
                     editable: {
                         type: 'text',
-                        title: '修改内容',
+                        title: '修改价格',
                         placement: 'right'
                     }
                 },
@@ -534,10 +534,11 @@
                         placement: 'right'
                     },
                     formatter: function (value, row, index) {
-                        if (row.url.length > 20)
+                       /* if (row.url.length > 20)
                             return row.url.slice(0, 20) + "....";
                         else
-                            return row.url
+                            return row.url*/
+                       return value;
                     }
                 },
                 {

@@ -72,6 +72,7 @@
           <element id="archive" name="_FastDFS-1.0-SNAPSHOT.jar">
             <element id="module-output" name="_FastDFS" />
           </element>
+          <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.23" />
         </element>
       </element>
       <element id="directory" name="META-INF">

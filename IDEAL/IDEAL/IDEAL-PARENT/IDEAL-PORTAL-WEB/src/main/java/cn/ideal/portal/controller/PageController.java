@@ -2,6 +2,7 @@ package cn.ideal.portal.controller;
 
 import cn.ideal.portal.service.CommodityDetailService;
 import cn.ideal.portal.service.IndexService;
+import cn.ideal.portal.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,6 +27,8 @@ public class PageController {
     private IndexService indexService;
     @Autowired
     private CommodityDetailService commodityDetailService;
+    @Autowired
+    private OrderService orderService;
 
     @RequestMapping("/")
     public String displayIndex(HttpServletRequest request){
@@ -56,5 +59,24 @@ public class PageController {
     @RequestMapping("/orderInfo.html")
     public String orderInfo() {
         return "orderInfo";
+    }
+
+    @RequestMapping("/user_center.html")
+    public String orderListInfo(HttpServletRequest request,String userId) {
+        System.out.println("****************所有订单");
+        System.out.println((userId));
+        request.setAttribute("allOrderList",orderService.getAllOrderForCenter(userId));
+        request.setAttribute("unPayOrderList",orderService.getOrderInfoForCenter(userId,(byte)1));
+        request.setAttribute("unReceiveOrderList",orderService.getUnReceiveOrderList(userId));
+        request.setAttribute("successedOrderList",orderService.getOrderInfoForCenter(userId,(byte)5));
+        System.out.println("****************所有订单");
+        System.out.println(orderService.getAllOrderForCenter(userId));
+        System.out.println("****************未支付");
+        System.out.println(orderService.getOrderInfoForCenter(userId,(byte)1));
+        System.out.println("****************未收货");
+        System.out.println(orderService.getUnReceiveOrderList(userId));
+        System.out.println("****************成功");
+        System.out.println(orderService.getOrderInfoForCenter(userId,(byte)5));
+        return "user_center";
     }
 }

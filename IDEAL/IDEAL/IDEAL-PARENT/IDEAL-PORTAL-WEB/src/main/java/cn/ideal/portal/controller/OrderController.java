@@ -134,8 +134,10 @@ public class OrderController {
         pd_FrpId = pd_FrpId;
         String p0_Cmd = "Buy";
         String p1_MerId = ResourceBundle.getBundle("merchantInfo").getString("p1_MerId");
-        String p2_Order = "998028403889509829090809";
-        String p3_Amt = "0.01";
+        String p2_Order = oid;
+        //查价格
+        Integer price = orderService.getTotalForPay(oid);
+        String p3_Amt = String.valueOf(price);
         String p4_Cur = "CNY";
         String p5_Pid = "";
         String p6_Pcat = "";

@@ -67,7 +67,7 @@
             <a class="logo " href="//www.mi.com/index.html" title="小米官网" data-stat-id="ea54c9fed6a874d7" onclick="_msq.push(['trackEvent', '17a1f380b9d4cd2e-ea54c9fed6a874d7', '//www.mi.com/index.html', 'pcpid', '']);"></a>
         </div>
         <div class="header-title" id="J_miniHeaderTitle"><h2>确认订单</h2></div>
-        <div class="topbar-info" id="J_userInfo"><span class="user"><a rel="nofollow" class="user-name" href="//my.mi.com/portal" target="_blank"><span class="name">about you</span><i class="iconfont"></i></a><ul class="user-menu"><li><a rel="nofollow" href="//my.mi.com/portal" target="_blank">个人中心</a></li><li><a rel="nofollow" href="https://order.mi.com/user/comment" target="_blank">评价晒单</a></li><li><a rel="nofollow" href="https://order.mi.com/user/favorite" target="_blank">我的喜欢</a></li><li><a rel="nofollow" href="//account.xiaomi.com/" target="_blank">小米账户</a></li><li><a rel="nofollow" href="https://order.mi.com/site/logout">退出登录</a></li></ul></span><span class="sep">|</span><a rel="nofollow" class="link link-order" href="//static.mi.com/order/" target="_blank">我的订单</a></div>
+        <div class="topbar-info" id="J_userInfo"><span class="user"><a rel="nofollow" class="user-name" href="//my.mi.com/portal" target="_blank"><span class="name">about you</span><i class="iconfont"></i></a><ul class="user-menu"><li><a rel="nofollow" href="//my.mi.com/portal" target="_blank">个人中心</a></li><li><a rel="nofollow" href="https://order.mi.com/user/comment" target="_blank">评价晒单</a></li><li><a rel="nofollow" href="https://order.mi.com/user/favorite" target="_blank">我的喜欢</a></li><li><a rel="nofollow" href="//account.xiaomi.com/" target="_blank">小米账户</a></li><li><a rel="nofollow" href="https://order.mi.com/site/logout">退出登录</a></li></ul></span><span class="sep">|</span><a rel="nofollow" id="orderList" class="link link-order"  target="_blank">我的订单</a></div>
     </div>
 </div>
 <div class="page-main">
@@ -612,17 +612,30 @@
          numList:numList
     };
     var orderCommodityList ;
+    //获取订单名称
+    var orderName = '' ;
+    var id = '';
+    var num = '';
+    var pic = '';
+    var title = '';
+    var price = '';
+    var user_id = 2;
+    var user_name = "任章哲";
+    var paymentText = $('.total-price').find('span').text();
+    var payment = paymentText.split('元');
+    var orderId = random_No(10);
+    $(document).data('orderId',orderId);
     $.getJSON(url,data,function(result){
-
         console.log(result);
         orderCommodityList=result;
         var payAllPrice =0 ;
         for(var i=0;i<result.data.length;i++){
-            var price = eval(result.data[i].price)/100;
+            var price = eval(result.data[i].price);
             var Num = eval(result.data[i].num);
             var allPrice = price*Num;
+            allPrice = allPrice/100;
             payAllPrice = payAllPrice + allPrice;
-            var li = goods_li.replace("TITLE",result.data[i].title).replace("NUM",result.data[i].num).replace("PRICE",result.data[i].price).replace("ALLPRICE",allPrice);
+            var li = goods_li.replace("TITLE",result.data[i].title).replace("NUM",result.data[i].num).replace("PRICE",eval(result.data[i].price)/100).replace("ALLPRICE",allPrice);
             var Li = $(li);
             $('#J_goodsList').append(Li);
         }
@@ -635,7 +648,50 @@
         var payPrice = eval(payAllPrice) + eval(postageVal) - eval(coupon) - eval(actionVal[1]);
         $('.total-price').find('span').text(payPrice+"元");
 
+
+        for(var i=0;i<orderCommodityList.data.length;i++){
+            if(orderCommodityList.data[i].pic==''){
+                price = price  + 'a#';
+            }else{
+                orderPrice = orderCommodityList.data[i].price;
+                price = price + orderPrice + '#';
+            }
+            id = id + orderCommodityList.data[i].id + '#';
+            num = num + orderCommodityList.data[i].num +'#';
+            pic = pic + orderCommodityList.data[i].pic + '#';
+            title = title + orderCommodityList.data[i].title + '#';
+            orderName = orderName + orderCommodityList.data[i].title + "  ";
+        }
+        var url = "order/insertIntoCommodityOrder/orderManager.do";
+        var data = {
+            id:$(document).data('orderId'),
+            shippingCode:random_No(10),
+            shippingName:orderName,
+            payment:payment[0]*100,
+            paymentType:1,
+            userId:user_id,
+            postFee:1000,
+            buyerNick:user_name
+        }
+        $.post(url,data,function(result){
+            //在Commodity_order_item中根据商品类别添加数据，订单有两类商品，就根据每个商品Id分别添加数据
+            var url = "order/insertIntoCommodityOrderItem/orderManager.do";
+            var data = {
+                orderId:$(document).data('orderId'),
+                itemId:id,
+                number:num,
+                title:title,
+                price:price,
+                picPath:pic
+            }
+            console.log("data");
+            console.log(data);
+            $.post(url,data,function(result){
+            })
+
+        });
     });
+
     function goBack(){
         window.history.forward(1);
     }
@@ -689,7 +745,7 @@
           var url = "order/insertIntoCommodityAddress/orderManager.do";
           var data = {
               id:id,
-              userId:1,
+              userId:2,
               name:userName,
               zip:zipCode,
               mobile:phone,
@@ -764,7 +820,7 @@
 
     var url = 'order/getAddressList/orderManager.do';
     var data = {
-        userId:1
+        userId:2
     }
     $.post(url,data,function(result){
         for(var i=0;i<result.data.length;i++){
@@ -825,14 +881,8 @@
         '</div>';
 
     //创建订单，向Commodity_Order表中insert
-    var user_id = 1;
-    var user_name = "woshirencai55";
-    var url = "order/insertIntoCommodityOrder/orderManager.do";
-    var paymentText = $('.total-price').find('span').text();
-    var payment = paymentText.split('元');
-    var orderId = random_No(10);
-    $(document).data('orderId',orderId);
-    var data = {
+
+    /*var data = {
         id:orderId,
         payment:payment[0]*100,
         paymentType:1,
@@ -841,7 +891,7 @@
         buyerNick:user_name
     };
     $.post(url,data,function(result){
-    });
+    });*/
     function random_No(j) {
         var random_no = "";
         for (var i = 0; i < j; i++) //j位随机数，用以加在时间戳后面。
@@ -854,57 +904,14 @@
 
     //点击支付按钮
     $('#J_checkoutToPay').click(payForOrder);
-    //支付后在Commodity_order表中设置订单更新时间，物流名称，物流单号,付款时间
-    //在Commodity_order_item中根据商品类别添加数据，订单有两类商品，就根据每个商品Id分别添加数据
-    //在Commodity_order_shipping中添加数据：每个订单号对应一个收获地址
+
     //将购物车中的该商品删除
     function payForOrder(){
         //检查登录
 
 
         if($('#J_addressList').find('div[class="address-item J_addressItem selected"]').html()!=null){
-            var title = '';
             //支付后在Commodity_order表中设置订单更新时间，物流名称，物流单号,付款时间
-            //获取订单名称
-            var orderName = '' ;
-            var id = '';
-            var num = '';
-            var pic = '';
-            var price = '';
-            for(var i=0;i<orderCommodityList.data.length;i++){
-                if(orderCommodityList.data[i].pic==''){
-                    price = price  + 'a#';
-                }else{
-                    orderPrice = orderCommodityList.data[i].price;
-                    price = price + orderPrice + '#';
-                }
-                id = id + orderCommodityList.data[i].id + '#';
-                num = num + orderCommodityList.data[i].num +'#';
-                pic = pic + orderCommodityList.data[i].pic + '#';
-                title = title + orderCommodityList.data[i].title + '#';
-                orderName = orderName + orderCommodityList.data[i].title + "  ";
-            }
-            var url = "order/updateCommodityOrder/orderManager.do";
-            var data = {
-                id:$(document).data('orderId'),
-                shippingCode:random_No(10),
-                shippingName:orderName
-            }
-            $.post(url,data,function(result){
-            })
-            //在Commodity_order_item中根据商品类别添加数据，订单有两类商品，就根据每个商品Id分别添加数据
-            var url = "order/insertIntoCommodityOrderItem/orderManager.do";
-            var data = {
-                orderId:$(document).data('orderId'),
-                itemId:id,
-                number:num,
-                title:title,
-                price:price,
-                picPath:pic
-            }
-            $.post(url,data,function(result){
-                console.log(data);
-            })
             //在Commodity_order_shipping中添加数据：每个订单号对应一个收获地址
             var name = $('#J_addressList').find('div[class="address-item J_addressItem selected"]').find('em[class="uname"]').text();
             var phone = $('#J_addressList').find('div[class="address-item J_addressItem selected"]').find('dd[class="utel"]').text();
@@ -932,14 +939,17 @@
             };
             $.post(url,data,function(result){
             });
-            var orderId = $(document).data('orderId');
             //跳转到订单信息：商品名称，订单号，用户名称，两个地址
-
               window.location.href = "http://localhost:8080/orderInfo.html?"+'orderId='+orderId;
 
         }else{
             toastr.info("请先选择地址");
         }
+    }
+    $('#orderList').click(turnToOrderList);
+    function turnToOrderList(){
+        //console.log(1);
+        window.location.href = "http://localhost:8080/user_center.html?userId=2";
     }
 </script>
 </body>

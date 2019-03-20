@@ -196,4 +196,27 @@ public class CommodityOrder implements Serializable {
     public void setUpdated(Date updated) {
         this.updated = updated;
     }
+
+    @Override
+    public String toString() {
+        return "CommodityOrder{" +
+                "id='" + id + '\'' +
+                ", payment='" + payment + '\'' +
+                ", paymentType=" + paymentType +
+                ", postFee='" + postFee + '\'' +
+                ", status=" + status +
+                ", paymentTime=" + paymentTime +
+                ", closeTime=" + closeTime +
+                ", endTime=" + endTime +
+                ", consignTime=" + consignTime +
+                ", shippingName='" + shippingName + '\'' +
+                ", shippingCode='" + shippingCode + '\'' +
+                ", userId=" + userId +
+                ", buyerMessage='" + buyerMessage + '\'' +
+                ", buyerNick='" + buyerNick + '\'' +
+                ", buyerRate=" + buyerRate +
+                ", created=" + created +
+                ", updated=" + updated +
+                '}';
+    }
 }

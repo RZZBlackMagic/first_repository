@@ -96,4 +96,18 @@ public class CommodityOrderItem implements Serializable {
     public void setPicPath(String picPath) {
         this.picPath = picPath == null ? null : picPath.trim();
     }
+
+    @Override
+    public String toString() {
+        return "CommodityOrderItem{" +
+                "id='" + id + '\'' +
+                ", itemId='" + itemId + '\'' +
+                ", orderId='" + orderId + '\'' +
+                ", number='" + number + '\'' +
+                ", title='" + title + '\'' +
+                ", price='" + price + '\'' +
+                ", totalFee='" + totalFee + '\'' +
+                ", picPath='" + picPath + '\'' +
+                '}';
+    }
 }

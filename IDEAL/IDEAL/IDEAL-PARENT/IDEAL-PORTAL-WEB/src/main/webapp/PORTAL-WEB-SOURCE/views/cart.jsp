@@ -65,7 +65,7 @@
 			   			</ul>
 	   				</span>
             <span class="sep"> | </span>
-            <a rel="nofollow" class="link link-order" href="#" target="_blank">我的订单</a>
+            <a rel="nofollow" id="orderList" class="link link-order"  target="_blank">我的订单</a>
         </div>
     </div>
 </div>
@@ -294,6 +294,11 @@
             }
             window.location.href = "http://localhost:8080/order.html?idList=" + ID + '&numList=' + NUMBER;
         }
+    }
+    $('#orderList').click(turnToOrderList);
+    function turnToOrderList(){
+        //console.log(1);
+        window.location.href = "http://localhost:8080/user_center.html?userId=2";
     }
 </script>
 </body>

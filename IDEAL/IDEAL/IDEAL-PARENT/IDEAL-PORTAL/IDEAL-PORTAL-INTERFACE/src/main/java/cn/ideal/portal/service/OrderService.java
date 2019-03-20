@@ -6,6 +6,8 @@ import cn.ideal.common.pojo.CommodityOrderItem;
 import cn.ideal.common.pojo.CommodityOrderShipping;
 import cn.ideal.common.results.MessageResult;
 
+import java.util.List;
+
 public interface OrderService {
 
     MessageResult insertIntoCommodityOrder(CommodityOrder commodityOrder);
@@ -23,4 +25,12 @@ public interface OrderService {
     MessageResult getOrderInfo(String orderId);
 
     MessageResult updateOrderStatus(String orderId);
+
+    List getOrderInfoForCenter(String userId,byte status);
+
+    List getAllOrderForCenter(String userId);
+
+    List getUnReceiveOrderList(String userId);
+
+    Integer getTotalForPay(String oid);
 }

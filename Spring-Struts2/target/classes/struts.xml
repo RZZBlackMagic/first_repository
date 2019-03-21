@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- dtd文件的作用：决定此xml文件可以使用那些标签 -->
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+     <!-- 访问路径为：项目名/demo/hello.action -->
+   
+   <package name="login" namespace="/login" extends="struts-default">
+       <action name="loginForm">
+         <result >
+           /WEB-INF/login.jsp
+         </result>
+       </action>
+       <action name="login2" class="helloWord">
+           <!--   <result name="success" type="redirectAction">
+               loginForm 
+            </result> -->
+             <!-- <result name="success" type="redirectAction">
+               <param name="namespace">
+                  /test
+               </param>
+               <param name="actionName">
+                  loginForm 
+               </param>
+            </result> -->
+            <result name="success" type="redirect">
+               http://www.baidu.com 
+            </result> 
+            <result name="error">
+               /WEB-INF/login.jsp
+            </result>
+            
+            
+       </action>
+       <action name="image" class="imageAction">
+            <result name="success" type="stream">
+                <param name="contentType">image/png</param>
+                <param name="inputName">image</param>
+                <!-- <param name="contentDisposition">attachment;filename="document.pdf"</param>
+                <param name="bufferSize">1024</param> -->
+            </result>
+       </action>
+      
+    </package> 
+    <package name="json" namespace="/json" extends="json-default">
+       <action name="jsonTest" class="jsonAction" method="jsonTest">
+          <result name="success" type="json">
+              <param name="root">name</param>
+          </result>
+       </action>
+    </package>
+</struts>

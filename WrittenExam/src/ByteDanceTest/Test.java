@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class Test {
 
 	public static void main(String[] args) {
-       
+       Test t = new Test();
+       t.test2();
 	}
   public void tese(){
 	  Scanner scan = new Scanner(System.in);
@@ -37,7 +38,6 @@ public class Test {
    	   String string = scan.next();
    	   inputString.add(string);
       }
-      
       for(int i=0;i<n;i++){
           StringBuffer stringBuffer = new StringBuffer(inputString.get(i));
           int j=0;
@@ -73,4 +73,16 @@ public class Test {
    	   System.out.println(list.toArray()[i]);
       }
   }
+  public void test2(){
+	  int i=0;
+	  int j=0;
+	  System.out.println(i++);
+	  System.out.println(++j);
+	  /*for(int i=0;i<5;++i){
+		  System.out.println("¹þ¹þ");
+		  System.out.println("Ö´ÐÐ´ÎÊý£º"+i);
+	  }*/
+  }
+
+
 }

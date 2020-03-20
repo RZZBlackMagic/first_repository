@@ -1,5 +1,7 @@
 package HuaWeiTest;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -75,17 +77,23 @@ public class Main {
 	    list.add(random.nextInt(100));
 	 }
 	 System.out.println(main.test(s));*/
+	 Calendar calendar = Calendar.getInstance();
+     calendar.setTime(new Date());
+     int year = calendar.get(Calendar.YEAR);
+     int month = calendar.get(Calendar.MONTH)+1;
+     int day = calendar.get(Calendar.DAY_OF_MONTH);
+     System.out.println(month);
 	 Thread t1 = new Thread(){
 		 public void run(){
 			 for(int i=0;i<100;i++){
-				  System.out.println(1);
+				 // System.out.println(1);
 			 }
 		 }
 	 };
 	 Thread t2 = new Thread(){
 		 public void run(){
 			 for(int i=0;i<100;i++){
-				 System.out.println(2);
+				 //System.out.println(2);
 			 }
 		 }
 	 };

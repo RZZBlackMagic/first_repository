@@ -6,101 +6,78 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 
 public class pro_con_model1 {
-	 List<Object> list = new LinkedList<Object>();
-	 Semaphore notFull = new Semaphore(10);
-	 Semaphore noEmpty = new Semaphore(0);
-	 Semaphore mutex = new Semaphore(1);
-	 public static void main(String[] args) {
-		 Thread t1 = new Thread(){
-			 public void run(){
-				 for(int i=0;i<5;i++){
-					 new pro_con_model1().produce("?");
-					 //System.out.println(1);
-				 }
-			 }
-		 };
-		 Thread t2 = new Thread(){
-			 public void run(){
-				 for(int i=0;i<5;i++){
-					 new pro_con_model1().produce("?");
-					// System.out.println(2);
-				 }			 }
-		 };
-		 Thread t3 = new Thread(){
-			 public void run(){
-				 for(int i=0;i<5;i++){
-					 new pro_con_model1().produce("?");
-					 //System.out.println(3);
+	 //初始容量
+     static final int N = 10;
 
-				 }			 }
-		 };
-		 Thread t4 = new Thread(){
-			 public void run(){
-				 for(int i=0;i<5;i++){
-					 new pro_con_model1().consume("?");
-					 System.out.println(4);
+   /***
+    * full 产品容量
+    * empty 空余容量
+    * mutex 读写锁
+    */
+    static Semaphore full,empty,mutex;
+   //记录当前的产品数量
+    static volatile int count = 0 ;
 
-				 }			 
-			 }
-		 };
-		 Thread t5 = new Thread(){
-			 public void run(){
-				 for(int i=0;i<5;i++){
-					 new pro_con_model1().consume("?");
-					 System.out.println(5);
+    static {
+        /**
+         * full 初始化0个产品
+         * empty 初始化有N个空余位置放置产品
+         * mutex 初始化每次最多只有一个线程可以读写
+         * */
+        full = new Semaphore(0);
+        empty = new Semaphore(N);
+        mutex = new Semaphore(1);
+    }
 
-				 }		
-			 }
-		 };
-		 Thread t6 = new Thread(){
-			 public void run(){
-				 for(int i=0;i<5;i++){
-					 new pro_con_model1().consume("?");
-					 System.out.println(6);
 
-				 }		
-			 }
-		 };
-		 
-		 t4.start();
-		 t5.start();
-		 t6.start();
-		 t1.start();
-		 t2.start();
-		 t3.start();
+   public static void main(String []args){
+        //生产线线程
+       new Thread(new Producer()).start();
+       //消费者线程
+       new Thread(new Consumer()).start();
+   }
 
-	 }
-	 public void produce(String i){
-		 try {
-			notFull.acquire();
-			mutex.acquire();
-			list.add(i);
-			System.out.println("生产者"+Thread.currentThread().getName()+"生产了1个商品，现存商品"+list.size()+"个");
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			System.out.println("仓库已满");
-			e.printStackTrace();
-		}finally{
-			noEmpty.release();
-			mutex.release();
-		}
-		 
-	 }
-	 public void consume(String  i ){
-		 try {
-			noEmpty.acquire();
-			mutex.acquire();
-			list.remove(i);
-			System.out.println("消费者"+Thread.currentThread().getName()+"消费了一个商品，剩余商品："+list.size()+"个");
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			System.out.println("仓库已空");
-			e.printStackTrace();
-		}finally{
-			notFull.release();
-			mutex.release();
-		}
-		 
-		 
-	 }
+   //生产者类
+   static class Producer implements Runnable{
+
+       @Override
+       public void run() {
+           while (true){
+               try {
+                   empty.acquire();//等待空位
+                   mutex.acquire();//等待读写锁
+                   count++;
+                   System.out.println("生产者生产了一个，还剩："+count);
+                   mutex.release();//释放读写锁
+                   full.release();//放置产品
+                   //随机休息一段时间，让生产者线程有机会抢占读写锁
+                   Thread.sleep(((int)Math.random())%10);
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+           }
+       }
+   }
+
+   //消费者类
+   static class Consumer implements Runnable{
+
+       @Override
+       public void run() {
+           while (true){
+               try {
+                   full.acquire();//等待产品
+                   mutex.acquire();//等待读写锁
+                   count--;
+                   System.out.println("消费者消费了一个，还剩："+count);
+                   mutex.release();//释放读写锁
+                   empty.release();//释放空位
+                   //随机休息一段时间，让消费者线程有机会抢占读写锁
+                   Thread.sleep(((int)Math.random())%10);
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+           }
+       }
+   }
 }

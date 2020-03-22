@@ -1,6 +1,7 @@
 package HuaWeiTest;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -77,7 +78,7 @@ public class Main {
 	    list.add(random.nextInt(100));
 	 }
 	 System.out.println(main.test(s));*/
-	 Calendar calendar = Calendar.getInstance();
+	 /*Calendar calendar = Calendar.getInstance();
      calendar.setTime(new Date());
      int year = calendar.get(Calendar.YEAR);
      int month = calendar.get(Calendar.MONTH)+1;
@@ -98,7 +99,117 @@ public class Main {
 		 }
 	 };
 	 t1.start();
-	 t2.start();
+	 t2.start();*/
+	 /*Random rand = new Random();
+	  for(int i=0; i<10; i++) {
+	   System.out.println(rand.nextInt(100) + 1);
+	  }
+	  List<Integer> list = new ArrayList<Integer>();
+	  List<Integer> list1 = new ArrayList<Integer>();
+	  Collections.sort(list);
+	  Collections.copy(list1, list);
+	  Collections.swap(list1, 0, 4);
+	  Integer[] a = (Integer[]) list.toArray();*/
+	  /*String str = "asd!wZer?ZXC#";
+	  String [] str1 = str.split("!?#");
+	  for(int i=0;i<str1.length;i++){
+		  System.out.println(str1[i]);
+	  }*/
+	 
+	 int x,y;
+	 Scanner scan = new Scanner(System.in);
+	 String str = scan.next();
+	 x = Integer.parseInt(str);
+	 str = scan.next();
+	 y = Integer.parseInt(str);
+	 //List<String> list = new ArrayList<String>();
+	 int[] a = new int[x];
+	 int[] b = new int[y];
+	 for(int i=0;i<x;i++){
+		 a[i] = Integer.parseInt(scan.next());
+	 }
+	 for(int i=0;i<y;i++){
+		 b[i] = Integer.parseInt(scan.next());
+	 }
+	 /*for(int i=0;i<a.length;i++){
+		 System.out.println(a[i]);
+	 }
+	 System.out.println("<<<<<");
+	 for(int i=0;i<b.length;i++){
+		 System.out.println(b[i]);
+	 }*/
+	 //ÊäÈëÍê³É
+	 int i=0;
+	 int j=0;
+	 int n=0;
+	 int length=0;
+	 int [] c = new int [x+y];
+	 while(true){
+		 if(i>=x||j>=y){
+			 break;
+		 }
+		 if(n==0){
+			 if(a[i]>b[j]){
+				 c[n]=b[j];
+				 j++;
+				 n++;
+				 length++;
+			 }else{
+				 c[n]=a[i];
+				 i++;
+				 n++;
+				 length++;
+			 }
+		 }else{
+			 if(a[i]>b[j]){
+				 if(b[j]==c[n-1]){
+					 j++;
+				 }else{
+					 c[n]=b[j];
+					 j++;
+					 n++;
+					 length++;
+				 }
+			 }else{
+				 if(a[i]==c[n-1]){
+					 i++;
+				 }else{
+					 c[n]=a[i];
+					 i++;
+					 n++;
+					 length++;
+				 }
+			 }
+		 }
+	 }
+	 if(i<x){
+		 while(i<x){
+			 if(a[i]==c[n-1]){
+				 i++;
+			 }else{
+				 c[n] = a[i];
+				 i++;
+				 n++;
+				 length++;
+			 }
+		 }
+	 }
+	 if(j<y){
+		 while(j<y){
+			 if(b[j]==c[n-1]){
+				 j++;
+			 }else{
+				 c[n] =b[j];
+				 n++;
+				 j++;
+				 length++;
+			 }
+		 }
+	 }
+	 for( i=0;i<length;i++){
+		 System.out.println(c[i]);
+	 }
+
  }
  public  String test(String a){
 	 return a+"hahahahahha";

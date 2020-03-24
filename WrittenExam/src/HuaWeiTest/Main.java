@@ -1,4 +1,7 @@
 package HuaWeiTest;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -10,7 +13,7 @@ import java.util.Random;
 import java.util.Scanner;
 //A={1,2,3},B={1,2,4},R=1
 public class Main {
- public static void main(String[] args) {
+ public static void main(String[] args) throws IOException {
    /*  Scanner sc = new Scanner(System.in);
      String input = sc.nextLine();
      String[] list = input.split("=");
@@ -116,7 +119,7 @@ public class Main {
 		  System.out.println(str1[i]);
 	  }*/
 	 
-	 int x,y;
+	 /*int x,y;
 	 Scanner scan = new Scanner(System.in);
 	 String str = scan.next();
 	 x = Integer.parseInt(str);
@@ -130,7 +133,7 @@ public class Main {
 	 }
 	 for(int i=0;i<y;i++){
 		 b[i] = Integer.parseInt(scan.next());
-	 }
+	 }*/
 	 /*for(int i=0;i<a.length;i++){
 		 System.out.println(a[i]);
 	 }
@@ -139,7 +142,7 @@ public class Main {
 		 System.out.println(b[i]);
 	 }*/
 	 //ÊäÈëÍê³É
-	 int i=0;
+	/* int i=0;
 	 int j=0;
 	 int n=0;
 	 int length=0;
@@ -209,7 +212,25 @@ public class Main {
 	 for( i=0;i<length;i++){
 		 System.out.println(c[i]);
 	 }
+*/
+	 /*InputStreamReader is = new InputStreamReader(System.in);
+     BufferedReader br = new BufferedReader(is);
+     String input = br.readLine();
+     System.out.println(input);
+     String[] str = input.split(" ");
+     for(int i=0;i<str.length;i++){
+    	 System.out.println(str[i]);
+     }*/
+	 /*
 
+*/
+	 List<Integer> l = new ArrayList<Integer>();
+	 l.add(1);
+	 l.add(2);
+	 l.add(3);
+	 l.remove(1);
+	 System.out.println(l.size());
+	 System.out.print(l.toString());
  }
  public  String test(String a){
 	 return a+"hahahahahha";

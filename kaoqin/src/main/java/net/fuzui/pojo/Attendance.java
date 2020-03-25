@@ -14,7 +14,7 @@ public class Attendance {
 	
 	private String att_time;
 	
-	private String att_status;
+	private String att_status;//0：签到成功，1：旷课 ，2：请假
 
 	public String getAtt_stu_id() {
 		return att_stu_id;

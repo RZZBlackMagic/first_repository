@@ -1,10 +1,12 @@
 package net.fuzui.handler;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import org.codehaus.jackson.map.util.LinkedNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -36,7 +38,7 @@ public class bluetoothController {
 	 * 0:关闭
 	 * 1:打开
 	 * @throws UnsupportedEncodingException
-	 *     http://localhost:8080/kaoqin/findAllCreatededClasses?cla_tea_id=1583335307020
+	 *     http://116.62.222.40:8080/kaoqin/checkBluetooth?cla_num=0002
 	 * */ 
 	@RequestMapping(value= {"checkBluetooth"},produces = "application/json; charset=utf-8")
 	@ResponseBody
@@ -50,7 +52,7 @@ public class bluetoothController {
 		Query query1 = new Query();
 		query.addCriteria(Criteria.where("tea_id").is(tea_id));
 		List<Teacher> list1 = mongoTemplate.find(query1, Teacher.class);
-
+		System.out.println(list1.get(0).getTea_blu_status());
 		if(list1.get(0).getTea_blu_status().equals("1")){
 			return (new JsonResult(200,"该老师的蓝牙已经打开").toString());
 		}else{
@@ -64,7 +66,7 @@ public class bluetoothController {
 	 * 0:关闭
 	 * 1:打开
 	 * @throws UnsupportedEncodingException
-	 *     http://localhost:8080/kaoqin/findAllCreatededClasses?cla_tea_id=1583335307020
+	 *     http://116.62.222.40:8080/kaoqin/openBluetooth?tea_id=1584627250335
 	 * */ 
 	@RequestMapping(value= {"openBluetooth"},produces = "application/json; charset=utf-8")
 	@ResponseBody
@@ -103,11 +105,11 @@ public class bluetoothController {
 	/** 
 	 * 老师关闭蓝牙
 	 * @throws UnsupportedEncodingException
-	 *     http://localhost:8080/kaoqin/findAllCreatededClasses?cla_tea_id=1583335307020
+	 *    http://116.62.222.40:8080/kaoqin/closeBluetooth?tea_id=1584627250335
 	 * */ 
-	@RequestMapping(value= {"checkBluetooth"},produces = "application/json; charset=utf-8")
+	@RequestMapping(value= {"closeBluetooth"},produces = "application/json; charset=utf-8")
 	@ResponseBody
-	public String chekBluetooth(Model model,@RequestParam String tea_id
+	public String closeBluetooth(Model model,@RequestParam String tea_id
 			) throws UnsupportedEncodingException {
 		System.out.println("......");
 		Query query = new Query();
@@ -143,11 +145,11 @@ public class bluetoothController {
 	 * 0:关闭
 	 * 1:打开
 	 * @throws UnsupportedEncodingException
-	 *     http://localhost:8080/kaoqin/findAllCreatededClasses?cla_tea_id=1583335307020
+	 *     http://localhost:8080/kaoqin/impleBluetooth?cla_num=0002&stu_id=1583675290261&att_status=0
 	 * */ 
 	@RequestMapping(value= {"impleBluetooth"},produces = "application/json; charset=utf-8")
 	@ResponseBody
-	public String impleBluetooth(Model model,@RequestParam String cla_num,String stu_id
+	public String impleBluetooth(Model model,@RequestParam String cla_num,String stu_id,String att_status
 			) throws UnsupportedEncodingException {
 		System.out.println("......");
 		Query query = new Query();
@@ -160,13 +162,21 @@ public class bluetoothController {
 		List<Student> list1 = mongoTemplate.find(query1, Student.class);
 		String stu_name = list1.get(0).getStu_name();
 		
+		Criteria criteria = new Criteria();
+		criteria.orOperator(
+		Criteria.where("att_stu_id").is(stu_id),
+		Criteria.where("att_cla_num").is(cla_num));
 		Query query2 = new Query();
+		query2.addCriteria(criteria);
 		long count = mongoTemplate.count(query2, Attendance.class);
+		System.out.println(count);
+		List<Attendance> l= mongoTemplate.find(query2, Attendance.class,"attendance");
 		
+		System.out.println(l.toString());
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date());
         int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH);
+        int month = calendar.get(Calendar.MONTH)+1;
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         String data = year+"-"+month+"-"+day;
 		Attendance a = new Attendance();
@@ -175,9 +185,28 @@ public class bluetoothController {
 		a.setAtt_stu_id(stu_id);
 		a.setAtt_stu_name(stu_name);
 		a.setAtt_weeks(String.valueOf(count+1));
-		a.setAtt_status(String.valueOf(0));
+		a.setAtt_status(att_status);
 		a.setAtt_time(data);
 		mongoTemplate.save(a);
 		return (new JsonResult(200,"打卡成功").toString());
+	}
+	
+	/** 
+	 * 老师关闭蓝牙
+	 * @throws UnsupportedEncodingException
+	 *    http://116.62.222.40:8080/kaoqin/test?att_cla_num=0002&att_stu_id=1583675290261
+	 * */ 
+	@RequestMapping(value= {"test"},produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public String test(Model model,@RequestParam String att_cla_num,String att_stu_id
+			) throws UnsupportedEncodingException {
+		System.out.println("......");
+		Query query = new Query();
+		query.addCriteria(Criteria.where("att_stu_id").is(att_stu_id));
+		query.addCriteria(Criteria.where("att_cla_num").is(att_cla_num));
+		List<Attendance> list = mongoTemplate.find(query, Attendance.class);
+		
+		
+		return (new JsonResult(200,list).toString());
 	}
 }

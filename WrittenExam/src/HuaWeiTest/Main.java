@@ -231,6 +231,32 @@ public class Main {
 	 l.remove(1);
 	 System.out.println(l.size());
 	 System.out.print(l.toString());
+	 
+	 
+	 /*Scanner scan = new Scanner(System.in);
+		long a ,b;
+		String input = null;
+		input = scan.nextLine();
+		String [] arr = input.split(",");
+		a = Integer.valueOf(arr[0]);
+		b = Integer.valueOf(arr[1]);
+		BigInteger power =BigInteger.valueOf(1);
+	
+		for(int i=0;i<b;i++){
+			power = power.multiply(BigInteger.valueOf(a));
+		}
+		String str = "";
+		int bai = Integer.valueOf(String.valueOf(power.divide(BigInteger.valueOf(Long.valueOf("100"))).mod(BigInteger.valueOf(10))));
+		int shi = Integer.valueOf(String.valueOf(power.divide(BigInteger.valueOf(Long.valueOf("10"))).mod(BigInteger.valueOf(10))));
+		int ge = Integer.valueOf(String.valueOf(power.mod(BigInteger.valueOf(10))));
+
+		System.out.println("jieguo是："+power);
+
+		System.out.println("百位是"+bai);
+		System.out.println("十位是："+shi);
+		System.out.println("个位是："+ge);
+		str = str +bai+shi +ge;
+		System.out.println("\""+str+"\"");*/
  }
  public  String test(String a){
 	 return a+"hahahahahha";

@@ -47,7 +47,7 @@ public class TransfMediaTool {
         convert.add(codcFilePath);
         try {
             Process videoProcess = new ProcessBuilder(convert).redirectErrorStream(true).start();
-            new PrintStream(videoProcess.getInputStream()).start();
+            new PrintStream(videoProcess.getInputStream()).run();
             videoProcess.waitFor();
         } catch (IOException e1) {
             e1.printStackTrace();

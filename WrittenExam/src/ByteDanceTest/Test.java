@@ -4,11 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Test {
+public class Test extends parent{
 
 	public static void main(String[] args) {
        Test t = new Test();
        t.test2();
+       parent p = new Test();
+       p.a();
+       int b =0;
+       Integer c = 1;
+       Object i = null;
+      
+       
+       
 	}
   public void tese(){
 	  Scanner scan = new Scanner(System.in);

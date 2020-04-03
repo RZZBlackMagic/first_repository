@@ -97,7 +97,7 @@ public class test03_31 {
 	}
 }
 
-class BinaryTreeNode {
+ class BinaryTreeNode {
 	private int val;
 	
 	private BinaryTreeNode leftNode;

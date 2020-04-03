@@ -11,11 +11,11 @@ public class pro_con_model {
     private LinkedList<Object> list = new LinkedList<Object>();
      static  int count = 0 ;
 	// 仓库的最大容量
-     static Semaphore notFull = new Semaphore(10);
+     static volatile Semaphore notFull = new Semaphore(10);
     // 将线程挂起，等待其他来触发
-     static Semaphore notEmpty = new Semaphore(0);
+     static volatile Semaphore notEmpty = new Semaphore(0);
     // 互斥锁
-     static Semaphore mutex = new Semaphore(1);
+     static volatile Semaphore mutex = new Semaphore(1);
 
     public static void main(String []args){
         //生产线线程
@@ -50,7 +50,6 @@ public class pro_con_model {
             System.out.println("【生产者" + Thread.currentThread().getName()
                     + "】生产一个产品，现库存" + count);
             Thread.sleep(100);
-
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -70,7 +69,6 @@ public class pro_con_model {
             System.out.println("【消费者" + Thread.currentThread().getName()
                     + "】消费一个产品，现库存" + count);
             Thread.sleep(100);
-
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

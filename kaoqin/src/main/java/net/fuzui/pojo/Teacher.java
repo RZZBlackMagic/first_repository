@@ -23,13 +23,25 @@ public class Teacher {
 	private String tea_bluetooth;
 	
 	private String tea_blu_status;
+	
+	private String tea_password;
 
+	public String getTea_password() {
+		return tea_password;
+	}
+
+	public void setTea_password(String tea_password) {
+		this.tea_password = tea_password;
+	}
+
+	
 	@Override
 	public String toString() {
 		return "Teacher [tea_id=" + tea_id + ", tea_phone=" + tea_phone + ", tea_school=" + tea_school
 				+ ", tea_academy=" + tea_academy + ", tea_name=" + tea_name + ", tea_nickname=" + tea_nickname
 				+ ", tea_sex=" + tea_sex + ", tea_isAssisance=" + tea_isAssisance + ", tea_picutre=" + tea_picutre
-				+ ", tea_bluetooth=" + tea_bluetooth + ", tea_blu_status=" + tea_blu_status + "]";
+				+ ", tea_bluetooth=" + tea_bluetooth + ", tea_blu_status=" + tea_blu_status + ", tea_password="
+				+ tea_password + "]";
 	}
 
 	public String getTea_id() {
@@ -120,9 +132,11 @@ public class Teacher {
 		this.tea_blu_status = tea_blu_status;
 	}
 
+	
+
 	public Teacher(String tea_id, String tea_phone, String tea_school, String tea_academy, String tea_name,
 			String tea_nickname, String tea_sex, String tea_isAssisance, String tea_picutre, String tea_bluetooth,
-			String tea_blu_status) {
+			String tea_blu_status, String tea_password) {
 		super();
 		this.tea_id = tea_id;
 		this.tea_phone = tea_phone;
@@ -135,6 +149,7 @@ public class Teacher {
 		this.tea_picutre = tea_picutre;
 		this.tea_bluetooth = tea_bluetooth;
 		this.tea_blu_status = tea_blu_status;
+		this.tea_password = tea_password;
 	}
 
 	public Teacher() {

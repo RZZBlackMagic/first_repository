@@ -29,7 +29,7 @@ public class attendanceController {
 	 * 学生查询当前学期对应班级的打卡情况
 	 * 
 	 * @throws UnsupportedEncodingException
-	 *     http://localhost:8080/kaoqin/selectRecordByClassNum?cla_num=0002&stu_id=1583675290261
+	 *     http://116.62.222.40:8080/kaoqin/selectRecordByClassNum?cla_num=0002&stu_id=1583675290261
 	 * */ 
 	@RequestMapping(value= {"selectRecordByClassNum"},produces = "application/json; charset=utf-8")
 	@ResponseBody
@@ -93,7 +93,7 @@ public class attendanceController {
 	 * 学生查询所有的打卡视频
 	 * 
 	 * @throws UnsupportedEncodingException
-	 *     http://localhost:8080/kaoqin/selectAllRecord?cla_num=0002&stu_id=1583675290261
+	 *     http://116.62.222.40:8080/kaoqin/selectAllRecord?stu_id=1583675290261
 	 * */ 
 	@RequestMapping(value= {"selectAllRecord"},produces = "application/json; charset=utf-8")
 	@ResponseBody
@@ -160,7 +160,7 @@ public class attendanceController {
 	 * 学生查询谋一学期的打卡情况
 	 * 
 	 * @throws UnsupportedEncodingException
-	 *     http://localhost:8080/kaoqin/selectAllRecordByDate?cla_num=0002&stu_id=1583675290261
+	 *     http://116.62.222.40:8080/kaoqin/selectAllRecordByDate?date=2020-1&stu_id=1583675290261
 	 * */ 
 	@RequestMapping(value= {"selectAllRecordByDate"},produces = "application/json; charset=utf-8")
 	@ResponseBody
@@ -202,8 +202,6 @@ public class attendanceController {
 	    		}else{
 	    			return (new JsonResult(302,"请检查你的日期格式").toString());
 	    		}
-	    	}else{
-    			return (new JsonResult(302,"请检查你的年份").toString());
 	    	}
 	    	
 	    }

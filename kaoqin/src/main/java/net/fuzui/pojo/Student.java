@@ -25,6 +25,16 @@ public class Student {
     private String stu_mom_phone;
     
     private String stu_dad_phone;
+    
+    private String stu_password;
+
+	public String getStu_password() {
+		return stu_password;
+	}
+
+	public void setStu_password(String stu_password) {
+		this.stu_password = stu_password;
+	}
 
 	public String getStu_id() {
 		return stu_id;
@@ -122,17 +132,20 @@ public class Student {
 		this.stu_dad_phone = stu_dad_phone;
 	}
 
+	
+
 	@Override
 	public String toString() {
 		return "Student [stu_id=" + stu_id + ", stu_phone=" + stu_phone + ", stu_school=" + stu_school + ", stu_num="
 				+ stu_num + ", stu_academy=" + stu_academy + ", stu_name=" + stu_name + ", stu_nickname=" + stu_nickname
 				+ ", stu_sex=" + stu_sex + ", stu_class=" + stu_class + ", stu_identity_num=" + stu_identity_num
-				+ ", stu_mom_phone=" + stu_mom_phone + ", stu_dad_phone=" + stu_dad_phone + "]";
+				+ ", stu_mom_phone=" + stu_mom_phone + ", stu_dad_phone=" + stu_dad_phone + ", stu_password="
+				+ stu_password + "]";
 	}
 
 	public Student(String stu_id, String stu_phone, String stu_school, String stu_num, String stu_academy,
 			String stu_name, String stu_nickname, String stu_sex, String stu_class, String stu_identity_num,
-			String stu_mom_phone, String stu_dad_phone) {
+			String stu_mom_phone, String stu_dad_phone, String stu_password) {
 		super();
 		this.stu_id = stu_id;
 		this.stu_phone = stu_phone;
@@ -146,6 +159,7 @@ public class Student {
 		this.stu_identity_num = stu_identity_num;
 		this.stu_mom_phone = stu_mom_phone;
 		this.stu_dad_phone = stu_dad_phone;
+		this.stu_password = stu_password;
 	}
 
 	public Student() {

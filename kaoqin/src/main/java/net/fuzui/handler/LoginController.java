@@ -48,10 +48,11 @@ public class LoginController {
 		if(mongoTemplate.count(query, Student.class)>0){
 	        List<Student> userList1 = mongoTemplate.find(query,Student.class);
             System.out.println(new JsonResult(userList1.get(0)).toString());
-			return "该手机号已经注册";
+    		return (new JsonResult(302,stu_phone+"该手机号已经被注册")).toString();
 		}
 		
-		return stu_phone+"注册成功，请跳转到完善信息页面";
+		return (new JsonResult(200,stu_phone+"该手机号注册成功")).toString();
+
 	}
 	
 	/**
@@ -99,10 +100,10 @@ public class LoginController {
 		if(mongoTemplate.count(query, Teacher.class)>0){
 			 List<Teacher> userList1 = mongoTemplate.find(query,Teacher.class);
 	            System.out.println(userList1.get(0));
-				return "该手机号已经注册";		
+	    		return (new JsonResult(302,tea_phone+"该手机号已经被注册")).toString();
 		}
 		
-		return tea_phone+"该手机号注册成功";
+		return (new JsonResult(200,tea_phone+"该手机号注册成功")).toString();
 	}
 	/**
 	  *    http://localhost:8080/kaoqin/teacherInfo?tea_phone=15592296549&tea_academy=信息&tea_school=西南交大&tea_name=徐图&tea_nickname=网名&tea_sex=男&tea_isAssisance=否&tea_picutre=略
@@ -151,10 +152,11 @@ public class LoginController {
 		if(mongoTemplate.count(query, Parents.class)>0){
 	        List<Parents> userList1 = mongoTemplate.find(query,Parents.class);
             System.out.println(new JsonResult(userList1.get(0)).toString());
-			return "该手机号已经注册";
+    		return (new JsonResult(302,par_phone+"该手机号已经被注册").toString());
 		}
 		
-		return par_phone+"注册成功，请跳转到完善信息页面";
+		return (new JsonResult(200,par_phone+"注册成功，请跳转到完善信息页面").toString());
+
 	}
 	
 	/** 
@@ -200,7 +202,71 @@ public class LoginController {
 		children.setCh_stu_identity_num(ch_stu_identity_num);
 		mongoTemplate.save(children);
 		System.out.println(children);
-		
 		return (new JsonResult(200,children).toString());
+	}
+	/** 
+	 * 学生登录登录
+	 * http://localhost:8080/kaoqin/studentLogin?stu_phone=13541197180&stu_password=rzz
+	 * @throws UnsupportedEncodingException 
+	 * */ 
+	@RequestMapping(value= {"studentLogin"},produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public String studentLogin(Model model,@RequestParam String stu_phone,@RequestParam String stu_password
+			) throws UnsupportedEncodingException {
+		Query query = new Query();
+		query.addCriteria(Criteria.where("stu_phone").is(stu_phone));
+		List<Student> list = mongoTemplate.find(query,Student.class);
+		if(list.size()==0){
+			return (new JsonResult(302,"该手机号还没有注册").toString());
+		}
+		if(list.get(0).getStu_password().equals(stu_password)){
+			return (new JsonResult(200,"登录成功",list.get(0)).toString());
+		}else{
+			return (new JsonResult(302,"登录失败").toString());
+		}
+	}
+	
+	/** 
+	 * 教师登录登录
+	 * 	 * http://localhost:8080/kaoqin/teacherLogin?tea_phone=15592296549&tea_password=2414234 
+	 * @throws UnsupportedEncodingException 
+	 * */ 
+	@RequestMapping(value= {"teacherLogin"},produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public String teacherLogin(Model model,@RequestParam String tea_phone,@RequestParam String tea_password
+			) throws UnsupportedEncodingException {
+		Query query = new Query();
+		query.addCriteria(Criteria.where("tea_phone").is(tea_phone));
+		List<Teacher> list = mongoTemplate.find(query,Teacher.class);
+		if(list.size()==0){
+			return (new JsonResult(302,"该手机号还没有注册").toString());
+		}
+		if(list.get(0).getTea_password().equals(tea_password)){
+			return (new JsonResult(200,"登录成功",list.get(0)).toString());
+		}else{
+			return (new JsonResult(302,"登录失败").toString());
+		}
+	}
+	
+	/** 
+	 *  http://localhost:8080/kaoqin/parentsLogin?par_phone=13541187191&par_password=1234
+	 * 家长登录登录 
+	 * @throws UnsupportedEncodingException 
+	 * */ 
+	@RequestMapping(value= {"parentsLogin"},produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public String parentsLogin(Model model,@RequestParam String par_phone,@RequestParam String par_password
+			) throws UnsupportedEncodingException {
+		Query query = new Query();
+		query.addCriteria(Criteria.where("par_phone").is(par_phone));
+		List<Parents> list = mongoTemplate.find(query,Parents.class);
+		if(list.size()==0){
+			return (new JsonResult(302,"该手机号还没有注册").toString());
+		}
+		if(list.get(0).getPar_password().equals(par_password)){
+			return (new JsonResult(200,"登录成功",list.get(0)).toString());
+		}else{
+			return (new JsonResult(302,"登录失败").toString());
+		}
 	}
 }

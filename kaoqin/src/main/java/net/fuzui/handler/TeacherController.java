@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import net.fuzui.pojo.Attendance;
 import net.fuzui.pojo.Children;
 import net.fuzui.pojo.Classes;
 import net.fuzui.pojo.JsonResult;
@@ -89,5 +90,98 @@ public class TeacherController {
 	    	return (new JsonResult(302,"该老师还没有添加班级。").toString());
 	    }
 		return (new JsonResult(200,userList1).toString());
+	}
+	
+	/** 
+	 * 教师处理旷课的同学
+	 * @throws UnsupportedEncodingException
+	 *     http://localhost:8080/kaoqin/handleAbsence?cla_num=0002&stu_id=1586323085756
+	 */ 
+	@RequestMapping(value= {"handleAbsence"},produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public String handleAbsence(Model model,@RequestParam String cla_num,@RequestParam String stu_id
+			) throws UnsupportedEncodingException {
+		System.out.println("......");
+		Query query = new Query();
+		query.addCriteria(Criteria.where("stu_id").is(stu_id));
+	    List<Student> userList1 = mongoTemplate.find(query,Student.class);
+	    System.out.println(userList1.toString());
+	    if(userList1.size()==0){
+	    	return (new JsonResult(302,"该学生还没有注册。").toString());
+	    }
+	    Query query1 = new Query();
+		query1.addCriteria(Criteria.where("cla_num").is(cla_num));
+	    List<Classes> userList = mongoTemplate.find(query1,Classes.class);
+	    System.out.println(userList.toString());
+		if(userList.size()==0){
+			return (new JsonResult(302,"该班级还没有创建").toString());
+		}
+		Attendance att = new Attendance();
+		att.setAtt_cla_name(userList.get(0).getCla_name());
+		att.setAtt_cla_num(cla_num);
+		att.setAtt_status("1");
+		att.setAtt_stu_id(stu_id);
+		Calendar now = Calendar.getInstance();
+		int year = now.get(Calendar.YEAR);
+		int month = now.get(Calendar.MONTH);
+		month++;
+		att.setAtt_time(year+"_"+month);
+		att.setAtt_stu_name(userList1.get(0).getStu_name());
+	    Query query2 = new Query();
+	    query2.addCriteria(Criteria.where("att_cla_num").is(cla_num));
+		query2.addCriteria(Criteria.where("att_stu_id").is(stu_id));
+		long count = mongoTemplate.count(query2, Attendance.class);
+		count++;
+		att.setAtt_weeks(String.valueOf(count));
+		mongoTemplate.save(att);
+		return (new JsonResult(200,att).toString());
+	}
+	
+
+	/** 
+	 * 教师处理旷课的同学
+	 * @throws UnsupportedEncodingException
+	 *     http://localhost:8080/kaoqin/handleAbsence?cla_tea_id=1583335307020
+	 */ 
+	@RequestMapping(value= {"handleLeave"},produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public String handleLeave(Model model,@RequestParam String cla_num,@RequestParam String stu_id
+			) throws UnsupportedEncodingException {
+		System.out.println("......");
+		Query query = new Query();
+		query.addCriteria(Criteria.where("stu_id").is(stu_id));
+	    List<Student> userList1 = mongoTemplate.find(query,Student.class);
+	    if(userList1.size()==0){
+	    	return (new JsonResult(302,"该学生还没有注册。").toString());
+	    }
+	    Query query1 = new Query();
+		query1.addCriteria(Criteria.where("cla_num").is(cla_num));
+	    List<Classes> userList = mongoTemplate.find(query1,Classes.class);
+		if(userList.size()==0){
+			return (new JsonResult(302,"该班级还没有创建").toString());
+		}
+		Attendance att = new Attendance();
+		att.setAtt_cla_name(userList.get(0).getCla_name());
+		att.setAtt_cla_num(cla_num);
+		att.setAtt_status("2");
+		att.setAtt_stu_id(stu_id);
+		Calendar now = Calendar.getInstance();
+		int year = now.get(Calendar.YEAR);
+		int month = now.get(Calendar.MONTH);
+        int day = now.get(Calendar.DAY_OF_MONTH);
+		month++;
+		att.setAtt_time(year+"_"+month+"_"+day);
+		att.setAtt_stu_name(userList1.get(0).getStu_name());
+		Criteria criteria = new Criteria();
+		criteria.orOperator(
+		Criteria.where("att_stu_id").is(stu_id),
+		Criteria.where("att_cla_num").is(cla_num));
+		Query query2 = new Query();
+		query2.addCriteria(criteria);
+		long count = mongoTemplate.count(query2, Attendance.class);
+		count++;
+		att.setAtt_weeks(String.valueOf(count));
+		mongoTemplate.save(att);
+		return (new JsonResult(200,att).toString());
 	}
 }

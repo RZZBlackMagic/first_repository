@@ -30,7 +30,7 @@ public class StudentController {
 	 * http://localhost:8080/kaoqin/createClasses?cla_name=毕业设计&cla_tea_id=12354&cla_tea_name=图图
 	 * 学生添加课程 
 	 * @throws UnsupportedEncodingException
-	 *     http://localhost:8080/kaoqin/addClasses?stu_id=1583675290261&cla_num=0007
+	 *     http://localhost:8080/kaoqin/addClasses?stu_id=1586323085756&cla_num=0002
 	 * */ 
 	@RequestMapping(value= {"addClasses"},produces = "application/json; charset=utf-8")
 	@ResponseBody

@@ -63,7 +63,7 @@ public class LoginController {
 	@ResponseBody
 	public String studentInfo(Model model,@RequestParam String stu_phone,@RequestParam String stu_academy,@RequestParam String stu_class,
 			@RequestParam String stu_dad_phone,@RequestParam String stu_identity_num,@RequestParam String stu_mom_phone,
-			@RequestParam String stu_name,@RequestParam String stu_school,
+			@RequestParam String stu_name,@RequestParam String stu_school,@RequestParam String stu_password,
 			@RequestParam String stu_sex,@RequestParam String stu_nickname,@RequestParam String stu_num
 			) throws UnsupportedEncodingException {
 		
@@ -82,6 +82,7 @@ public class LoginController {
 		student.setStu_phone(stu_phone);
 		student.setStu_school(stu_school);
 		student.setStu_sex(stu_sex);
+		student.setStu_password(stu_password);
 		mongoTemplate.save(student);
 		System.out.println(student);
 		return (new JsonResult(200,student).toString());
@@ -115,7 +116,7 @@ public class LoginController {
 	@ResponseBody
 	public String teacherInfo(Model model,@RequestParam String tea_phone,@RequestParam String tea_school,@RequestParam String tea_academy,
 			@RequestParam String tea_name,@RequestParam String tea_nickname,@RequestParam String tea_sex,@RequestParam String tea_isAssisance,
-			@RequestParam String tea_picutre
+			@RequestParam String tea_picutre,@RequestParam String tea_bluetooth,@RequestParam String tea_password
 			) throws UnsupportedEncodingException {
 		Long time=System.currentTimeMillis();
 		String tea_id = String.valueOf(time);
@@ -130,7 +131,8 @@ public class LoginController {
 		teacher.setTea_school(tea_school);
 		teacher.setTea_sex(tea_sex);
 		teacher.setTea_blu_status("0");
-		//teacher.setTea_bluetooth("1234567890");
+		teacher.setTea_bluetooth(tea_bluetooth);
+		teacher.setTea_password(tea_password);
 		mongoTemplate.save(teacher);
 		System.out.println(teacher);
 		return (new JsonResult(200,teacher)).toString();
@@ -166,7 +168,7 @@ public class LoginController {
 	@RequestMapping(value= {"parentInfo"},produces = "application/json; charset=utf-8")
 	@ResponseBody
 	public String parentInfo(Model model,@RequestParam String par_phone,@RequestParam String par_name
-			,@RequestParam String par_nickname,@RequestParam String par_sex
+			,@RequestParam String par_nickname,@RequestParam String par_sex,@RequestParam String par_password
 			) throws UnsupportedEncodingException {
 		long time = System.currentTimeMillis();
 		String par_id = String.valueOf(time);
@@ -176,6 +178,7 @@ public class LoginController {
 		parent.setPar_nickname(par_nickname);
 		parent.setPar_phone(par_phone);
 		parent.setPar_sex(par_sex);
+		parent.setPar_password(par_password);
 		mongoTemplate.save(parent);
 		System.out.println(parent);
 		return (new JsonResult(200,parent).toString());

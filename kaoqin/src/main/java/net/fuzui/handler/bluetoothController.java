@@ -209,4 +209,28 @@ public class bluetoothController {
 		
 		return (new JsonResult(200,list).toString());
 	}
+	
+	/** 
+	 * 学生去查找老师的蓝牙地址
+	 * @throws UnsupportedEncodingException
+	 *    http://116.62.222.40:8080/kaoqin/test?att_cla_num=0002&att_stu_id=1583675290261
+	 * */ 
+	@RequestMapping(value= {"findBluetooth"},produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public String findBluetooth(Model model,@RequestParam String cla_num,String stu_id
+			) throws UnsupportedEncodingException {
+		Query query = new Query();
+		query.addCriteria(Criteria.where("cla_num").is(cla_num));
+		List<Classes> list = mongoTemplate.find(query, Classes.class);
+		if(list.size()==0){
+			return (new JsonResult(302,"没有找到该班级，请确认班级号").toString());
+		}
+		Query query1 = new Query();
+		query.addCriteria(Criteria.where("tea_id").is(list.get(0).getCla_tea_id()));
+		List<Teacher> list1 = mongoTemplate.find(query1, Teacher.class);
+		if(list1.size()==0){
+			return (new JsonResult(302,"没有找到该老师的蓝牙").toString());
+		}
+		return (new JsonResult(200,"蓝牙地址查找成功",list1.get(0).getTea_bluetooth()).toString());
+	}
 }

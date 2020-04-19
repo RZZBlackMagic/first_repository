@@ -179,31 +179,36 @@ public class attendanceController {
 	    for(int i=0;i<userList1.size();i++){
 	    	String [] arr = userList1.get(i).getAtt_time().split("-");
 	    	if(arr[0].equals(str[0])){
-	    		if(Integer.valueOf(str[1])==1){
+	    		if(Integer.valueOf(str[1])==0){
 	    			//对应年份的下半年
-	    			count++;
-	    	    	if(userList1.get(i).getAtt_status().equals("0")){
-	    	    		normal_count++;
-	    	    	}else if(userList1.get(i).getAtt_status().equals("1")){
-	    	    		taoke_count++;
-	    	    	}else{
-	    	    		qingjia_count++;
-	    	    	}
-	    		}else if(Integer.valueOf(str[1])==0){
+	    			if(Integer.valueOf(arr[1])>=3&&Integer.valueOf(arr[1])<9){
+	    				count++;
+		    	    	if(userList1.get(i).getAtt_status().equals("0")){
+		    	    		normal_count++;
+		    	    	}else if(userList1.get(i).getAtt_status().equals("1")){
+		    	    		taoke_count++;
+		    	    	}else{
+		    	    		qingjia_count++;
+		    	    	}
+	    			}
+	    			
+	    		}else if(Integer.valueOf(str[1])==1){
 	    			//对应年份的上半年
-	    			count++;
-	    	    	if(userList1.get(i).getAtt_status().equals("0")){
-	    	    		normal_count++;
-	    	    	}else if(userList1.get(i).getAtt_status().equals("1")){
-	    	    		taoke_count++;
-	    	    	}else{
-	    	    		qingjia_count++;
-	    	    	}
+	    			if(Integer.valueOf(arr[1])>=9||Integer.valueOf(arr[1])<3){
+	    				count++;
+		    	    	if(userList1.get(i).getAtt_status().equals("0")){
+		    	    		normal_count++;
+		    	    	}else if(userList1.get(i).getAtt_status().equals("1")){
+		    	    		taoke_count++;
+		    	    	}else{
+		    	    		qingjia_count++;
+		    	    	}
+	    			}
+	    			
 	    		}else{
 	    			return (new JsonResult(302,"请检查你的日期格式").toString());
 	    		}
 	    	}
-	    	
 	    }
 		return (new JsonResult(200,"该学生一共打卡"+count+"次，正常签到"+normal_count+"次，请假"+qingjia_count+"次，旷课"+taoke_count+"次")).toString();
 	}

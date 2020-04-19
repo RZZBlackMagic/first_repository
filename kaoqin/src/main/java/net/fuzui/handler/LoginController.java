@@ -108,7 +108,6 @@ public class LoginController {
 	}
 	/**
 	  *    http://localhost:8080/kaoqin/teacherInfo?tea_phone=15592296549&tea_academy=信息&tea_school=西南交大&tea_name=徐图&tea_nickname=网名&tea_sex=男&tea_isAssisance=否&tea_picutre=略
-
 	 * 教师完善信息
 	 * @throws UnsupportedEncodingException 
 	 * */
@@ -156,9 +155,7 @@ public class LoginController {
             System.out.println(new JsonResult(userList1.get(0)).toString());
     		return (new JsonResult(302,par_phone+"该手机号已经被注册").toString());
 		}
-		
 		return (new JsonResult(200,par_phone+"注册成功，请跳转到完善信息页面").toString());
-
 	}
 	
 	/** 
@@ -204,7 +201,6 @@ public class LoginController {
 		children.setCh_sex(ch_sex);
 		children.setCh_stu_identity_num(ch_stu_identity_num);
 		mongoTemplate.save(children);
-		System.out.println(children);
 		return (new JsonResult(200,children).toString());
 	}
 	/** 

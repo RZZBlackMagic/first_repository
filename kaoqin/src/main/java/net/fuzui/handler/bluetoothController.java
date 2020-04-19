@@ -50,9 +50,9 @@ public class bluetoothController {
 		List<Classes> list = mongoTemplate.find(query, Classes.class);
 		String tea_id = list.get(0).getCla_tea_id();
 		Query query1 = new Query();
-		query.addCriteria(Criteria.where("tea_id").is(tea_id));
+		query1.addCriteria(Criteria.where("tea_id").is(tea_id));
 		List<Teacher> list1 = mongoTemplate.find(query1, Teacher.class);
-		System.out.println(list1.get(0).getTea_blu_status());
+		System.out.println(list1.toString());
 		if(list1.get(0).getTea_blu_status().equals("1")){
 			return (new JsonResult(200,"该老师的蓝牙已经打开").toString());
 		}else{

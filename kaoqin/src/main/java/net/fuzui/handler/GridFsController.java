@@ -20,7 +20,10 @@ import com.mongodb.Mongo;
 import com.mongodb.gridfs.GridFS;
 
 import net.fuzui.pojo.Classes;
+import net.fuzui.pojo.Comment;
 import net.fuzui.pojo.JsonResult;
+import net.fuzui.pojo.Parents;
+import net.fuzui.pojo.Tags;
 import net.fuzui.pojo.Teacher;
 import net.fuzui.video.Mon_GridFS;
 
@@ -70,7 +73,6 @@ public class GridFsController {
 			}
 		if(result==null){
      		return (new JsonResult(302,"下载出现异常，请重新尝试")).toString();
-
 		}
  		return (new JsonResult(200,result)).toString();
 	}
@@ -98,6 +100,79 @@ public class GridFsController {
 	 		return (new JsonResult(302,"下载出现异常，请重新尝试")).toString();
 		}
  		return (new JsonResult(200,result)).toString();
+	}
+	
+	
+	/** 
+	 * 点赞
+	 * http://localhost:8080/kaoqin/tag?user_id=1583675290261&filename=1582788755063.mp4
+	 * @throws Exception 
+	 * */ 
+	@RequestMapping(value= {"tag"},produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public String tag(Model model,@RequestParam String user_id,@RequestParam String filename
+			) throws Exception {
+		Tags t = Mon_GridFS.getShuxing(user_id, filename);
+		if(t==null){
+			return new JsonResult(302,"没有该视频或者视频名冲突").toString();
+		}
+		Query query1 = new Query();
+		query1.addCriteria(Criteria.where("tag_md5").is(t.getTag_md5()));
+		query1.addCriteria(Criteria.where("tag_user_id").is(user_id));
+        List<Tags> userList1 = mongoTemplate.find(query1,Tags.class);
+        if(userList1.size()>0){
+        	return (new JsonResult(302,"您已经点赞过了").toString());
+        }
+        mongoTemplate.save(t);
+ 		return (new JsonResult(200,t)).toString();
+	}
+	
+	/** 
+	 * 评论
+	 * 	 * http://localhost:8080/kaoqin/comment?user_id=1583675290261&filename=1582788755063.mp4&com_ment=好棒呀
+
+	 * @throws Exception 
+	 * */ 
+	@RequestMapping(value= {"comment"},produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public String comment(Model model,@RequestParam String user_id,@RequestParam String filename,@RequestParam String com_ment
+			) throws Exception {
+		Comment com = Mon_GridFS.comment(user_id, filename, com_ment);
+		if(com==null){
+			return new JsonResult(302,"没有该视频或者视频名冲突").toString();
+		}
+        mongoTemplate.save(com);
+ 		return (new JsonResult(200,com)).toString();
+	}
+	/** 
+	 * 获取所有的点赞
+	 * 	 * http://localhost:8080/kaoqin/comment?user_id=1583675290261&filename=1582788755063.mp4&com_ment=好棒呀
+
+	 * @throws Exception 
+	 * */ 
+	@RequestMapping(value= {"getAllTag"},produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public String getAllTag(Model model,@RequestParam String filename
+			) throws Exception {
+		Query query1 = new Query();
+		query1.addCriteria(Criteria.where("tag_filename").is(filename));
+        List<Tags> userList1 = mongoTemplate.find(query1,Tags.class);
+ 		return (new JsonResult(200,userList1)).toString();
+	}
+	/** 
+	 * 获取所有的评论
+	 * 	 * http://localhost:8080/kaoqin/comment?user_id=1583675290261&filename=1582788755063.mp4&com_ment=好棒呀
+
+	 * @throws Exception 
+	 * */ 
+	@RequestMapping(value= {"getAllComment"},produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public String getAllComment(Model model,@RequestParam String filename
+			) throws Exception {
+		Query query1 = new Query();
+		query1.addCriteria(Criteria.where("com_filename").is(filename));
+        List<Comment> userList1 = mongoTemplate.find(query1,Comment.class);
+ 		return (new JsonResult(200,userList1)).toString();
 	}
 	
 }

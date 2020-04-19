@@ -124,8 +124,10 @@ public class TeacherController {
 		Calendar now = Calendar.getInstance();
 		int year = now.get(Calendar.YEAR);
 		int month = now.get(Calendar.MONTH);
+        int day = now.get(Calendar.DAY_OF_MONTH);
+
 		month++;
-		att.setAtt_time(year+"_"+month);
+		att.setAtt_time(year+"-"+month+"-"+day);
 		att.setAtt_stu_name(userList1.get(0).getStu_name());
 	    Query query2 = new Query();
 	    query2.addCriteria(Criteria.where("att_cla_num").is(cla_num));
@@ -170,7 +172,7 @@ public class TeacherController {
 		int month = now.get(Calendar.MONTH);
         int day = now.get(Calendar.DAY_OF_MONTH);
 		month++;
-		att.setAtt_time(year+"_"+month+"_"+day);
+		att.setAtt_time(year+"-"+month+"-"+day);
 		att.setAtt_stu_name(userList1.get(0).getStu_name());
 		Criteria criteria = new Criteria();
 		criteria.orOperator(

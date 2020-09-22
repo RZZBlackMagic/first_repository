@@ -178,22 +178,7 @@ public class Mon_GridFS {
 			return null;
 		}
 		GridFSDBFile gridFSDBFile=null;
-		/*for(int i=0;i<listFile.size();i++){
-				    gridFSDBFile = listFile.get(i);
-				//3.获取文件名
-					//注意：不是fs中的表的列名，而是根据调试gridDBFile中的属性而来
-					String fileName1 = (String)gridFSDBFile.get("filename");
-					System.out.println("从MongoDB获得的文件名为:"+fileName1);
-					
-					//4.创建空文件
-					File writeFile = new File("d:/re_test/"+fileName1);
-					if(!writeFile.exists()){
-						writeFile.createNewFile();
-					}
-					System.out.println(1);
-					//5.写入文件
-					gridFSDBFile.writeTo(writeFile);	
-		}*/
+		
 	    gridFSDBFile = listFile.get(0);
 	    //3.获取文件名
 		//注意：不是fs中的表的列名，而是根据调试gridDBFile中的属性而来
@@ -234,22 +219,7 @@ public class Mon_GridFS {
 			return null;
 		}
 		GridFSDBFile gridFSDBFile=null;
-		/*for(int i=0;i<listFile.size();i++){
-				    gridFSDBFile = listFile.get(i);
-				//3.获取文件名
-					//注意：不是fs中的表的列名，而是根据调试gridDBFile中的属性而来
-					String fileName1 = (String)gridFSDBFile.get("filename");
-					System.out.println("从MongoDB获得的文件名为:"+fileName1);
-					
-					//4.创建空文件
-					File writeFile = new File("d:/re_test/"+fileName1);
-					if(!writeFile.exists()){
-						writeFile.createNewFile();
-					}
-					System.out.println(1);
-					//5.写入文件
-					gridFSDBFile.writeTo(writeFile);	
-		}*/
+		
 	    gridFSDBFile = listFile.get(0);
 	    //3.获取文件名
 		//注意：不是fs中的表的列名，而是根据调试gridDBFile中的属性而来

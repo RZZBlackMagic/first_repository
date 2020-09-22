@@ -39,6 +39,7 @@ public class attendanceController {
 		int normal_count=0;//正常出席
 		int qingjia_count = 0;
 		int taoke_count = 0;
+		int chidao_count = 0;
 		Query query = new Query();
 		query.addCriteria(Criteria.where("att_cla_num").is(cla_num));
 		query.addCriteria(Criteria.where("att_stu_id").is(stu_id));
@@ -61,8 +62,10 @@ public class attendanceController {
 						normal_count++;
 					}else if(userList1.get(i).getAtt_status().equals("1")){
 						taoke_count++;
-					}else{
+					}else if(userList1.get(i).getAtt_status().equals("2")){
 						qingjia_count++;
+					}else{
+						chidao_count++;
 					}
 					count++;
 				}
@@ -78,14 +81,16 @@ public class attendanceController {
 						normal_count++;
 					}else if(userList1.get(i).getAtt_status().equals("1")){
 						taoke_count++;
-					}else{
+					}else if(userList1.get(i).getAtt_status().equals("2")){
 						qingjia_count++;
+					}else{
+						chidao_count++;
 					}
 					count++;
 				}
 			}
 		}
-		return (new JsonResult(200,"该学生一共打卡"+count+"次，正常签到"+normal_count+"次，请假"+qingjia_count+"次，旷课"+taoke_count+"次")).toString();
+		return (new JsonResult(200,"该学生一共打卡"+count+"次，正常签到"+normal_count+"次，请假"+qingjia_count+"次，旷课"+taoke_count+"次,迟到"+chidao_count+"次")).toString();
 	}
 	
 	
@@ -103,6 +108,7 @@ public class attendanceController {
 		int normal_count=0;//正常出席
 		int qingjia_count = 0;
 		int taoke_count = 0;
+		int chidao_count=0;
 		Query query = new Query();
 		query.addCriteria(Criteria.where("att_stu_id").is(stu_id));
 
@@ -115,11 +121,13 @@ public class attendanceController {
 	    		normal_count++;
 	    	}else if(userList1.get(i).getAtt_status().equals("1")){
 	    		taoke_count++;
-	    	}else{
+	    	}else if(userList1.get(i).getAtt_status().equals("2")){
 	    		qingjia_count++;
+	    	}else{
+	    		chidao_count++;
 	    	}
 	    }
-		return (new JsonResult(200,"该学生一共打卡"+count+"次，正常签到"+normal_count+"次，请假"+qingjia_count+"次，旷课"+taoke_count+"次")).toString();
+		return (new JsonResult(200,"该学生一共打卡"+count+"次，正常签到"+normal_count+"次，请假"+qingjia_count+"次，旷课"+taoke_count+"次,迟到"+chidao_count+"次")).toString();
 	}
 	
 	/** 
@@ -136,6 +144,7 @@ public class attendanceController {
 		int normal_count=0;//正常出席
 		int qingjia_count = 0;
 		int taoke_count = 0;
+		int chidao_count=0;
 		Query query = new Query();
 		query.addCriteria(Criteria.where("att_stu_id").is(stu_id));
 		query.addCriteria(Criteria.where("att_cla_num").is(cla_num));
@@ -147,11 +156,13 @@ public class attendanceController {
 	    		normal_count++;
 	    	}else if(userList1.get(i).getAtt_status().equals("1")){
 	    		taoke_count++;
-	    	}else{
+	    	}else if(userList1.get(i).getAtt_status().equals("2")){
 	    		qingjia_count++;
+	    	}else{
+	    		chidao_count++;
 	    	}
 	    }
-		return (new JsonResult(200,"该学生一共打卡"+count+"次，正常签到"+normal_count+"次，请假"+qingjia_count+"次，旷课"+taoke_count+"次")).toString();
+		return (new JsonResult(200,"该学生一共打卡"+count+"次，正常签到"+normal_count+"次，请假"+qingjia_count+"次，旷课"+taoke_count+"次,迟到"+chidao_count+"次")).toString();
 	}
 	
 	
@@ -172,6 +183,7 @@ public class attendanceController {
 		int normal_count=0;//正常出席
 		int qingjia_count = 0;
 		int taoke_count = 0;
+		int chidao_count=0;
 		Query query = new Query();
 		query.addCriteria(Criteria.where("att_stu_id").is(stu_id));
 	    List<Attendance> userList1 = mongoTemplate.find(query,Attendance.class);
@@ -187,8 +199,10 @@ public class attendanceController {
 		    	    		normal_count++;
 		    	    	}else if(userList1.get(i).getAtt_status().equals("1")){
 		    	    		taoke_count++;
-		    	    	}else{
+		    	    	}else if(userList1.get(i).getAtt_status().equals("2")){
 		    	    		qingjia_count++;
+		    	    	}else{
+		    	    		chidao_count++;
 		    	    	}
 	    			}
 	    			
@@ -200,8 +214,10 @@ public class attendanceController {
 		    	    		normal_count++;
 		    	    	}else if(userList1.get(i).getAtt_status().equals("1")){
 		    	    		taoke_count++;
-		    	    	}else{
+		    	    	}else if(userList1.get(i).getAtt_status().equals("2")){
 		    	    		qingjia_count++;
+		    	    	}else{
+		    	    		chidao_count++;
 		    	    	}
 	    			}
 	    			
@@ -210,6 +226,48 @@ public class attendanceController {
 	    		}
 	    	}
 	    }
-		return (new JsonResult(200,"该学生一共打卡"+count+"次，正常签到"+normal_count+"次，请假"+qingjia_count+"次，旷课"+taoke_count+"次")).toString();
+		return (new JsonResult(200,"该学生一共打卡"+count+"次，正常签到"+normal_count+"次，请假"+qingjia_count+"次，旷课"+taoke_count+"次,迟到"+chidao_count+"次")).toString();
 	}
+	
+	/** 
+	 * 学生查询对应班级的打卡情况
+	 * 
+	 * @throws UnsupportedEncodingException
+	 *     http://localhost:8080/kaoqin/ClassWarning?cla_num=0002&stu_id=1583675290261
+	 * */ 
+	@RequestMapping(value= {"ClassWarning"},produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public String ClassWarning(Model model,@RequestParam String stu_id,@RequestParam String cla_num
+			) throws UnsupportedEncodingException {
+		int count=0;//总打卡数
+		int normal_count=0;//正常出席
+		int qingjia_count = 0;
+		int taoke_count = 0;
+		int chidao_count = 0;
+		Query query = new Query();
+		query.addCriteria(Criteria.where("att_stu_id").is(stu_id));
+		query.addCriteria(Criteria.where("att_cla_num").is(cla_num));
+	    List<Attendance> userList1 = mongoTemplate.find(query,Attendance.class);
+	    System.out.println(userList1.toString());
+	    for(int i=0;i<userList1.size();i++){
+	    	count++;
+	    	if(userList1.get(i).getAtt_status().equals("0")){
+	    		normal_count++;
+	    	}else if(userList1.get(i).getAtt_status().equals("1")){
+	    		taoke_count++;
+	    	}else if(userList1.get(i).getAtt_status().equals("2")){
+	    		qingjia_count++;
+	    	}else{
+	    		chidao_count++;
+	    	}
+	    }
+	    if(taoke_count>=3){
+	    	return new JsonResult(200,"你已经旷课三次了").toString();
+	    }
+	    if(chidao_count>=5){
+	    	return new JsonResult(200,"你已经迟到五次了").toString();
+	    }
+	    return new JsonResult(200,"该学生还有到需要提醒的阶段").toString();
+	}
+	
 }

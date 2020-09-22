@@ -56,7 +56,7 @@ public class LoginController {
 	}
 	
 	/**
-	 * 学生完善信息    http://localhost:8080/kaoqin/studentInfo?stu_phone=15592296549&stu_academy=信息&stu_class=课程&stu_dad_phone=15512365445&stu_identity_num=156487&stu_mom_phone=16545896547&stu_name=任一鸣&stu_school=四川大学&stu_sex=女&stu_nickname=网名&stu_num=2012112226
+	 * 学生完善个人信息
 	 * @throws UnsupportedEncodingException 
 	 * */
 	@RequestMapping(value= {"studentInfo"},produces = "application/json; charset=utf-8")

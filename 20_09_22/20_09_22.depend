@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1600944274 source:d:\code block project\20_09_22\main.cpp
+	<iostream>
+	<typeinfo>
+	"divide_error.h"
+
+1600778435 d:\code block project\20_09_22\nestedclass.h
+	<iostream>
+
+1600780175 d:\code block project\20_09_22\homework_date.h
+	<iostream>
+
+1600838028 d:\code block project\20_09_22\tdate.h
+	<iostream>
+
+1600839539 d:\code block project\20_09_22\point.h
+	<iostream>
+	<math.h>
+
+1600943933 d:\code block project\20_09_22\people.h
+	<iostream>
+	<string.h>
+
+1600953887 d:\code block project\20_09_22\divide_error.h
+	<iostream>
+	<exception>
+	<string.h>
+

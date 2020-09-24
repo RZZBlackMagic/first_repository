@@ -32,11 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="MyString.h" />
 		<Unit filename="TDate.h" />
+		<Unit filename="divide_error.h" />
 		<Unit filename="error_test.h" />
 		<Unit filename="homework_date.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="nestedClass.h" />
+		<Unit filename="people.h" />
+		<Unit filename="point.h" />
+		<Unit filename="totalWeight.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

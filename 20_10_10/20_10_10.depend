@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1602317793 source:d:\code block project\20_10_10\main.cpp
+	<iostream>
+	"homework6-9.h"
+
+1602317822 d:\code block project\20_10_10\homework6-9.h
+	<iostream>
+

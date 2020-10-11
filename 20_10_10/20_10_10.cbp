@@ -32,10 +32,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="construct_virtual.h" />
+		<Unit filename="decorator.h" />
 		<Unit filename="homework6-10.h" />
 		<Unit filename="homework6-7.h" />
 		<Unit filename="homework6-9.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="private_virtual.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

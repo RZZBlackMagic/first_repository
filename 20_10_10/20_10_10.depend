@@ -1,8 +1,17 @@
 # depslib dependency file v1.0
-1602317793 source:d:\code block project\20_10_10\main.cpp
+1602421584 source:d:\code block project\20_10_10\main.cpp
 	<iostream>
-	"homework6-9.h"
+	"decorator.h"
 
 1602317822 d:\code block project\20_10_10\homework6-9.h
+	<iostream>
+
+1602385894 d:\code block project\20_10_10\construct_virtual.h
+	<iostream>
+
+1602412610 d:\code block project\20_10_10\private_virtual.h
+	<iostream>
+
+1602421807 d:\code block project\20_10_10\decorator.h
 	<iostream>
 

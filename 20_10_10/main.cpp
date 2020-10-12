@@ -2,7 +2,8 @@
 //#include "homework6-9.h"
 //#include "construct_virtual.h"
 //#include "private_virtual.h"
-#include "decorator.h"
+//#include "decorator.h"
+#include "homework7-1.h"
 using namespace std;
 
 int main()
@@ -33,10 +34,17 @@ int main()
     //SellTransaction s;
 
     Base * b = new D();
-    delete b;*/
+    delete b;
     coffee *c = new coffee();
     cout<<c->getName()<<"价格是："<<c->getPrice()<<endl;
     coffee *mc = new milkDecorator(*c);
     cout<<mc->getName()<<"价格是："<<mc->getPrice()<<endl;
+    int m = T_min<int>(9,2,3);
+    cout<<m<<endl;
+       */
+    int m = T_max(4,8);
+    cout<<m<<endl;
+    int mm = T_max("ad","bd");
+    cout<<mm<<endl;
     return 0;
 }

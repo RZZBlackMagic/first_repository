@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
-1602421584 source:d:\code block project\20_10_10\main.cpp
+1602505886 source:d:\code block project\20_10_10\main.cpp
 	<iostream>
-	"decorator.h"
+	"homework7-1.h"
 
 1602317822 d:\code block project\20_10_10\homework6-9.h
 	<iostream>
@@ -13,5 +13,9 @@
 	<iostream>
 
 1602421807 d:\code block project\20_10_10\decorator.h
+	<iostream>
+
+1602508411 d:\code block project\20_10_10\homework7-1.h
+	"cstring"
 	<iostream>
 

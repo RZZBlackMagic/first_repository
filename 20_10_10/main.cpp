@@ -6,7 +6,9 @@
 //#include "homework7-1.h"
 //#include "homework7-4.h"
 //#include "homework7-5.h"
-#include "operator.h"
+//#include "operator.h"
+//#include "computer.h"
+#include "file_operator.h"
 using namespace std;
 
 /*
@@ -97,7 +99,7 @@ int main()
     cout<<mm<<endl;
     Sample<char> s('a');
     s++;
-    s.disp();    */
+    s.disp();
     people  p ;
     p.age=1;
     p.score=2;
@@ -108,16 +110,28 @@ int main()
     //cout<<"P_age="<<p3.age<<"  "<<"p_score="<<p3.score<<endl;
     cout<<p<<endl;
     people p2;
-    p2 = p;
+    p2 = p;*/
     /*
     if(p2==p)
         cout<<"相等"<<endl;
     if(p2!=p)
         cout<<"不相等"<<endl;
-    cout<<p2<<endl;*/
+    cout<<p2<<endl;
     //cout<<&p<<endl;
 
     //cout<<&p<<endl;
     //cout<<"P_age="<<p.age<<"  "<<"p_score="<<p.score<<endl;
+
+    CPU *cpu = new Intel_cpu();
+    VideoCard *vc = new Intel_VideoCard();
+    Memory *m = new Intel_Memory();
+    computer *c = new computer(cpu,vc,m);
+    c->cpu->caculate();
+    c->vc->display();
+    c->memory->storage();*/
+    //test01();
+    //test02();
+    //test03();
+    //test04();
     return 0;
 }

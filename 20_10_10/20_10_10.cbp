@@ -33,8 +33,11 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="MyArray.h" />
+		<Unit filename="computer.h" />
 		<Unit filename="construct_virtual.h" />
 		<Unit filename="decorator.h" />
+		<Unit filename="emp_manager.h" />
+		<Unit filename="file_operator.h" />
 		<Unit filename="homework6-10.h" />
 		<Unit filename="homework6-7.h" />
 		<Unit filename="homework6-9.h" />

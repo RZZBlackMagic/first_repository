@@ -8,7 +8,8 @@
 //#include "homework7-5.h"
 //#include "operator.h"
 //#include "computer.h"
-#include "file_operator.h"
+//#include "file_operator.h"
+#include "emp_manager.h"
 using namespace std;
 
 /*
@@ -133,5 +134,50 @@ int main()
     //test02();
     //test03();
     //test04();
-    return 0;
+    employee e;
+    e.show_menu();
+    int empNum = e.getNum();
+    //employee* e_arr;//创建一个数组，数组大小就是文件中的数据的大小和要添加的员工的大小。
+    while(true){
+        cout<<"请选择要使用的功能："<<endl;
+        int choice;
+        cin>>choice;
+        switch(choice){
+        case 0:
+            //退出系统
+            return 0;
+        case 1:
+            //增加职工
+            e.add_emp();
+            cout<<"增加成功"<<endl;
+            break;
+        case 2:
+            //显示职工
+            e.display();
+            break;
+        case 3:
+            //删除职工信息
+            e.delete_emp();
+            cout<<"删除成功"<<endl;
+            break;
+        case 4:
+            //修改职工
+            e.edit_emp();
+            cout<<"修改成功"<<endl;
+            break;
+        case 5:
+            //查找职工
+            e.findEmpNyNum();
+            break;
+        case 6:
+            //按照编号排序
+            e.sortByNum();
+            break;
+        case 7:
+            //清空所有文档
+            e.clear_emp();
+            cout<<"清空成功"<<endl;
+            break;
+        }
+    }
 }

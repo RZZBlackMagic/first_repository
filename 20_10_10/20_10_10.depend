@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
-1602935473 source:d:\code block project\20_10_10\main.cpp
+1603011995 source:d:\code block project\20_10_10\main.cpp
 	<iostream>
-	"file_operator.h"
+	"emp_manager.h"
 
 1602317822 d:\code block project\20_10_10\homework6-9.h
 	<iostream>
@@ -26,4 +26,9 @@
 	"fstream"
 	<iostream>
 	<string>
+
+1603012262 d:\code block project\20_10_10\emp_manager.h
+	"fstream"
+	<iostream>
+	"string"
 

@@ -9,7 +9,8 @@
 //#include "operator.h"
 //#include "computer.h"
 //#include "file_operator.h"
-#include "emp_manager.h"
+//#include "emp_manager.h"
+#include "vector.h"
 using namespace std;
 
 /*
@@ -134,6 +135,7 @@ int main()
     //test02();
     //test03();
     //test04();
+    /*
     employee e;
     e.show_menu();
     int empNum = e.getNum();
@@ -179,5 +181,6 @@ int main()
             cout<<"Çå¿Õ³É¹¦"<<endl;
             break;
         }
-    }
+    }*/
+    test11();
 }

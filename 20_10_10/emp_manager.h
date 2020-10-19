@@ -21,6 +21,7 @@ public:
     string emp_position;//职工岗位
     string emp_duty;//职工职责
     //employee* e_array;
+
     //交换
     void Swap(employee& e1,employee& e2){
         employee temp ;

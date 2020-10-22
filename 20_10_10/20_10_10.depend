@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
-1603098268 source:d:\code block project\20_10_10\main.cpp
+1603360645 source:d:\code block project\20_10_10\main.cpp
 	<iostream>
-	"vector.h"
+	"set_multiset.h"
 
 1602317822 d:\code block project\20_10_10\homework6-9.h
 	<iostream>
@@ -32,10 +32,27 @@
 	<iostream>
 	"string"
 
-1603098418 d:\code block project\20_10_10\vector.h
+1603098436 d:\code block project\20_10_10\vector.h
 	"fstream"
 	<iostream>
 	"algorithm"
 	"string"
 	"vector"
+
+1603357467 d:\code block project\20_10_10\deque.h
+	"fstream"
+	<iostream>
+	"algorithm"
+	"string"
+	"list"
+	"deque"
+	"set"
+
+1603360785 d:\code block project\20_10_10\set_multiset.h
+	"fstream"
+	<iostream>
+	"algorithm"
+	"string"
+	"set"
+	"map"
 

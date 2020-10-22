@@ -36,6 +36,7 @@
 		<Unit filename="computer.h" />
 		<Unit filename="construct_virtual.h" />
 		<Unit filename="decorator.h" />
+		<Unit filename="deque.h" />
 		<Unit filename="emp_manager.h" />
 		<Unit filename="file_operator.h" />
 		<Unit filename="homework6-10.h" />
@@ -48,6 +49,8 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="operator.h" />
 		<Unit filename="private_virtual.h" />
+		<Unit filename="set_multiset.h" />
+		<Unit filename="vector.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -10,7 +10,9 @@
 //#include "computer.h"
 //#include "file_operator.h"
 //#include "emp_manager.h"
-#include "vector.h"
+//#include "vector.h"
+//#include "deque.h"
+#include "set_multiset.h"
 using namespace std;
 
 /*
@@ -182,5 +184,6 @@ int main()
             break;
         }
     }*/
-    test11();
+    //test11();
+    test06();
 }

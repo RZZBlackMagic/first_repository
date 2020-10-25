@@ -50,6 +50,9 @@
 		<Unit filename="operator.h" />
 		<Unit filename="private_virtual.h" />
 		<Unit filename="set_multiset.h" />
+		<Unit filename="speech.h" />
+		<Unit filename="speech_actor.h" />
+		<Unit filename="speech_manager.h" />
 		<Unit filename="vector.h" />
 		<Extensions>
 			<code_completion />

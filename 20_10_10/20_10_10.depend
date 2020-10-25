@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
-1603456686 source:d:\code block project\20_10_10\main.cpp
+1603613799 source:d:\code block project\20_10_10\main.cpp
 	<iostream>
-	"set_multiset.h"
+	"speech_manager.h"
 
 1602317822 d:\code block project\20_10_10\homework6-9.h
 	<iostream>
@@ -58,4 +58,24 @@
 	"functional"
 	"map"
 	"numeric"
+
+1603522236 d:\code block project\20_10_10\speech.h
+	<iostream>
+	"map"
+	"algorithm"
+
+1603615386 d:\code block project\20_10_10\speech_manager.h
+	<iostream>
+	"map"
+	"algorithm"
+	"speech_actor.h"
+	"string"
+	"vector"
+	"math.h"
+
+1603603236 d:\code block project\20_10_10\speech_actor.h
+	<iostream>
+	"map"
+	"string"
+	"algorithm"
 

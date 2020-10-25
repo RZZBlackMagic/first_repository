@@ -12,7 +12,9 @@
 //#include "emp_manager.h"
 //#include "vector.h"
 //#include "deque.h"
-#include "set_multiset.h"
+//#include "set_multiset.h"
+//#include "speech.h"
+#include "speech_manager.h"
 using namespace std;
 
 /*
@@ -185,5 +187,32 @@ int main()
         }
     }*/
     //test11();
-    test33();
+    //test33();
+    //menu();
+    SpeechManager sp ;
+    sp.show_Menu();
+    //sp.print();
+    int input;
+    while(true){
+        cout<<"请输入您的选择:"<<endl;
+        cin>>input;
+        switch(input){
+        case 1:
+            //begin_speech();
+            sp.startSpeech();
+            //sp.print();
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 0:
+            sp.exit_speech();
+            break;
+        default:
+            cout<<"您的输入有问题"<<endl;
+            system("cls");
+            break;
+        }
+    }
 }

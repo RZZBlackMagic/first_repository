@@ -205,11 +205,11 @@ public:
     void save_result(){
             //保存分数
             ofstream ofs;
-            ofs.open("speak.txt",ios::out);
+            ofs.open("speak.csv",ios::out|ios::app);
             for(vector<int>::iterator it = victory.begin();it!=victory.end();it++){
-                ofs<<"编号为："<<*it<< " ";
-                ofs<<"姓名为："<<m.find(*it)->second.s_name<<" ";
-                ofs<<"第一轮得分："<<m.find(*it)->second.s_score[0]<<" ";
+                ofs<<"编号为："<<*it<< ",";
+                ofs<<"姓名为："<<m.find(*it)->second.s_name<<",";
+                ofs<<"第一轮得分："<<m.find(*it)->second.s_score[0]<<",";
                 ofs<<"第二轮得分："<<m.find(*it)->second.s_score[1]<<endl;
             }
             ofs.close();
@@ -264,7 +264,7 @@ public:
     //查看往届比赛选手
     void find_past_result(){
         ifstream ifs;
-        ifs.open("speak.txt",ios::in);
+        ifs.open("speak.csv",ios::in);
         string str;
         while(getline(ifs,str)){
             cout<<str<<endl;
@@ -272,6 +272,21 @@ public:
         ifs.close();
     }
     void clear_result(){
+        cout<<"确认清空？"<<endl;
+        cout<<"1 确认"<<endl;
+        cout<<"2 返回"<<endl;
+        int flag ;
+        cin>>flag;
+        if(flag==1){
+            //清空
+            ofstream ofs;
+            ofs.open("speak.csv",ios::trunc);
+            ofs.close();
+        }else if(flag==2){
+            return ;
+        }else{
+            cout<<"您的输入有问题"<<endl;
+        }
         ofstream file_writer("speak.txt", ios_base::out);
     }
 };

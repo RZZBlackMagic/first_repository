@@ -7,7 +7,16 @@
 #include "string"
 #include "vector"
 #include "math.h"
+#include "fstream"
+
 using namespace std;
+ //将比赛结果从大到小排序的仿函数
+    class great{
+    public:
+        bool operator()(const double v1,const double v2){
+            return v1>v2;
+        }
+    };
 /*
 提供菜单界面与用户交互
 对演讲比赛流程进行控制
@@ -75,6 +84,7 @@ public:
             cout<<"*****************"<<endl;
             random_shuffle(v2.begin(),v2.end());
         }
+        //print();
     }
     //比赛‘(rand()% (b-a+1))+ a
     void speech_context(){
@@ -83,8 +93,9 @@ public:
         srand(11);
         vector<double> pingwei;
         pingwei.resize(10);
-        map<double,int> temp1;//放第一组
-        map<double,int> temp2;//放第二组
+        map<double,int,great> temp1;//放第一组
+        map<double,int,great> temp2;//放第二组
+        map<double,int,great> temp_speaker;//临时容器：存放第二组的选手，用来排序
         if(index==1){
             //第一轮比赛
             for(int j=0;j<12;j++){
@@ -102,7 +113,7 @@ public:
                 }
                 avg_score = avg_score/(pingwei.size()-2);
                 //m[] =(double)avg_score;
-                m.at(v1[j]).s_score[0] = avg_score;
+                m.find(v1[j])->second.s_score[0] = avg_score;
                 if(v1[j]%2==0){
                     //第一组
                     temp1.insert(make_pair(avg_score,v1[j]));
@@ -112,46 +123,156 @@ public:
                 }
             }
             //将临时结果进行排序(map默认插入式从小到大，加个仿函数变为从大到小)
-            for(map<double,int>::iterator it = temp1.begin();it!=temp1.end();it++){
+            /*
+            for(map<double,int,great>::iterator it = temp1.begin();it!=temp1.end();it++){
                 cout<<it->first<<"******"<<it->second<<endl;
             }
-            for(map<double,int>::iterator it = temp2.begin();it!=temp2.end();it++){
+            for(map<double,int,great>::iterator it = temp2.begin();it!=temp2.end();it++){
                 cout<<it->first<<"******"<<it->second<<endl;
             }
-            //打分完毕，将12个人分为6组
+            cout<<"**************"<<endl;*/
+            //排序完毕，将两组选手的前三名放入第二轮选手容器中
+            map<double,int,great>::iterator it1 = temp1.begin();
+            map<double,int,great>::iterator it2 = temp2.begin();
+            for(int i=0;i<3;i++){
+                v2.push_back(it1->second);
+                v2.push_back(it2->second);
+                it1++;
+                it2++;
+            }
+            /*
+            for(vector<int>::iterator it = v2.begin();it!=v2.end();it++){
+                cout<<*it<<endl;
+            }
+            */
         }else{
             //第二轮比赛
-
+            //给六个人打分
+            for(int i=0;i<6;i++){
+                for(vector<double>::iterator it = pingwei.begin();it!=pingwei.end();it++){
+                    *it = ((rand() % (b-a+1))+ a);
+                }
+                //去掉最高分和最低分计算平均成绩
+                sort(pingwei.begin(),pingwei.end());
+                pingwei[0] = 0.0;
+                pingwei[0] = 0.0;
+                double avg_score = 0.0;
+                for(vector<double>::iterator it = pingwei.begin();it!=pingwei.end();it++){
+                    avg_score+=(*it);
+                }
+                avg_score = avg_score/(pingwei.size()-2);
+                m.find(v2[i])->second.s_score[1] = avg_score;
+                temp_speaker.insert(make_pair(avg_score,v2[i]));
+            }
+            //打印比赛结果
+            map<double,int>::iterator it = temp_speaker.begin();
+            for(int i=0;i<3;i++){
+                victory.push_back(it->second);
+                it++;
+            }
+            /*
+            cout<<"第二轮比赛结束，比赛结果如下："<<endl;
+            map<double,int,great>::iterator it =  temp_speaker.begin();
+            for(int i=0;i<3;i++){
+                cout<<"编号为："<<it->second<< " ";
+                cout<<"姓名为："<<m.at(it->second).s_name<<" ";
+                cout<<"第一轮得分："<<m.at(it->second).s_score[0]<<" ";
+                cout<<"第二轮得分："<<m.at(it->second).s_score[1]<<endl;
+                it++;
+            }
+            */
         }
+    }
+    //显示第一轮结果
+    void show_result(){
+        if(index==1){
+            cout<<"第一轮比赛已经结束，结果如下："<<endl;
+            for(vector<int>::iterator it = v2.begin();it!=v2.end();it++){
+                cout<<"编号："<<*it<<"  ";
+                cout<<"姓名为："<<m.find(*it)->second.s_name<<"  ";
+                cout<<"第一轮比赛成绩为："<<m.find(*it)->second.s_score[0]<<endl;
+            }
+        }else{
+            cout<<"第二轮比赛结束，结果如下："<<endl;
+            for(vector<int>::iterator it = victory.begin();it!=victory.end();it++){
+                cout<<"编号为："<<*it<<endl;
+                cout<<"姓名为:s"<<m.find(*it)->second.s_name<<endl;
+                cout<<"第二轮比赛成绩为："<<m.find(*it)->second.s_score[1]<<endl;
+            }
+        }
+    }
+    //保存结果
+    void save_result(){
+            //保存分数
+            ofstream ofs;
+            ofs.open("speak.txt",ios::out);
+            for(vector<int>::iterator it = victory.begin();it!=victory.end();it++){
+                ofs<<"编号为："<<*it<< " ";
+                ofs<<"姓名为："<<m.find(*it)->second.s_name<<" ";
+                ofs<<"第一轮得分："<<m.find(*it)->second.s_score[0]<<" ";
+                ofs<<"第二轮得分："<<m.find(*it)->second.s_score[1]<<endl;
+            }
+            ofs.close();
+    }
+    //显示第二轮结果
+    void show_second(){
 
+    }
+
+    void print(){
+        for(vector<int>::iterator it=v1.begin();it!=v1.end();it++){
+            cout<<"编号："<<*it<<" ";
+            cout<<"姓名："<<m.find(*it)->second.s_name<<" ";
+            cout<<"第一轮分数："<<m.find(*it)->second.s_score[0]<<" ";
+            cout<<"第二轮分数："<<m.find(*it)->second.s_score[1]<<endl;
+        }
+    }
+    void print2(){
+        for(vector<int>::iterator it=v2.begin();it!=v2.end();it++){
+            cout<<"编号："<<*it<<" ";
+            cout<<"姓名："<<m.find(*it)->second.s_name<<" ";
+            cout<<"第一轮分数："<<m.find(*it)->second.s_score[0]<<" ";
+            cout<<"第二轮分数："<<m.find(*it)->second.s_score[1]<<endl;
+        }
     }
     void startSpeech(){
         //第一轮比赛：
         //抽签
         random_function();
-        //print();
+        //打印抽签结果
+        cout<<"第"<<this->index<<"轮抽签结果"<<endl;
+        print();
         //比赛
         speech_context();
         //显示晋级结果
-
+        show_result();
+        index++;
+        cout<<"第一轮比赛全部结束"<<endl;
         //第二轮比赛
-
         //抽签
-
+        random_function();
+        //打印抽签结果
+        cout<<"第"<<this->index<<"轮抽签结果"<<endl;
+        print2();
         //比赛
-
-        //显示最终结果
-
+        speech_context();
+        //显示结果
+        show_result();
         //保存分数
+        save_result();
     }
-    void print(){
-
-        for(vector<int>::iterator it=v1.begin();it!=v1.end();it++){
-            cout<<"编号："<<*it<<endl;
-            cout<<"姓名："<<m.find(*it)->second.s_name<<endl;
-            cout<<"第一轮分数："<<m.find(*it)->second.s_score[0]<<endl;
-            cout<<"第二轮分数："<<m.find(*it)->second.s_score[1]<<endl;
+    //查看往届比赛选手
+    void find_past_result(){
+        ifstream ifs;
+        ifs.open("speak.txt",ios::in);
+        string str;
+        while(getline(ifs,str)){
+            cout<<str<<endl;
         }
+        ifs.close();
+    }
+    void clear_result(){
+        ofstream file_writer("speak.txt", ios_base::out);
     }
 };
 

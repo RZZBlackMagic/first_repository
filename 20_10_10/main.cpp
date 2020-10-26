@@ -203,9 +203,11 @@ int main()
             //sp.print();
             break;
         case 2:
+            sp.find_past_result();
             break;
         case 3:
             break;
+            sp.clear_result();
         case 0:
             sp.exit_speech();
             break;

@@ -5,6 +5,7 @@
 #include "ideatity.h"
 #include "vector"
 #include "teacher.h"
+#include "ComputerRoom.h"
 using namespace std;
 
 class manager:public identity
@@ -89,16 +90,58 @@ public:
         ofs.close();
     }
     //查看账号
+    void printStudent(student &s){
+        cout<<" 学号："<<s.id<<" 姓名："<<s.m_Name<<" 密码："<<s.m_Password<<endl;
+    }
+    void printTeacher(teacher &t){
+        cout<<" 工号："<<t.empId<<" 姓名："<<t.m_Name<<" 密码："<<t.m_Password<<endl;
+    }
     void showPerson(){
+        while(true){
+            cout<<"请选择查看内容："<<endl;
+            cout<<"1 学生"<<endl;
+            cout<<"2 教师"<<endl;
+            int select = 0;
+            cin>>select;
+            if(select==1){
+                //查看学生
+                for(vector<student>::iterator it = vStu.begin();it!=vStu.end();it++){
+                    printStudent(*it);
+                }
+                break;
+            }else if(select==2){
+                //查看教师
+                for(vector<teacher>::iterator it = vTea.begin();it!=vTea.end();it++){
+                    printTeacher(*it);
+                }
+                break;
+            }else{
+                //输入有误
+                cout<<"输入有误！"<<endl;
+            }
+        }
+    }
+    void printComputerRoom(computerRoom& cr){
+        cout<<"机房号为："<<cr.m_ComId<<" 机房的最大容量为："<<cr.m_MaxNum<<endl;
     }
     //查看机房信息
     void showComputer(){
+        for(vector<computerRoom>::iterator it= vCom.begin();it!=vCom.end();it++){
+            printComputerRoom(*it);
+        }
     }
     //清空预约记录
     void cleanFile(){
+        ofstream ofs;
+        ofs.open(ORDER_FILE,ios::trunc);
+        ofs.close();
+        cout<<"清空成功"<<endl;
+        system("pause");
+        system("cls");
     }
     vector<student> vStu;//学生容器
     vector<teacher> vTea;//教师容器
+    vector<computerRoom> vCom;//机房容器
     void initVector(){
         //初始化容器
         //读取学生信息
@@ -112,7 +155,7 @@ public:
         vTea.clear();
 
         student s;
-        while(ifs>>s.id&&ifs>>m_Name&&ifs>>m_Password){
+        while(ifs>>s.id&&ifs>>s.m_Name&&ifs>>s.m_Password){
             vStu.push_back(s);
         }
         cout<<"当前学生数量为："<<vStu.size()<<endl;
@@ -124,6 +167,14 @@ public:
             vTea.push_back(t);
         }
         cout<<"当前教师数量为："<<vTea.size()<<endl;
+        ifs.close();
+        //初始化机房信息
+        ifs.open(COMPUTER_FILE,ios::in);
+        computerRoom cr;
+        while(ifs>>cr.m_ComId&&ifs>>cr.m_MaxNum){
+            vCom.push_back(cr);
+        }
+        cout<<"当前机房数量为："<<vCom.size()<<endl;
         ifs.close();
     }
     bool checkRepeat(int id,int type){

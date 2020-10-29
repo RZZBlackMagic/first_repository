@@ -1,0 +1,1 @@
+date:周2 interval:下午 stuId:1 stuName:张三 roomId:2号房间 status:审核中

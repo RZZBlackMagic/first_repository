@@ -7,6 +7,36 @@
 #include "manager.h"
 using namespace std;
 
+
+void  studentMenu(identity* &student1){
+    while(true){
+        //学生菜单
+        student1->operMenu();
+        student* stu = (student*)student1;
+        int select;
+        cout<<"请输入你的选择："<<endl;
+        cin>>select;
+        if(select==1){
+            //申请预约
+            stu->applyOrder();
+        }else if(select==2){
+            //查看我的预约
+            stu->showAMyOrder();
+        }else if(select==3){
+            //查看所有预约
+            stu->showAllOrder();
+        }else if(select==4){
+            //取消预约
+            stu->cancelOrder();
+        }else{
+            //注销登录
+            cout<<"注销成功"<<endl;
+            system("pause");
+            system("cls");
+            break;
+        }
+    }
+}
 void managerMenu(identity* &manager1){
     while(true){
         //管理员菜单
@@ -88,6 +118,7 @@ void loginIn(string filename,int type){//filename：操作的文件名，type:登录的身份
                 system("cls");
                 person = new student(fId,fName,fPwd);
                 //登录成功，进入学生的子菜单
+                studentMenu(person);
                 return;
             }
         }

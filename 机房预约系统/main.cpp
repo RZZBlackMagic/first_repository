@@ -1,11 +1,35 @@
 #include <iostream>
 #include "globalFile.h"
 #include "ideatity.h"
-#include "fstream"
 #include "student.h"
 #include "teacher.h"
 #include "manager.h"
 using namespace std;
+#include "fstream"
+
+void teacherManager(identity* &teacher1){
+    while(true){
+        //教师菜单
+        teacher1->operMenu();
+        teacher* tea = (teacher*) teacher1;
+        int select ;
+        cout<<"请输入您的选择："<<endl;
+        cin>>select;
+        if(select == 1){
+            //查看所有预约
+            tea->showAllOrder();
+        }else if(select == 2){
+            //审核预约
+            tea->validOrder();
+        }else{
+            //注销登录
+            cout<<"注销成功"<<endl;
+            system("pause");
+            system("cls");
+            return ;
+        }
+    }
+}
 
 
 void  studentMenu(identity* &student1){
@@ -37,6 +61,8 @@ void  studentMenu(identity* &student1){
         }
     }
 }
+
+
 void managerMenu(identity* &manager1){
     while(true){
         //管理员菜单
@@ -131,6 +157,7 @@ void loginIn(string filename,int type){//filename：操作的文件名，type:登录的身份
                 system("cls");
                 person = new teacher(fId,fName,fPwd);
                 //登录成功，进入学生的子菜单
+                teacherManager(person);
                 return;
             }
         }

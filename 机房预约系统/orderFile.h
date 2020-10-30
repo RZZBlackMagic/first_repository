@@ -3,16 +3,13 @@
 #include "map"
 #include <iostream>
 #include "string"
+#include "fstream"
 using namespace std;
 
 class orderFile{
 public:
     orderFile(){
-        updateOrder();
-    }
-    //更新预约系统
-    void updateOrder(){
-        //把order文件中的信息读出来
+         //把order文件中的信息读出来
         ifstream ifs;
         ifs.open(ORDER_FILE,ios::in);
         string date;
@@ -62,17 +59,35 @@ public:
                 value = status.substr(pos+1,status.size()-pos);
                 m.insert(make_pair(key,value));
             }
-            this->m_orderData.insert(make_pair(this->m_size,m));
             this->m_size++;
+            this->m_orderData.insert(make_pair(this->m_size,m));
         }
+    }
+    //更新预约系统
+    void updateOrder(){
+        if(m_size==0)
+            return;
+        ofstream ofs;
+        ofs.open(ORDER_FILE,ios::out|ios::trunc);
+        for(map<int,map<string,string>>::iterator it = m_orderData.begin();it!=m_orderData.end();it++){
+            ofs<<"date:"<<it->second.at("date")<<" ";
+            ofs<<"interval:"<<it->second.at("interval")<<" ";
+            ofs<<"stuId:"<<it->second.at("stuId")<<" ";
+            ofs<<"stuName:"<<it->second.at("stuName")<<" ";
+            ofs<<"roomId:"<<it->second.at("roomId")<<" ";
+            ofs<<"status:"<<it->second.at("status")<<endl;
+        }
+        ofs.close();
     }
     //记录的容器 key...记录的条数  value...具体记录的键值对信息
     map<int,map<string,string>> m_orderData;
 
     //测试代码
     void printMap(){
+        int i=1;
         for(map<int,map<string,string>>::iterator it = m_orderData.begin();it!=m_orderData.end();it++){
-            cout<<"第一条记录：";
+            cout<<"第"<<it->first<<"条记录：";
+            i++;
             for(map<string,string>::iterator it1 = it->second.begin();it1!=it->second.end();it1++){
                 cout<<it1->first<<":"<<it1->second;
             }

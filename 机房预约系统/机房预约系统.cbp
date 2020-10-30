@@ -32,8 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ComputerRoom.h" />
 		<Unit filename="aaa.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="orderFile.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

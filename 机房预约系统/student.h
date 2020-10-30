@@ -15,6 +15,7 @@ public:
     int id;
     vector<computerRoom> vCom;//机房容器
     map<int,map<string,string>> myApply;//我的预约容器
+    vector<int> index;
     student(){}
 
     student(int id,string name,string password){
@@ -25,10 +26,13 @@ public:
         initMyApply();
     }
     void initMyApply(){
+        myApply.clear();
         orderFile *of = new orderFile();
+        int i = 1;
         for(map<int,map<string,string>>::iterator it = of->m_orderData.begin();it!=of->m_orderData.end();it++){
-            if(it->second.find("stuId")==string(this->id)){
-                myApply.insert(*it);
+            if(it->second.at("stuId")==to_string(this->id)){
+                myApply.insert(make_pair(i,it->second));
+                i++;
             }
         }
     }
@@ -57,7 +61,6 @@ public:
         cout<<"\t\t|     0 注销登录       |\n";
         cout<<"\t\t------------------------\n";
         cout<<"请选择您的操作"<<endl;
-
     }
     //申请预约
     void applyOrder(){
@@ -116,14 +119,16 @@ public:
         ofs<<"stuName:"<<this->m_Name<<" ";
         ofs<<"roomId:"<<room<<"号房间 ";
         ofs<<"status:"<<"审核中"<<endl;
+        initMyApply();
         ofs.close();
         system("pause");
         system("cls");
     }
     void printMap(){
         int i =1;
+        cout<<"myApply的大小："<<myApply.size()<<endl;
         for(map<int,map<string,string>>::iterator it = myApply.begin();it!=myApply.end();it++){
-            cout<<"第"<<i<<"条记录：";
+            cout<<"第"<<it->first<<"条记录：";
             i++;
             for(map<string,string>::iterator it1 = it->second.begin();it1!=it->second.end();it1++){
                 cout<<it1->first<<":"<<it1->second;
@@ -142,33 +147,55 @@ public:
     }
     //取消预约
     void cancelOrder(){
+        printMap();
         cout<<"请输入预约条数："<<endl;
         int select;
         while(true){
             cin>>select;
             if(select>myApply.size()){
                 cout<<"你的输入有误，请重新输入："<<endl;
+            }else{
+                break;
             }
         }
         //取消预约
-        myApply.erase(select);
+        int i = 1;
+        orderFile *of = new orderFile();
+        cout<<myApply[select]["date"]<<endl;
+        cout<<myApply[select]["interval"]<<endl;;
+        cout<<myApply[select]["stuId"]<<endl;;
+        cout<<myApply[select]["stuName"]<<endl;;
+        cout<<myApply[select]["roomId"]<<endl;;
+        for(map<int,map<string,string>>::iterator it = of->m_orderData.begin();it!=of->m_orderData.end();it++)
+        {
+            if(it->second == myApply[select]){
+                break;
+            }else{
+                i++;
+            }
+        }
+        cout<<"orderDAta中的第"<<i<<"条消息和myApply一样"<<endl;
+        //myApply.erase(select);
+        //调整删除后序号‘
+        of->m_orderData.erase(i);
         //将order文件的预约信息删掉
-        for(map<int,map<string,string>>::iterator it = myApply.begin();it!=myApply.end();it++){
+        ofstream ofs;
+        ofs.open(ORDER_FILE,ios::in|ios::trunc);
+        for(map<int,map<string,string>>::iterator it = of->m_orderData.begin();it!=of->m_orderData.end();it++){
             //生成订单
-            ofstream ofs;
-            ofs.open(ORDER_FILE,ios::in|ios::app);
-            ofs<<"date:周"<<it->second.find("date")<<" ";
-            if(it->second.find("interval")==1){
+            ofs<<"date:"<<it->second.at("date")<<" ";
+            if(it->second.at("interval")==to_string(1)){
                 ofs<<"interval:"<<"上午"<<" ";
             }else{
                 ofs<<"interval:"<<"下午"<<" ";
             }
-            ofs<<"stuId:"<<it->second.find("stuId")<<" ";
-            ofs<<"stuName:"<<it->second.find("stuName")<<" ";
-            ofs<<"roomId:"<<it->second.find("roomId")<<"号房间 ";
-            ofs<<"status:"<<it->second.find("status")<<endl;
-            ofs.close();
+            ofs<<"stuId:"<<it->second.at("stuId")<<" ";
+            ofs<<"stuName:"<<it->second.at("stuName")<<" ";
+            ofs<<"roomId:"<<it->second.at("roomId")<<" ";
+            ofs<<"status:"<<it->second.at("status")<<endl;
         }
+        ofs.close();
+        initMyApply();
     }
 
 };

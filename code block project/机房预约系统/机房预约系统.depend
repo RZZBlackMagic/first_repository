@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1604045322 source:d:\code block project\机房预约系统\main.cpp
+	<iostream>
+	"globalFile.h"
+	"ideatity.h"
+	"student.h"
+	"teacher.h"
+	"manager.h"
+	"fstream"
+
+1603875963 d:\code block project\机房预约系统\globalfile.h
+
+1603874276 d:\code block project\机房预约系统\ideatity.h
+	<iostream>
+	"string"
+
+1604044427 d:\code block project\机房预约系统\student.h
+	"ideatity.h"
+	<iostream>
+	"string"
+	"vector"
+	"orderFile.h"
+	"ComputerRoom.h"
+	"fstream"
+
+1604047949 d:\code block project\机房预约系统\teacher.h
+	"ideatity.h"
+	<iostream>
+	"string"
+	"orderFile.h"
+
+1603956073 d:\code block project\机房预约系统\manager.h
+	<iostream>
+	"string"
+	"ideatity.h"
+	"vector"
+	"teacher.h"
+	"ComputerRoom.h"
+
+1603955060 d:\code block project\机房预约系统\computerroom.h
+	<iostream>
+	"string"
+
+1604047622 d:\code block project\机房预约系统\orderfile.h
+	"map"
+	<iostream>
+	"string"
+	"fstream"
+

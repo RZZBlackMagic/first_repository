@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="20_10_10" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/20_10_10" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/20_10_10" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="MyArray.h" />
+		<Unit filename="computer.h" />
+		<Unit filename="construct_virtual.h" />
+		<Unit filename="decorator.h" />
+		<Unit filename="deque.h" />
+		<Unit filename="emp_manager.h" />
+		<Unit filename="file_operator.h" />
+		<Unit filename="homework6-10.h" />
+		<Unit filename="homework6-7.h" />
+		<Unit filename="homework6-9.h" />
+		<Unit filename="homework7-1.h" />
+		<Unit filename="homework7-4.h" />
+		<Unit filename="homework7-5.h" />
+		<Unit filename="homework7-6.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="operator.h" />
+		<Unit filename="private_virtual.h" />
+		<Unit filename="set_multiset.h" />
+		<Unit filename="speech.h" />
+		<Unit filename="speech_actor.h" />
+		<Unit filename="speech_manager.h" />
+		<Unit filename="vector.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

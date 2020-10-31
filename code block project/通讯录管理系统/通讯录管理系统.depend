@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1600663574 source:d:\code block project\通讯录管理系统\main.cpp
+	<iostream>
+	"showMenu.h"
+
+1600568436 d:\code block project\通讯录管理系统\showmenu.h
+	<string>
+

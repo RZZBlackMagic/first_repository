@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1563092558 source:d:\code block project\linear_list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cal_address_h.h"
+
+1563092570 d:\code block project\linear_list\cal_address_h.h
+
+1563092222 source:d:\code block project\linear_list\cal_address.c
+	"cal_address_h.h"
+

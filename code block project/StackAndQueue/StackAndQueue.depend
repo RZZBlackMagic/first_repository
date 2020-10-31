@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1557621962 source:d:\code block project\stackandqueue\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"3.17.c"
+
+1557637200 d:\code block project\stackandqueue\3.17.c
+	<stdio.h>
+	<stdlib.h>
+

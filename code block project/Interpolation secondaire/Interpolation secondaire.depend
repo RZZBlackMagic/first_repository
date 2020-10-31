@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1578807014 source:d:\code block project\interpolation secondaire\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<conio.h>
+

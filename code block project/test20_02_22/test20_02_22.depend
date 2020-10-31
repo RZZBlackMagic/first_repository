@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1584022913 source:d:\code block project\test20_02_22\src\test.cpp
+	"test.h"
+
+1584022912 d:\code block project\test20_02_22\include\test.h
+
+1584025760 source:d:\code block project\test20_02_22\main.c
+	<stdio.h>
+	<stdlib.h>
+

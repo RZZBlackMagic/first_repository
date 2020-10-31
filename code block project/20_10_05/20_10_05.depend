@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1602242273 source:d:\code block project\20_10_05\main.cpp
+	<iostream>
+	"makeDrink.h"
+	"test.h"
+	"homework5-2.h"
+	"homework5-3.h"
+	"EmpInfo.h"
+	"string"
+
+1601881496 d:\code block project\20_10_05\makedrink.h
+	<iostream>
+
+1601888659 d:\code block project\20_10_05\test.h
+	<iostream>
+
+1602240166 d:\code block project\20_10_05\homework5-2.h
+	<iostream>
+	"string"
+
+1602240953 d:\code block project\20_10_05\homework5-3.h
+	<iostream>
+	"string"
+
+1602243215 d:\code block project\20_10_05\empinfo.h
+	<iostream>
+	"string"
+

@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1604131342 source:d:\code block project\20_11\main.cpp
+	<iostream>
+	"threadTest.h"
+
+1604137134 d:\code block project\20_11\threadtest.h
+	"string"
+	<iostream>
+	<pthread.h>
+

@@ -1,0 +1,6 @@
+date:周2 interval:下午 stuId:1 stuName:张三 roomId:2号房间 status:通过
+date:周4 interval:下午 stuId:1 stuName:张三 roomId:3号房间 status:不通过
+date:周1 interval:下午 stuId:2 stuName:李四 roomId:1号房间 status:通过
+date:周5 interval:下午 stuId:2 stuName:李四 roomId:2号房间 status:不通过
+date:周3 interval:下午 stuId:2 stuName:李四 roomId:1号房间 status:不通过
+date:周3 interval:下午 stuId:1 stuName:张三 roomId:1号房间 status:通过

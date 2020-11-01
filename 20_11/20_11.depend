@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1604208023 source:d:\code block project\20_11\main.cpp
+	<iostream>
+	"threadTest.h"
+
+1604215578 d:\code block project\20_11\threadtest.h
+	"string"
+	"mutex"
+	<iostream>
+	<pthread.h>
+	"thread"
+	<condition_variable>
+
